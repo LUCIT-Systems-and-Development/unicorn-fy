@@ -1,3 +1,4 @@
+# *ALPHA STATUS* Dont use now! Unify data from crypto exchanges
 # UnicornFy
 Unify data from crypto exchanges
 
