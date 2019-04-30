@@ -3,10 +3,10 @@
 #
 # File: pypi_create_test_wheel.sh
 #
-# Part of ‘UNICORN Binance WebSocket API’
-# Project website: https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api
-# Documentation: https://www.unicorn-data.com/unicorn-binance-websocket-api.html
-# PyPI: https://pypi.org/project/unicorn-binance-websocket-api/
+# Part of ‘UnicornFy’
+# Project website: https://github.com/unicorn-data-analysis/unicorn_fy
+# Documentation: https://www.unicorn-data.com/unicorn_fy.html
+# PyPI: https://pypi.org/project/unicorn-fy/
 #
 # Author: UNICORN Data Analysis
 #         https://www.unicorn-data.com/
