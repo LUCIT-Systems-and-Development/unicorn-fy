@@ -334,7 +334,7 @@ class UnicornFy(object):
         if unicorn_fied_data is False:
             logging.error("detected unknown data stream format in module `unicorn_fy`: please report to "
                           "https://www.unicorn-data.com " + str(stream_data))
-        unicorn_fied_version = ['binance', '0.0.2']
+        unicorn_fied_version = ['binance', '0.1.0']
         unicorn_fied_data['unicorn_fied'] = unicorn_fied_version
         logging.debug("UnicornFy->binance(" + str(unicorn_fied_data) + ")")
         return unicorn_fied_data

@@ -39,7 +39,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-     name='unicorn-fy',
+     name='unicorn_fy',
      version='0.0.1.0',
      author="UNICORN Data Analysis",
      url="https://www.unicorn-data.com",
