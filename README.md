@@ -3,7 +3,7 @@
 # UnicornFy
 Unify data from crypto exchanges
 
-# Supported Exchanges
+## Supported Exchanges
 - Binance
 
 ## Installation
