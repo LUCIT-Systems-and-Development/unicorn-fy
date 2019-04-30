@@ -6,4 +6,5 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## 0.1.0.dev (development stage/unreleased)
 
-## 0.1.0 - Released
+## 0.1.0 
+- Released
