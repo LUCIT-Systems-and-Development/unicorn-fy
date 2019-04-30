@@ -2,6 +2,9 @@ Unify data from crypto exchanges
 # UnicornFy
 Unify data from crypto exchanges
 
+# Supported Exchanges
+- Binance
+
 ## Documentation
 https://www.unicorn-data.com/unicorn_fy.html
 
