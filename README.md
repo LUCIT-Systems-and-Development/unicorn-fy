@@ -1,4 +1,4 @@
-# *ALPHA STATUS* Dont use now! Unify data from crypto exchanges
+Unify data from crypto exchanges
 # UnicornFy
 Unify data from crypto exchanges
 
@@ -10,4 +10,3 @@ https://github.com/unicorn-data-analysis/unicorn_fy
 
 ## How to report bugs or suggest improvements?
 Please open a new issue: https://github.com/unicorn-data-analysis/unicorn_fy/issues
-
