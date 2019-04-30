@@ -6,6 +6,11 @@ Unify data from crypto exchanges
 # Supported Exchanges
 - Binance
 
+## Installation
+`pip install unicorn-fy`
+
+https://pypi.org/project/unicorn-fy/
+
 ## Documentation
 https://www.unicorn-data.com/unicorn_fy.html
 

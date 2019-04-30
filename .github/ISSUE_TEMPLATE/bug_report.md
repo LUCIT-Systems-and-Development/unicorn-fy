@@ -9,7 +9,7 @@ assignees: bithon
 
 <!--
 Before opening a new issue, please ensure:
-- YOU HAVE READ THE ISSUE GUIDELINES! -> https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api/wiki/Issue-Guidelines
+- YOU HAVE READ THE ISSUE GUIDELINES! -> https://github.com/unicorn-data-analysis/unicorn_fy/wiki/Issue-Guidelines
 - You search for existing bugs/feature requests
 - Remove extraneous template details
 - Do not prefix title with type of issue (Feature Request, Bug, etc.) The appropriate labels will be added during triage.
@@ -35,9 +35,6 @@ Check this or we will delete your issue. (fill in the checkbox with an X like so
 - [ ] macOS
 - [ ] Windows
 - [ ] Linux (include flavour)
-
-#### Python Version Requirement
-- [ ] I am using Python 3.5.1 or above
 
 #### Exact Python Version?
 ```

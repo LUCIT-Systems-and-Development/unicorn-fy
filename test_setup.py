@@ -44,7 +44,7 @@ setuptools.setup(
      author="UNICORN Data Analysis",
      url="https://www.unicorn-data.com",
      scripts=['unicorn_fy.py'],
-     description="Unify data from crypto exchanges",
+     description="Development package in testing stage! Please use https://pypi.org/project/unicorn-fy/",
      license='MIT License',
      install_requires=[],
      keywords='unicorn-data-analysis, binance, api, exchange, unify',

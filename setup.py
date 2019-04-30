@@ -40,11 +40,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='unicorn-fy',
-     version='0.0.1',
+     version='0.0.2',
      author="UNICORN Data Analysis",
      url="https://www.unicorn-data.com",
      scripts=['unicorn_fy.py'],
-     description="Development package in testing stage! Please use https://pypi.org/project/unicorn_fy/",
+     description="Unify data from crypto exchanges",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
      license='MIT License',
      install_requires=[],
      keywords='unicorn-data-analysis, binance, api, exchange, unify',
