@@ -2,7 +2,25 @@
 
 # UnicornFy
 Unify data from crypto exchanges
+```
+received_stream_data_json = {"stream": "btcusdt@trade",
+                             "data": {"e": "trade",
+                                      "E": 1556876873656,
+                                      "s": "BTCUSDT",
+                                      "t": 117727701,
+                                      "p": "5786.76000000",
+                                      "q": "0.03200500",
+                                      "b": 341831847,
+                                      "a": 341831876,
+                                      "T": 1556876873648,
+                                      "m": True,
+                                      "M": True}}
 
+unicorn_fied_stream_data = UnicornFy.binance_websocket(received_stream_data_json)
+print(unicorn_fied_stream_data)
+>>>
+{'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT', 'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847, 'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True, 'unicorn_fied': ['binance', '0.1.0']}
+```
 ## Supported Exchanges
 - Binance
 
