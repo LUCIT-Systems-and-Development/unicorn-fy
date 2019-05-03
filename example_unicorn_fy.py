@@ -33,7 +33,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-from unicorn_fy import UnicornFy
+from unicorn_fy.unicorn_fy import UnicornFy
 
 import json
 

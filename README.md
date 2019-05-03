@@ -3,6 +3,8 @@
 # UnicornFy
 Unify data from crypto exchanges 
 ```
+from unicorn_fy.unicorn_fy import UnicornFy
+
 received_stream_data_json = {"stream": "btcusdt@trade",
                              "data": {"e": "trade",
                                       "E": 1556876873656,
