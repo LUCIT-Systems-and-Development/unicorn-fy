@@ -35,6 +35,8 @@
 
 from unicorn_fy import UnicornFy
 
+import json
+
 # recevied data format from binance:
 received_stream_data_json = {"stream": "btcusdt@trade",
                              "data": {"e": "trade",
@@ -48,8 +50,15 @@ received_stream_data_json = {"stream": "btcusdt@trade",
                                       "T": 1556876873648,
                                       "m": True,
                                       "M": True}}
+
+received_stream_data_json = json.dumps(received_stream_data_json)
+
+print("raw format:")
+print(received_stream_data_json)
+
 # unicorn_fy the format:
 unicorn_fied_stream_data = UnicornFy.binance_websocket(received_stream_data_json)
+print("unicorn_fied:")
 print(unicorn_fied_stream_data)
 
 # recevied data format from binance:
@@ -78,6 +87,12 @@ received_stream_data_json = {"stream": "ethbtc@ticker",
                                       "L": 120137417,
                                       "n": 154895}}
 
+received_stream_data_json = json.dumps(received_stream_data_json)
+
+print("raw format:")
+print(received_stream_data_json)
+
 # unicorn_fy the format:
 unicorn_fied_stream_data = UnicornFy.binance_websocket(received_stream_data_json)
+print("unicorn_fied:")
 print(unicorn_fied_stream_data)
