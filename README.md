@@ -1,7 +1,7 @@
 ![GitHub release](https://img.shields.io/github/release/unicorn-data-analysis/unicorn_fy.svg) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/unicorn-data-analysis/unicorn_fy.svg) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg) ![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg) ![PyPI - yes](https://img.shields.io/badge/PyPI-yes-brightgreen.svg) ![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg) ![GitHub](https://img.shields.io/github/license/unicorn-data-analysis/unicorn_fy.svg) 
 
 # UnicornFy
-Unify data from crypto exchanges
+Unify data from crypto exchanges 
 ```
 received_stream_data_json = {"stream": "btcusdt@trade",
                              "data": {"e": "trade",
@@ -22,7 +22,7 @@ print(unicorn_fied_stream_data)
 {'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT', 'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847, 'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True, 'unicorn_fied': ['binance', '0.1.0']}
 ```
 ## Supported Exchanges
-- Binance
+- Binance (all webstream data!)
 
 ## Installation
 `pip install unicorn-fy`
