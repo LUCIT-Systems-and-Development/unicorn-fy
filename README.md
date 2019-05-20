@@ -41,12 +41,12 @@ https://github.com/unicorn-data-analysis/unicorn_fy
 https://github.com/unicorn-data-analysis/unicorn_fy/wiki
 
 ## How to report bugs or suggest improvements?
-Please open a new issue:
-https://github.com/unicorn-data-analysis/unicorn_fy/issues
-
 If you report a bug, try first the latest release via [download](https://github.com/unicorn-data-analysis/unicorn_fy/releases) 
 or with `pip install unicorn-fy --upgrade`. If the issue still exists, provide the error trace, OS 
 and python version and explain how to reproduce the error. A demo script is appreciated.
+
+Please open a new issue:
+https://github.com/unicorn-data-analysis/unicorn_fy/issues
 
 ## Contributing
 UnicornFy is an open source project which welcomes contributions which can be anything from simple 
