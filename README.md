@@ -1,4 +1,11 @@
-![GitHub release](https://img.shields.io/github/release/unicorn-data-analysis/unicorn_fy.svg) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/unicorn-data-analysis/unicorn_fy.svg) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg) ![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg) ![PyPI - yes](https://img.shields.io/badge/PyPI-yes-brightgreen.svg) ![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg) ![GitHub](https://img.shields.io/github/license/unicorn-data-analysis/unicorn_fy.svg) 
+![GitHub release](https://img.shields.io/github/release/unicorn-data-analysis/unicorn_fy.svg) 
+![GitHub](https://img.shields.io/github/license/unicorn-data-analysis/unicorn_fy.svg?color=blue) 
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg) 
+![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg) 
+![PyPI - yes](https://img.shields.io/badge/PyPI-yes-brightgreen.svg?color=orange) 
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel&color=orange) 
+![PyPI - Downloads](https://img.shields.io/pypi/dm/unicorn-fy.svg?label=PyPI%20downloads&color=orange)
+
 
 # UnicornFy
 Unify data from crypto exchanges 
@@ -50,4 +57,7 @@ https://github.com/unicorn-data-analysis/unicorn_fy/issues
 
 ## Contributing
 UnicornFy is an open source project which welcomes contributions which can be anything from simple 
-documentation fixes to new features. To contribute, fork the project on [GitHub](https://github.com/unicorn-data-analysis/unicorn_fy) and send a pull request.
+documentation fixes to new features. To contribute, fork the project on 
+[GitHub](https://github.com/unicorn-data-analysis/unicorn_fy) and send a pull request.
+
+We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!
