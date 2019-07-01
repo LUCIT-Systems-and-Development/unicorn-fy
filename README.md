@@ -34,9 +34,9 @@ print(unicorn_fied_stream_data)
 - binance.com
 
 ## Todo
-- binance.je 
-- binance.org
-- testnet.binance.org
+- binance.je (comming soon)
+- binance.org (comming soon)
+- testnet.binance.org (comming soon)
 
 ## Installation
 `pip install unicorn-fy`
@@ -46,7 +46,7 @@ https://pypi.org/project/unicorn-fy/
 ## Documentation
 https://www.unicorn-data.com/unicorn_fy.html
 
-## Project, code and downloads:
+## Source, Downloads, Examples, ...
 https://github.com/unicorn-data-analysis/unicorn_fy
 
 ## Wiki
@@ -54,20 +54,21 @@ https://github.com/unicorn-data-analysis/unicorn_fy/wiki
 
 ## Receive Notifications
 To receive notifications on available updates you can ![watch](https://s3.gifyu.com/images/github_watch.png) the 
-repository on [GitHub](https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api) 
+repository on [GitHub](https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api).
 
 ## How to report Bugs or suggest Improvements?
 [List of planned features](https://github.com/unicorn-data-analysis/unicorn_fy/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) - 
 click ![thumbs-up](https://s3.gifyu.com/images/tu.png) if you need one of them or suggest a new feature!
 
-Before you report a bug, [try the latest release](https://github.com/unicorn-data-analysis/unicorn_fy#installation-and-upgrade). If the issue still exists, provide the error trace, OS 
-and python version and explain how to reproduce the error. A demo script is appreciated.
+Before you report a bug, [try the latest release](https://github.com/unicorn-data-analysis/unicorn_fy#installation). 
+If the issue still exists, provide the error trace, OS and python version and explain how to reproduce the error. 
+A demo script is appreciated.
 
 If you dont find an issue related to your topic, please open a new issue:
 https://github.com/unicorn-data-analysis/unicorn_fy/issues
 
 ## Contributing
-[UNICORN Binance WebSocket API](https://github.com/unicorn-data-analysis/unicorn_fy) is an open 
+[unicorn_fy](https://github.com/unicorn-data-analysis/unicorn_fy) is an open 
 source project which welcomes contributions which can be anything from simple documentation fixes to new features. To 
 contribute, fork the project on [GitHub](https://github.com/unicorn-data-analysis/unicorn_fy) and 
 send a pull request. 
