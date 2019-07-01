@@ -31,7 +31,12 @@ print(unicorn_fied_stream_data)
 {'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT', 'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847, 'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True, 'unicorn_fied': ['binance', '0.1.0']}
 ```
 ## Supported Exchanges
-- Binance (all webstream data!)
+- binance.com
+
+## Todo
+- binance.je 
+- binance.org
+- testnet.binance.org
 
 ## Installation
 `pip install unicorn-fy`
@@ -47,17 +52,24 @@ https://github.com/unicorn-data-analysis/unicorn_fy
 ## Wiki
 https://github.com/unicorn-data-analysis/unicorn_fy/wiki
 
-## How to report bugs or suggest improvements?
-First try the latest release via [download](https://github.com/unicorn-data-analysis/unicorn_fy/releases) 
-or with `pip install unicorn-fy --upgrade`. If the issue still exists, provide the error trace, OS 
+## Receive Notifications
+To receive notifications on available updates you can ![watch](https://s3.gifyu.com/images/github_watch.png) the 
+repository on [GitHub](https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api) 
+
+## How to report Bugs or suggest Improvements?
+[List of planned features](https://github.com/unicorn-data-analysis/unicorn_fy/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) - 
+click ![thumbs-up](https://s3.gifyu.com/images/tu.png) if you need one of them or suggest a new feature!
+
+Before you report a bug, [try the latest release](https://github.com/unicorn-data-analysis/unicorn_fy#installation-and-upgrade). If the issue still exists, provide the error trace, OS 
 and python version and explain how to reproduce the error. A demo script is appreciated.
 
-Please open a new issue:
+If you dont find an issue related to your topic, please open a new issue:
 https://github.com/unicorn-data-analysis/unicorn_fy/issues
 
 ## Contributing
-UnicornFy is an open source project which welcomes contributions which can be anything from simple 
-documentation fixes to new features. To contribute, fork the project on 
-[GitHub](https://github.com/unicorn-data-analysis/unicorn_fy) and send a pull request.
+[UNICORN Binance WebSocket API](https://github.com/unicorn-data-analysis/unicorn_fy) is an open 
+source project which welcomes contributions which can be anything from simple documentation fixes to new features. To 
+contribute, fork the project on [GitHub](https://github.com/unicorn-data-analysis/unicorn_fy) and 
+send a pull request. 
 
 We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!
