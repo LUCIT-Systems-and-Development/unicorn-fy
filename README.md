@@ -70,7 +70,6 @@ https://github.com/unicorn-data-analysis/unicorn_fy/issues
 ## Contributing
 [unicorn_fy](https://github.com/unicorn-data-analysis/unicorn_fy) is an open 
 source project which welcomes contributions which can be anything from simple documentation fixes to new features. To 
-contribute, fork the project on [GitHub](https://github.com/unicorn-data-analysis/unicorn_fy) and 
-send a pull request. 
+contribute, fork the project on [GitHub](https://github.com/unicorn-data-analysis/unicorn_fy) and send a pull request. 
 
 We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!
