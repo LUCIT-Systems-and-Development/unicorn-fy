@@ -35,6 +35,8 @@ print(unicorn_fied_stream_data)
 >>>
 {'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT', 'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847, 'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True, 'unicorn_fied': ['binance', '0.1.0']}
 ```
+Currently this module has no dependencies.
+
 If you like the project, please ![star](https://s3.gifyu.com/images/stard237b3003af9f9a9.png) it on 
 [GitHub](https://github.com/unicorn-data-analysis/unicorn_fy)! If you use the
 [UnicornFy](https://github.com/unicorn-data-analysis/unicorn_fy) lib in your project, let us know on Twitter 
