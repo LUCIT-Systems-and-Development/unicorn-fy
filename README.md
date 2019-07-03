@@ -12,7 +12,7 @@ Unify received data from crypto exchanges
 
 [UnicornFy](https://github.com/unicorn-data-analysis/unicorn_fy) is a side project of 
 [UNICORN Binance WebSocket API](https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api) but can be used
-with every other API which delivers the receives in raw format.
+with every API that delivers the receives in raw format (as received without changes).
 
 ```
 from unicorn_fy.unicorn_fy import UnicornFy
@@ -58,11 +58,11 @@ Run in bash:
 #### Windows
 Use the below command with the version (such as 0.2.0) you determined [here](https://github.com/unicorn-data-analysis/unicorn_fy/releases/latest):
 
-`pip install https://github.com/unicorn-data-analysis/unicorn-fy/archive/0.2.0.tar.gz --upgrade`
+`pip install https://github.com/unicorn-data-analysis/unicorn_fy/archive/0.2.0.tar.gz --upgrade`
 ### From the latest source (dev-stage) with PIP from [Github](https://github.com/unicorn-data-analysis/unicorn_fy)
 This is not a release version and can not be considered to be stable!
 
-`pip install https://github.com/unicorn-data-analysis/unicorn-fy/tarball/master --upgrade`
+`pip install https://github.com/unicorn-data-analysis/unicorn_fy/tarball/master --upgrade`
 
 ## Documentation
 https://www.unicorn-data.com/unicorn_fy.html
@@ -87,6 +87,8 @@ A demo script is appreciated.
 
 If you dont find an issue related to your topic, please open a new issue:
 https://github.com/unicorn-data-analysis/unicorn_fy/issues
+
+[Report a security bug!](https://github.com/unicorn-data-analysis/unicorn_fy/security/policy)
 
 ## Contributing
 [unicorn_fy](https://github.com/unicorn-data-analysis/unicorn_fy) is an open 
