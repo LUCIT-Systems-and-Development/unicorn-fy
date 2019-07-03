@@ -30,6 +30,11 @@ print(unicorn_fied_stream_data)
 >>>
 {'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT', 'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847, 'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True, 'unicorn_fied': ['binance', '0.1.0']}
 ```
+If you like the project, please ![star](https://s3.gifyu.com/images/stard237b3003af9f9a9.png) it on 
+[GitHub](https://github.com/unicorn-data-analysis/unicorn-fy)! If you use the
+[UnicornFy](https://github.com/unicorn-data-analysis/unicorn-fy) lib in your project, let us know on Twitter 
+[@unicorn_data](https://twitter.com/unicorn_data)!
+
 ## Supported Exchanges
 ### Websockets
 - binance.com ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
@@ -37,12 +42,24 @@ print(unicorn_fied_stream_data)
 - binance.org ([API specification](https://docs.binance.org/api-reference/dex-api/ws-connection.html))
 - testnet.binance.org ([API specification](https://docs.binance.org/api-reference/dex-api/ws-connection.html))
 
-## Todo
+## Installation and Upgrade
+Please note: UnicornFy is not longer part of this package, visit https://github.com/unicorn-data-analysis/unicorn_fy for
+further information.
+### A wheel of the latest release with PIP from [PyPI](https://pypi.org/project/unicorn-fy/)
+`pip install unicorn-fy --upgrade`
+### From source of the latest release with PIP from [Github](https://github.com/unicorn-data-analysis/unicorn-fy)
+#### Linux, macOS, ...
+Run in bash:
 
-## Installation
-`pip install unicorn-fy`
+`pip install https://github.com/unicorn-data-analysis/unicorn-fy/archive/$(curl -s https://api.github.com/repos/unicorn-data-analysis/unicorn-fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
+#### Windows
+Use the below command with the version (such as 1.3.8) you determined [here](https://github.com/unicorn-data-analysis/unicorn-fy/releases/latest):
 
-https://pypi.org/project/unicorn-fy/
+`pip install https://github.com/unicorn-data-analysis/unicorn-fy/archive/0.2.0.tar.gz --upgrade`
+### From the latest source (dev-stage) with PIP from [Github](https://github.com/unicorn-data-analysis/unicorn-fy)
+This is not a release version and can not be considered to be stable!
+
+`pip install https://github.com/unicorn-data-analysis/unicorn-fy/tarball/master --upgrade`
 
 ## Documentation
 https://www.unicorn-data.com/unicorn_fy.html
