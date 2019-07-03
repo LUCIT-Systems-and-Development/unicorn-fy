@@ -31,12 +31,13 @@ print(unicorn_fied_stream_data)
 {'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT', 'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847, 'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True, 'unicorn_fied': ['binance', '0.1.0']}
 ```
 ## Supported Exchanges
-- binance.com
+### Websockets
+- binance.com ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
+- binance.je ([API specification](https://github.com/binance-jersey/binance-official-api-docs/))
+- binance.org ([API specification](https://docs.binance.org/api-reference/dex-api/ws-connection.html))
+- testnet.binance.org ([API specification](https://docs.binance.org/api-reference/dex-api/ws-connection.html))
 
 ## Todo
-- binance.je (comming soon)
-- binance.org (comming soon)
-- testnet.binance.org (comming soon)
 
 ## Installation
 `pip install unicorn-fy`
@@ -70,6 +71,7 @@ https://github.com/unicorn-data-analysis/unicorn_fy/issues
 ## Contributing
 [unicorn_fy](https://github.com/unicorn-data-analysis/unicorn_fy) is an open 
 source project which welcomes contributions which can be anything from simple documentation fixes to new features. To 
-contribute, fork the project on [GitHub](https://github.com/unicorn-data-analysis/unicorn_fy) and send a pull request. 
-
+contribute follow 
+[this guide](https://github.com/unicorn-data-analysis/unicorn-fy/blob/master/CONTRIBUTING.md).
+ 
 We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!

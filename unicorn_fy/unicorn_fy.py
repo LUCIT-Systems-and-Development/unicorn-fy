@@ -68,15 +68,31 @@ class UnicornFy(object):
             return variable
 
     @staticmethod
-    def binance_websocket(stream_data_json):
+    def binance_com_websocket(stream_data_json):
         """
-        unicorn_fy binance raw_stream_data
+        unicorn_fy binance.com raw_stream_data
 
         :param stream_data_json: The received raw stream data from the Binance websocket
         :type stream_data_json: json
 
         :return: dict
         """
+        return UnicornFy.binance_websocket(stream_data_json)
+
+    @staticmethod
+    def binance_je_websocket(stream_data_json):
+        """
+        unicorn_fy binance.je (Jersey) raw_stream_data
+
+        :param stream_data_json: The received raw stream data from the Binance websocket
+        :type stream_data_json: json
+
+        :return: dict
+        """
+        return UnicornFy.binance_websocket(stream_data_json)
+
+    @staticmethod
+    def binance_websocket(stream_data_json):
         unicorn_fied_data = False
         logging.debug("UnicornFy->binance_websocket(" + str(stream_data_json) + ")")
         if UnicornFy.is_json(stream_data_json) is False:
