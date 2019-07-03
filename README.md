@@ -8,7 +8,7 @@
 
 
 # UnicornFy
-Unify received raw data from crypto exchanges.
+Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
 
 [UnicornFy](https://github.com/unicorn-data-analysis/unicorn_fy) is a side project of 
 [UNICORN Binance WebSocket API](https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api) but can be used
