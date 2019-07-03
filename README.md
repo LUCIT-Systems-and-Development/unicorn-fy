@@ -8,7 +8,7 @@
 
 
 # UnicornFy
-Unify received data from crypto exchanges
+Unify received data from crypto exchanges.
 
 [UnicornFy](https://github.com/unicorn-data-analysis/unicorn_fy) is a side project of 
 [UNICORN Binance WebSocket API](https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api) but can be used
