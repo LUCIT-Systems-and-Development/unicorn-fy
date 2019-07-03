@@ -8,9 +8,9 @@
 
 
 # UnicornFy
-Unify data from crypto exchanges 
+Unify received data from crypto exchanges
 
-[UnicornFy](https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api) is a side project of 
+[UnicornFy](https://github.com/unicorn-data-analysis/unicorn_fy) is a side project of 
 [UNICORN Binance WebSocket API](https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api) but can be used
 with every other API which delivers the receives in raw format.
 
@@ -59,7 +59,7 @@ Run in bash:
 Use the below command with the version (such as 0.2.0) you determined [here](https://github.com/unicorn-data-analysis/unicorn_fy/releases/latest):
 
 `pip install https://github.com/unicorn-data-analysis/unicorn-fy/archive/0.2.0.tar.gz --upgrade`
-### From the latest source (dev-stage) with PIP from [Github](https://github.com/unicorn-data-analysis/unicorn-fy)
+### From the latest source (dev-stage) with PIP from [Github](https://github.com/unicorn-data-analysis/unicorn_fy)
 This is not a release version and can not be considered to be stable!
 
 `pip install https://github.com/unicorn-data-analysis/unicorn-fy/tarball/master --upgrade`
@@ -75,7 +75,7 @@ https://github.com/unicorn-data-analysis/unicorn_fy/wiki
 
 ## Receive Notifications
 To receive notifications on available updates you can ![watch](https://s3.gifyu.com/images/github_watch.png) the 
-repository on [GitHub](https://github.com/unicorn-data-analysis/unicorn-fy).
+repository on [GitHub](https://github.com/unicorn-data-analysis/unicorn_fy).
 
 ## How to report Bugs or suggest Improvements?
 [List of planned features](https://github.com/unicorn-data-analysis/unicorn_fy/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) - 
