@@ -57,7 +57,7 @@ print("raw format:")
 print(received_stream_data_json)
 
 # unicorn_fy the format:
-unicorn_fied_stream_data = UnicornFy.binance_websocket(received_stream_data_json)
+unicorn_fied_stream_data = UnicornFy.binance_com_websocket(received_stream_data_json)
 print("unicorn_fied:")
 print(unicorn_fied_stream_data)
 
@@ -93,6 +93,17 @@ print("raw format:")
 print(received_stream_data_json)
 
 # unicorn_fy the format:
-unicorn_fied_stream_data = UnicornFy.binance_websocket(received_stream_data_json)
+unicorn_fied_stream_data = UnicornFy.binance_com_websocket(received_stream_data_json)
 print("unicorn_fied:")
 print(unicorn_fied_stream_data)
+
+print()
+
+unicorn_fy = UnicornFy()
+
+print("is_update_availabe: " + str(unicorn_fy.is_update_availabe()))
+print("get_latest_version: " + str(unicorn_fy.get_latest_version()))
+
+# static methods
+print("get_version: " + str(UnicornFy.get_version()))
+print("get_latest_release_info: " + str(UnicornFy.get_latest_release_info()))
