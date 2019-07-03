@@ -83,7 +83,7 @@ https://github.com/unicorn-data-analysis/unicorn_fy/wiki
 To receive notifications on available updates you can ![watch](https://s3.gifyu.com/images/github_watch.png) the 
 repository on [GitHub](https://github.com/unicorn-data-analysis/unicorn_fy), write your 
 [own script](https://github.com/unicorn-data-analysis/unicorn_fy/blob/master/example_version_of_this_package.py) 
-with using `binance_websocket_api_manager.is_update_availabe()` or you use the 
+with using `unicorn_fy.is_update_availabe()` or you use the 
 [monitoring API service](https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api/blob/master/tools/icinga/).
 
 ## How to report Bugs or suggest Improvements?
