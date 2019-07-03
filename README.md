@@ -9,6 +9,11 @@
 
 # UnicornFy
 Unify data from crypto exchanges 
+
+UnicornFy is a side project of 
+[UNICORN Binance WebSocket API](https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api) but can be used
+with every other API which delivers the receives in raw format.
+
 ```
 from unicorn_fy.unicorn_fy import UnicornFy
 
@@ -31,8 +36,8 @@ print(unicorn_fied_stream_data)
 {'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT', 'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847, 'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True, 'unicorn_fied': ['binance', '0.1.0']}
 ```
 If you like the project, please ![star](https://s3.gifyu.com/images/stard237b3003af9f9a9.png) it on 
-[GitHub](https://github.com/unicorn-data-analysis/unicorn-fy)! If you use the
-[UnicornFy](https://github.com/unicorn-data-analysis/unicorn-fy) lib in your project, let us know on Twitter 
+[GitHub](https://github.com/unicorn-data-analysis/unicorn_fy)! If you use the
+[UnicornFy](https://github.com/unicorn-data-analysis/unicorn_fy) lib in your project, let us know on Twitter 
 [@unicorn_data](https://twitter.com/unicorn_data)!
 
 ## Supported Exchanges
@@ -43,17 +48,15 @@ If you like the project, please ![star](https://s3.gifyu.com/images/stard237b300
 - testnet.binance.org ([API specification](https://docs.binance.org/api-reference/dex-api/ws-connection.html))
 
 ## Installation and Upgrade
-Please note: UnicornFy is not longer part of this package, visit https://github.com/unicorn-data-analysis/unicorn_fy for
-further information.
 ### A wheel of the latest release with PIP from [PyPI](https://pypi.org/project/unicorn-fy/)
 `pip install unicorn-fy --upgrade`
-### From source of the latest release with PIP from [Github](https://github.com/unicorn-data-analysis/unicorn-fy)
+### From source of the latest release with PIP from [Github](https://github.com/unicorn-data-analysis/unicorn_fy)
 #### Linux, macOS, ...
 Run in bash:
 
 `pip install https://github.com/unicorn-data-analysis/unicorn-fy/archive/$(curl -s https://api.github.com/repos/unicorn-data-analysis/unicorn-fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
 #### Windows
-Use the below command with the version (such as 1.3.8) you determined [here](https://github.com/unicorn-data-analysis/unicorn-fy/releases/latest):
+Use the below command with the version (such as 0.2.0) you determined [here](https://github.com/unicorn-data-analysis/unicorn_fy/releases/latest):
 
 `pip install https://github.com/unicorn-data-analysis/unicorn-fy/archive/0.2.0.tar.gz --upgrade`
 ### From the latest source (dev-stage) with PIP from [Github](https://github.com/unicorn-data-analysis/unicorn-fy)
@@ -72,13 +75,13 @@ https://github.com/unicorn-data-analysis/unicorn_fy/wiki
 
 ## Receive Notifications
 To receive notifications on available updates you can ![watch](https://s3.gifyu.com/images/github_watch.png) the 
-repository on [GitHub](https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api).
+repository on [GitHub](https://github.com/unicorn-data-analysis/unicorn-fy).
 
 ## How to report Bugs or suggest Improvements?
 [List of planned features](https://github.com/unicorn-data-analysis/unicorn_fy/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) - 
 click ![thumbs-up](https://s3.gifyu.com/images/tu.png) if you need one of them or suggest a new feature!
 
-Before you report a bug, [try the latest release](https://github.com/unicorn-data-analysis/unicorn_fy#installation). 
+Before you report a bug, [try the latest release](https://github.com/unicorn-data-analysis/unicorn_fy#installation-and-upgrade). 
 If the issue still exists, provide the error trace, OS and python version and explain how to reproduce the error. 
 A demo script is appreciated.
 
@@ -89,6 +92,6 @@ https://github.com/unicorn-data-analysis/unicorn_fy/issues
 [unicorn_fy](https://github.com/unicorn-data-analysis/unicorn_fy) is an open 
 source project which welcomes contributions which can be anything from simple documentation fixes to new features. To 
 contribute follow 
-[this guide](https://github.com/unicorn-data-analysis/unicorn-fy/blob/master/CONTRIBUTING.md).
+[this guide](https://github.com/unicorn-data-analysis/unicorn_fy/blob/master/CONTRIBUTING.md).
  
 We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!
