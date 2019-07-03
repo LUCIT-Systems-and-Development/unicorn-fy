@@ -46,8 +46,9 @@ If you like the project, please ![star](https://s3.gifyu.com/images/stard237b300
 ### Websockets
 - binance.com ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
 - binance.je ([API specification](https://github.com/binance-jersey/binance-official-api-docs/))
-- binance.org ([API specification](https://docs.binance.org/api-reference/dex-api/ws-connection.html))
-- testnet.binance.org ([API specification](https://docs.binance.org/api-reference/dex-api/ws-connection.html))
+- binance.org ([API specification](https://docs.binance.org/api-reference/dex-api/ws-connection.html)) **(in planning)**
+- testnet.binance.org ([API specification](https://docs.binance.org/api-reference/dex-api/ws-connection.html)) 
+**(in planning)**
 
 ## Installation and Upgrade
 ### A wheel of the latest release with PIP from [PyPI](https://pypi.org/project/unicorn-fy/)
@@ -71,6 +72,9 @@ https://www.unicorn-data.com/unicorn_fy.html
 
 ## Source, Downloads, Examples, ...
 https://github.com/unicorn-data-analysis/unicorn_fy
+
+## Change Log
+https://github.com/unicorn-data-analysis/unicorn_fy/blob/master/CHANGELOG.md
 
 ## Wiki
 https://github.com/unicorn-data-analysis/unicorn_fy/wiki
