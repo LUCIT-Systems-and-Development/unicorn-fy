@@ -10,7 +10,7 @@
 # UnicornFy
 Unify data from crypto exchanges 
 
-UnicornFy is a side project of 
+[UnicornFy](https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api) is a side project of 
 [UNICORN Binance WebSocket API](https://github.com/unicorn-data-analysis/unicorn-binance-websocket-api) but can be used
 with every other API which delivers the receives in raw format.
 
