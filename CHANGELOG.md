@@ -13,6 +13,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - get_version()
 - get_latest_release_info()
 
+### Depricated
+- binance_websocket()
+
 ## 0.1.1
 ### Fixed
 - create pypi package

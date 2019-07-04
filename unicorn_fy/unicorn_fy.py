@@ -51,6 +51,7 @@ class UnicornFy(object):
     def __init__(self):
         self.last_update_check_github = {'timestamp': time.time(),
                                          'status': None}
+
     @staticmethod
     def is_json(var):
         try:
@@ -73,6 +74,18 @@ class UnicornFy(object):
         except IndexError:
             variable[key] = False
             return variable
+
+    @staticmethod
+    def binance_org_websocket(stream_data_json):
+        """
+        unicorn_fy binance.org (incl testnet) raw_stream_data
+
+        :param stream_data_json: The received raw stream data from the Binance websocket
+        :type stream_data_json: json
+
+        :return: dict
+        """
+        return stream_data_json
 
     @staticmethod
     def binance_com_websocket(stream_data_json):
