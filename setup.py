@@ -51,7 +51,7 @@ setuptools.setup(
      install_requires=[],
      keywords='unicorn-data-analysis, binance, api, exchange, unify, binance-dex, binance-chain, rest-api, websockets',
      project_urls={
-        'Documentation': 'https://www.unicorn-data.com/unicorn_fy',
+        'Documentation': 'https://www.unicorn-data.com/unicorn_fy.html',
         'Wiki': 'https://github.com/unicorn-data-analysis/unicorn_fy/wiki',
         'Source': 'https://github.com/unicorn-data-analysis/unicorn_fy',
      },
