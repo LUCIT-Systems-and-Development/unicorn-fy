@@ -57,7 +57,7 @@ If you like the project, please ![star](https://s3.gifyu.com/images/stard237b300
 #### Linux, macOS, ...
 Run in bash:
 
-`pip install https://github.com/unicorn-data-analysis/unicorn-fy/archive/$(curl -s https://api.github.com/repos/unicorn-data-analysis/unicorn-fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
+`pip install https://github.com/unicorn-data-analysis/unicorn_fy/archive/$(curl -s https://api.github.com/repos/unicorn-data-analysis/unicorn_fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
 #### Windows
 Use the below command with the version (such as 0.2.0) you determined [here](https://github.com/unicorn-data-analysis/unicorn_fy/releases/latest):
 
