@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## 0.2.0.dev (development stage/unreleased)
 ### Todo
 - binance_org_websocket()
+### Changes
+- exchange name to return dict
 
 ## 0.2.0
 ### Adding
