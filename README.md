@@ -46,9 +46,7 @@ If you like the project, please ![star](https://s3.gifyu.com/images/stard237b300
 ### Websockets
 - binance.com ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
 - binance.je ([API specification](https://github.com/binance-jersey/binance-official-api-docs/))
-- binance.org ([API specification](https://docs.binance.org/api-reference/dex-api/ws-connection.html)) **(in planning)**
-- testnet.binance.org ([API specification](https://docs.binance.org/api-reference/dex-api/ws-connection.html)) 
-**(in planning)**
+- binance.us ([API specification](https://github.com/binance-us/binance-official-api-docs))
 
 ## Installation and Upgrade
 ### A wheel of the latest release with PIP from [PyPI](https://pypi.org/project/unicorn-fy/)

@@ -46,7 +46,7 @@ class UnicornFy(object):
     Supported exchanges:
         - Binance
     """
-    VERSION = "0.2.0.dev"
+    VERSION = "0.3.0"
 
     def __init__(self):
         self.last_update_check_github = {'timestamp': time.time(),
@@ -110,6 +110,18 @@ class UnicornFy(object):
         :return: dict
         """
         return UnicornFy.binance_websocket(stream_data_json, exchange="binance.je", show_deprecated_warning=False)
+
+    @staticmethod
+    def binance_us_websocket(stream_data_json):
+        """
+        unicorn_us binance.us (US) raw_stream_data
+
+        :param stream_data_json: The received raw stream data from the Binance websocket
+        :type stream_data_json: json
+
+        :return: dict
+        """
+        return UnicornFy.binance_websocket(stream_data_json, exchange="binance.us", show_deprecated_warning=False)
 
     @staticmethod
     def binance_websocket(stream_data_json, exchange="binance", show_deprecated_warning=True):

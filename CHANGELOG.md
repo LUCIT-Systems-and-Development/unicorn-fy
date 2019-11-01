@@ -4,7 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## 0.2.0.dev (development stage/unreleased)
+## 0.3.0.dev (development stage/unreleased)
+
+## 0.3.0
+### Adding
+- binance_us_websocket()
 ### Changes
 - exchange name to return dict
 
