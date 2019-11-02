@@ -38,9 +38,7 @@ print(unicorn_fied_stream_data)
 Currently this module has no dependencies.
 
 If you like the project, please ![star](https://s3.gifyu.com/images/stard237b3003af9f9a9.png) it on 
-[GitHub](https://github.com/oliver-zehentleitner/unicorn_fy)! If you use the
-[UnicornFy](https://github.com/oliver-zehentleitner/unicorn_fy) lib in your project, let us know on Twitter 
-[@unicorn_data](https://twitter.com/unicorn_data)!
+[GitHub](https://github.com/oliver-zehentleitner/unicorn_fy)! 
 
 ## Supported Exchanges
 ### Websockets
