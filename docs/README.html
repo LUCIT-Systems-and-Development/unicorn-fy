@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>UnicornFy &#8212; UnicornFy 0.3.0 documentation</title>
+    <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to UnicornFy’s documentation!" href="index.html" />
+    <link rel="shortcut icon" type="image/png" href="_static/py.png" />
+    
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    
+     
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to UnicornFy’s documentation!"
+             accesskey="P">previous</a> |</li>
+    <li><img src="_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="https://www.python.org/">Python</a> &#187;</li>
+    
+    <a href="index.html">UnicornFy 0.3.0 documentation</a> &#187;
+    
+
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p><img alt="GitHub release" src="https://img.shields.io/github/release/oliver-zehentleitner/unicorn_fy.svg" />
+<img alt="GitHub" src="https://img.shields.io/github/license/oliver-zehentleitner/unicorn_fy.svg?color=blue" />
+<img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/unicorn_fy.svg" />
+<img alt="PyPI - Status" src="https://img.shields.io/pypi/status/unicorn_fy.svg" />
+<img alt="PyPI - yes" src="https://img.shields.io/badge/PyPI-yes-brightgreen.svg?color=orange" />
+<img alt="PyPI - Wheel" src="https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel&amp;color=orange" />
+<img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/unicorn-fy.svg?label=PyPI%20downloads&amp;color=orange" /></p>
+<div class="section" id="unicornfy">
+<h1>UnicornFy<a class="headerlink" href="#unicornfy" title="Permalink to this headline">¶</a></h1>
+<p>Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.</p>
+<p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy">UnicornFy</a> is a side project of
+<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api">UNICORN Binance WebSocket API</a> but can be used
+with every API that delivers the receives in raw format (as received without changes).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">unicorn_fy.unicorn_fy</span> <span class="k">import</span> <span class="n">UnicornFy</span>
+
+<span class="n">received_stream_data_json</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;stream&quot;</span><span class="p">:</span> <span class="s2">&quot;btcusdt@trade&quot;</span><span class="p">,</span>
+                             <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;e&quot;</span><span class="p">:</span> <span class="s2">&quot;trade&quot;</span><span class="p">,</span>
+                                      <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="mi">1556876873656</span><span class="p">,</span>
+                                      <span class="s2">&quot;s&quot;</span><span class="p">:</span> <span class="s2">&quot;BTCUSDT&quot;</span><span class="p">,</span>
+                                      <span class="s2">&quot;t&quot;</span><span class="p">:</span> <span class="mi">117727701</span><span class="p">,</span>
+                                      <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="s2">&quot;5786.76000000&quot;</span><span class="p">,</span>
+                                      <span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="s2">&quot;0.03200500&quot;</span><span class="p">,</span>
+                                      <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">341831847</span><span class="p">,</span>
+                                      <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">341831876</span><span class="p">,</span>
+                                      <span class="s2">&quot;T&quot;</span><span class="p">:</span> <span class="mi">1556876873648</span><span class="p">,</span>
+                                      <span class="s2">&quot;m&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                                      <span class="s2">&quot;M&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}}</span>
+
+<span class="n">unicorn_fied_stream_data</span> <span class="o">=</span> <span class="n">UnicornFy</span><span class="o">.</span><span class="n">binance_com_websocket</span><span class="p">(</span><span class="n">received_stream_data_json</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">unicorn_fied_stream_data</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="p">{</span><span class="s1">&#39;stream_type&#39;</span><span class="p">:</span> <span class="s1">&#39;btcusdt@trade&#39;</span><span class="p">,</span> <span class="s1">&#39;event_type&#39;</span><span class="p">:</span> <span class="s1">&#39;trade&#39;</span><span class="p">,</span> <span class="s1">&#39;event_time&#39;</span><span class="p">:</span> <span class="mi">1556876873656</span><span class="p">,</span> <span class="s1">&#39;symbol&#39;</span><span class="p">:</span> <span class="s1">&#39;BTCUSDT&#39;</span><span class="p">,</span> <span class="s1">&#39;trade_id&#39;</span><span class="p">:</span> <span class="mi">117727701</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="s1">&#39;5786.76000000&#39;</span><span class="p">,</span> <span class="s1">&#39;quantity&#39;</span><span class="p">:</span> <span class="s1">&#39;0.03200500&#39;</span><span class="p">,</span> <span class="s1">&#39;buyer_order_id&#39;</span><span class="p">:</span> <span class="mi">341831847</span><span class="p">,</span> <span class="s1">&#39;seller_order_id&#39;</span><span class="p">:</span> <span class="mi">341831876</span><span class="p">,</span> <span class="s1">&#39;trade_time&#39;</span><span class="p">:</span> <span class="mi">1556876873648</span><span class="p">,</span> <span class="s1">&#39;is_market_maker&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;ignore&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;unicorn_fied&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;binance&#39;</span><span class="p">,</span> <span class="s1">&#39;0.1.0&#39;</span><span class="p">]}</span>
+</pre></div>
+</div>
+<p>Currently this module has no dependencies.</p>
+<p>If you like the project, please <img alt="star" src="https://s3.gifyu.com/images/stard237b3003af9f9a9.png" /> it on
+<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy">GitHub</a>!</p>
+<div class="section" id="supported-exchanges">
+<h2>Supported Exchanges<a class="headerlink" href="#supported-exchanges" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="websockets">
+<h3>Websockets<a class="headerlink" href="#websockets" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>binance.com (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>) <strong>NOT SUPPORTING FUTURES</strong></p></li>
+<li><p>binance.je (<a class="reference external" href="https://github.com/binance-jersey/binance-official-api-docs/">API specification</a>)</p></li>
+<li><p>binance.us (<a class="reference external" href="https://github.com/binance-us/binance-official-api-docs">API specification</a>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="installation-and-upgrade">
+<h2>Installation and Upgrade<a class="headerlink" href="#installation-and-upgrade" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-wheel-of-the-latest-release-with-pip-from-pypi">
+<h3>A wheel of the latest release with PIP from <a class="reference external" href="https://pypi.org/project/unicorn-fy/">PyPI</a><a class="headerlink" href="#a-wheel-of-the-latest-release-with-pip-from-pypi" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">unicorn-fy</span> <span class="pre">--upgrade</span></code></p>
+</div>
+<div class="section" id="from-source-of-the-latest-release-with-pip-from-github">
+<h3>From source of the latest release with PIP from <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy">Github</a><a class="headerlink" href="#from-source-of-the-latest-release-with-pip-from-github" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="linux-macos">
+<h4>Linux, macOS, …<a class="headerlink" href="#linux-macos" title="Permalink to this headline">¶</a></h4>
+<p>Run in bash:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/oliver-zehentleitner/unicorn_fy/archive/$(curl</span> <span class="pre">-s</span> <span class="pre">https://api.github.com/repos/oliver-zehentleitner/unicorn_fy/releases/latest</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">-oP</span> <span class="pre">'&quot;tag_name&quot;:</span> <span class="pre">&quot;\K(.*)(?=&quot;)').tar.gz</span> <span class="pre">--upgrade</span></code></p>
+</div>
+<div class="section" id="windows">
+<h4>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h4>
+<p>Use the below command with the version (such as 0.2.0) you determined <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/releases/latest">here</a>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/oliver-zehentleitner/unicorn_fy/archive/0.2.0.tar.gz</span> <span class="pre">--upgrade</span></code></p>
+</div>
+</div>
+<div class="section" id="from-the-latest-source-dev-stage-with-pip-from-github">
+<h3>From the latest source (dev-stage) with PIP from <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy">Github</a><a class="headerlink" href="#from-the-latest-source-dev-stage-with-pip-from-github" title="Permalink to this headline">¶</a></h3>
+<p>This is not a release version and can not be considered to be stable!</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/oliver-zehentleitner/unicorn_fy/tarball/master</span> <span class="pre">--upgrade</span></code></p>
+</div>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>https://oliver-zehentleitner.github.io/unicorn_fy/</p>
+</div>
+<div class="section" id="source-downloads-examples">
+<h2>Source, Downloads, Examples, …<a class="headerlink" href="#source-downloads-examples" title="Permalink to this headline">¶</a></h2>
+<p>https://github.com/oliver-zehentleitner/unicorn_fy</p>
+</div>
+<div class="section" id="change-log">
+<h2>Change Log<a class="headerlink" href="#change-log" title="Permalink to this headline">¶</a></h2>
+<p>https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/CHANGELOG.md</p>
+</div>
+<div class="section" id="wiki">
+<h2>Wiki<a class="headerlink" href="#wiki" title="Permalink to this headline">¶</a></h2>
+<p>https://github.com/oliver-zehentleitner/unicorn_fy/wiki</p>
+</div>
+<div class="section" id="receive-notifications">
+<h2>Receive Notifications<a class="headerlink" href="#receive-notifications" title="Permalink to this headline">¶</a></h2>
+<p>To receive notifications on available updates you can <img alt="watch" src="https://s3.gifyu.com/images/github_watch.png" /> the
+repository on <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy">GitHub</a>, write your
+<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/example_version_of_this_package.py">own script</a>
+with using <code class="docutils literal notranslate"><span class="pre">unicorn_fy.is_update_availabe()</span></code> or you use the
+<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api/wiki/UNICORN-Monitoring-API-Service">monitoring API service</a>.</p>
+</div>
+<div class="section" id="how-to-report-bugs-or-suggest-improvements">
+<h2>How to report Bugs or suggest Improvements?<a class="headerlink" href="#how-to-report-bugs-or-suggest-improvements" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement">List of planned features</a> -
+click <img alt="thumbs-up" src="https://s3.gifyu.com/images/tu.png" /> if you need one of them or suggest a new feature!</p>
+<p>Before you report a bug, <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy#installation-and-upgrade">try the latest release</a>.
+If the issue still exists, provide the error trace, OS and python version and explain how to reproduce the error.
+A demo script is appreciated.</p>
+<p>If you dont find an issue related to your topic, please open a new issue:
+https://github.com/oliver-zehentleitner/unicorn_fy/issues</p>
+<p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/security/policy">Report a security bug!</a></p>
+</div>
+<div class="section" id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy">unicorn_fy</a> is an open
+source project which welcomes contributions which can be anything from simple documentation fixes to new features. To
+contribute follow
+<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/CONTRIBUTING">this guide</a>.</p>
+<p>We <img alt="love" src="https://s3.gifyu.com/images/heartae002231c41d8a80.png" /> open source!</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">UnicornFy</a><ul>
+<li><a class="reference internal" href="#supported-exchanges">Supported Exchanges</a><ul>
+<li><a class="reference internal" href="#websockets">Websockets</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation-and-upgrade">Installation and Upgrade</a><ul>
+<li><a class="reference internal" href="#a-wheel-of-the-latest-release-with-pip-from-pypi">A wheel of the latest release with PIP from PyPI</a></li>
+<li><a class="reference internal" href="#from-source-of-the-latest-release-with-pip-from-github">From source of the latest release with PIP from Github</a><ul>
+<li><a class="reference internal" href="#linux-macos">Linux, macOS, …</a></li>
+<li><a class="reference internal" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#from-the-latest-source-dev-stage-with-pip-from-github">From the latest source (dev-stage) with PIP from Github</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+<li><a class="reference internal" href="#source-downloads-examples">Source, Downloads, Examples, …</a></li>
+<li><a class="reference internal" href="#change-log">Change Log</a></li>
+<li><a class="reference internal" href="#wiki">Wiki</a></li>
+<li><a class="reference internal" href="#receive-notifications">Receive Notifications</a></li>
+<li><a class="reference internal" href="#how-to-report-bugs-or-suggest-improvements">How to report Bugs or suggest Improvements?</a></li>
+<li><a class="reference internal" href="#contributing">Contributing</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to UnicornFy’s documentation!</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/README.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to UnicornFy’s documentation!"
+             >previous</a> |</li>
+    <li><img src="_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="https://www.python.org/">Python</a> &#187;</li>
+    
+    <a href="index.html">UnicornFy 0.3.0 documentation</a> &#187;
+    
+
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html">Copyright</a> 2019, Oliver Zehentleitner.
+    <br />
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
+    <br />
+
+    Last updated on None.
+    
+    <br />
+
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.2.1.
+    </div>
+
+  </body>
+</html>
