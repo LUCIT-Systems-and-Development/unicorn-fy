@@ -4,14 +4,14 @@
 # File: setup.py
 #
 # Part of ‘UnicornFy’
-# Project website: https://github.com/unicorn-data-analysis/unicorn_fy
-# Documentation: https://www.unicorn-data.com/unicorn_fy.html
-# PyPI: https://pypi.org/project/unicorn-fy/
+# Project website: https://github.com/oliver-zehentleitner/unicorn_fy
+# Documentation: https://oliver-zehentleitner.github.io/unicorn_fy
+# PyPI: https://pypi.org/project/unicorn-fy
 #
-# Author: UNICORN Data Analysis
-#         https://www.unicorn-data.com/
+# Author: Oliver Zehentleitner
+#         https://about.me/oliver-zehentleitner
 #
-# Copyright (c) 2019, UNICORN Data Analysis
+# Copyright (c) 2019, Oliver Zehentleitner
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
@@ -41,19 +41,19 @@ with open("README.md", "r") as fh:
 setuptools.setup(
      name='unicorn_fy',
      version='0.3.0',
-     author="UNICORN Data Analysis",
-     url="https://www.unicorn-data.com",
+     author="Oliver Zehentleitner",
+     url="https://about.me/oliver-zehentleitner/",
      scripts=['unicorn_fy.py'],
      description="Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.",
      long_description=long_description,
      long_description_content_type="text/markdown",
      license='MIT License',
      install_requires=[],
-     keywords='unicorn-data-analysis, binance, api, exchange, unify, binance-dex, binance-chain, rest-api, websockets',
+     keywords='binance, api, exchange, unify, binance-dex, binance-chain, rest-api, websockets',
      project_urls={
-        'Documentation': 'https://www.unicorn-data.com/unicorn_fy.html',
-        'Wiki': 'https://github.com/unicorn-data-analysis/unicorn_fy/wiki',
-        'Source': 'https://github.com/unicorn-data-analysis/unicorn_fy',
+        'Documentation': 'https://oliver-zehentleitner.github.io/unicorn_fy/',
+        'Wiki': 'https://github.com/oliver-zehentleitner/unicorn_fy/wiki',
+        'Source': 'https://github.com/oliver-zehentleitner/unicorn_fy',
      },
      packages=setuptools.find_packages(),
      classifiers=[

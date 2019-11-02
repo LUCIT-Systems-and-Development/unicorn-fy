@@ -4,14 +4,14 @@
 # File: pypi_create_wheel.sh
 #
 # Part of ‘UnicornFy’
-# Project website: https://github.com/unicorn-data-analysis/unicorn_fy
-# Documentation: https://www.unicorn-data.com/unicorn_fy.html
-# PyPI: https://pypi.org/project/unicorn-fy/
+# Project website: https://github.com/oliver-zehentleitner/unicorn_fy
+# Documentation: https://oliver-zehentleitner.github.io/unicorn_fy
+# PyPI: https://pypi.org/project/unicorn-fy
 #
-# Author: UNICORN Data Analysis
-#         https://www.unicorn-data.com/
+# Author: Oliver Zehentleitner
+#         https://about.me/oliver-zehentleitner
 #
-# Copyright (c) 2019, UNICORN Data Analysis
+# Copyright (c) 2019, Oliver Zehentleitner
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
