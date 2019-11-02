@@ -53,9 +53,18 @@ class UnicornFy(object):
                                          'status': None}
 
     @staticmethod
-    def is_json(var):
+    def is_json(data):
+        """
+        Is the string in json format?
+
+        :param data: the data to verify
+        :type data: str
+
+        :return: True or False
+        :rtype: bool
+        """
         try:
-            json.loads(var)
+            json.loads(data)
         except ValueError:
             return False
         except TypeError:
@@ -63,17 +72,28 @@ class UnicornFy(object):
         return True
 
     @staticmethod
-    def set_to_false_if_not_exist(variable, key):
-        # some vars are non existent if they would be empty, so we create the missing vars with default values
+    def set_to_false_if_not_exist(value, key):
+        """
+        some vars are non existent if they would be empty, so we create the missing vars with default values
+
+        :param value: default value
+        :type value: str
+
+        :param key: the key name
+        :type key: str
+
+        :return: final value
+        :rtype: str
+        """
         try:
-            if variable[key]:
-                return variable[key]
+            if value[key]:
+                return value[key]
         except KeyError:
-            variable[key] = False
-            return variable
+            value[key] = False
+            return value
         except IndexError:
-            variable[key] = False
-            return variable
+            value[key] = False
+            return value
 
     @staticmethod
     def binance_org_websocket(stream_data_json):
