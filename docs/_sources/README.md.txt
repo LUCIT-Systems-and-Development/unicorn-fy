@@ -64,16 +64,16 @@ This is not a release version and can not be considered to be stable!
 `pip install https://github.com/oliver-zehentleitner/unicorn_fy/tarball/master --upgrade`
 
 ## Documentation
-https://oliver-zehentleitner.github.io/unicorn_fy/
+[https://oliver-zehentleitner.github.io/unicorn_fy/](https://oliver-zehentleitner.github.io/unicorn_fy/)
 
 ## Source, Downloads, Examples, ...
-https://github.com/oliver-zehentleitner/unicorn_fy
+[https://github.com/oliver-zehentleitner/unicorn_fy](https://github.com/oliver-zehentleitner/unicorn_fy)
 
 ## Change Log
-https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/CHANGELOG.md
+[https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/CHANGELOG.md](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/CHANGELOG.md)
 
 ## Wiki
-https://github.com/oliver-zehentleitner/unicorn_fy/wiki
+[https://github.com/oliver-zehentleitner/unicorn_fy/wiki](https://github.com/oliver-zehentleitner/unicorn_fy/wiki)
 
 ## Receive Notifications
 To receive notifications on available updates you can ![watch](https://s3.gifyu.com/images/github_watch.png) the 
@@ -91,7 +91,7 @@ If the issue still exists, provide the error trace, OS and python version and ex
 A demo script is appreciated.
 
 If you dont find an issue related to your topic, please open a new issue:
-https://github.com/oliver-zehentleitner/unicorn_fy/issues
+[https://github.com/oliver-zehentleitner/unicorn_fy/issues](https://github.com/oliver-zehentleitner/unicorn_fy/issues)
 
 [Report a security bug!](https://github.com/oliver-zehentleitner/unicorn_fy/security/policy)
 
