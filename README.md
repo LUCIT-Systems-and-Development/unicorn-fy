@@ -45,6 +45,8 @@ If you like the project, please ![star](https://s3.gifyu.com/images/stard237b300
 - binance.com ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) **NOT SUPPORTING FUTURES**
 - binance.je ([API specification](https://github.com/binance-jersey/binance-official-api-docs/))
 - binance.us ([API specification](https://github.com/binance-us/binance-official-api-docs))
+### REST
+- none
 
 ## Installation and Upgrade
 ### A wheel of the latest release with PIP from [PyPI](https://pypi.org/project/unicorn-fy/)
