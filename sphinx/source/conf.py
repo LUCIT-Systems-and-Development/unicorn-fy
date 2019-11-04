@@ -50,7 +50,7 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'python_docs_theme'
+html_theme = 'python_docs_theme_technopathy'
 html_context = {'github_repo_url': 'https://github.com/oliver-zehentleitner/unicorn_fy',
                 'github_repo_name': project}
 
