@@ -46,7 +46,7 @@ class UnicornFy(object):
     Supported exchanges:
         - Binance
     """
-    VERSION = "0.3.0.dev"
+    VERSION = "0.3.1.dev"
 
     def __init__(self):
         self.last_update_check_github = {'timestamp': time.time(),
