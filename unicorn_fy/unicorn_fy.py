@@ -419,7 +419,7 @@ class UnicornFy(object):
         return unicorn_fied_data
 
     @staticmethod
-    def binance_com_futures_websocket(stream_data_json, exchange="binance", show_deprecated_warning=True):
+    def binance_com_futures_websocket(stream_data_json, exchange="binance.com-futures", show_deprecated_warning=False):
         """
         unicorn_fy binance.com-futures raw_stream_data
 
@@ -693,7 +693,7 @@ class UnicornFy(object):
                           "https://github.com/oliver-zehentleitner/unicorn_fy/issues " + str(stream_data))
         unicorn_fied_version = [exchange, UnicornFy.VERSION]
         unicorn_fied_data['unicorn_fied'] = unicorn_fied_version
-        logging.debug("UnicornFy->binance(" + str(unicorn_fied_data) + ")")
+        logging.debug("UnicornFy->binance_com_futures_websocket(" + str(unicorn_fied_data) + ")")
         return unicorn_fied_data
 
     @staticmethod
