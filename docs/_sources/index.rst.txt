@@ -10,7 +10,8 @@ Welcome to UnicornFy's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   README.md
+   Readme <README.md>
+   Copyright <copyright.rst>
 
 
 Indices and tables
