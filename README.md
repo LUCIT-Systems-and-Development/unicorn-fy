@@ -78,8 +78,9 @@ This is not a release version and can not be considered to be stable!
 [https://github.com/oliver-zehentleitner/unicorn_fy/wiki](https://github.com/oliver-zehentleitner/unicorn_fy/wiki)
 
 ## Receive Notifications
-To receive notifications on available updates you can ![watch](https://s3.gifyu.com/images/github_watch.png) the 
-repository on [GitHub](https://github.com/oliver-zehentleitner/unicorn_fy), write your 
+To receive notifications on available updates you can 
+[![watch](https://s3.gifyu.com/images/github_watch.png)](https://github.com/oliver-zehentleitner/unicorn_fy/watchers) 
+the repository on [GitHub](https://github.com/oliver-zehentleitner/unicorn_fy), write your 
 [own script](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/example_version_of_this_package.py) 
 with using `unicorn_fy.is_update_availabe()` or you use the 
 [monitoring API service](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api/wiki/UNICORN-Monitoring-API-Service).
