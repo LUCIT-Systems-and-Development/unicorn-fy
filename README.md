@@ -35,7 +35,7 @@ print(unicorn_fied_stream_data)
 ```
 Currently this module has no dependencies.
 
-If you like the project, please ![star](https://s3.gifyu.com/images/stard237b3003af9f9a9.png) it on 
+If you like the project, please [![star](https://s3.gifyu.com/images/stard237b3003af9f9a9.png)](https://github.com/oliver-zehentleitner/unicorn_fy/stargazers) it on 
 [GitHub](https://github.com/oliver-zehentleitner/unicorn_fy)! 
 
 ## Supported Exchanges
