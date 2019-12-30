@@ -65,10 +65,8 @@ This is not a release version and can not be considered to be stable!
 `pip install https://github.com/oliver-zehentleitner/unicorn_fy/tarball/master --upgrade`
 
 ## Documentation
-[https://oliver-zehentleitner.github.io/unicorn_fy/](https://oliver-zehentleitner.github.io/unicorn_fy/)
 - [General](https://oliver-zehentleitner.github.io/unicorn_fy)
 - [Modules](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html)
-
 
 ## Source, Downloads, Examples, ...
 [https://github.com/oliver-zehentleitner/unicorn_fy](https://github.com/oliver-zehentleitner/unicorn_fy)
