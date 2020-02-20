@@ -1,10 +1,8 @@
-![GitHub release](https://img.shields.io/github/release/oliver-zehentleitner/unicorn_fy.svg) 
-![GitHub](https://img.shields.io/github/license/oliver-zehentleitner/unicorn_fy.svg?color=blue) 
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg) 
-![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg) 
-![PyPI - yes](https://img.shields.io/badge/PyPI-yes-brightgreen.svg?color=orange) 
-![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel&color=orange) 
-![PyPI - Downloads](https://img.shields.io/pypi/dm/unicorn-fy.svg?label=PyPI%20downloads&color=orange)
+[![GitHub release](https://img.shields.io/github/release/oliver-zehentleitner/unicorn_fy.svg)](https://github.com/oliver-zehentleitner/unicorn_fy/releases/latest)
+[![GitHub](https://img.shields.io/github/license/oliver-zehentleitner/unicorn_fy.svg?color=blue)](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/LICENSE)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg)](https://www.python.org/downloads/)
+[![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg)](https://github.com/oliver-zehentleitner/unicorn_fy/issues)
+[![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel&color=orange)](https://pypi.org/project/unicorn-fy/)
 
 
 # UnicornFy
@@ -37,7 +35,7 @@ print(unicorn_fied_stream_data)
 ```
 Currently this module has no dependencies.
 
-If you like the project, please ![star](https://s3.gifyu.com/images/stard237b3003af9f9a9.png) it on 
+If you like the project, please [![star](https://s3.gifyu.com/images/stard237b3003af9f9a9.png)](https://github.com/oliver-zehentleitner/unicorn_fy/stargazers) it on 
 [GitHub](https://github.com/oliver-zehentleitner/unicorn_fy)! 
 
 ## Supported Exchanges
@@ -67,7 +65,8 @@ This is not a release version and can not be considered to be stable!
 `pip install https://github.com/oliver-zehentleitner/unicorn_fy/tarball/master --upgrade`
 
 ## Documentation
-[https://oliver-zehentleitner.github.io/unicorn_fy/](https://oliver-zehentleitner.github.io/unicorn_fy/)
+- [General](https://oliver-zehentleitner.github.io/unicorn_fy)
+- [Modules](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html)
 
 ## Source, Downloads, Examples, ...
 [https://github.com/oliver-zehentleitner/unicorn_fy](https://github.com/oliver-zehentleitner/unicorn_fy)
@@ -79,8 +78,9 @@ This is not a release version and can not be considered to be stable!
 [https://github.com/oliver-zehentleitner/unicorn_fy/wiki](https://github.com/oliver-zehentleitner/unicorn_fy/wiki)
 
 ## Receive Notifications
-To receive notifications on available updates you can ![watch](https://s3.gifyu.com/images/github_watch.png) the 
-repository on [GitHub](https://github.com/oliver-zehentleitner/unicorn_fy), write your 
+To receive notifications on available updates you can 
+[![watch](https://s3.gifyu.com/images/github_watch.png)](https://github.com/oliver-zehentleitner/unicorn_fy/watchers) 
+the repository on [GitHub](https://github.com/oliver-zehentleitner/unicorn_fy), write your 
 [own script](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/example_version_of_this_package.py) 
 with using `unicorn_fy.is_update_availabe()` or you use the 
 [monitoring API service](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api/wiki/UNICORN-Monitoring-API-Service).
