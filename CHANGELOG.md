@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## 0.3.2
 ### Changed
-- json instead of ujson
+- ujson instead of stock json
 - exception handling
 ### Added
 - binance.com-futures (copy of binance_websocket() with suggested modification of 
