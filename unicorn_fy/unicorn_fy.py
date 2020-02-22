@@ -51,7 +51,7 @@ class UnicornFy(object):
         - Binance.us
         - Binance.org
     """
-    VERSION = "0.3.2.dev"
+    VERSION = "0.3.3"
 
     def __init__(self):
         self.last_update_check_github = {'timestamp': time.time(),
@@ -417,6 +417,11 @@ class UnicornFy(object):
             logging.debug("UnicornFy->binance_com_futures_websocket(" + str(unicorn_fied_data) + ")")
             return unicorn_fied_data
         except KeyError:
+            if "result" not in stream_data:
+                logging.error("detected unknown data stream format in module `unicorn_fy`: please report to "
+                              "https://github.com/oliver-zehentleitner/unicorn_fy/issues " + str(stream_data))
+            return stream_data
+        except TypeError:
             logging.error("detected unknown data stream format in module `unicorn_fy`: please report to "
                           "https://github.com/oliver-zehentleitner/unicorn_fy/issues " + str(stream_data))
             return stream_data
@@ -697,6 +702,11 @@ class UnicornFy(object):
             logging.debug("UnicornFy->binance_com_futures_websocket(" + str(unicorn_fied_data) + ")")
             return unicorn_fied_data
         except KeyError:
+            if "result" not in stream_data:
+                logging.error("detected unknown data stream format in module `unicorn_fy`: please report to "
+                              "https://github.com/oliver-zehentleitner/unicorn_fy/issues " + str(stream_data))
+            return stream_data
+        except TypeError:
             logging.error("detected unknown data stream format in module `unicorn_fy`: please report to "
                           "https://github.com/oliver-zehentleitner/unicorn_fy/issues " + str(stream_data))
             return stream_data
@@ -757,3 +767,4 @@ class UnicornFy(object):
             return False
         else:
             return True
+
