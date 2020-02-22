@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## 0.3.3
 ### Added
-- 
+- TypeError exception
 
 ## 0.3.2
 ### Changed
