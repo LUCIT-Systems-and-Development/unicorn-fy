@@ -11,6 +11,7 @@ Welcome to UnicornFy's documentation!
    :caption: Contents:
 
    Readme <README.md>
+   ChangeLog <CHANGELOG.md>
    Copyright <copyright.rst>
 
 
