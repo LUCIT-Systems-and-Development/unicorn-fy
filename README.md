@@ -72,7 +72,7 @@ This is not a release version and can not be considered to be stable!
 [https://github.com/oliver-zehentleitner/unicorn_fy](https://github.com/oliver-zehentleitner/unicorn_fy)
 
 ## Change Log
-[https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/CHANGELOG.md](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/CHANGELOG.md)
+[https://oliver-zehentleitner.github.io/unicorn_fy/CHANGELOG.html](https://oliver-zehentleitner.github.io/unicorn_fy/CHANGELOG.html)
 
 ## Wiki
 [https://github.com/oliver-zehentleitner/unicorn_fy/wiki](https://github.com/oliver-zehentleitner/unicorn_fy/wiki)
