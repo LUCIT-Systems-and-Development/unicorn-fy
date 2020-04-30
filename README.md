@@ -106,3 +106,7 @@ contribute follow
 [this guide](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/CONTRIBUTING.md).
  
 We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!
+
+## You need a python dev?
+If you would like to [hire me](https://about.me/oliver-zehentleitner) for a Python project, you can book me through 
+my company [LUCIT](https://www.lucit.co/desktop-and-server-apps.html).

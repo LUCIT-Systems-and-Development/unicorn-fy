@@ -40,7 +40,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='unicorn_fy',
-     version='0.3.4',
+     version='0.3.5',
      author="Oliver Zehentleitner",
      url="https://about.me/oliver-zehentleitner/",
      scripts=['unicorn_fy.py'],
