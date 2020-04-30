@@ -42,6 +42,7 @@ If you like the project, please [![star](https://s3.gifyu.com/images/stard237b30
 ### Websockets
 - binance.com ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
 - binance.com-futures ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
+- binance.com-margin ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
 - binance.je ([API specification](https://github.com/binance-jersey/binance-official-api-docs/))
 - binance.us ([API specification](https://github.com/binance-us/binance-official-api-docs))
 ### REST
@@ -105,3 +106,7 @@ contribute follow
 [this guide](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/CONTRIBUTING.md).
  
 We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!
+
+## You need a python dev?
+If you would like to [hire me](https://about.me/oliver-zehentleitner) for a Python project, you can book me through 
+my company [LUCIT](https://www.lucit.co/desktop-and-server-apps.html).
