@@ -48,8 +48,6 @@ class UnicornFy(object):
         - Binance-com-futures
         - Binance-com-margin
         - Binance.je
-        - Binance.us
-        - Binance.org
     """
     VERSION = "0.3.5"
 

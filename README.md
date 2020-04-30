@@ -42,6 +42,7 @@ If you like the project, please [![star](https://s3.gifyu.com/images/stard237b30
 ### Websockets
 - binance.com ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
 - binance.com-futures ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
+- binance.com-margin ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
 - binance.je ([API specification](https://github.com/binance-jersey/binance-official-api-docs/))
 - binance.us ([API specification](https://github.com/binance-us/binance-official-api-docs))
 ### REST
