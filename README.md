@@ -3,6 +3,7 @@
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg)](https://www.python.org/downloads/)
 [![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg)](https://github.com/oliver-zehentleitner/unicorn_fy/issues)
 [![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel&color=orange)](https://pypi.org/project/unicorn-fy/)
+[![Downloads](https://pepy.tech/badge/unicorn-fy)](https://pepy.tech/project/unicorn-fy)
 
 
 # UnicornFy
@@ -107,6 +108,6 @@ contribute follow
  
 We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!
 
-## You need a python dev?
+## You need a Python Dev?
 If you would like to [hire me](https://about.me/oliver-zehentleitner) for a Python project, you can book me through 
 my company [LUCIT](https://www.lucit.co/desktop-and-server-apps.html).
