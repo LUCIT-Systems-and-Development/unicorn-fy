@@ -107,6 +107,11 @@ source project which welcomes contributions which can be anything from simple do
 contribute follow 
 [this guide](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/CONTRIBUTING.md).
  
+### Contributors
+<a href="https://github.com/oliver-zehentleitner/unicorn_fy/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=oliver-zehentleitner/unicorn_fy" />
+</a>
+
 We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!
 
 ## You need a Python Dev?
