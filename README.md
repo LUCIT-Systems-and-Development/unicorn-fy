@@ -8,6 +8,10 @@
 
 
 # UnicornFy
+[Exchanges](#supported-exchanges) [Installation](#installation-and-upgrade) | [Documentation](#documentation) | 
+[Change Log](#change-log) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | 
+[Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing)
+
 Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
 
 [UnicornFy](https://github.com/oliver-zehentleitner/unicorn_fy) is a side project of 
@@ -79,6 +83,9 @@ This is not a release version and can not be considered to be stable!
 
 ## Wiki
 [https://github.com/oliver-zehentleitner/unicorn_fy/wiki](https://github.com/oliver-zehentleitner/unicorn_fy/wiki)
+
+## Social
+- [Telegram](https://t.me/unicorndevs)
 
 ## Receive Notifications
 To receive notifications on available updates you can 
