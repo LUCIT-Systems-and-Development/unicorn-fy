@@ -51,21 +51,27 @@ If you like the project, please [![star](https://s3.gifyu.com/images/stard237b30
 - binance.com-margin ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
 - binance.je ([API specification](https://github.com/binance-jersey/binance-official-api-docs/))
 - binance.us ([API specification](https://github.com/binance-us/binance-official-api-docs))
+- binance.org ([API specification](https://docs.binance.org/))
+
 ### REST
 - none
 
 ## Installation and Upgrade
 ### A wheel of the latest release with PIP from [PyPI](https://pypi.org/project/unicorn-fy/)
 `pip install unicorn-fy --upgrade`
+
 ### From source of the latest release with PIP from [Github](https://github.com/oliver-zehentleitner/unicorn_fy)
+
 #### Linux, macOS, ...
 Run in bash:
 
 `pip install https://github.com/oliver-zehentleitner/unicorn_fy/archive/$(curl -s https://api.github.com/repos/oliver-zehentleitner/unicorn_fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
+
 #### Windows
 Use the below command with the version (such as 0.2.0) you determined [here](https://github.com/oliver-zehentleitner/unicorn_fy/releases/latest):
 
 `pip install https://github.com/oliver-zehentleitner/unicorn_fy/archive/0.2.0.tar.gz --upgrade`
+
 ### From the latest source (dev-stage) with PIP from [Github](https://github.com/oliver-zehentleitner/unicorn_fy)
 This is not a release version and can not be considered to be stable!
 
@@ -114,6 +120,11 @@ source project which welcomes contributions which can be anything from simple do
 contribute follow 
 [this guide](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/CONTRIBUTING.md).
  
+### Contributors
+<a href="https://github.com/oliver-zehentleitner/unicorn_fy/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=oliver-zehentleitner/unicorn_fy" />
+</a>
+
 We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!
 
 ## You need a Python Dev?
