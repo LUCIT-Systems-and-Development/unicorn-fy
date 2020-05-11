@@ -5,9 +5,14 @@
 [![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel)](https://pypi.org/project/unicorn-fy/)
 [![Downloads](https://pepy.tech/badge/unicorn-fy)](https://pepy.tech/project/unicorn-fy)
 [![Telegram](https://img.shields.io/badge/chat-telegram-red.svg)](https://t.me/unicorndevs)
-
+[![Donations/week](http://img.shields.io/liberapay/receives/oliver-zehentleitner.svg?logo=liberapay)](https://liberapay.com/oliver-zehentleitner/donate)
+[![Patrons](http://img.shields.io/liberapay/patrons/oliver-zehentleitner.svg?logo=liberapay")](https://liberapay.com/oliver-zehentleitner/donate)
 
 # UnicornFy
+[Supported Exchanges](#supported-exchanges) | [Installation](#installation-and-upgrade) | [Documentation](#documentation) | 
+[Change Log](#change-log) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | 
+[Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing)
+
 Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
 
 [UnicornFy](https://github.com/oliver-zehentleitner/unicorn_fy) is a side project of 
@@ -86,6 +91,9 @@ This is not a release version and can not be considered to be stable!
 ## Wiki
 [https://github.com/oliver-zehentleitner/unicorn_fy/wiki](https://github.com/oliver-zehentleitner/unicorn_fy/wiki)
 
+## Social
+- [Telegram](https://t.me/unicorndevs)
+
 ## Receive Notifications
 To receive notifications on available updates you can 
 [![watch](https://s3.gifyu.com/images/github_watch.png)](https://github.com/oliver-zehentleitner/unicorn_fy/watchers) 
@@ -114,12 +122,26 @@ contribute follow
 [this guide](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/CONTRIBUTING.md).
  
 ### Contributors
-<a href="https://github.com/oliver-zehentleitner/unicorn_fy/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=oliver-zehentleitner/unicorn_fy" />
-</a>
+[![Contributors](https://contributors-img.web.app/image?repo=oliver-zehentleitner/unicorn_fy)](https://github.com/oliver-zehentleitner/unicorn_fy/graphs/contributors)
 
 We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!
 
+### Donate
+Since you are probably a developer yourself, you will understand very well that the creation of open source software is 
+not free - it requires technical knowledge, a lot of time and also financial expenditure.
+
+If you would like to help me to dedicate my time and energy to this project, donations are very welcome.
+
+[![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/oliver-zehentleitner/donate)
+
+```
+BTC: 39fS74fvcGnmEk8JUV8bG6P1wkdH29GtsA
+DASH: XsRhBuPkXGF9WvifdpkVhTGSmVT4VcuQZ7
+ETH: 0x1C15857Bf1E18D122dDd1E536705748aa529fc9C
+LTC: LYNzHMFUbee3siyHvNCPaCjqXxjyq8YRGJ
+XMR: 85dzsTRh6GRPGVSJoUbFDwAf9uwwAdim1HFpiGshLeKHgj2hVqKtYVPXMZvudioLsuLS1AegkUiQ12jwReRwWcFvF7kDAbF
+ZEC: t1WvQMPJMriGWD9qkZGDdE9tTJaawvmsBie
+```
 ## You need a Python Dev?
 If you would like to [hire me](https://about.me/oliver-zehentleitner) for a Python project, you can book me through 
 my company [LUCIT](https://www.lucit.co/desktop-and-server-apps.html).

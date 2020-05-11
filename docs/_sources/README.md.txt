@@ -8,6 +8,10 @@
 
 
 # UnicornFy
+[Supported Exchanges](#supported-exchanges) | [Installation](#installation-and-upgrade) | [Documentation](#documentation) | 
+[Change Log](#change-log) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | 
+[Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing)
+
 Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
 
 [UnicornFy](https://github.com/oliver-zehentleitner/unicorn_fy) is a side project of 
@@ -86,6 +90,9 @@ This is not a release version and can not be considered to be stable!
 ## Wiki
 [https://github.com/oliver-zehentleitner/unicorn_fy/wiki](https://github.com/oliver-zehentleitner/unicorn_fy/wiki)
 
+## Social
+- [Telegram](https://t.me/unicorndevs)
+
 ## Receive Notifications
 To receive notifications on available updates you can 
 [![watch](https://s3.gifyu.com/images/github_watch.png)](https://github.com/oliver-zehentleitner/unicorn_fy/watchers) 
@@ -114,11 +121,21 @@ contribute follow
 [this guide](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/CONTRIBUTING.md).
  
 ### Contributors
-<a href="https://github.com/oliver-zehentleitner/unicorn_fy/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=oliver-zehentleitner/unicorn_fy" />
-</a>
+[![Contributors](https://contributors-img.web.app/image?repo=oliver-zehentleitner/unicorn_fy)](https://github.com/oliver-zehentleitner/unicorn_fy/graphs/contributors)
 
 We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!
+
+### Donate
+Develop open source software is not without cost - it takes technical knowledge, time, and effort.
+
+You don't have to be a developer to support this open source project. If you want to receive personal support, or just 
+feel all warm and fuzzy inside from helping open source development, donations are very welcome. 
+
+```
+BTC: 39fS74fvcGnmEk8JUV8bG6P1wkdH29GtsA
+LTC: LTyxxXocZo2rVUuYEkU4taqVQpA19iSfs3
+ETH: 0x724600d08cc2cd4ed408a8aeb021df259adf0aa5
+```
 
 ## You need a Python Dev?
 If you would like to [hire me](https://about.me/oliver-zehentleitner) for a Python project, you can book me through 
