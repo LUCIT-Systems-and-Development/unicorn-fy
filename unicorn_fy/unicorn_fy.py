@@ -51,7 +51,7 @@ class UnicornFy(object):
         - Binance.us
         - Binance.org
     """
-    VERSION = "0.4.0.dev"
+    VERSION = "0.4.1"
 
     def __init__(self):
         self.last_update_check_github = {'timestamp': time.time(),
@@ -429,7 +429,8 @@ class UnicornFy(object):
                                  'can_trade': stream_data['data']['T'],
                                  'can_withdraw': stream_data['data']['W'],
                                  'can_deposit': stream_data['data']['D'],
-                                 'balances': []}
+                                 'balances': [],
+                                 'account_permissions': stream_data['data']['P']}
             for item in stream_data['data']['B']:
                 new_item = {'asset': item['a'],
                             'free': item['f'],

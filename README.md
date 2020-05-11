@@ -92,7 +92,8 @@ This is not a release version and can not be considered to be stable!
 [https://github.com/oliver-zehentleitner/unicorn_fy/wiki](https://github.com/oliver-zehentleitner/unicorn_fy/wiki)
 
 ## Social
-- [Telegram](https://t.me/unicorndevs)
+- [https://t.me/unicorndevs](https://t.me/unicorndevs)
+- [https://dev.binance.vision](https://dev.binance.vision)
 
 ## Receive Notifications
 To receive notifications on available updates you can 
