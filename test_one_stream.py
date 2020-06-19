@@ -62,8 +62,8 @@ def print_stream_data_from_stream_buffer(binance_websocket_api_manager):
         oldest_stream_data_from_stream_buffer = binance_websocket_api_manager.pop_stream_data_from_stream_buffer()
         if oldest_stream_data_from_stream_buffer is not False:
             unicorn_fied_data = UnicornFy.binance_com_websocket(oldest_stream_data_from_stream_buffer)
-            print(str(unicorn_fied_data))
             print(str(oldest_stream_data_from_stream_buffer))
+            print(str(unicorn_fied_data))
         else:
             time.sleep(0.01)
 
@@ -77,5 +77,5 @@ worker_thread.start()
 #            'ticker', 'bookTicker', 'depth5', 'depth10', 'depth20', 'depth', 'depth@100ms'}
 #arr_channels = {'!miniTicker', '!ticker', '!bookTicker'}
 
-binance_websocket_api_manager.create_stream('aggTrade', 'btcusdt')
+binance_websocket_api_manager.create_stream('miniTicker', ['btcusdt', 'bnbbtc', 'ethbtc'])
 
