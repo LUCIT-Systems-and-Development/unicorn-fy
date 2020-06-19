@@ -1,0 +1,16 @@
+language: python
+os:
+  - linux
+python:
+  - "2.6"
+  - "2.7"
+  - "3.6"
+  - "3.7"
+  - "3.8"
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls
+script:
+  - coverage run --source unicorn_fy unittest_unicorn_fy.py
+after_success:
+  - coveralls

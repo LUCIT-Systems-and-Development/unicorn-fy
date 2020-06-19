@@ -54,7 +54,7 @@ class TestUnicornFy(unittest.TestCase):
         self.unicorn_fy = UnicornFy()
         self.unicorn_fy_version = str(self.unicorn_fy.get_version())
 
-    def test_aggtrade(self):
+    def test_aggTrade(self):
         data = '{"stream":"btcusdt@aggTrade","data":{"e":"aggTrade","E":1592584651517,"s":"BTCUSDT","a":315753210,"p":"9319.00000000","q":"0.01864900","f":343675554,"l":343675554,"T":1592584651516,"m":true,"M":true}}'
         asserted_result = "{'stream_type': 'btcusdt@aggTrade', 'event_type': 'aggTrade', 'event_time': 1592584651517, 'symbol': 'BTCUSDT', 'aggregate_trade_id': 315753210, 'price': '9319.00000000', 'quantity': '0.01864900', 'first_trade_id': 343675554, 'last_trade_id': 343675554, 'trade_time': 1592584651516, 'is_market_maker': True, 'ignore': True, 'unicorn_fied': ['binance.com', '" + self.unicorn_fy_version + "']}"
         self.assertEqual(str(self.unicorn_fy.binance_com_websocket(data)), asserted_result)
