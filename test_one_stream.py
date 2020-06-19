@@ -79,6 +79,3 @@ worker_thread.start()
 
 binance_websocket_api_manager.create_stream('aggTrade', 'btcusdt')
 
-#while True:
-#    binance_websocket_api_manager.print_summary()
-#    time.sleep(1)
