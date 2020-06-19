@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# File: test_stream_everything_and_unicorn_fy.py
+# File: test_one_stream.py
 #
 # Part of ‘UnicornFy’
 # Project website: https://github.com/oliver-zehentleitner/unicorn_fy
@@ -63,39 +63,21 @@ def print_stream_data_from_stream_buffer(binance_websocket_api_manager):
         if oldest_stream_data_from_stream_buffer is not False:
             unicorn_fied_data = UnicornFy.binance_com_websocket(oldest_stream_data_from_stream_buffer)
             print(str(unicorn_fied_data))
+            print(str(oldest_stream_data_from_stream_buffer))
         else:
             time.sleep(0.01)
 
-
-binance_api_key = ""
-binance_api_secret = ""
-
-channels = {'aggTrade', 'trade', 'kline_1m', 'kline_5m', 'kline_15m', 'kline_30m', 'kline_1h', 'kline_2h', 'kline_4h',
-            'kline_6h', 'kline_8h', 'kline_12h', 'kline_1d', 'kline_3d', 'kline_1w', 'kline_1M', 'miniTicker',
-            'ticker', 'bookTicker', 'depth5', 'depth10', 'depth20', 'depth', 'depth@100ms'}
-arr_channels = {'!miniTicker', '!ticker', '!bookTicker'}
-markets = []
-
-try:
-    binance_rest_client = Client(binance_api_key, binance_api_secret)
-    binance_websocket_api_manager = BinanceWebSocketApiManager()
-except requests.exceptions.ConnectionError:
-    print("No internet connection?")
-    sys.exit(1)
+binance_websocket_api_manager = BinanceWebSocketApiManager()
 
 worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer, args=(binance_websocket_api_manager,))
 worker_thread.start()
 
-data = binance_rest_client.get_all_tickers()
-for item in data:
-    markets.append(item['symbol'])
+#channels = {'aggTrade', 'trade', 'kline_1m', 'kline_5m', 'kline_15m', 'kline_30m', 'kline_1h', 'kline_2h', 'kline_4h',
+#            'kline_6h', 'kline_8h', 'kline_12h', 'kline_1d', 'kline_3d', 'kline_1w', 'kline_1M', 'miniTicker',
+#            'ticker', 'bookTicker', 'depth5', 'depth10', 'depth20', 'depth', 'depth@100ms'}
+#arr_channels = {'!miniTicker', '!ticker', '!bookTicker'}
 
-binance_websocket_api_manager.set_private_api_config(binance_api_key, binance_api_secret)
-userdata_stream_id = binance_websocket_api_manager.create_stream(["!userData"], ["arr"])
-arr_stream_id = binance_websocket_api_manager.create_stream(arr_channels, "arr")
-
-for channel in channels:
-    binance_websocket_api_manager.create_stream(channel, markets)
+binance_websocket_api_manager.create_stream('aggTrade', 'btcusdt')
 
 #while True:
 #    binance_websocket_api_manager.print_summary()

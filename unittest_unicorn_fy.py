@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# File: example_version_of_this_package.py
+# File: unittest_unicorn_fy.py
 #
 # Part of ‘UnicornFy’
 # Project website: https://github.com/oliver-zehentleitner/unicorn_fy
@@ -33,14 +33,35 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-
 from unicorn_fy.unicorn_fy import UnicornFy
+import logging
+import unittest
+import os
 
-unicorn_fy = UnicornFy()
+BINANCE_COM_API_KEY = ""
+BINANCE_COM_API_SECRET = ""
 
-print("is_update_availabe: " + str(unicorn_fy.is_update_availabe()))
-print("get_latest_version: " + str(unicorn_fy.get_latest_version()))
+# https://docs.python.org/3/library/logging.html#logging-levels
+logging.basicConfig(level=logging.DEBUG,
+                    filename=os.path.basename(__file__) + '.log',
+                    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
+                    style="{")
 
-# static methods
-print("get_version: " + str(UnicornFy.get_version()))
-print("get_latest_release_info: " + str(UnicornFy.get_latest_release_info()))
+
+class TestUnicornFy(unittest.TestCase):
+
+    def setUp(self):
+        self.unicorn_fy = UnicornFy()
+        self.unicorn_fy_version = str(self.unicorn_fy.get_version())
+
+    def test_aggtrade(self):
+        data = '{"stream":"btcusdt@aggTrade","data":{"e":"aggTrade","E":1592584651517,"s":"BTCUSDT","a":315753210,"p":"9319.00000000","q":"0.01864900","f":343675554,"l":343675554,"T":1592584651516,"m":true,"M":true}}'
+        asserted_result = "{'stream_type': 'btcusdt@aggTrade', 'event_type': 'aggTrade', 'event_time': 1592584651517, 'symbol': 'BTCUSDT', 'aggregate_trade_id': 315753210, 'price': '9319.00000000', 'quantity': '0.01864900', 'first_trade_id': 343675554, 'last_trade_id': 343675554, 'trade_time': 1592584651516, 'is_market_maker': True, 'ignore': True, 'unicorn_fied': ['binance.com', '" + self.unicorn_fy_version + "']}"
+        self.assertEqual(str(self.unicorn_fy.binance_com_websocket(data)), asserted_result)
+
+    def tearDown(self):
+        del self.unicorn_fy
+
+
+if __name__ == '__main__':
+    unittest.main()
