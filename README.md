@@ -45,7 +45,8 @@ print(unicorn_fied_stream_data)
 ```
 Currently this module has no dependencies.
 
-If you like the project, please [![star](https://s3.gifyu.com/images/stard237b3003af9f9a9.png)](https://github.com/oliver-zehentleitner/unicorn_fy/stargazers) it on 
+If you like the project, please 
+[![star](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/star.png)](https://github.com/oliver-zehentleitner/unicorn_fy/stargazers) it on 
 [GitHub](https://github.com/oliver-zehentleitner/unicorn_fy)! 
 
 ## Supported Exchanges
@@ -100,7 +101,7 @@ This is not a release version and can not be considered to be stable!
 
 ## Receive Notifications
 To receive notifications on available updates you can 
-[![watch](https://s3.gifyu.com/images/github_watch.png)](https://github.com/oliver-zehentleitner/unicorn_fy/watchers) 
+[![watch](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/watch.png)](https://github.com/oliver-zehentleitner/unicorn_fy/watchers) 
 the repository on [GitHub](https://github.com/oliver-zehentleitner/unicorn_fy), write your 
 [own script](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/example_version_of_this_package.py) 
 with using `unicorn_fy.is_update_availabe()` or you use the 
@@ -108,7 +109,7 @@ with using `unicorn_fy.is_update_availabe()` or you use the
 
 ## How to report Bugs or suggest Improvements?
 [List of planned features](https://github.com/oliver-zehentleitner/unicorn_fy/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) - 
-click ![thumbs-up](https://s3.gifyu.com/images/tu.png) if you need one of them or suggest a new feature!
+click ![thumbs-up](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/thumbup.png) if you need one of them or suggest a new feature!
 
 Before you report a bug, [try the latest release](https://github.com/oliver-zehentleitner/unicorn_fy#installation-and-upgrade). 
 If the issue still exists, provide the error trace, OS and python version and explain how to reproduce the error. 
@@ -128,7 +129,7 @@ contribute follow
 ### Contributors
 [![Contributors](https://contributors-img.web.app/image?repo=oliver-zehentleitner/unicorn_fy)](https://github.com/oliver-zehentleitner/unicorn_fy/graphs/contributors)
 
-We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!
+We ![love](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/heart.png) open source!
 
 ### Donate
 Since you are probably a developer yourself, you will understand very well that the creation of open source software is 
