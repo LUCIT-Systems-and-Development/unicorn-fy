@@ -201,6 +201,8 @@ class UnicornFy(object):
                 stream_data = {'data': stream_data}
             elif stream_data['e'] == 'executionReport':
                 stream_data = {'data': stream_data}
+            elif stream_data['e'] == 'outboundAccountPosition':
+                stream_data = {'data': stream_data}
         except KeyError:
             pass
         try:
@@ -431,6 +433,17 @@ class UnicornFy(object):
                                  'can_deposit': stream_data['data']['D'],
                                  'balances': [],
                                  'account_permissions': stream_data['data']['P']}
+            for item in stream_data['data']['B']:
+                new_item = {'asset': item['a'],
+                            'free': item['f'],
+                            'locked': item['l']}
+                unicorn_fied_data['balances'] += [new_item]
+        elif stream_data['data']['e'] == 'outboundAccountPosition':
+            unicorn_fied_data = {'stream_type': '!userData@arr',
+                                 'event_type': stream_data['data']['e'],
+                                 'event_time': stream_data['data']['E'],
+                                 'last_update_time': stream_data['data']['u'],
+                                 'balances': []}
             for item in stream_data['data']['B']:
                 new_item = {'asset': item['a'],
                             'free': item['f'],
