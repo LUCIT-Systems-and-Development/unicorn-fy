@@ -37,7 +37,6 @@ import ujson as json
 import logging
 import time
 import requests
-import sys
 
 
 class UnicornFy(object):

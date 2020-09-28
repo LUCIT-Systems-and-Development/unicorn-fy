@@ -43,7 +43,6 @@ setuptools.setup(
      version='0.5.0',
      author="Oliver Zehentleitner",
      url="https://about.me/oliver-zehentleitner/",
-     scripts=['unicorn_fy.py'],
      description="Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.",
      long_description=long_description,
      long_description_content_type="text/markdown",
