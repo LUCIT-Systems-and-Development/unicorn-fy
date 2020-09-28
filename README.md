@@ -43,7 +43,9 @@ print(unicorn_fied_stream_data)
 >>>
 {'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT', 'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847, 'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True, 'unicorn_fied': ['binance', '0.1.0']}
 ```
-Currently this module has no dependencies.
+
+The module requires Python 3.6.0 or above. The current dependencies are listed 
+[here](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/requirements.txt).
 
 If you like the project, please 
 [![star](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/star.png)](https://github.com/oliver-zehentleitner/unicorn_fy/stargazers) it on 
@@ -81,6 +83,14 @@ Use the below command with the version (such as 0.2.0) you determined [here](htt
 This is not a release version and can not be considered to be stable!
 
 `pip install https://github.com/oliver-zehentleitner/unicorn_fy/tarball/master --upgrade`
+
+### [Conda environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html), [Virtualenv](https://virtualenv.pypa.io/en/latest/) or plain [Python](https://docs.python.org/2/install/)
+Download the [latest release](https://github.com/oliver-zehentleitner/unicorn_fy/releases/latest) 
+or the [current master branch](https://github.com/oliver-zehentleitner/unicorn_fy/archive/master.zip)
+ and use:
+- ./environment.yml
+- ./requirements.txt
+- ./setup.py
 
 ## Documentation
 - [General](https://oliver-zehentleitner.github.io/unicorn_fy)
