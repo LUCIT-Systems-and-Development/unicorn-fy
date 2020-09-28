@@ -41,4 +41,4 @@
 #repository = https://upload.pypi.org/legacy/
 #username = unicorn_data_analysis
 
-python -m twine upload dist/*
+python3 -m twine upload dist/*
