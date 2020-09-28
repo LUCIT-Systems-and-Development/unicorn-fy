@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>UnicornFy &#8212; UnicornFy 0.4.1 documentation</title>
+    <title>UnicornFy &#8212; UnicornFy 0.5.0 documentation</title>
     <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -48,7 +48,7 @@
     <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">UnicornFy</a> &#187;</li>
     
     
-    <a href="index.html">UnicornFy 0.4.1 documentation</a> &#187;
+    <a href="index.html">UnicornFy 0.5.0 documentation</a> &#187;
     
 
     <li class="right">
@@ -67,10 +67,13 @@
   <p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/releases/latest"><img alt="GitHub release" src="https://img.shields.io/github/release/oliver-zehentleitner/unicorn_fy.svg" /></a>
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/oliver-zehentleitner/unicorn_fy.svg?color=blue" /></a>
 <a class="reference external" href="https://www.python.org/downloads/"><img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/unicorn_fy.svg" /></a>
-<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/issues"><img alt="PyPI - Status" src="https://img.shields.io/pypi/status/unicorn_fy.svg" /></a>
-<a class="reference external" href="https://pypi.org/project/unicorn-fy/"><img alt="PyPI - Wheel" src="https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel" /></a>
 <a class="reference external" href="https://pepy.tech/project/unicorn-fy"><img alt="Downloads" src="https://pepy.tech/badge/unicorn-fy" /></a>
-<a class="reference external" href="https://t.me/unicorndevs"><img alt="Telegram" src="https://img.shields.io/badge/chat-telegram-red.svg" /></a>
+<a class="reference external" href="https://pypi.org/project/unicorn-fy/"><img alt="PyPI - Wheel" src="https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel" /></a>
+<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/issues"><img alt="PyPI - Status" src="https://img.shields.io/pypi/status/unicorn_fy.svg" /></a>
+<a class="reference external" href="https://travis-ci.com/oliver-zehentleitner/unicorn_fy"><img alt="Build Status" src="https://travis-ci.com/oliver-zehentleitner/unicorn_fy.svg?branch=master" /></a>
+<a class="reference external" href="https://lgtm.com/projects/g/oliver-zehentleitner/unicorn_fy/context:python"><img alt="Language grade: Python" src="https://img.shields.io/lgtm/grade/python/g/oliver-zehentleitner/unicorn_fy.svg?logo=lgtm&amp;logoWidth=18" /></a>
+<a class="reference external" href="https://coveralls.io/github/oliver-zehentleitner/unicorn_fy?branch=master"><img alt="Coverage Status" src="https://coveralls.io/repos/github/oliver-zehentleitner/unicorn_fy/badge.svg?branch=master" /></a>
+<a class="reference external" href="https://t.me/unicorndevs"><img alt="Telegram" src="https://img.shields.io/badge/chat-telegram-yellow.svg" /></a>
 <a class="reference external" href="https://liberapay.com/oliver-zehentleitner/donate"><img alt="Donations/week" src="http://img.shields.io/liberapay/receives/oliver-zehentleitner.svg?logo=liberapay" /></a>
 <a class="reference external" href="https://liberapay.com/oliver-zehentleitner/donate"><img alt="Patrons" src="http://img.shields.io/liberapay/patrons/oliver-zehentleitner.svg?logo=liberapay%22" /></a></p>
 <div class="section" id="unicornfy">
@@ -82,7 +85,7 @@
 <p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy">UnicornFy</a> is a side project of
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api">UNICORN Binance WebSocket API</a> but can be used
 with every API that delivers the receives in raw format (as received without changes).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">unicorn_fy.unicorn_fy</span> <span class="k">import</span> <span class="n">UnicornFy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">unicorn_fy.unicorn_fy</span> <span class="kn">import</span> <span class="n">UnicornFy</span>
 
 <span class="n">received_stream_data_json</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;stream&quot;</span><span class="p">:</span> <span class="s2">&quot;btcusdt@trade&quot;</span><span class="p">,</span>
                              <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;e&quot;</span><span class="p">:</span> <span class="s2">&quot;trade&quot;</span><span class="p">,</span>
@@ -104,7 +107,8 @@ with every API that delivers the receives in raw format (as received without cha
 </pre></div>
 </div>
 <p>Currently this module has no dependencies.</p>
-<p>If you like the project, please <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/stargazers"><img alt="star" src="https://s3.gifyu.com/images/stard237b3003af9f9a9.png" /></a> it on
+<p>If you like the project, please
+<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/stargazers"><img alt="star" src="https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/star.png" /></a> it on
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy">GitHub</a>!</p>
 <div class="section" id="supported-exchanges">
 <h2>Supported Exchanges<a class="headerlink" href="#supported-exchanges" title="Permalink to this headline">¶</a></h2>
@@ -180,16 +184,18 @@ with every API that delivers the receives in raw format (as received without cha
 <div class="section" id="receive-notifications">
 <h2>Receive Notifications<a class="headerlink" href="#receive-notifications" title="Permalink to this headline">¶</a></h2>
 <p>To receive notifications on available updates you can
-<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/watchers"><img alt="watch" src="https://s3.gifyu.com/images/github_watch.png" /></a>
+<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/watchers"><img alt="watch" src="https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/watch.png" /></a>
 the repository on <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy">GitHub</a>, write your
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/example_version_of_this_package.py">own script</a>
-with using <code class="docutils literal notranslate"><span class="pre">unicorn_fy.is_update_availabe()</span></code> or you use the
+with using
+<a class="reference external" href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=is_update#unicorn_fy.unicorn_fy.UnicornFy.is_update_availabe"><code class="docutils literal notranslate"><span class="pre">is_update_availabe()</span></code></a>
+or you use the
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api/wiki/UNICORN-Monitoring-API-Service">monitoring API service</a>.</p>
 </div>
 <div class="section" id="how-to-report-bugs-or-suggest-improvements">
 <h2>How to report Bugs or suggest Improvements?<a class="headerlink" href="#how-to-report-bugs-or-suggest-improvements" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement">List of planned features</a> -
-click <img alt="thumbs-up" src="https://s3.gifyu.com/images/tu.png" /> if you need one of them or suggest a new feature!</p>
+click <img alt="thumbs-up" src="https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/thumbup.png" /> if you need one of them or suggest a new feature!</p>
 <p>Before you report a bug, <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy#installation-and-upgrade">try the latest release</a>.
 If the issue still exists, provide the error trace, OS and python version and explain how to reproduce the error.
 A demo script is appreciated.</p>
@@ -206,13 +212,13 @@ contribute follow
 <div class="section" id="contributors">
 <h3>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/graphs/contributors"><img alt="Contributors" src="https://contributors-img.web.app/image?repo=oliver-zehentleitner/unicorn_fy" /></a></p>
-<p>We <img alt="love" src="https://s3.gifyu.com/images/heartae002231c41d8a80.png" /> open source!</p>
+<p>We <img alt="love" src="https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/heart.png" /> open source!</p>
 </div>
 <div class="section" id="donate">
 <h3>Donate<a class="headerlink" href="#donate" title="Permalink to this headline">¶</a></h3>
 <p>Since you are probably a developer yourself, you will understand very well that the creation of open source software is
 not free - it requires technical knowledge, a lot of time and also financial expenditure.</p>
-<p>If you would like to help me to dedicate my time and energy to this project, donations are very welcome.</p>
+<p>If you would like to help me to dedicate my time and energy to this project, even small donations are very welcome.</p>
 <p><a class="reference external" href="https://liberapay.com/oliver-zehentleitner/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg" /></a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BTC</span><span class="p">:</span> <span class="mi">39</span><span class="n">fS74fvcGnmEk8JUV8bG6P1wkdH29GtsA</span>
 <span class="n">DASH</span><span class="p">:</span> <span class="n">XsRhBuPkXGF9WvifdpkVhTGSmVT4VcuQZ7</span>
@@ -339,7 +345,7 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
     <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">UnicornFy</a> &#187;</li>
     
     
-    <a href="index.html">UnicornFy 0.4.1 documentation</a> &#187;
+    <a href="index.html">UnicornFy 0.5.0 documentation</a> &#187;
     
 
     <li class="right">
@@ -350,10 +356,10 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html">Copyright</a> 2019, Oliver Zehentleitner.
+    &copy; <a href="copyright.html">Copyright</a> 2019-2020, Oliver Zehentleitner.
     <br />
 
-    Last updated on None.
+    Last updated on 28. Sep 09:27:17 UTC 2020.
     <a href="https://github.com/oliver-zehentleitner/unicorn_fy/issues">Found a bug</a>?
     <br />
 
@@ -362,13 +368,12 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
 
-    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.0.3
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.4.3
         with <a href="https://github.com/oliver-zehentleitner/python-docs-theme-technopathy">python-docs-theme-technopathy</a>
         by <a href="https://about.me/oliver-zehentleitner">Oliver Zehentleitner</a>.
     <br />
         <a href="https://www.technopathy.club/2019/11/03/use-python-sphinx-on-github-pages-with-html-and-an-indivdual-theme">
-    Create a GitHub Page like this one!</a>    <br />
-        Powered by <a href="https://www.lucit.co/desktop-and-server-apps.html">LUCIT - Python Development</a>
+    Create a GitHub Page like this one!</a>
     </div>
 
   </body>

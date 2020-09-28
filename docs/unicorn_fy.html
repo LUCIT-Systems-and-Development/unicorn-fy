@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>unicorn_fy package &#8212; UnicornFy 0.4.1 documentation</title>
+    <title>unicorn_fy package &#8212; UnicornFy 0.5.0 documentation</title>
     <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -40,7 +40,7 @@
     <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">UnicornFy</a> &#187;</li>
     
     
-    <a href="index.html">UnicornFy 0.4.1 documentation</a> &#187;
+    <a href="index.html">UnicornFy 0.5.0 documentation</a> &#187;
     
 
     <li class="right">
@@ -63,7 +63,7 @@
 </div>
 <div class="section" id="module-unicorn_fy.unicorn_fy">
 <span id="unicorn-fy-unicorn-fy-module"></span><h2>unicorn_fy.unicorn_fy module<a class="headerlink" href="#module-unicorn_fy.unicorn_fy" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
+<dl class="class">
 <dt id="unicorn_fy.unicorn_fy.UnicornFy">
 <em class="property">class </em><code class="sig-prename descclassname">unicorn_fy.unicorn_fy.</code><code class="sig-name descname">UnicornFy</code><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
@@ -79,14 +79,14 @@
 </ul>
 </dd>
 </dl>
-<dl class="py attribute">
+<dl class="attribute">
 <dt id="unicorn_fy.unicorn_fy.UnicornFy.VERSION">
-<code class="sig-name descname">VERSION</code><em class="property"> = '0.4.1'</em><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.VERSION" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">VERSION</code><em class="property"> = '0.5.0'</em><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.VERSION" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket">
-<em class="property">static </em><code class="sig-name descname">binance_com_futures_websocket</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stream_data_json</span></em>, <em class="sig-param"><span class="n">exchange</span><span class="o">=</span><span class="default_value">'binance.com-futures'</span></em>, <em class="sig-param"><span class="n">show_deprecated_warning</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">binance_com_futures_websocket</code><span class="sig-paren">(</span><em class="sig-param">stream_data_json</em>, <em class="sig-param">exchange='binance.com-futures'</em>, <em class="sig-param">show_deprecated_warning=False</em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket" title="Permalink to this definition">¶</a></dt>
 <dd><p>unicorn_fy binance.com-futures raw_stream_data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -102,9 +102,9 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="unicorn_fy.unicorn_fy.UnicornFy.binance_com_websocket">
-<em class="property">static </em><code class="sig-name descname">binance_com_websocket</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stream_data_json</span></em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.binance_com_websocket" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">binance_com_websocket</code><span class="sig-paren">(</span><em class="sig-param">stream_data_json</em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.binance_com_websocket" title="Permalink to this definition">¶</a></dt>
 <dd><p>unicorn_fy binance.com raw_stream_data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -116,9 +116,9 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="unicorn_fy.unicorn_fy.UnicornFy.binance_je_websocket">
-<em class="property">static </em><code class="sig-name descname">binance_je_websocket</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stream_data_json</span></em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.binance_je_websocket" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">binance_je_websocket</code><span class="sig-paren">(</span><em class="sig-param">stream_data_json</em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.binance_je_websocket" title="Permalink to this definition">¶</a></dt>
 <dd><p>unicorn_fy binance.je (Jersey) raw_stream_data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -130,9 +130,9 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="unicorn_fy.unicorn_fy.UnicornFy.binance_org_websocket">
-<em class="property">static </em><code class="sig-name descname">binance_org_websocket</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stream_data_json</span></em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.binance_org_websocket" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">binance_org_websocket</code><span class="sig-paren">(</span><em class="sig-param">stream_data_json</em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.binance_org_websocket" title="Permalink to this definition">¶</a></dt>
 <dd><p>unicorn_fy binance.org (incl testnet) raw_stream_data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -144,9 +144,9 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="unicorn_fy.unicorn_fy.UnicornFy.binance_us_websocket">
-<em class="property">static </em><code class="sig-name descname">binance_us_websocket</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stream_data_json</span></em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.binance_us_websocket" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">binance_us_websocket</code><span class="sig-paren">(</span><em class="sig-param">stream_data_json</em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.binance_us_websocket" title="Permalink to this definition">¶</a></dt>
 <dd><p>unicorn_us binance.us (US) raw_stream_data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -158,9 +158,9 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="unicorn_fy.unicorn_fy.UnicornFy.binance_websocket">
-<em class="property">static </em><code class="sig-name descname">binance_websocket</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stream_data_json</span></em>, <em class="sig-param"><span class="n">exchange</span><span class="o">=</span><span class="default_value">'binance'</span></em>, <em class="sig-param"><span class="n">show_deprecated_warning</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.binance_websocket" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">binance_websocket</code><span class="sig-paren">(</span><em class="sig-param">stream_data_json</em>, <em class="sig-param">exchange='binance'</em>, <em class="sig-param">show_deprecated_warning=True</em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.binance_websocket" title="Permalink to this definition">¶</a></dt>
 <dd><p>unicorn_fy binance.com raw_stream_data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -176,7 +176,7 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="unicorn_fy.unicorn_fy.UnicornFy.get_latest_release_info">
 <em class="property">static </em><code class="sig-name descname">get_latest_release_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.get_latest_release_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get infos about the latest available release</p>
@@ -187,7 +187,7 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="unicorn_fy.unicorn_fy.UnicornFy.get_latest_version">
 <code class="sig-name descname">get_latest_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.get_latest_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the version of the latest available release (cache time 1 hour)</p>
@@ -198,7 +198,7 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="unicorn_fy.unicorn_fy.UnicornFy.get_version">
 <em class="property">static </em><code class="sig-name descname">get_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.get_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the package/module version</p>
@@ -209,9 +209,9 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="unicorn_fy.unicorn_fy.UnicornFy.is_json">
-<em class="property">static </em><code class="sig-name descname">is_json</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.is_json" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">is_json</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.is_json" title="Permalink to this definition">¶</a></dt>
 <dd><p>Is the string in json format?</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -226,7 +226,7 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="unicorn_fy.unicorn_fy.UnicornFy.is_update_availabe">
 <code class="sig-name descname">is_update_availabe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.is_update_availabe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Is a new release of this package available?</p>
@@ -237,9 +237,9 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
+<dl class="method">
 <dt id="unicorn_fy.unicorn_fy.UnicornFy.set_to_false_if_not_exist">
-<em class="property">static </em><code class="sig-name descname">set_to_false_if_not_exist</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.set_to_false_if_not_exist" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">set_to_false_if_not_exist</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#unicorn_fy.unicorn_fy.UnicornFy.set_to_false_if_not_exist" title="Permalink to this definition">¶</a></dt>
 <dd><p>some vars are non existent if they would be empty, so we create the missing vars with default values</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -336,7 +336,7 @@
     <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">UnicornFy</a> &#187;</li>
     
     
-    <a href="index.html">UnicornFy 0.4.1 documentation</a> &#187;
+    <a href="index.html">UnicornFy 0.5.0 documentation</a> &#187;
     
 
     <li class="right">
@@ -347,10 +347,10 @@
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html">Copyright</a> 2019, Oliver Zehentleitner.
+    &copy; <a href="copyright.html">Copyright</a> 2019-2020, Oliver Zehentleitner.
     <br />
 
-    Last updated on None.
+    Last updated on 28. Sep 09:27:17 UTC 2020.
     <a href="https://github.com/oliver-zehentleitner/unicorn_fy/issues">Found a bug</a>?
     <br />
 
@@ -359,13 +359,12 @@
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
 
-    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.0.3
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.4.3
         with <a href="https://github.com/oliver-zehentleitner/python-docs-theme-technopathy">python-docs-theme-technopathy</a>
         by <a href="https://about.me/oliver-zehentleitner">Oliver Zehentleitner</a>.
     <br />
         <a href="https://www.technopathy.club/2019/11/03/use-python-sphinx-on-github-pages-with-html-and-an-indivdual-theme">
-    Create a GitHub Page like this one!</a>    <br />
-        Powered by <a href="https://www.lucit.co/desktop-and-server-apps.html">LUCIT - Python Development</a>
+    Create a GitHub Page like this one!</a>
     </div>
 
   </body>

@@ -1,10 +1,13 @@
 [![GitHub release](https://img.shields.io/github/release/oliver-zehentleitner/unicorn_fy.svg)](https://github.com/oliver-zehentleitner/unicorn_fy/releases/latest)
 [![GitHub](https://img.shields.io/github/license/oliver-zehentleitner/unicorn_fy.svg?color=blue)](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/LICENSE)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg)](https://www.python.org/downloads/)
-[![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg)](https://github.com/oliver-zehentleitner/unicorn_fy/issues)
-[![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel)](https://pypi.org/project/unicorn-fy/)
 [![Downloads](https://pepy.tech/badge/unicorn-fy)](https://pepy.tech/project/unicorn-fy)
-[![Telegram](https://img.shields.io/badge/chat-telegram-red.svg)](https://t.me/unicorndevs)
+[![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel)](https://pypi.org/project/unicorn-fy/)
+[![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg)](https://github.com/oliver-zehentleitner/unicorn_fy/issues)
+[![Build Status](https://travis-ci.com/oliver-zehentleitner/unicorn_fy.svg?branch=master)](https://travis-ci.com/oliver-zehentleitner/unicorn_fy)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/oliver-zehentleitner/unicorn_fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/oliver-zehentleitner/unicorn_fy/context:python)
+[![Coverage Status](https://coveralls.io/repos/github/oliver-zehentleitner/unicorn_fy/badge.svg?branch=master)](https://coveralls.io/github/oliver-zehentleitner/unicorn_fy?branch=master)
+[![Telegram](https://img.shields.io/badge/chat-telegram-yellow.svg)](https://t.me/unicorndevs)
 [![Donations/week](http://img.shields.io/liberapay/receives/oliver-zehentleitner.svg?logo=liberapay)](https://liberapay.com/oliver-zehentleitner/donate)
 [![Patrons](http://img.shields.io/liberapay/patrons/oliver-zehentleitner.svg?logo=liberapay")](https://liberapay.com/oliver-zehentleitner/donate)
 
@@ -42,7 +45,8 @@ print(unicorn_fied_stream_data)
 ```
 Currently this module has no dependencies.
 
-If you like the project, please [![star](https://s3.gifyu.com/images/stard237b3003af9f9a9.png)](https://github.com/oliver-zehentleitner/unicorn_fy/stargazers) it on 
+If you like the project, please 
+[![star](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/star.png)](https://github.com/oliver-zehentleitner/unicorn_fy/stargazers) it on 
 [GitHub](https://github.com/oliver-zehentleitner/unicorn_fy)! 
 
 ## Supported Exchanges
@@ -97,15 +101,17 @@ This is not a release version and can not be considered to be stable!
 
 ## Receive Notifications
 To receive notifications on available updates you can 
-[![watch](https://s3.gifyu.com/images/github_watch.png)](https://github.com/oliver-zehentleitner/unicorn_fy/watchers) 
+[![watch](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/watch.png)](https://github.com/oliver-zehentleitner/unicorn_fy/watchers) 
 the repository on [GitHub](https://github.com/oliver-zehentleitner/unicorn_fy), write your 
 [own script](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/example_version_of_this_package.py) 
-with using `unicorn_fy.is_update_availabe()` or you use the 
+with using 
+[`is_update_availabe()`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=is_update#unicorn_fy.unicorn_fy.UnicornFy.is_update_availabe) 
+ or you use the 
 [monitoring API service](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api/wiki/UNICORN-Monitoring-API-Service).
 
 ## How to report Bugs or suggest Improvements?
 [List of planned features](https://github.com/oliver-zehentleitner/unicorn_fy/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) - 
-click ![thumbs-up](https://s3.gifyu.com/images/tu.png) if you need one of them or suggest a new feature!
+click ![thumbs-up](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/thumbup.png) if you need one of them or suggest a new feature!
 
 Before you report a bug, [try the latest release](https://github.com/oliver-zehentleitner/unicorn_fy#installation-and-upgrade). 
 If the issue still exists, provide the error trace, OS and python version and explain how to reproduce the error. 
@@ -125,13 +131,13 @@ contribute follow
 ### Contributors
 [![Contributors](https://contributors-img.web.app/image?repo=oliver-zehentleitner/unicorn_fy)](https://github.com/oliver-zehentleitner/unicorn_fy/graphs/contributors)
 
-We ![love](https://s3.gifyu.com/images/heartae002231c41d8a80.png) open source!
+We ![love](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/heart.png) open source!
 
 ### Donate
 Since you are probably a developer yourself, you will understand very well that the creation of open source software is 
 not free - it requires technical knowledge, a lot of time and also financial expenditure.
 
-If you would like to help me to dedicate my time and energy to this project, donations are very welcome.
+If you would like to help me to dedicate my time and energy to this project, even small donations are very welcome.
 
 [![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/oliver-zehentleitner/donate)
 

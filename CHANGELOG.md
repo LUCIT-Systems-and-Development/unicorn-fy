@@ -8,10 +8,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## 0.5.0
 ### Added
-- `outboundAccountPosition` [issue#11](https://github.com/oliver-zehentleitner/unicorn_fy/issues/11) thanks to 
+- `outboundAccountPosition` [issue#11](https://github.com/oliver-zehentleitner/unicorn_fy/issues/11) - thanks to 
 @bmschwartz
 - handling for results
-
+### Fixed
+- `ModuleNotFoundError: No module named 'unicorn_fy.unicorn_fy'; 'unicorn_fy' is not a package` 
+[PR#10](https://github.com/oliver-zehentleitner/unicorn_fy/pull/10), [issue#9](https://github.com/oliver-zehentleitner/unicorn_fy/issues/9)
+- thanks to @uggel
 
 ## 0.4.1
 ### Added
