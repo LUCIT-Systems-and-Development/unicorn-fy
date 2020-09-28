@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# File: test_stream_everything_and_unicorn_fy.py
+# File: dev_stream_everything_and_unicorn_fy.py
 #
 # Part of ‘UnicornFy’
 # Project website: https://github.com/oliver-zehentleitner/unicorn_fy
@@ -95,7 +95,10 @@ userdata_stream_id = binance_websocket_api_manager.create_stream(["!userData"], 
 arr_stream_id = binance_websocket_api_manager.create_stream(arr_channels, "arr")
 
 for channel in channels:
-    binance_websocket_api_manager.create_stream(channel, markets)
+    binance_websocket_api_manager.create_stream(channel, markets, stream_label=channel)
+
+stream_id_trade = binance_websocket_api_manager.get_stream_id_by_label("trade")
+binance_websocket_api_manager.get_stream_subscriptions(stream_id_trade)
 
 #while True:
 #    binance_websocket_api_manager.print_summary()

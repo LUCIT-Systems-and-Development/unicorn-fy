@@ -4,7 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## 0.4.1.dev (development stage/unreleased/unstable)
+## 0.5.0.dev (development stage/unreleased/unstable)
+
+## 0.5.0
+### Added
+- `outboundAccountPosition` [issue#11](https://github.com/oliver-zehentleitner/unicorn_fy/issues/11) thanks to 
+@bmschwartz
+- handling for results
+
 
 ## 0.4.1
 ### Added

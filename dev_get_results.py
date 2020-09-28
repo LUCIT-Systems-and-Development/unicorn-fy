@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# File: test_one_stream.py
+# File: dev_get_results.py
 #
 # Part of ‘UnicornFy’
 # Project website: https://github.com/oliver-zehentleitner/unicorn_fy
@@ -11,7 +11,7 @@
 # Author: Oliver Zehentleitner
 #         https://about.me/oliver-zehentleitner
 #
-# Copyright (c) 2019-2020, Oliver Zehentleitner
+# Copyright (c) 2019, Oliver Zehentleitner
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
@@ -35,47 +35,29 @@
 
 from unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager import BinanceWebSocketApiManager
 from unicorn_fy.unicorn_fy import UnicornFy
+import time
 import logging
 import os
-import requests
-import sys
-import time
-import threading
 
-try:
-    from binance.client import Client
-except ImportError:
-    print("Please install `python-binance`!")
-    sys.exit(1)
-
-# https://docs.python.org/3/library/logging.html#logging-levels
-logging.basicConfig(level=logging.INFO,
+logging.basicConfig(level=logging.DEBUG,
                     filename=os.path.basename(__file__) + '.log',
                     format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
                     style="{")
 
+binance_websocket_api_manager = BinanceWebSocketApiManager(exchange="binance.com")
+stream_id = binance_websocket_api_manager.create_stream(['ticker'], ['btcusdt', 'bnbbtc', 'ethbtc'])
+#binance_websocket_api_manager.create_stream(['miniTicker'], ['btcusdt', 'bnbbtc', 'ethbtc'])
+#binance_websocket_api_manager.create_stream(['!miniTicker'], ['arr'])
+#binance_websocket_api_manager.create_stream(['!ticker'], ['arr'])
 
-def print_stream_data_from_stream_buffer(binance_websocket_api_manager):
-    while True:
-        if binance_websocket_api_manager.is_manager_stopping():
-            exit(0)
-        oldest_stream_data_from_stream_buffer = binance_websocket_api_manager.pop_stream_data_from_stream_buffer()
-        if oldest_stream_data_from_stream_buffer is not False:
-            unicorn_fied_data = UnicornFy.binance_com_websocket(oldest_stream_data_from_stream_buffer)
-            print(str(oldest_stream_data_from_stream_buffer))
-            print(str(unicorn_fied_data))
-        else:
-            time.sleep(0.01)
+time.sleep(10)
+binance_websocket_api_manager.get_stream_subscriptions(stream_id)
+time.sleep(5)
+print(str(binance_websocket_api_manager.get_results_from_endpoints()))
+time.sleep(5)
 
-binance_websocket_api_manager = BinanceWebSocketApiManager()
-
-worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer, args=(binance_websocket_api_manager,))
-worker_thread.start()
-
-#channels = {'aggTrade', 'trade', 'kline_1m', 'kline_5m', 'kline_15m', 'kline_30m', 'kline_1h', 'kline_2h', 'kline_4h',
-#            'kline_6h', 'kline_8h', 'kline_12h', 'kline_1d', 'kline_3d', 'kline_1w', 'kline_1M', 'miniTicker',
-#            'ticker', 'bookTicker', 'depth5', 'depth10', 'depth20', 'depth', 'depth@100ms'}
-#arr_channels = {'!miniTicker', '!ticker', '!bookTicker'}
-
-binance_websocket_api_manager.create_stream('miniTicker', ['btcusdt', 'bnbbtc', 'ethbtc'])
-
+while True:
+    oldest_stream_data_from_stream_buffer = binance_websocket_api_manager.pop_stream_data_from_stream_buffer()
+    if oldest_stream_data_from_stream_buffer:
+        oldest_stream_data_from_stream_buffer = UnicornFy.binance_com_websocket(oldest_stream_data_from_stream_buffer)
+        #print(oldest_stream_data_from_stream_buffer)

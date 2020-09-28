@@ -70,8 +70,8 @@ class TestBinanceComWebsocket(unittest.TestCase):
         self.assertEqual(str(self.unicorn_fy.binance_com_websocket(data)), asserted_result)
 
     def test_ticker_multi(self):
-        data = '{"stream":"btcusdt@ticker","data":{"e":"24hrTicker","E":1592593725004,"s":"BTCUSDT","p":"-63.97000000","P":"-0.682","w":"9343.30115252","x":"9382.47000000","c":"9318.88000000","Q":"0.00124400","b":"9318.52000000","B":"0.01713800","a":"9319.07000000","A":"0.13698900","o":"9382.85000000","h":"9438.30000000","l":"9215.79000000","v":"48749.21550100","q":"455478601.37507634","O":1592507324958,"C":1592593724958,"F":343178715,"L":343729070,"n":550356}}                       '
-        asserted_result = "{'stream_type': 'btcusdt@ticker', 'event_type': '24hrTicker', 'data': [{'stream_type': 'btcusdt@ticker', 'event_type': '24hrTicker', 'event_time': 1592593725004, 'symbol': 'BTCUSDT', 'price_change': '-63.97000000', 'price_change_percent': '-0.682', 'weighted_average_price': '9343.30115252', 'trade_before_24h_window': '9382.47000000', 'last_price': '9318.88000000', 'last_quantity': '0.00124400', 'best_bid_price': '9318.52000000', 'best_bid_quantity': '0.01713800', 'best_ask_price': '9319.07000000', 'best_ask_quantity': '0.13698900', 'open_price': '9382.85000000', 'high_price': '9438.30000000', 'low_price': '9215.79000000', 'total_traded_base_asset_volume': '48749.21550100', 'total_traded_quote_asset_volume': '455478601.37507634', 'statistics_open_time': 1592507324958, 'statistics_close_time': 1592593724958, 'first_trade_id': 343178715, 'last_trade_id': 343729070, 'total_nr_of_trades': 550356}], 'unicorn_fied': ['binance.com', '" + self.unicorn_fy_version + "']}"
+        data = "{'stream_type': 'btcusdt@ticker', 'event_type': '24hrTicker', 'data': [{'stream_type': 'btcusdt@ticker', 'event_type': '24hrTicker', 'event_time': 1601238149443, 'symbol': 'BTCUSDT', 'price_change': '8.05000000', 'price_change_percent': '0.075', 'weighted_average_price': '10708.65798356', 'trade_before_24h_window': '10713.10000000', 'last_price': '10721.15000000', 'last_quantity': '0.01952400', 'best_bid_price': '10721.15000000', 'best_bid_quantity': '12.51342600', 'best_ask_price': '10721.16000000', 'best_ask_quantity': '0.02454900', 'open_price': '10713.10000000', 'high_price': '10799.00000000', 'low_price': '10594.82000000', 'total_traded_base_asset_volume': '30642.60765400', 'total_traded_quote_asset_volume': '328141205.09112697', 'statistics_open_time': 1601151749415, 'statistics_close_time': 1601238149415, 'first_trade_id': 423470822, 'last_trade_id': 423988198, 'total_nr_of_trades': 517377}], 'unicorn_fied': ['binance.com', '" + self.unicorn_fy_version + "']}"
+        asserted_result = "{'stream_type': 'btcusdt@ticker', 'event_type': '24hrTicker', 'data': [{'stream_type': 'btcusdt@ticker', 'event_type': '24hrTicker', 'event_time': 1601238149443, 'symbol': 'BTCUSDT', 'price_change': '8.05000000', 'price_change_percent': '0.075', 'weighted_average_price': '10708.65798356', 'trade_before_24h_window': '10713.10000000', 'last_price': '10721.15000000', 'last_quantity': '0.01952400', 'best_bid_price': '10721.15000000', 'best_bid_quantity': '12.51342600', 'best_ask_price': '10721.16000000', 'best_ask_quantity': '0.02454900', 'open_price': '10713.10000000', 'high_price': '10799.00000000', 'low_price': '10594.82000000', 'total_traded_base_asset_volume': '30642.60765400', 'total_traded_quote_asset_volume': '328141205.09112697', 'statistics_open_time': 1601151749415, 'statistics_close_time': 1601238149415, 'first_trade_id': 423470822, 'last_trade_id': 423988198, 'total_nr_of_trades': 517377}], 'unicorn_fied': ['binance.com', '" + self.unicorn_fy_version + "']}"
         self.assertEqual(str(self.unicorn_fy.binance_com_websocket(data)), asserted_result)
 
     def test_miniTicker_arr(self):
@@ -93,6 +93,22 @@ class TestBinanceComWebsocket(unittest.TestCase):
         data = ''
         asserted_result = ""
         self.assertEqual(str(self.unicorn_fy.binance_com_websocket(data)), asserted_result)
+
+    def tearDown(self):
+        del self.unicorn_fy
+
+
+class TestBinanceComWebsocketFutures(unittest.TestCase):
+
+    def setUp(self):
+        self.unicorn_fy = UnicornFy()
+        self.unicorn_fy_version = str(self.unicorn_fy.get_version())
+
+    def test_aggTrade_single(self):
+        data = '{"stream":"btcusdt@aggTrade","data":{"e":"aggTrade","E":1592584651517,"s":"BTCUSDT","a":315753210,"p":"9319.00000000","q":"0.01864900","f":343675554,"l":343675554,"T":1592584651516,"m":true,"M":true}}'
+        print(str(self.unicorn_fy.binance_com_futures_websocket(data)))
+        asserted_result = "{'stream_type': 'btcusdt@aggTrade', 'event_type': 'aggTrade', 'event_time': 1592584651517, 'symbol': 'BTCUSDT', 'aggregate_trade_id': 315753210, 'price': '9319.00000000', 'quantity': '0.01864900', 'first_trade_id': 343675554, 'last_trade_id': 343675554, 'trade_time': 1592584651516, 'is_market_maker': True, 'unicorn_fied': ['binance.com-futures', '" + self.unicorn_fy_version + "']}"
+        self.assertEqual(str(self.unicorn_fy.binance_com_futures_websocket(data)), asserted_result)
 
     def tearDown(self):
         del self.unicorn_fy
