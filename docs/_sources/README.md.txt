@@ -44,24 +44,25 @@ print(unicorn_fied_stream_data)
 {'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT', 'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847, 'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True, 'unicorn_fied': ['binance', '0.1.0']}
 ```
 
-The module requires Python 3.6.0 or above. The current dependencies are listed 
-[here](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/requirements.txt).
-
-If you like the project, please 
-[![star](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/star.png)](https://github.com/oliver-zehentleitner/unicorn_fy/stargazers) it on 
-[GitHub](https://github.com/oliver-zehentleitner/unicorn_fy)! 
-
 ## Supported Exchanges
 ### Websockets
 - binance.com ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
 - binance.com-futures ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
 - binance.com-margin ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
+- binance.com-isolated_margin ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
 - binance.je ([API specification](https://github.com/binance-jersey/binance-official-api-docs/))
 - binance.us ([API specification](https://github.com/binance-us/binance-official-api-docs))
 - binance.org ([API specification](https://docs.binance.org/))
 
 ### REST
 - none
+
+The module requires Python 3.6.0 or above. The current dependencies are listed 
+[here](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/requirements.txt).
+
+If you like the project, please 
+[![star](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/star.png)](https://github.com/oliver-zehentleitner/unicorn_fy/stargazers) it on 
+[GitHub](https://github.com/oliver-zehentleitner/unicorn_fy)! 
 
 ## Installation and Upgrade
 ### A wheel of the latest release with PIP from [PyPI](https://pypi.org/project/unicorn-fy/)
@@ -75,9 +76,9 @@ Run in bash:
 `pip install https://github.com/oliver-zehentleitner/unicorn_fy/archive/$(curl -s https://api.github.com/repos/oliver-zehentleitner/unicorn_fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
 
 #### Windows
-Use the below command with the version (such as 0.2.0) you determined [here](https://github.com/oliver-zehentleitner/unicorn_fy/releases/latest):
+Use the below command with the version (such as 0.6.0) you determined [here](https://github.com/oliver-zehentleitner/unicorn_fy/releases/latest):
 
-`pip install https://github.com/oliver-zehentleitner/unicorn_fy/archive/0.2.0.tar.gz --upgrade`
+`pip install https://github.com/oliver-zehentleitner/unicorn_fy/archive/0.6.0.tar.gz --upgrade`
 
 ### From the latest source (dev-stage) with PIP from [Github](https://github.com/oliver-zehentleitner/unicorn_fy)
 This is not a release version and can not be considered to be stable!

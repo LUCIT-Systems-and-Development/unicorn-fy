@@ -106,11 +106,6 @@ with every API that delivers the receives in raw format (as received without cha
 <span class="p">{</span><span class="s1">&#39;stream_type&#39;</span><span class="p">:</span> <span class="s1">&#39;btcusdt@trade&#39;</span><span class="p">,</span> <span class="s1">&#39;event_type&#39;</span><span class="p">:</span> <span class="s1">&#39;trade&#39;</span><span class="p">,</span> <span class="s1">&#39;event_time&#39;</span><span class="p">:</span> <span class="mi">1556876873656</span><span class="p">,</span> <span class="s1">&#39;symbol&#39;</span><span class="p">:</span> <span class="s1">&#39;BTCUSDT&#39;</span><span class="p">,</span> <span class="s1">&#39;trade_id&#39;</span><span class="p">:</span> <span class="mi">117727701</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="s1">&#39;5786.76000000&#39;</span><span class="p">,</span> <span class="s1">&#39;quantity&#39;</span><span class="p">:</span> <span class="s1">&#39;0.03200500&#39;</span><span class="p">,</span> <span class="s1">&#39;buyer_order_id&#39;</span><span class="p">:</span> <span class="mi">341831847</span><span class="p">,</span> <span class="s1">&#39;seller_order_id&#39;</span><span class="p">:</span> <span class="mi">341831876</span><span class="p">,</span> <span class="s1">&#39;trade_time&#39;</span><span class="p">:</span> <span class="mi">1556876873648</span><span class="p">,</span> <span class="s1">&#39;is_market_maker&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;ignore&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;unicorn_fied&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;binance&#39;</span><span class="p">,</span> <span class="s1">&#39;0.1.0&#39;</span><span class="p">]}</span>
 </pre></div>
 </div>
-<p>The module requires Python 3.6.0 or above. The current dependencies are listed
-<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/requirements.txt">here</a>.</p>
-<p>If you like the project, please
-<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/stargazers"><img alt="star" src="https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/star.png" /></a> it on
-<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy">GitHub</a>!</p>
 <div class="section" id="supported-exchanges">
 <h2>Supported Exchanges<a class="headerlink" href="#supported-exchanges" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="websockets">
@@ -119,6 +114,7 @@ with every API that delivers the receives in raw format (as received without cha
 <li><p>binance.com (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>)</p></li>
 <li><p>binance.com-futures (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>)</p></li>
 <li><p>binance.com-margin (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>)</p></li>
+<li><p>binance.com-isolated_margin (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>)</p></li>
 <li><p>binance.je (<a class="reference external" href="https://github.com/binance-jersey/binance-official-api-docs/">API specification</a>)</p></li>
 <li><p>binance.us (<a class="reference external" href="https://github.com/binance-us/binance-official-api-docs">API specification</a>)</p></li>
 <li><p>binance.org (<a class="reference external" href="https://docs.binance.org/">API specification</a>)</p></li>
@@ -129,6 +125,11 @@ with every API that delivers the receives in raw format (as received without cha
 <ul class="simple">
 <li><p>none</p></li>
 </ul>
+<p>The module requires Python 3.6.0 or above. The current dependencies are listed
+<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/requirements.txt">here</a>.</p>
+<p>If you like the project, please
+<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/stargazers"><img alt="star" src="https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/star.png" /></a> it on
+<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy">GitHub</a>!</p>
 </div>
 </div>
 <div class="section" id="installation-and-upgrade">
@@ -146,8 +147,8 @@ with every API that delivers the receives in raw format (as received without cha
 </div>
 <div class="section" id="windows">
 <h4>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h4>
-<p>Use the below command with the version (such as 0.2.0) you determined <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/releases/latest">here</a>:</p>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/oliver-zehentleitner/unicorn_fy/archive/0.2.0.tar.gz</span> <span class="pre">--upgrade</span></code></p>
+<p>Use the below command with the version (such as 0.6.0) you determined <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/releases/latest">here</a>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/oliver-zehentleitner/unicorn_fy/archive/0.6.0.tar.gz</span> <span class="pre">--upgrade</span></code></p>
 </div>
 </div>
 <div class="section" id="from-the-latest-source-dev-stage-with-pip-from-github">
