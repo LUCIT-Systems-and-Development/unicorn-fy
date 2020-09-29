@@ -57,14 +57,14 @@ print(unicorn_fied_stream_data)
 ### REST
 - none
 
-The module requires Python 3.6.0 or above. The current dependencies are listed 
-[here](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/requirements.txt).
-
 If you like the project, please 
 [![star](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn_fy/master/images/misc/star.png)](https://github.com/oliver-zehentleitner/unicorn_fy/stargazers) it on 
 [GitHub](https://github.com/oliver-zehentleitner/unicorn_fy)! 
 
 ## Installation and Upgrade
+The module requires Python 3.6.0 or above. The current dependencies are listed 
+[here](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/requirements.txt).
+
 ### A wheel of the latest release with PIP from [PyPI](https://pypi.org/project/unicorn-fy/)
 `pip install unicorn-fy --upgrade`
 
