@@ -60,4 +60,4 @@ while True:
     oldest_stream_data_from_stream_buffer = binance_websocket_api_manager.pop_stream_data_from_stream_buffer()
     if oldest_stream_data_from_stream_buffer:
         oldest_stream_data_from_stream_buffer = UnicornFy.binance_com_websocket(oldest_stream_data_from_stream_buffer)
-        #print(oldest_stream_data_from_stream_buffer)
+        print(oldest_stream_data_from_stream_buffer)
