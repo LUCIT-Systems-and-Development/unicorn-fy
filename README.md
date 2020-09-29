@@ -62,7 +62,9 @@ If you like the project, please
 [GitHub](https://github.com/oliver-zehentleitner/unicorn_fy)! 
 
 ## Installation and Upgrade
-The module requires Python 3.6.0 or above. The current dependencies are listed 
+The module requires Python 3.6.0 or above. 
+
+The current dependencies are listed 
 [here](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/requirements.txt).
 
 ### A wheel of the latest release with PIP from [PyPI](https://pypi.org/project/unicorn-fy/)
