@@ -53,54 +53,11 @@ class UnicornFy(object):
         - Binance.org
         - Jex.com
     """
-    VERSION = "0.5.1.dev"
+    VERSION = "0.6.0"
 
     def __init__(self):
         self.last_update_check_github = {'timestamp': time.time(),
                                          'status': None}
-
-    @staticmethod
-    def is_json(data):
-        """
-        Is the string in json format?
-
-        :param data: the data to verify
-        :type data: str
-
-        :return: True or False
-        :rtype: bool
-        """
-        try:
-            json.loads(data)
-        except ValueError:
-            return False
-        except TypeError:
-            return False
-        return True
-
-    @staticmethod
-    def set_to_false_if_not_exist(value, key):
-        """
-        some vars are non existent if they would be empty, so we create the missing vars with default values
-
-        :param value: default value
-        :type value: str
-
-        :param key: the key name
-        :type key: str
-
-        :return: final value
-        :rtype: str
-        """
-        try:
-            if value[key]:
-                return value[key]
-        except KeyError:
-            value[key] = False
-            return value
-        except IndexError:
-            value[key] = False
-            return value
 
     @staticmethod
     def binance_org_websocket(stream_data_json):
@@ -163,18 +120,6 @@ class UnicornFy(object):
         """
         return UnicornFy.binance_com_futures_websocket(stream_data_json, exchange="binance.com-futures", show_deprecated_warning=False)
             
-    @staticmethod
-    def jex_com_websocket(stream_data_json):
-        """
-        unicorn_fy jex.com raw_stream_data
-
-        :param stream_data_json: The received raw stream data from the Binance websocket
-        :type stream_data_json: json
-
-        :return: dict
-        """
-        return UnicornFy.binance_websocket(stream_data_json, exchange="jex.com", show_deprecated_warning=False)
-
     @staticmethod
     def binance_je_websocket(stream_data_json):
         """
@@ -850,6 +795,18 @@ class UnicornFy(object):
         return unicorn_fied_data
 
     @staticmethod
+    def jex_com_websocket(stream_data_json):
+        """
+        unicorn_fy jex.com raw_stream_data
+
+        :param stream_data_json: The received raw stream data from the Binance websocket
+        :type stream_data_json: json
+
+        :return: dict
+        """
+        return UnicornFy.binance_websocket(stream_data_json, exchange="jex.com", show_deprecated_warning=False)
+
+    @staticmethod
     def get_latest_release_info():
         """
         Get infos about the latest available release
@@ -861,15 +818,6 @@ class UnicornFy(object):
             return respond.json()
         except Exception:
             return False
-
-    @staticmethod
-    def get_version():
-        """
-        Get the package/module version
-
-        :return: str
-        """
-        return UnicornFy.VERSION
 
     def get_latest_version(self):
         """
@@ -889,6 +837,34 @@ class UnicornFy(object):
         else:
             return "unknown"
 
+    @staticmethod
+    def get_version():
+        """
+        Get the package/module version
+
+        :return: str
+        """
+        return UnicornFy.VERSION
+
+    @staticmethod
+    def is_json(data):
+        """
+        Is the string in json format?
+
+        :param data: the data to verify
+        :type data: str
+
+        :return: True or False
+        :rtype: bool
+        """
+        try:
+            json.loads(data)
+        except ValueError:
+            return False
+        except TypeError:
+            return False
+        return True
+
     def is_update_availabe(self):
         """
         Is a new release of this package available?
@@ -906,3 +882,26 @@ class UnicornFy(object):
         else:
             return True
 
+    @staticmethod
+    def set_to_false_if_not_exist(value, key):
+        """
+        some vars are non existent if they would be empty, so we create the missing vars with default values
+
+        :param value: default value
+        :type value: str
+
+        :param key: the key name
+        :type key: str
+
+        :return: final value
+        :rtype: str
+        """
+        try:
+            if value[key]:
+                return value[key]
+        except KeyError:
+            value[key] = False
+            return value
+        except IndexError:
+            value[key] = False
+            return value

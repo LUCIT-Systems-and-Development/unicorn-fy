@@ -22,9 +22,9 @@ copyright = '2019-2020, Oliver Zehentleitner'
 author = 'Oliver Zehentleitner'
 
 # The full version, including alpha/beta/rc tags
-release = '0.5.1'
+release = '0.6.0'
 
-html_last_updated_fmt = "28. Sep 09:27:17 UTC 2020"
+html_last_updated_fmt = "Sep 29 19:31:14 UTC 2020"
 
 # -- General configuration ---------------------------------------------------
 
