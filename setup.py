@@ -42,7 +42,7 @@ setuptools.setup(
      name='unicorn_fy',
      version='0.5.0.dev',
      author="Oliver Zehentleitner",
-     url="https://about.me/oliver-zehentleitner/",
+     url="https://github.com/oliver-zehentleitner/unicorn_fy",
      description="Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.",
      long_description=long_description,
      long_description_content_type="text/markdown",
@@ -52,7 +52,7 @@ setuptools.setup(
      project_urls={
         'Documentation': 'https://oliver-zehentleitner.github.io/unicorn_fy/',
         'Wiki': 'https://github.com/oliver-zehentleitner/unicorn_fy/wiki',
-        'Source': 'https://github.com/oliver-zehentleitner/unicorn_fy',
+        'Author': 'https://about.me/oliver-zehentleitner/',
      },
      packages=setuptools.find_packages(),
      classifiers=[
