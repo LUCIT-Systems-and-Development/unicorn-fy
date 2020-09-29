@@ -47,9 +47,11 @@ class UnicornFy(object):
         - Binance.com
         - Binance-com-futures
         - Binance-com-margin
+        - Binance-com-isolated_margin
         - Binance.je
         - Binance.us
         - Binance.org
+        - Jex.com
     """
     VERSION = "0.5.1.dev"
 
@@ -110,6 +112,7 @@ class UnicornFy(object):
 
         :return: dict
         """
+        logging.info("Can not convert raw data from binance.org")
         return stream_data_json
 
     @staticmethod
@@ -123,6 +126,54 @@ class UnicornFy(object):
         :return: dict
         """
         return UnicornFy.binance_websocket(stream_data_json, exchange="binance.com", show_deprecated_warning=False)
+
+    @staticmethod
+    def binance_com_margin_websocket(stream_data_json):
+        """
+        unicorn_fy binance.com-margin raw_stream_data
+
+        :param stream_data_json: The received raw stream data from the Binance websocket
+        :type stream_data_json: json
+
+        :return: dict
+        """
+        return UnicornFy.binance_websocket(stream_data_json, exchange="binance.com-margin", show_deprecated_warning=False)
+    
+    @staticmethod
+    def binance_com_isolated_margin_websocket(stream_data_json):
+        """
+        unicorn_fy binance.com-isolated_margin raw_stream_data
+
+        :param stream_data_json: The received raw stream data from the Binance websocket
+        :type stream_data_json: json
+
+        :return: dict
+        """
+        return UnicornFy.binance_websocket(stream_data_json, exchange="binance.com-isolated_margin", show_deprecated_warning=False)
+        
+    @staticmethod
+    def binance_com_futures_websocket(stream_data_json):
+        """
+        unicorn_fy binance.com-futures raw_stream_data
+
+        :param stream_data_json: The received raw stream data from the Binance websocket
+        :type stream_data_json: json
+
+        :return: dict
+        """
+        return UnicornFy.binance_com_futures_websocket(stream_data_json, exchange="binance.com-futures", show_deprecated_warning=False)
+            
+    @staticmethod
+    def jex_com_websocket(stream_data_json):
+        """
+        unicorn_fy jex.com raw_stream_data
+
+        :param stream_data_json: The received raw stream data from the Binance websocket
+        :type stream_data_json: json
+
+        :return: dict
+        """
+        return UnicornFy.binance_websocket(stream_data_json, exchange="jex.com", show_deprecated_warning=False)
 
     @staticmethod
     def binance_je_websocket(stream_data_json):
