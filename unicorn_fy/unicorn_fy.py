@@ -51,7 +51,7 @@ class UnicornFy(object):
         - Binance.us
         - Binance.org
     """
-    VERSION = "0.5.0a"
+    VERSION = "0.5.1.dev"
 
     def __init__(self):
         self.last_update_check_github = {'timestamp': time.time(),

@@ -34,13 +34,16 @@
 # IN THE SOFTWARE.
 
 import setuptools
+from unicorn_fy.unicorn_fy import UnicornFy
+
+unicornfy = UnicornFy
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
      name='unicorn_fy',
-     version='0.5.0a',
+     version=str(unicornfy.get_version()),
      author="Oliver Zehentleitner",
      url="https://github.com/oliver-zehentleitner/unicorn_fy",
      description="Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.",
