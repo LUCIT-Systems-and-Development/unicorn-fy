@@ -40,7 +40,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='unicorn_fy',
-     version='0.5.0.dev',
+     version='0.5.0a',
      author="Oliver Zehentleitner",
      url="https://github.com/oliver-zehentleitner/unicorn_fy",
      description="Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.",
