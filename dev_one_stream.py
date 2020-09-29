@@ -59,6 +59,7 @@ def print_stream_data_from_stream_buffer(binance_websocket_api_manager):
         else:
             time.sleep(0.01)
 
+
 binance_websocket_api_manager = BinanceWebSocketApiManager()
 
 worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer, args=(binance_websocket_api_manager,))
