@@ -14,7 +14,7 @@
 # UnicornFy
 [Supported Exchanges](#supported-exchanges) | [Installation](#installation-and-upgrade) | [Documentation](#documentation) | 
 [Change Log](#change-log) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | 
-[Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing)
+[Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing) | [Donate](#donate)
 
 Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
 
