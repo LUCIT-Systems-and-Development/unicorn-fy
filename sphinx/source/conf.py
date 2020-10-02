@@ -35,7 +35,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.githubpages',
     'recommonmark',
-    'sphinx_markdown_tables',
+    'sphinx_markdown_tables'
 ]
 
 source_parsers = {
