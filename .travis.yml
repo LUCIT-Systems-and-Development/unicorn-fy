@@ -7,6 +7,7 @@ python:
   - "3.8"
 install:
   - pip install -r requirements.txt
+  - pip install -r test-requirements.txt
   - pip install coveralls
 script:
   - coverage run --source unicorn_fy unittest_unicorn_fy.py
