@@ -89,6 +89,16 @@ class TestBinanceGeneric(unittest.TestCase):
     def test_is_json(self):
         self.assertFalse(self.unicorn_fy.is_json(False))
 
+    def test_result(self):
+        data = '{"result":null,"id":2}'
+        asserted_result = "{'result': None, 'id': 2, 'unicorn_fied': ['binance.com', '" + self.unicorn_fy_version + "']}"
+        self.assertEqual(str(self.unicorn_fy.binance_com_websocket(data)), asserted_result)
+
+    def test_error(self):
+        data = '{"error":"blahblah"}'
+        asserted_result = "{'error': 'blahblah', 'unicorn_fied': ['binance.com', '" + self.unicorn_fy_version + "']}"
+        self.assertEqual(str(self.unicorn_fy.binance_com_websocket(data)), asserted_result)
+
     def test_template(self):
         data = ''
         asserted_result = ""
@@ -152,6 +162,16 @@ class TestBinanceComWebsocketFutures(unittest.TestCase):
 
     def test_with_non_json(self):
         self.unicorn_fy.binance_futures_websocket(False)
+
+    def test_result(self):
+        data = '{"result":null,"id":2}'
+        asserted_result = "{'result': None, 'id': 2, 'unicorn_fied': ['binance.com', '" + self.unicorn_fy_version + "']}"
+        self.assertEqual(str(self.unicorn_fy.binance_com_websocket(data)), asserted_result)
+
+    def test_error(self):
+        data = '{"error":"blahblah"}'
+        asserted_result = "{'error': 'blahblah', 'unicorn_fied': ['binance.com', '" + self.unicorn_fy_version + "']}"
+        self.assertEqual(str(self.unicorn_fy.binance_com_websocket(data)), asserted_result)
 
     def test_aggTrade_single(self):
         data = '{"stream":"btcusdt@aggTrade","data":{"e":"aggTrade","E":1592584651517,"s":"BTCUSDT","a":315753210,"p":"9319.00000000","q":"0.01864900","f":343675554,"l":343675554,"T":1592584651516,"m":true,"M":true}}'

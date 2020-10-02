@@ -73,5 +73,8 @@ worker_thread.start()
 #            'ticker', 'bookTicker', 'depth5', 'depth10', 'depth20', 'depth', 'depth@100ms'}
 #arr_channels = {'!miniTicker', '!ticker', '!bookTicker'}
 
-stream_id = binance_websocket_api_manager.create_stream('kline_1m', ['btcusdt', 'bnbbtc', 'ethbtc'])
+stream_id = binance_websocket_api_manager.create_stream('ticker', ['btcusdt', 'bnbbtc', 'ethbtc'])
+time.sleep(10)
+binance_websocket_api_manager.print_stream_info(stream_id)
+binance_websocket_api_manager.get_stream_subscriptions(stream_id)
 
