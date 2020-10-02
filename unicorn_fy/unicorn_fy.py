@@ -227,12 +227,12 @@ class UnicornFy(object):
             if stream_data['result'] is None:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_com_futures_websocket({str(stream_data)}")
+                logging.debug(f"UnicornFy->binance_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
             else:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_com_futures_websocket({str(stream_data)}")
+                logging.debug(f"UnicornFy->binance_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
         except KeyError:
             pass
@@ -241,7 +241,7 @@ class UnicornFy(object):
             if stream_data['error']:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_com_futures_websocket({str(stream_data)}")
+                logging.debug(f"UnicornFy->binance_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
         except KeyError:
             pass
@@ -558,12 +558,12 @@ class UnicornFy(object):
             if stream_data['result'] is None:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_com_futures_websocket({str(stream_data)}")
+                logging.debug(f"UnicornFy->binance_com_futures_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
             else:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_com_futures_websocket({str(stream_data)}")
+                logging.debug(f"UnicornFy->binance_com_futures_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
         except KeyError:
             pass
@@ -572,7 +572,7 @@ class UnicornFy(object):
             if stream_data['error']:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_com_futures_websocket({str(stream_data)}")
+                logging.debug(f"UnicornFy->binance_com_futures_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
         except KeyError:
             pass
