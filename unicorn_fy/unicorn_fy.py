@@ -345,7 +345,9 @@ class UnicornFy(object):
                             'taker_by_base_asset_volume': stream_data['data']['v'],
                             'taker_by_quote_asset_volume': stream_data['data']['q']}
                     unicorn_fied_data['data'].append(data)
-                except KeyError:
+                except KeyError as error_msg:
+                    logging.critical(f"UnicornFy->binance_com_futures_websocket({str(stream_data)}) - "
+                                     f"error: {str(error_msg)}")
                     print(str(stream_data))
         elif stream_data['data']['e'] == '24hrTicker':
             try:
@@ -520,15 +522,6 @@ class UnicornFy(object):
 
         stream_data = json.loads(stream_data_json)
 
-        try:
-            if stream_data[0]['e'] == "24hrMiniTicker":
-                stream_data = {'data': {'e': "24hrMiniTicker"},
-                               'items': stream_data}
-            elif stream_data[0]['e'] == "24hrTicker":
-                stream_data = {'data': {'e': "24hrTicker"},
-                               'items': stream_data}
-        except KeyError:
-            pass
         try:
             if stream_data['e'] == 'outboundAccountInfo':
                 stream_data = {'data': stream_data}

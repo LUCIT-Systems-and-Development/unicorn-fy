@@ -97,6 +97,7 @@ class TestBinanceGeneric(unittest.TestCase):
     def tearDown(self):
         del self.unicorn_fy
 
+
 class TestBinanceComWebsocket(unittest.TestCase):
     def setUp(self):
         self.unicorn_fy = UnicornFy()
@@ -147,6 +148,10 @@ class TestBinanceComWebsocketFutures(unittest.TestCase):
     def setUp(self):
         self.unicorn_fy = UnicornFy()
         self.unicorn_fy_version = str(self.unicorn_fy.get_version())
+        self.unicorn_fy.binance_futures_websocket(data, show_deprecated_warning=True)
+
+    def test_with_non_json(self):
+        self.unicorn_fy.binance_futures_websocket(False)
 
     def test_aggTrade_single(self):
         data = '{"stream":"btcusdt@aggTrade","data":{"e":"aggTrade","E":1592584651517,"s":"BTCUSDT","a":315753210,"p":"9319.00000000","q":"0.01864900","f":343675554,"l":343675554,"T":1592584651516,"m":true,"M":true}}'
