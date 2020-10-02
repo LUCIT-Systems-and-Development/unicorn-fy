@@ -106,7 +106,9 @@ class UnicornFy(object):
 
         :return: dict
         """
-        return UnicornFy.binance_websocket(stream_data_json, exchange="binance.com-isolated_margin", show_deprecated_warning=False)
+        return UnicornFy.binance_websocket(stream_data_json,
+                                           exchange="binance.com-isolated_margin",
+                                           show_deprecated_warning=False)
         
     @staticmethod
     def binance_com_futures_websocket(stream_data_json):
@@ -118,7 +120,9 @@ class UnicornFy(object):
 
         :return: dict
         """
-        return UnicornFy.binance_com_futures_websocket(stream_data_json, exchange="binance.com-futures", show_deprecated_warning=False)
+        return UnicornFy.binance_futures_websocket(stream_data_json,
+                                                   exchange="binance.com-futures",
+                                                   show_deprecated_warning=False)
             
     @staticmethod
     def binance_je_websocket(stream_data_json):
@@ -489,7 +493,7 @@ class UnicornFy(object):
         return unicorn_fied_data
 
     @staticmethod
-    def binance_com_futures_websocket(stream_data_json, exchange="binance.com-futures", show_deprecated_warning=False):
+    def binance_futures_websocket(stream_data_json, exchange="binance.com-futures", show_deprecated_warning=False):
         """
         unicorn_fy binance.com-futures raw_stream_data
 
