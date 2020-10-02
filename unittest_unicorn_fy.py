@@ -45,6 +45,29 @@ logging.basicConfig(level=logging.DEBUG,
                     style="{")
 
 
+class TestBinanceGeneric(unittest.TestCase):
+    def setUp(self):
+        self.unicorn_fy = UnicornFy()
+        self.unicorn_fy_version = str(self.unicorn_fy.get_version())
+        self.unicorn_fy.get_latest_release_info()
+        self.unicorn_fy.get_latest_version()
+
+    def test_set_to_false_if_not_exist(self):
+        value = {'key': '',
+                 'blub': 2}
+        self.assertEqual(str(self.unicorn_fy.set_to_false_if_not_exist(value, "invalid")), "{'key': '', 'blub': 2, 'invalid': False}")
+
+    def test_is_json(self):
+        self.assertFalse(self.unicorn_fy.is_json(False))
+
+    def test_template(self):
+        data = ''
+        asserted_result = ""
+        self.assertEqual(str(self.unicorn_fy.binance_com_margin_websocket(data)), asserted_result)
+
+    def tearDown(self):
+        del self.unicorn_fy
+
 class TestBinanceComWebsocket(unittest.TestCase):
     def setUp(self):
         self.unicorn_fy = UnicornFy()
@@ -147,7 +170,7 @@ class TestBinanceJeWebsocket(unittest.TestCase):
         del self.unicorn_fy
 
 
-class TestBinanceJeWebsocket(unittest.TestCase):
+class TestBinanceJexWebsocket(unittest.TestCase):
     def setUp(self):
         self.unicorn_fy = UnicornFy()
         self.unicorn_fy_version = str(self.unicorn_fy.get_version())
@@ -155,7 +178,7 @@ class TestBinanceJeWebsocket(unittest.TestCase):
     def test_template(self):
         data = ''
         asserted_result = ""
-        self.assertEqual(str(self.unicorn_fy.binance_je_websocket(data)), asserted_result)
+        self.assertEqual(str(self.unicorn_fy.binance_jex_websocket(data)), asserted_result)
 
     def tearDown(self):
         del self.unicorn_fy
