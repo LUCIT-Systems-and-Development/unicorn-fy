@@ -33,7 +33,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-from binance.client import Client
 from unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager import BinanceWebSocketApiManager
 from unicorn_fy.unicorn_fy import UnicornFy
 import logging
@@ -234,7 +233,6 @@ class TestLive(unittest.TestCase):
         print("\n\rstarting live test ...\n\r")
         self.unicorn_fy = UnicornFy()
         ubwa = BinanceWebSocketApiManager(exchange="binance.com")
-        binance_rest_client = Client("", "")
         worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer,
                                          args=(ubwa,))
         worker_thread.start()
