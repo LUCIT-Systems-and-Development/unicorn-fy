@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>UnicornFy &#8212; UnicornFy 0.6.0 documentation</title>
+    <title>UnicornFy &#8212; unicorn_fy 0.6.0 documentation</title>
     <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -45,10 +45,10 @@
     
     <li><img src="_static/github-logo.png" alt=""
              style="vertical-align: middle; margin-top: -1px"/></li>
-    <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">UnicornFy</a> &#187;</li>
+    <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">unicorn_fy</a> &#187;</li>
     
     
-    <a href="index.html">UnicornFy 0.6.0 documentation</a> &#187;
+    <a href="index.html">unicorn_fy 0.6.0 documentation</a> &#187;
     
 
     <li class="right">
@@ -80,12 +80,12 @@
 <h1>UnicornFy<a class="headerlink" href="#unicornfy" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="#supported-exchanges">Supported Exchanges</a> | <a class="reference external" href="#installation-and-upgrade">Installation</a> | <a class="reference external" href="#documentation">Documentation</a> |
 <a class="reference external" href="#change-log">Change Log</a> | <a class="reference external" href="#wiki">Wiki</a> | <a class="reference external" href="#social">Social</a> | <a class="reference external" href="#receive-notifications">Notifications</a> |
-<a class="reference external" href="#how-to-report-bugs-or-suggest-improvements">Bugs</a> | <a class="reference external" href="#contributing">Contributing</a></p>
+<a class="reference external" href="#how-to-report-bugs-or-suggest-improvements">Bugs</a> | <a class="reference external" href="#contributing">Contributing</a> | <a class="reference external" href="#donate">Donate</a></p>
 <p>Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.</p>
 <p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy">UnicornFy</a> is a side project of
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api">UNICORN Binance WebSocket API</a> but can be used
 with every API that delivers the receives in raw format (as received without changes).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">unicorn_fy.unicorn_fy</span> <span class="k">import</span> <span class="n">UnicornFy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">unicorn_fy.unicorn_fy</span> <span class="kn">import</span> <span class="n">UnicornFy</span>
 
 <span class="n">received_stream_data_json</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;stream&quot;</span><span class="p">:</span> <span class="s2">&quot;btcusdt@trade&quot;</span><span class="p">,</span>
                              <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;e&quot;</span><span class="p">:</span> <span class="s2">&quot;trade&quot;</span><span class="p">,</span>
@@ -111,13 +111,14 @@ with every API that delivers the receives in raw format (as received without cha
 <div class="section" id="websockets">
 <h3>Websockets<a class="headerlink" href="#websockets" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>binance.com (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>)</p></li>
-<li><p>binance.com-futures (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>)</p></li>
-<li><p>binance.com-margin (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>)</p></li>
-<li><p>binance.com-isolated_margin (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>)</p></li>
-<li><p>binance.je (<a class="reference external" href="https://github.com/binance-jersey/binance-official-api-docs/">API specification</a>)</p></li>
-<li><p>binance.us (<a class="reference external" href="https://github.com/binance-us/binance-official-api-docs">API specification</a>)</p></li>
-<li><p>binance.org (<a class="reference external" href="https://docs.binance.org/">API specification</a>)</p></li>
+<li><p>binance.com (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>) * STABLE *</p></li>
+<li><p>binance.com-futures (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>) * STABLE *</p></li>
+<li><p>binance.com-margin (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>) * NEEDS_YOUR_HELP *</p></li>
+<li><p>binance.com-isolated_margin (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>) * NEEDS_YOUR_HELP *</p></li>
+<li><p>binance.je (<a class="reference external" href="https://github.com/binance-jersey/binance-official-api-docs/">API specification</a>) * STABLE *</p></li>
+<li><p>binance.us (<a class="reference external" href="https://github.com/binance-us/binance-official-api-docs">API specification</a>) * STABLE *</p></li>
+<li><p>binance.org (<a class="reference external" href="https://docs.binance.org/">API specification</a>) * NEEDS_YOUR_HELP *</p></li>
+<li><p>jex.com (<a class="reference external" href="https://jexapi.github.io/api-doc/spot.html#change-log">API specification</a>) * NEEDS_YOUR_HELP *</p></li>
 </ul>
 </div>
 <div class="section" id="rest">
@@ -132,7 +133,8 @@ with every API that delivers the receives in raw format (as received without cha
 </div>
 <div class="section" id="installation-and-upgrade">
 <h2>Installation and Upgrade<a class="headerlink" href="#installation-and-upgrade" title="Permalink to this headline">¶</a></h2>
-<p>The module requires Python 3.6.0 or above. The current dependencies are listed
+<p>The module requires Python 3.6.0 or above.</p>
+<p>The current dependencies are listed
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/requirements.txt">here</a>.</p>
 <div class="section" id="a-wheel-of-the-latest-release-with-pip-from-pypi">
 <h3>A wheel of the latest release with PIP from <a class="reference external" href="https://pypi.org/project/unicorn-fy/">PyPI</a><a class="headerlink" href="#a-wheel-of-the-latest-release-with-pip-from-pypi" title="Permalink to this headline">¶</a></h3>
@@ -356,10 +358,10 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
     
     <li><img src="_static/github-logo.png" alt=""
              style="vertical-align: middle; margin-top: -1px"/></li>
-    <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">UnicornFy</a> &#187;</li>
+    <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">unicorn_fy</a> &#187;</li>
     
     
-    <a href="index.html">UnicornFy 0.6.0 documentation</a> &#187;
+    <a href="index.html">unicorn_fy 0.6.0 documentation</a> &#187;
     
 
     <li class="right">
@@ -382,13 +384,12 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
 
-    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.0.3
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.4.3
         with <a href="https://github.com/oliver-zehentleitner/python-docs-theme-technopathy">python-docs-theme-technopathy</a>
         by <a href="https://about.me/oliver-zehentleitner">Oliver Zehentleitner</a>.
     <br />
         <a href="https://www.technopathy.club/2019/11/03/use-python-sphinx-on-github-pages-with-html-and-an-indivdual-theme">
-    Create a GitHub Page like this one!</a>    <br />
-        Powered by <a href="https://www.lucit.co/desktop-and-server-apps.html">LUCIT - Python Development</a>
+    Create a GitHub Page like this one!</a>
     </div>
 
   </body>
