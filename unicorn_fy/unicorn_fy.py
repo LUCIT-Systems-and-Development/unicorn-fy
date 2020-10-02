@@ -728,7 +728,7 @@ class UnicornFy(object):
                         'total_nr_of_trades': stream_data['data']['n']}
                 unicorn_fied_data['data'].append(data)
         elif stream_data['data']['e'] == 'depth':
-            # todo: KeyError: 'lastUpdateId'
+            # Todo: KeyError: 'lastUpdateId'
             # 'last_update_id': stream_data['data']['lastUpdateId'],
             unicorn_fied_data = {'stream_type': stream_data['stream'],
                                  'event_type': stream_data['data']['e'],
@@ -736,13 +736,14 @@ class UnicornFy(object):
                                  'bids': stream_data['data']['bids'],
                                  'asks': stream_data['data']['asks']}
         elif stream_data['data']['e'] == 'depthUpdate':
+            # Todo: KeyError: 'bids'
+            # 'bids': stream_data['data']['b'],
             unicorn_fied_data = {'stream_type': stream_data['stream'],
                                  'event_type': stream_data['data']['e'],
                                  'event_time': stream_data['data']['E'],
                                  'symbol': stream_data['data']['s'],
                                  'first_update_id_in_event': stream_data['data']['U'],
                                  'final_update_id_in_event': stream_data['data']['u'],
-                                 'bids': stream_data['data']['b'],
                                  'asks': stream_data['data']['a']}
         elif stream_data['data']['e'] == 'outboundAccountInfo':
             unicorn_fied_data = {'stream_type': '!userData@arr',
