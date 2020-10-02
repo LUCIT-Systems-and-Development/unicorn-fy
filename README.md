@@ -53,7 +53,7 @@ print(unicorn_fied_stream_data)
 - binance.je ([API specification](https://github.com/binance-jersey/binance-official-api-docs/))  ** STABLE **
 - binance.us ([API specification](https://github.com/binance-us/binance-official-api-docs))  ** STABLE **
 - binance.org ([API specification](https://docs.binance.org/))  ** NEEDS_YOUR_HELP **
-- jex.com ([API specification](https://github.com/JexApi/jex-official-api-docs))** NEEDS_YOUR_HELP ** 
+- jex.com ([API specification](https://jexapi.github.io/api-doc/spot.html#change-log))** NEEDS_YOUR_HELP ** 
 
 ### REST
 - none
