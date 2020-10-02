@@ -75,6 +75,7 @@ def print_stream_data_from_stream_buffer_futures(binance_websocket_api_manager):
 
 class TestBinanceGeneric(unittest.TestCase):
     def setUp(self):
+        print("\n\rstarting unittests")
         self.unicorn_fy = UnicornFy()
         self.unicorn_fy_version = str(self.unicorn_fy.get_version())
         self.unicorn_fy.get_latest_release_info()
@@ -242,7 +243,7 @@ class TestBinanceOrgWebsocket(unittest.TestCase):
 
 class TestLiveBinanceCom(unittest.TestCase):
     def setUp(self):
-        print("\n\rstarting live test binance.com ...\n\r")
+        print("\n\rstarting live test binance.com")
         self.unicorn_fy = UnicornFy()
         ubwa = BinanceWebSocketApiManager(exchange="binance.com")
         worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer,
@@ -275,7 +276,7 @@ class TestLiveBinanceCom(unittest.TestCase):
 
 class TestLiveBinanceComFutures(unittest.TestCase):
     def setUp(self):
-        print("\n\rstarting live test binance.com-futures ...\n\r")
+        print("\n\rstarting live test binance.com-futures")
         self.unicorn_fy = UnicornFy()
         ubwa = BinanceWebSocketApiManager(exchange="binance.com-futures")
         worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer_futures,
