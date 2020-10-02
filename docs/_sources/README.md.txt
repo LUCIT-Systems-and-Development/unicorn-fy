@@ -48,19 +48,19 @@ print(unicorn_fied_stream_data)
 ### Websockets
 | Exchange | Docs            | Status | 
 | -------- | --------------- | ------ |
-| [Binance](https://www.binance.com) | ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) | STABLE |
-| [Binance Testnet](https://testnet.binance.vision/) | ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) | STABLE |
-| [Binance Margin](https://www.binance.com) | ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) | NEEDS_YOUR_HELP |
-| [Binance Margin Testnet](https://testnet.binance.vision/) | ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) | NEEDS_YOUR_HELP |
-| [Binance Isolated Margin](https://www.binance.com) | ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) | NEEDS_YOUR_HELP |
-| [Binance Isolated Margin Testnet](https://testnet.binance.vision/) | ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) | NEEDS_YOUR_HELP |
-| [Binance Futures](https://www.binance.com) | ([API specification](https://github.com/binance-exchange/binance-official-api-docs))  | NEEDS_YOUR_HELP |
-| [Binance Futures Testnet](https://testnet.binancefuture.com) | ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) | NEEDS_YOUR_HELP |
-| [Binance Jersey](https://www.binance.je) | ([API specification](https://github.com/binance-jersey/binance-official-api-docs/)) | NEEDS_YOUR_HELP |
-| [Binance US](https://www.binance.us) | ([API specification](https://github.com/binance-us/binance-official-api-docs)) | NEEDS_YOUR_HELP |
-| [Binance JEX](https://www.jex.com) | ([API specification](https://jexapi.github.io/api-doc/spot.html#change-log)) | NEEDS_YOUR_HELP |
-| [Binance DEX](https://www.binance.org) | ([API specification](https://docs.binance.org/)) | NEEDS_YOUR_HELP |
-| [Binance DEX Testnet](https://testnet.binance.org) | ([API specification](https://docs.binance.org/)) | NEEDS_YOUR_HELP |
+| [Binance](https://www.binance.com) | [API specification](https://github.com/binance-exchange/binance-official-api-docs) | STABLE |
+| [Binance Testnet](https://testnet.binance.vision/) | [API specification](https://github.com/binance-exchange/binance-official-api-docs) | STABLE |
+| [Binance Margin](https://www.binance.com) | [API specification](https://github.com/binance-exchange/binance-official-api-docs) | NEEDS_YOUR_HELP |
+| [Binance Margin Testnet](https://testnet.binance.vision/) | [API specification](https://github.com/binance-exchange/binance-official-api-docs) | NEEDS_YOUR_HELP |
+| [Binance Isolated Margin](https://www.binance.com) | [API specification](https://github.com/binance-exchange/binance-official-api-docs) | NEEDS_YOUR_HELP |
+| [Binance Isolated Margin Testnet](https://testnet.binance.vision/) | [API specification](https://github.com/binance-exchange/binance-official-api-docs) | NEEDS_YOUR_HELP |
+| [Binance Futures](https://www.binance.com) | [API specification](https://github.com/binance-exchange/binance-official-api-docs) | NEEDS_YOUR_HELP |
+| [Binance Futures Testnet](https://testnet.binancefuture.com) | [API specification](https://github.com/binance-exchange/binance-official-api-docs)) | NEEDS_YOUR_HELP |
+| [Binance Jersey](https://www.binance.je) | [API specification](https://github.com/binance-jersey/binance-official-api-docs/) | NEEDS_YOUR_HELP |
+| [Binance US](https://www.binance.us) | [API specification](https://github.com/binance-us/binance-official-api-docs) | NEEDS_YOUR_HELP |
+| [Binance JEX](https://www.jex.com) | [API specification](https://jexapi.github.io/api-doc/spot.html#change-log) | NEEDS_YOUR_HELP |
+| [Binance DEX](https://www.binance.org) | [API specification](https://docs.binance.org/) | NEEDS_YOUR_HELP |
+| [Binance DEX Testnet](https://testnet.binance.org) | [API specification](https://docs.binance.org/) | NEEDS_YOUR_HELP |
 
 ### REST
 - none
