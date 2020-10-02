@@ -1,4 +1,4 @@
-name: unicorn_fy
+name: unicorn-fy
 dependencies:
 - python>=3.6.0
 - pip:

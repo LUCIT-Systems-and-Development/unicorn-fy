@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>UnicornFy &#8212; unicorn_fy 0.6.0 documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnicornFy &#8212; UnicornFy 0.6.0 documentation</title>
     <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -45,12 +46,13 @@
     
     <li><img src="_static/github-logo.png" alt=""
              style="vertical-align: middle; margin-top: -1px"/></li>
-    <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">unicorn_fy</a> &#187;</li>
+    <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">UnicornFy</a> &#187;</li>
     
     
-    <a href="index.html">unicorn_fy 0.6.0 documentation</a> &#187;
+    <a href="index.html">UnicornFy 0.6.0 documentation</a> &#187;
     
 
+        <li class="nav-item nav-item-this"><a href="">UnicornFy</a></li>
     <li class="right">
         <a href="search.html" title="Search">search</a>
          |
@@ -85,7 +87,7 @@
 <p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy">UnicornFy</a> is a side project of
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api">UNICORN Binance WebSocket API</a> but can be used
 with every API that delivers the receives in raw format (as received without changes).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">unicorn_fy.unicorn_fy</span> <span class="kn">import</span> <span class="n">UnicornFy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">unicorn_fy.unicorn_fy</span> <span class="k">import</span> <span class="n">UnicornFy</span>
 
 <span class="n">received_stream_data_json</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;stream&quot;</span><span class="p">:</span> <span class="s2">&quot;btcusdt@trade&quot;</span><span class="p">,</span>
                              <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;e&quot;</span><span class="p">:</span> <span class="s2">&quot;trade&quot;</span><span class="p">,</span>
@@ -110,17 +112,82 @@ with every API that delivers the receives in raw format (as received without cha
 <h2>Supported Exchanges<a class="headerlink" href="#supported-exchanges" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="websockets">
 <h3>Websockets<a class="headerlink" href="#websockets" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>binance.com (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>) * STABLE *</p></li>
-<li><p>binance.com-futures (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>) * STABLE *</p></li>
-<li><p>binance.com-margin (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>) * NEEDS_YOUR_HELP *</p></li>
-<li><p>binance.com-isolated_margin (<a class="reference external" href="https://github.com/binance-exchange/binance-official-api-docs">API specification</a>) * NEEDS_YOUR_HELP *</p></li>
-<li><p>binance.je (<a class="reference external" href="https://github.com/binance-jersey/binance-official-api-docs/">API specification</a>) * STABLE *</p></li>
-<li><p>binance.us (<a class="reference external" href="https://github.com/binance-us/binance-official-api-docs">API specification</a>) * STABLE *</p></li>
-<li><p>binance.org (<a class="reference external" href="https://docs.binance.org/">API specification</a>) * NEEDS_YOUR_HELP *</p></li>
-<li><p>jex.com (<a class="reference external" href="https://jexapi.github.io/api-doc/spot.html#change-log">API specification</a>) * NEEDS_YOUR_HELP *</p></li>
-</ul>
-</div>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Exchange</th>
+<th>Docs</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.binance.com">Binance</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_websocket"><code>binance_com_websocket(stream_data_json)</code></a></td>
+<td>STABLE</td>
+</tr>
+<tr>
+<td><a href="https://testnet.binance.vision/">Binance Testnet</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_websocket"><code>binance_com_websocket(stream_data_json)</code></a></td>
+<td>STABLE</td>
+</tr>
+<tr>
+<td><a href="https://www.binance.com">Binance Margin</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_margin_websocket"><code>binance_com_margin_websocket(stream_data_json)</code></a></td>
+<td>NEEDS_YOUR_HELP</td>
+</tr>
+<tr>
+<td><a href="https://testnet.binance.vision/">Binance Margin Testnet</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_margin_websocket"><code>binance_com_margin_websocket(stream_data_json)</code></a></td>
+<td>NEEDS_YOUR_HELP</td>
+</tr>
+<tr>
+<td><a href="https://www.binance.com">Binance Isolated Margin</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_isolated_margin_websocket"><code>binance_com_isolated_margin_websocket(stream_data_json)</code></a></td>
+<td>NEEDS_YOUR_HELP</td>
+</tr>
+<tr>
+<td><a href="https://testnet.binance.vision/">Binance Isolated Margin Testnet</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_isolated_margin_websocket"><code>binance_com_isolated_margin_websocket(stream_data_json)</code></a></td>
+<td>NEEDS_YOUR_HELP</td>
+</tr>
+<tr>
+<td><a href="https://www.binance.com">Binance Futures</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket"><code>binance_com_futures_websocket(stream_data_json)</code></a></td>
+<td>NEEDS_YOUR_HELP</td>
+</tr>
+<tr>
+<td><a href="https://testnet.binancefuture.com">Binance Futures Testnet</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket"><code>binance_com_futures_websocket(stream_data_json)</code></a></td>
+<td>NEEDS_YOUR_HELP</td>
+</tr>
+<tr>
+<td><a href="https://www.binance.je">Binance Jersey</a> (<a href="https://github.com/binance-jersey/binance-official-api-docs/">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_je_websocket"><code>binance_je_websocket(stream_data_json)</code></a></td>
+<td>NEEDS_YOUR_HELP</td>
+</tr>
+<tr>
+<td><a href="https://www.binance.us">Binance US</a> (<a href="https://github.com/binance-us/binance-official-api-docs">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_us_websocket"><code>binance_us_websocket(stream_data_json)</code></a></td>
+<td>NEEDS_YOUR_HELP</td>
+</tr>
+<tr>
+<td><a href="https://www.jex.com">Binance JEX</a> (<a href="https://jexapi.github.io/api-doc/spot.html#change-log">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.jex_com_websocket"><code>jex_com_websocket(stream_data_json)</code></a></td>
+<td>NEEDS_YOUR_HELP</td>
+</tr>
+<tr>
+<td><a href="https://www.binance.org">Binance DEX</a> (<a href="https://docs.binance.org/">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_org_websocket"><code>binance_org_websocket(stream_data_json)</code></a></td>
+<td>NEEDS_YOUR_HELP</td>
+</tr>
+<tr>
+<td><a href="https://testnet.binance.org">Binance DEX Testnet</a> (<a href="https://docs.binance.org/">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_org_websocket"><code>binance_org_websocket(stream_data_json)</code></a></td>
+<td>NEEDS_YOUR_HELP</td>
+</tr>
+</tbody>
+</table></div>
 <div class="section" id="rest">
 <h3>REST<a class="headerlink" href="#rest" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -253,6 +320,7 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -358,12 +426,13 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
     
     <li><img src="_static/github-logo.png" alt=""
              style="vertical-align: middle; margin-top: -1px"/></li>
-    <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">unicorn_fy</a> &#187;</li>
+    <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">UnicornFy</a> &#187;</li>
     
     
-    <a href="index.html">unicorn_fy 0.6.0 documentation</a> &#187;
+    <a href="index.html">UnicornFy 0.6.0 documentation</a> &#187;
     
 
+        <li class="nav-item nav-item-this"><a href="">UnicornFy</a></li>
     <li class="right">
         <a href="search.html" title="Search">search</a>
          |
@@ -384,12 +453,13 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
 
-    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.4.3
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.2.1
         with <a href="https://github.com/oliver-zehentleitner/python-docs-theme-technopathy">python-docs-theme-technopathy</a>
         by <a href="https://about.me/oliver-zehentleitner">Oliver Zehentleitner</a>.
     <br />
         <a href="https://www.technopathy.club/2019/11/03/use-python-sphinx-on-github-pages-with-html-and-an-indivdual-theme">
-    Create a GitHub Page like this one!</a>
+    Create a GitHub Page like this one!</a>    <br />
+        Powered by <a href="https://www.lucit.co/desktop-and-server-apps.html">LUCIT - Python Development</a>
     </div>
 
   </body>
