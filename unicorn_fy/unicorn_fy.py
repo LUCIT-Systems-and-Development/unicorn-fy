@@ -599,7 +599,7 @@ class UnicornFy(object):
                 # 'buyer_order_id': stream_data['data']['b'],
                 # Todo: KeyError: 'a'
                 # 'seller_order_id': stream_data['data']['a'],
-                # Todo:
+                # Todo: KeyError: 'M'
                 # , 'ignore': stream_data['data']['M']
                 unicorn_fied_data = {'stream_type': stream_data['stream'],
                                      'event_type': stream_data['data']['e'],
@@ -708,6 +708,14 @@ class UnicornFy(object):
                 except KeyError:
                     # Todo: KeyError: 'x'
                     # 'trade_before_24h_window': stream_data['data']['x'],
+                    # Todo: KeyError: 'b'
+                    # 'best_bid_price': stream_data['data']['b'],
+                    # Todo: KeyError: 'B'
+                    # 'best_bid_quantity': stream_data['data']['B'],
+                    # Todo KeyError: 'a'
+                    # 'best_ask_price': stream_data['data']['a'],
+                    # Todo KeyError: 'A'
+                    # 'best_ask_quantity': stream_data['data']['A'],
                     data = {'stream_type': stream_data['stream'],
                             'event_type': stream_data['data']['e'],
                             'event_time': stream_data['data']['E'],
@@ -717,10 +725,6 @@ class UnicornFy(object):
                             'weighted_average_price': stream_data['data']['w'],
                             'last_price': stream_data['data']['c'],
                             'last_quantity': stream_data['data']['Q'],
-                            'best_bid_price': stream_data['data']['b'],
-                            'best_bid_quantity': stream_data['data']['B'],
-                            'best_ask_price': stream_data['data']['a'],
-                            'best_ask_quantity': stream_data['data']['A'],
                             'open_price': stream_data['data']['o'],
                             'high_price': stream_data['data']['h'],
                             'low_price': stream_data['data']['l'],

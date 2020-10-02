@@ -261,7 +261,7 @@ class TestLiveBinanceCom(unittest.TestCase):
         ubwa.create_stream(arr_channels, "arr")
         stream_id_trade = ubwa.get_stream_id_by_label("trade")
         ubwa.get_stream_subscriptions(stream_id_trade)
-        time.sleep(5)
+        time.sleep(70)
         ubwa.stop_manager_with_all_streams()
 
     def test_template(self):
