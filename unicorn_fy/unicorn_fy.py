@@ -728,10 +728,11 @@ class UnicornFy(object):
                         'total_nr_of_trades': stream_data['data']['n']}
                 unicorn_fied_data['data'].append(data)
         elif stream_data['data']['e'] == 'depth':
+            # todo: KeyError: 'lastUpdateId'
+            # 'last_update_id': stream_data['data']['lastUpdateId'],
             unicorn_fied_data = {'stream_type': stream_data['stream'],
                                  'event_type': stream_data['data']['e'],
                                  'symbol': stream_data['stream'][:stream_data['stream'].find('@')].upper(),
-                                 'last_update_id': stream_data['data']['lastUpdateId'],
                                  'bids': stream_data['data']['bids'],
                                  'asks': stream_data['data']['asks']}
         elif stream_data['data']['e'] == 'depthUpdate':
@@ -794,7 +795,11 @@ class UnicornFy(object):
                                  'cumulative_quote_asset_transacted_quantity': stream_data['data']['Z'],
                                  'last_quote_asset_transacted_quantity': stream_data['data']['Y']}
         unicorn_fied_version = [exchange, UnicornFy.VERSION]
-        unicorn_fied_data['unicorn_fied'] = unicorn_fied_version
+        try:
+            unicorn_fied_data['unicorn_fied'] = unicorn_fied_version
+        except TypeError as error_msg:
+            logging.critical(f"UnicornFy->binance_com_futures_websocket({str(unicorn_fied_data)}) - "
+                             f"error: {str(error_msg)}")
         logging.debug("UnicornFy->binance_com_futures_websocket(" + str(unicorn_fied_data) + ")")
         return unicorn_fied_data
 
