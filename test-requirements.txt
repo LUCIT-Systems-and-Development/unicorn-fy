@@ -1,3 +1,2 @@
 ujson
 unicorn-binance-websocket-api
-python-binance

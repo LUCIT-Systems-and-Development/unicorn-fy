@@ -244,16 +244,14 @@ class TestLive(unittest.TestCase):
                     'kline_6h', 'kline_8h', 'kline_12h', 'kline_1d', 'kline_3d', 'kline_1w', 'kline_1M', 'miniTicker',
                     'ticker', 'bookTicker', 'depth5', 'depth10', 'depth20', 'depth', 'depth@100ms'}
         arr_channels = {'!miniTicker', '!ticker', '!bookTicker'}
-        markets = []
-        data = binance_rest_client.get_all_tickers()
-        for item in data:
-            markets.append(item['symbol'])
+        markets = {'bnbbtc', 'ethbtc', 'btcusdt', 'bchabcusdt', 'xrpusdt', 'rvnbtc', 'ltcusdt', 'adausdt', 'eosusdt',
+                   'wanbnb', 'zrxbnb', 'agibnb', 'funeth', 'arketh', 'engeth'}
         for channel in channels:
             ubwa.create_stream(channel, markets, stream_label=channel)
         ubwa.create_stream(arr_channels, "arr")
         stream_id_trade = ubwa.get_stream_id_by_label("trade")
         ubwa.get_stream_subscriptions(stream_id_trade)
-        time.sleep(7)
+        time.sleep(20)
         ubwa.stop_manager_with_all_streams()
 
     def test_template(self):
