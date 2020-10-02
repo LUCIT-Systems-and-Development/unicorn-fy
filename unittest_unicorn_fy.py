@@ -178,7 +178,7 @@ class TestBinanceJexWebsocket(unittest.TestCase):
     def test_template(self):
         data = ''
         asserted_result = ""
-        self.assertEqual(str(self.unicorn_fy.binance_jex_websocket(data)), asserted_result)
+        self.assertEqual(str(self.unicorn_fy.jex_com_websocket(data)), asserted_result)
 
     def tearDown(self):
         del self.unicorn_fy
