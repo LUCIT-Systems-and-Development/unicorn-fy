@@ -46,6 +46,7 @@ print(unicorn_fied_stream_data)
 
 ## Supported Exchanges
 ### Websockets
+
 | Exchange | Docs            | Status | 
 | -------- | --------------- | ------ |
 | [Binance](https://www.binance.com) | [API specification](https://github.com/binance-exchange/binance-official-api-docs) | STABLE |
