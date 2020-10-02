@@ -60,7 +60,7 @@ print(unicorn_fied_stream_data)
 | [Binance US](https://www.binance.us) | ([API specification](https://github.com/binance-us/binance-official-api-docs)) | STABLE |
 | [Binance JEX](https://www.jex.com) | ([API specification](https://jexapi.github.io/api-doc/spot.html#change-log)) | NEEDS_YOUR_HELP |
 | [Binance DEX](https://www.binance.org) | ([API specification](https://docs.binance.org/)) | NEEDS_YOUR_HELP |
-| [Binance DEX Testnet](https://testnet.binance.org) | `BinanceWebSocketApiManager(exchange="binance.org-testnet")` | NEEDS_YOUR_HELP |
+| [Binance DEX Testnet](https://testnet.binance.org) | ([API specification](https://docs.binance.org/)) | NEEDS_YOUR_HELP |
 
 ### REST
 - none
