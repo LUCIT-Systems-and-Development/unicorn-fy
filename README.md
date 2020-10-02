@@ -46,13 +46,13 @@ print(unicorn_fied_stream_data)
 
 ## Supported Exchanges
 ### Websockets
-- binance.com ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) *STABLE*
-- binance.com-futures ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) *STABLE*
-- binance.com-margin ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) *NEEDS_YOUR_HELP*
-- binance.com-isolated_margin ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) *NEEDS_YOUR_HELP*
-- binance.je ([API specification](https://github.com/binance-jersey/binance-official-api-docs/)) *STABLE*
-- binance.us ([API specification](https://github.com/binance-us/binance-official-api-docs)) *STABLE*
-- binance.org ([API specification](https://docs.binance.org/))*NEEDS_YOUR_HELP*
+- binance.com ([API specification](https://github.com/binance-exchange/binance-official-api-docs))  ** STABLE **
+- binance.com-futures ([API specification](https://github.com/binance-exchange/binance-official-api-docs))  ** STABLE **
+- binance.com-margin ([API specification](https://github.com/binance-exchange/binance-official-api-docs))  ** NEEDS_YOUR_HELP ** 
+- binance.com-isolated_margin ([API specification](https://github.com/binance-exchange/binance-official-api-docs))  ** NEEDS_YOUR_HELP ** 
+- binance.je ([API specification](https://github.com/binance-jersey/binance-official-api-docs/))  ** STABLE **
+- binance.us ([API specification](https://github.com/binance-us/binance-official-api-docs))  ** STABLE **
+- binance.org ([API specification](https://docs.binance.org/))  ** NEEDS_YOUR_HELP **
 
 ### REST
 - none
