@@ -14,7 +14,7 @@
 # UnicornFy
 [Supported Exchanges](#supported-exchanges) | [Installation](#installation-and-upgrade) | [Documentation](#documentation) | 
 [Change Log](#change-log) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | 
-[Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing)
+[Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing) | [Donate](#donate)
 
 Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
 
@@ -46,13 +46,14 @@ print(unicorn_fied_stream_data)
 
 ## Supported Exchanges
 ### Websockets
-- binance.com ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
-- binance.com-futures ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
-- binance.com-margin ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
-- binance.com-isolated_margin ([API specification](https://github.com/binance-exchange/binance-official-api-docs))
-- binance.je ([API specification](https://github.com/binance-jersey/binance-official-api-docs/))
-- binance.us ([API specification](https://github.com/binance-us/binance-official-api-docs))
-- binance.org ([API specification](https://docs.binance.org/))
+- binance.com ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) * STABLE *
+- binance.com-futures ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) * STABLE *
+- binance.com-margin ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) * NEEDS_YOUR_HELP * 
+- binance.com-isolated_margin ([API specification](https://github.com/binance-exchange/binance-official-api-docs)) * NEEDS_YOUR_HELP * 
+- binance.je ([API specification](https://github.com/binance-jersey/binance-official-api-docs/)) * STABLE *
+- binance.us ([API specification](https://github.com/binance-us/binance-official-api-docs)) * STABLE *
+- binance.org ([API specification](https://docs.binance.org/)) * NEEDS_YOUR_HELP *
+- jex.com ([API specification](https://jexapi.github.io/api-doc/spot.html#change-log)) * NEEDS_YOUR_HELP * 
 
 ### REST
 - none
@@ -62,7 +63,9 @@ If you like the project, please
 [GitHub](https://github.com/oliver-zehentleitner/unicorn_fy)! 
 
 ## Installation and Upgrade
-The module requires Python 3.6.0 or above. The current dependencies are listed 
+The module requires Python 3.6.0 or above. 
+
+The current dependencies are listed 
 [here](https://github.com/oliver-zehentleitner/unicorn_fy/blob/master/requirements.txt).
 
 ### A wheel of the latest release with PIP from [PyPI](https://pypi.org/project/unicorn-fy/)
