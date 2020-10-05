@@ -24,7 +24,7 @@ author = 'Oliver Zehentleitner'
 # The full version, including alpha/beta/rc tags
 release = '0.6.0'
 
-html_last_updated_fmt = "Sep 29 19:31:14 UTC 2020"
+html_last_updated_fmt = "%b %d %Y at %H:%M"
 
 # -- General configuration ---------------------------------------------------
 
