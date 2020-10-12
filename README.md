@@ -5,6 +5,7 @@
 [![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel)](https://pypi.org/project/unicorn-fy/)
 [![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg)](https://github.com/oliver-zehentleitner/unicorn_fy/issues)
 [![Build Status](https://travis-ci.com/oliver-zehentleitner/unicorn_fy.svg?branch=master)](https://travis-ci.com/oliver-zehentleitner/unicorn_fy)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/oliver-zehentleitner/unicorn_fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/oliver-zehentleitner/unicorn_fy/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/oliver-zehentleitner/unicorn_fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/oliver-zehentleitner/unicorn_fy/context:python)
 [![Coverage Status](https://coveralls.io/repos/github/oliver-zehentleitner/unicorn_fy/badge.svg?branch=master)](https://coveralls.io/github/oliver-zehentleitner/unicorn_fy?branch=master)
 [![Telegram](https://img.shields.io/badge/chat-telegram-yellow.svg)](https://t.me/unicorndevs)
