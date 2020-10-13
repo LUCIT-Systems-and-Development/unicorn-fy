@@ -9,7 +9,6 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-    default_reviewers:
-      - "oliver-zehentleitner"
     default_labels:
       - "dependencies"
+      - "dependabot"
