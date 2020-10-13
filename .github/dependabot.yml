@@ -2,6 +2,7 @@
 # package ecosystems to update and where the package manifests are located.
 # Please see the documentation for all configuration options:
 # https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+# https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/enabling-and-disabling-version-updates
 
 version: 2
 updates:
@@ -9,6 +10,3 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-    default_labels:
-      - "dependencies"
-      - "dependabot"
