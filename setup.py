@@ -4,8 +4,8 @@
 # File: setup.py
 #
 # Part of ‘UnicornFy’
-# Project website: https://github.com/oliver-zehentleitner/unicorn_fy
-# Documentation: https://oliver-zehentleitner.github.io/unicorn_fy
+# Project website: https://github.com/oliver-zehentleitner/unicorn-fy
+# Documentation: https://oliver-zehentleitner.github.io/unicorn-fy
 # PyPI: https://pypi.org/project/unicorn-fy
 #
 # Author: Oliver Zehentleitner
@@ -45,7 +45,7 @@ setuptools.setup(
      name='unicorn-fy',
      version=str(unicornfy.get_version()),
      author="Oliver Zehentleitner",
-     url="https://github.com/oliver-zehentleitner/unicorn_fy",
+     url="https://github.com/oliver-zehentleitner/unicorn-fy",
      description="Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.",
      long_description=long_description,
      long_description_content_type="text/markdown",
@@ -53,8 +53,8 @@ setuptools.setup(
      install_requires=['ujson'],
      keywords='binance, api, exchange, unify, binance-dex, binance-chain, rest-api, websockets',
      project_urls={
-        'Documentation': 'https://oliver-zehentleitner.github.io/unicorn_fy/',
-        'Wiki': 'https://github.com/oliver-zehentleitner/unicorn_fy/wiki',
+        'Documentation': 'https://oliver-zehentleitner.github.io/unicorn-fy/',
+        'Wiki': 'https://github.com/oliver-zehentleitner/unicorn-fy/wiki',
         'Author': 'https://about.me/oliver-zehentleitner/',
      },
      packages=setuptools.find_packages(),

@@ -4,8 +4,8 @@
 # File: unicorn_fy.py
 #
 # Part of ‘UnicornFy’
-# Project website: https://github.com/oliver-zehentleitner/unicorn_fy
-# Documentation: https://oliver-zehentleitner.github.io/unicorn_fy
+# Project website: https://github.com/oliver-zehentleitner/unicorn-fy
+# Documentation: https://oliver-zehentleitner.github.io/unicorn-fy
 # PyPI: https://pypi.org/project/unicorn-fy
 #
 # Author: Oliver Zehentleitner
@@ -850,7 +850,7 @@ class UnicornFy(object):
         :return: dict or False
         """
         try:
-            respond = requests.get('https://api.github.com/repos/oliver-zehentleitner/unicorn_fy/releases/latest')
+            respond = requests.get('https://api.github.com/repos/oliver-zehentleitner/unicorn-fy/releases/latest')
             return respond.json()
         except Exception:
             return False

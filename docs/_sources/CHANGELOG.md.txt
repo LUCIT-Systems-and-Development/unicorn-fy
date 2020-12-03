@@ -1,4 +1,4 @@
-# unicorn_fy Change Log
+# unicorn-fy Change Log
 
 All notable changes to this project will be documented in this file.
 
@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## 0.7.0
 ### Added
 - Support for `listStatus` in `binance_websocket()` 
-[issue#19](https://github.com/oliver-zehentleitner/unicorn_fy/issues/19)
+[issue#19](https://github.com/oliver-zehentleitner/unicorn-fy/issues/19)
 
 ## 0.6.0
 ### Added
@@ -20,13 +20,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## 0.5.0
 ### Added
-- `outboundAccountPosition` [issue#11](https://github.com/oliver-zehentleitner/unicorn_fy/issues/11) - thanks to 
+- `outboundAccountPosition` [issue#11](https://github.com/oliver-zehentleitner/unicorn-fy/issues/11) - thanks to 
 @bmschwartz
 - handling for results
 ### Fixed
 - `ModuleNotFoundError: No module named 'unicorn_fy.unicorn_fy'; 'unicorn_fy' is not a package` 
-[PR#10](https://github.com/oliver-zehentleitner/unicorn_fy/pull/10), 
-[issue#9](https://github.com/oliver-zehentleitner/unicorn_fy/issues/9)
+[PR#10](https://github.com/oliver-zehentleitner/unicorn-fy/pull/10), 
+[issue#9](https://github.com/oliver-zehentleitner/unicorn-fy/issues/9)
 - thanks to @uggel
 
 ## 0.4.1
@@ -59,7 +59,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - exception handling
 ### Added
 - binance.com-futures (copy of binance_websocket() with suggested modification of 
-[issue #1](https://github.com/oliver-zehentleitner/unicorn_fy/issues/1))
+[issue #1](https://github.com/oliver-zehentleitner/unicorn-fy/issues/1))
 
 ## 0.3.1
 ### Changes

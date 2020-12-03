@@ -4,8 +4,8 @@
 # File: dev_get_results.py
 #
 # Part of ‘UnicornFy’
-# Project website: https://github.com/oliver-zehentleitner/unicorn_fy
-# Documentation: https://oliver-zehentleitner.github.io/unicorn_fy
+# Project website: https://github.com/oliver-zehentleitner/unicorn-fy
+# Documentation: https://oliver-zehentleitner.github.io/unicorn-fy
 # PyPI: https://pypi.org/project/unicorn-fy
 #
 # Author: Oliver Zehentleitner
