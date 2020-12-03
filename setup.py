@@ -42,7 +42,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-     name='unicorn_fy',
+     name='unicorn-fy',
      version=str(unicornfy.get_version()),
      author="Oliver Zehentleitner",
      url="https://github.com/oliver-zehentleitner/unicorn_fy",
