@@ -5,6 +5,7 @@
 [![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel)](https://pypi.org/project/unicorn-fy/)
 [![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg)](https://github.com/oliver-zehentleitner/unicorn_fy/issues)
 [![Build Status](https://travis-ci.com/oliver-zehentleitner/unicorn_fy.svg?branch=master)](https://travis-ci.com/oliver-zehentleitner/unicorn_fy)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/oliver-zehentleitner/unicorn_fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/oliver-zehentleitner/unicorn_fy/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/oliver-zehentleitner/unicorn_fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/oliver-zehentleitner/unicorn_fy/context:python)
 [![Coverage Status](https://coveralls.io/repos/github/oliver-zehentleitner/unicorn_fy/badge.svg?branch=master)](https://coveralls.io/github/oliver-zehentleitner/unicorn_fy?branch=master)
 [![Telegram](https://img.shields.io/badge/chat-telegram-yellow.svg)](https://t.me/unicorndevs)
@@ -51,15 +52,15 @@ print(unicorn_fied_stream_data)
 | -------- | --------------- | ------ |
 | [Binance](https://www.binance.com) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_websocket) | STABLE |
 | [Binance Testnet](https://testnet.binance.vision/) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_websocket) | STABLE |
-| [Binance Margin](https://www.binance.com) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_margin_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_margin_websocket) | NEEDS_YOUR_HELP |
-| [Binance Margin Testnet](https://testnet.binance.vision/) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_margin_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_margin_websocket) | NEEDS_YOUR_HELP |
-| [Binance Isolated Margin](https://www.binance.com) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_isolated_margin_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_isolated_margin_websocket) | NEEDS_YOUR_HELP |
-| [Binance Isolated Margin Testnet](https://testnet.binance.vision/) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_isolated_margin_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_isolated_margin_websocket) | NEEDS_YOUR_HELP |
-| [Binance Futures](https://www.binance.com) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_futures_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket) | NEEDS_YOUR_HELP |
-| [Binance Futures Testnet](https://testnet.binancefuture.com) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_futures_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket) | NEEDS_YOUR_HELP |
-| [Binance Jersey](https://www.binance.je) ([API](https://github.com/binance-jersey/binance-official-api-docs/)) | [`binance_je_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_je_websocket) | NEEDS_YOUR_HELP |
-| [Binance US](https://www.binance.us) ([API](https://github.com/binance-us/binance-official-api-docs)) | [`binance_us_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_us_websocket) | NEEDS_YOUR_HELP |
-| [Binance JEX](https://www.jex.com) ([API](https://jexapi.github.io/api-doc/spot.html#change-log)) | [`jex_com_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.jex_com_websocket) | NEEDS_YOUR_HELP |
+| [Binance Margin](https://www.binance.com) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_margin_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_margin_websocket) | STABLE |
+| [Binance Margin Testnet](https://testnet.binance.vision/) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_margin_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_margin_websocket) | STABLE |
+| [Binance Isolated Margin](https://www.binance.com) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_isolated_margin_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_isolated_margin_websocket) | STABLE |
+| [Binance Isolated Margin Testnet](https://testnet.binance.vision/) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_isolated_margin_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_isolated_margin_websocket) | STABLE |
+| [Binance Futures](https://www.binance.com) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_futures_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket) | STABLE |
+| [Binance Futures Testnet](https://testnet.binancefuture.com) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_futures_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket) | STABLE |
+| [Binance Jersey](https://www.binance.je) ([API](https://github.com/binance-jersey/binance-official-api-docs/)) | [`binance_je_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_je_websocket) | STABLE |
+| [Binance US](https://www.binance.us) ([API](https://github.com/binance-us/binance-official-api-docs)) | [`binance_us_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_us_websocket) | STABLE |
+| [Binance JEX](https://www.jex.com) ([API](https://jexapi.github.io/api-doc/spot.html#change-log)) | [`jex_com_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.jex_com_websocket) | STABLE |
 | [Binance DEX](https://www.binance.org) ([API](https://docs.binance.org/)) | [`binance_org_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_org_websocket) | NEEDS_YOUR_HELP |
 | [Binance DEX Testnet](https://testnet.binance.org) ([API](https://docs.binance.org/)) | [`binance_org_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_org_websocket) | NEEDS_YOUR_HELP |
 
@@ -87,9 +88,9 @@ Run in bash:
 `pip install https://github.com/oliver-zehentleitner/unicorn_fy/archive/$(curl -s https://api.github.com/repos/oliver-zehentleitner/unicorn_fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
 
 #### Windows
-Use the below command with the version (such as 0.6.0) you determined [here](https://github.com/oliver-zehentleitner/unicorn_fy/releases/latest):
+Use the below command with the version (such as 0.7.0) you determined [here](https://github.com/oliver-zehentleitner/unicorn_fy/releases/latest):
 
-`pip install https://github.com/oliver-zehentleitner/unicorn_fy/archive/0.6.0.tar.gz --upgrade`
+`pip install https://github.com/oliver-zehentleitner/unicorn_fy/archive/0.7.0.tar.gz --upgrade`
 
 ### From the latest source (dev-stage) with PIP from [Github](https://github.com/oliver-zehentleitner/unicorn_fy)
 This is not a release version and can not be considered to be stable!
@@ -120,6 +121,7 @@ or the [current master branch](https://github.com/oliver-zehentleitner/unicorn_f
 ## Social
 - [https://t.me/unicorndevs](https://t.me/unicorndevs)
 - [https://dev.binance.vision](https://dev.binance.vision)
+- [https://community.binance.org](https://community.binance.org)
 
 ## Receive Notifications
 To receive notifications on available updates you can 
@@ -173,4 +175,4 @@ ZEC: t1WvQMPJMriGWD9qkZGDdE9tTJaawvmsBie
 ```
 ## You need a Python Dev?
 If you would like to [hire me](https://about.me/oliver-zehentleitner) for a Python project, you can book me through 
-my company [LUCIT](https://www.lucit.co/desktop-and-server-apps.html).
+my company [LUCIT IT-Management GmbH](https://www.lucit.co/desktop-and-server-apps.html).

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UnicornFy &#8212; unicorn_fy 0.6.0 documentation</title>
+    <title>UnicornFy &#8212; unicorn-fy 0.7.0 documentation</title>
     <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -18,7 +18,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="copyright" title="Copyright" href="copyright.html" />
-    <link rel="next" title="unicorn_fy Change Log" href="CHANGELOG.html" />
+    <link rel="next" title="unicorn_fy" href="modules.html" />
     <link rel="prev" title="Welcome to UnicornFy’s documentation!" href="index.html" />
     <link rel="shortcut icon" type="image/png" href="_static/py.png" />
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -38,7 +38,7 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="CHANGELOG.html" title="unicorn_fy Change Log"
+          <a href="modules.html" title="unicorn_fy"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="index.html" title="Welcome to UnicornFy’s documentation!"
@@ -46,10 +46,10 @@
     
     <li><img src="_static/github-logo.png" alt=""
              style="vertical-align: middle; margin-top: -1px"/></li>
-    <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">unicorn_fy</a> &#187;</li>
+    <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">unicorn-fy</a> &#187;</li>
     
     
-    <a href="index.html">unicorn_fy 0.6.0 documentation</a> &#187;
+    <a href="index.html">unicorn-fy 0.7.0 documentation</a> &#187;
     
 
         <li class="nav-item nav-item-this"><a href="">UnicornFy</a></li>
@@ -73,6 +73,7 @@
 <a class="reference external" href="https://pypi.org/project/unicorn-fy/"><img alt="PyPI - Wheel" src="https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel" /></a>
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/issues"><img alt="PyPI - Status" src="https://img.shields.io/pypi/status/unicorn_fy.svg" /></a>
 <a class="reference external" href="https://travis-ci.com/oliver-zehentleitner/unicorn_fy"><img alt="Build Status" src="https://travis-ci.com/oliver-zehentleitner/unicorn_fy.svg?branch=master" /></a>
+<a class="reference external" href="https://lgtm.com/projects/g/oliver-zehentleitner/unicorn_fy/alerts/"><img alt="Total alerts" src="https://img.shields.io/lgtm/alerts/g/oliver-zehentleitner/unicorn_fy.svg?logo=lgtm&amp;logoWidth=18" /></a>
 <a class="reference external" href="https://lgtm.com/projects/g/oliver-zehentleitner/unicorn_fy/context:python"><img alt="Language grade: Python" src="https://img.shields.io/lgtm/grade/python/g/oliver-zehentleitner/unicorn_fy.svg?logo=lgtm&amp;logoWidth=18" /></a>
 <a class="reference external" href="https://coveralls.io/github/oliver-zehentleitner/unicorn_fy?branch=master"><img alt="Coverage Status" src="https://coveralls.io/repos/github/oliver-zehentleitner/unicorn_fy/badge.svg?branch=master" /></a>
 <a class="reference external" href="https://t.me/unicorndevs"><img alt="Telegram" src="https://img.shields.io/badge/chat-telegram-yellow.svg" /></a>
@@ -87,7 +88,7 @@
 <p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy">UnicornFy</a> is a side project of
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api">UNICORN Binance WebSocket API</a> but can be used
 with every API that delivers the receives in raw format (as received without changes).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">unicorn_fy.unicorn_fy</span> <span class="kn">import</span> <span class="n">UnicornFy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">unicorn_fy.unicorn_fy</span> <span class="k">import</span> <span class="n">UnicornFy</span>
 
 <span class="n">received_stream_data_json</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;stream&quot;</span><span class="p">:</span> <span class="s2">&quot;btcusdt@trade&quot;</span><span class="p">,</span>
                              <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;e&quot;</span><span class="p">:</span> <span class="s2">&quot;trade&quot;</span><span class="p">,</span>
@@ -134,47 +135,47 @@ with every API that delivers the receives in raw format (as received without cha
 <tr>
 <td><a href="https://www.binance.com">Binance Margin</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
 <td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_margin_websocket"><code>binance_com_margin_websocket(stream_data_json)</code></a></td>
-<td>NEEDS_YOUR_HELP</td>
+<td>STABLE</td>
 </tr>
 <tr>
 <td><a href="https://testnet.binance.vision/">Binance Margin Testnet</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
 <td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_margin_websocket"><code>binance_com_margin_websocket(stream_data_json)</code></a></td>
-<td>NEEDS_YOUR_HELP</td>
+<td>STABLE</td>
 </tr>
 <tr>
 <td><a href="https://www.binance.com">Binance Isolated Margin</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
 <td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_isolated_margin_websocket"><code>binance_com_isolated_margin_websocket(stream_data_json)</code></a></td>
-<td>NEEDS_YOUR_HELP</td>
+<td>STABLE</td>
 </tr>
 <tr>
 <td><a href="https://testnet.binance.vision/">Binance Isolated Margin Testnet</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
 <td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_isolated_margin_websocket"><code>binance_com_isolated_margin_websocket(stream_data_json)</code></a></td>
-<td>NEEDS_YOUR_HELP</td>
+<td>STABLE</td>
 </tr>
 <tr>
 <td><a href="https://www.binance.com">Binance Futures</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
 <td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket"><code>binance_com_futures_websocket(stream_data_json)</code></a></td>
-<td>NEEDS_YOUR_HELP</td>
+<td>STABLE</td>
 </tr>
 <tr>
 <td><a href="https://testnet.binancefuture.com">Binance Futures Testnet</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
 <td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket"><code>binance_com_futures_websocket(stream_data_json)</code></a></td>
-<td>NEEDS_YOUR_HELP</td>
+<td>STABLE</td>
 </tr>
 <tr>
 <td><a href="https://www.binance.je">Binance Jersey</a> (<a href="https://github.com/binance-jersey/binance-official-api-docs/">API</a>)</td>
 <td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_je_websocket"><code>binance_je_websocket(stream_data_json)</code></a></td>
-<td>NEEDS_YOUR_HELP</td>
+<td>STABLE</td>
 </tr>
 <tr>
 <td><a href="https://www.binance.us">Binance US</a> (<a href="https://github.com/binance-us/binance-official-api-docs">API</a>)</td>
 <td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_us_websocket"><code>binance_us_websocket(stream_data_json)</code></a></td>
-<td>NEEDS_YOUR_HELP</td>
+<td>STABLE</td>
 </tr>
 <tr>
 <td><a href="https://www.jex.com">Binance JEX</a> (<a href="https://jexapi.github.io/api-doc/spot.html#change-log">API</a>)</td>
 <td><a href="https://oliver-zehentleitner.github.io/unicorn_fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.jex_com_websocket"><code>jex_com_websocket(stream_data_json)</code></a></td>
-<td>NEEDS_YOUR_HELP</td>
+<td>STABLE</td>
 </tr>
 <tr>
 <td><a href="https://www.binance.org">Binance DEX</a> (<a href="https://docs.binance.org/">API</a>)</td>
@@ -216,8 +217,8 @@ with every API that delivers the receives in raw format (as received without cha
 </div>
 <div class="section" id="windows">
 <h4>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h4>
-<p>Use the below command with the version (such as 0.6.0) you determined <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/releases/latest">here</a>:</p>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/oliver-zehentleitner/unicorn_fy/archive/0.6.0.tar.gz</span> <span class="pre">--upgrade</span></code></p>
+<p>Use the below command with the version (such as 0.7.0) you determined <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn_fy/releases/latest">here</a>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/oliver-zehentleitner/unicorn_fy/archive/0.7.0.tar.gz</span> <span class="pre">--upgrade</span></code></p>
 </div>
 </div>
 <div class="section" id="from-the-latest-source-dev-stage-with-pip-from-github">
@@ -261,6 +262,7 @@ and use:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://t.me/unicorndevs">https://t.me/unicorndevs</a></p></li>
 <li><p><a class="reference external" href="https://dev.binance.vision">https://dev.binance.vision</a></p></li>
+<li><p><a class="reference external" href="https://community.binance.org">https://community.binance.org</a></p></li>
 </ul>
 </div>
 <div class="section" id="receive-notifications">
@@ -315,7 +317,7 @@ not free - it requires technical knowledge, a lot of time and also financial exp
 <div class="section" id="you-need-a-python-dev">
 <h2>You need a Python Dev?<a class="headerlink" href="#you-need-a-python-dev" title="Permalink to this headline">¶</a></h2>
 <p>If you would like to <a class="reference external" href="https://about.me/oliver-zehentleitner">hire me</a> for a Python project, you can book me through
-my company <a class="reference external" href="https://www.lucit.co/desktop-and-server-apps.html">LUCIT</a>.</p>
+my company <a class="reference external" href="https://www.lucit.co/desktop-and-server-apps.html">LUCIT IT-Management GmbH</a>.</p>
 </div>
 </div>
 
@@ -366,8 +368,8 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
   <p class="topless"><a href="index.html"
                         title="previous chapter">Welcome to UnicornFy’s documentation!</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="CHANGELOG.html"
-                        title="next chapter">unicorn_fy Change Log</a></p>
+  <p class="topless"><a href="modules.html"
+                        title="next chapter">unicorn_fy</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -418,7 +420,7 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="CHANGELOG.html" title="unicorn_fy Change Log"
+          <a href="modules.html" title="unicorn_fy"
              >next</a> |</li>
         <li class="right" >
           <a href="index.html" title="Welcome to UnicornFy’s documentation!"
@@ -426,10 +428,10 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
     
     <li><img src="_static/github-logo.png" alt=""
              style="vertical-align: middle; margin-top: -1px"/></li>
-    <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">unicorn_fy</a> &#187;</li>
+    <li><a href="https://github.com/oliver-zehentleitner/unicorn_fy">unicorn-fy</a> &#187;</li>
     
     
-    <a href="index.html">unicorn_fy 0.6.0 documentation</a> &#187;
+    <a href="index.html">unicorn-fy 0.7.0 documentation</a> &#187;
     
 
         <li class="nav-item nav-item-this"><a href="">UnicornFy</a></li>
@@ -444,7 +446,7 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
     &copy; <a href="copyright.html">Copyright</a> 2019-2020, Oliver Zehentleitner.
     <br />
 
-    Last updated on Sep 29 19:31:14 UTC 2020.
+    Last updated on Dec 03 2020 at 15:27 (CET).
     <a href="https://github.com/oliver-zehentleitner/unicorn_fy/issues">Found a bug</a>?
     <br />
 
