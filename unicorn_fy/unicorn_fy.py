@@ -203,6 +203,8 @@ class UnicornFy(object):
                 stream_data = {'data': stream_data}
             elif stream_data['e'] == 'outboundAccountPosition':
                 stream_data = {'data': stream_data}
+            elif stream_data['e'] == 'listStatus':
+                stream_data = {'data': stream_data}
         except KeyError:
             pass
         try:
@@ -263,6 +265,24 @@ class UnicornFy(object):
                                  'trade_time': stream_data['data']['T'],
                                  'is_market_maker': stream_data['data']['m'],
                                  'ignore': stream_data['data']['M']}
+        elif stream_data['data']['e'] == 'listStatus':
+            objects = []
+            for item in stream_data['data']['O']:
+                objects.append({'symbol': item['s'],
+                                'order_id': item['i'],
+                                'client_order_id': item['c']})
+            unicorn_fied_data = {'stream_type': stream_data['data']['s'].lower() + "@listStatus",
+                                 'event_type': stream_data['data']['e'],
+                                 'event_time': stream_data['data']['E'],
+                                 'symbol': stream_data['data']['s'],
+                                 'order_list_id': stream_data['data']['g'],
+                                 'contingency_type': stream_data['data']['c'],
+                                 'list_status_type': stream_data['data']['l'],
+                                 'list_order_status': stream_data['data']['L'],
+                                 'list_reject_reason': stream_data['data']['r'],
+                                 'list_client_order_id': stream_data['data']['C'],
+                                 'transaction_time': stream_data['data']['T'],
+                                 'objects': objects}
         elif stream_data['data']['e'] == 'trade':
             unicorn_fied_data = {'stream_type': stream_data['stream'],
                                  'event_type': stream_data['data']['e'],

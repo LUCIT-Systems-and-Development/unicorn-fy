@@ -145,6 +145,11 @@ class TestBinanceComWebsocket(unittest.TestCase):
         asserted_result = "{'stream_type': 'btcusdt@kline_1m', 'event_type': 'kline', 'event_time': 1601630228469, 'symbol': 'BTCUSDT', 'kline': {'kline_start_time': 1601630220000, 'kline_close_time': 1601630279999, 'symbol': 'BTCUSDT', 'interval': '1m', 'first_trade_id': False, 'last_trade_id': False, 'open_price': '10437.32000000', 'close_price': '10441.80000000', 'high_price': '10441.80000000', 'low_price': '10437.32000000', 'base_volume': '20.63957400', 'number_of_trades': 183, 'is_closed': False, 'quote': '215452.69236872', 'taker_by_base_asset_volume': '19.31210700', 'taker_by_quote_asset_volume': '201593.99488069', 'ignore': '0'}, 'unicorn_fied': ['binance.com', '" + self.unicorn_fy_version + "']}"
         self.assertEqual(str(self.unicorn_fy.binance_com_websocket(data)), asserted_result)
 
+    def test_listStatus(self):
+        data = '{"e":"listStatus","E":1606946194410,"s":"ETHUSDT","g":10717037,"c":"OCO","l":"ALL_DONE","L":"ALL_DONE","r":"NONE","C":"i8B7NXuB37QkJ2Vy8f5KHh","T":1606946194409,"O":[{"s":"ETHUSDT","i":2175939815,"c":"electron_648187c31bda49b6a2e81d23ae0"},{"s":"ETHUSDT","i":2175939816,"c":"84wruoWCZdkBUqbqlKfpv6"}]}'
+        asserted_result = "{'stream_type': 'ethusdt@listStatus', 'event_type': 'listStatus', 'event_time': 1606946194410, 'symbol': 'ETHUSDT', 'order_list_id': 10717037, 'contingency_type': 'OCO', 'list_status_type': 'ALL_DONE', 'list_order_status': 'ALL_DONE', 'list_reject_reason': 'NONE', 'list_client_order_id': 'i8B7NXuB37QkJ2Vy8f5KHh', 'transaction_time': 1606946194409, 'objects': [{'symbol': 'ETHUSDT', 'order_id': 2175939815, 'client_order_id': 'electron_648187c31bda49b6a2e81d23ae0'}, {'symbol': 'ETHUSDT', 'order_id': 2175939816, 'client_order_id': '84wruoWCZdkBUqbqlKfpv6'}], 'unicorn_fied': ['binance.com', '" + self.unicorn_fy_version + "']}"
+        self.assertEqual(str(self.unicorn_fy.binance_com_websocket(data)), asserted_result)
+
     def test_template(self):
         data = ''
         asserted_result = "" + self.unicorn_fy_version + "']}"

@@ -2,9 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
+The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to 
+[Semantic Versioning](http://semver.org/).
 
 ## 0.6.0.dev (development stage/unreleased/unstable)
+### Added
+- Support for `listStatus` in `binance_websocket()` 
+[issue#19](https://github.com/oliver-zehentleitner/unicorn_fy/issues/19)
 
 ## 0.6.0
 ### Added
@@ -19,7 +23,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - handling for results
 ### Fixed
 - `ModuleNotFoundError: No module named 'unicorn_fy.unicorn_fy'; 'unicorn_fy' is not a package` 
-[PR#10](https://github.com/oliver-zehentleitner/unicorn_fy/pull/10), [issue#9](https://github.com/oliver-zehentleitner/unicorn_fy/issues/9)
+[PR#10](https://github.com/oliver-zehentleitner/unicorn_fy/pull/10), 
+[issue#9](https://github.com/oliver-zehentleitner/unicorn_fy/issues/9)
 - thanks to @uggel
 
 ## 0.4.1
