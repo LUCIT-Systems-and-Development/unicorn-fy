@@ -15,7 +15,7 @@
 # UnicornFy
 [Supported Exchanges](#supported-exchanges) | [Installation](#installation-and-upgrade) | [Documentation](#documentation) | 
 [Change Log](#change-log) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | 
-[Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing) | [Donate](#donate)
+[Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing) | [Commercial Support](#commercial-support) | [Donate](#donate)
 
 Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
 
@@ -157,6 +157,12 @@ contribute follow
 
 We ![love](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-fy/master/images/misc/heart.png) open source!
 
+## Commercial Support
+Need a Python developer or consulting? 
+
+Contact [me](https://about.me/oliver-zehentleitner) for a non-binding and free consultation via my company 
+[LUCIT](https://www.lucit.dev) from Vienna (Austria).
+
 ### Donate
 Since you are probably a developer yourself, you will understand very well that the creation of open source software is 
 not free - it requires technical knowledge, a lot of time and also financial expenditure.
@@ -173,6 +179,3 @@ LTC: LYNzHMFUbee3siyHvNCPaCjqXxjyq8YRGJ
 XMR: 85dzsTRh6GRPGVSJoUbFDwAf9uwwAdim1HFpiGshLeKHgj2hVqKtYVPXMZvudioLsuLS1AegkUiQ12jwReRwWcFvF7kDAbF
 ZEC: t1WvQMPJMriGWD9qkZGDdE9tTJaawvmsBie
 ```
-## You need a Python Dev?
-If you would like to [hire me](https://about.me/oliver-zehentleitner) for a Python project, you can book me through 
-my company [LUCIT IT-Management GmbH](https://www.lucit.co/desktop-and-server-apps.html).
