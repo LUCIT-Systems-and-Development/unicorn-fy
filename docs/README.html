@@ -5,15 +5,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UnicornFy &#8212; unicorn-fy 0.7.0 documentation</title>
-    <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
+    <title>UnicornFy &#8212; unicorn-fy 0.8.0 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,7 +48,7 @@
     <li><a href="https://github.com/oliver-zehentleitner/unicorn-fy">unicorn-fy</a> &#187;</li>
     
     
-    <a href="index.html">unicorn-fy 0.7.0 documentation</a> &#187;
+    <a href="index.html">unicorn-fy 0.8.0 documentation</a> &#187;
     
 
         <li class="nav-item nav-item-this"><a href="">UnicornFy</a></li>
@@ -83,12 +82,12 @@
 <h1>UnicornFy<a class="headerlink" href="#unicornfy" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="#supported-exchanges">Supported Exchanges</a> | <a class="reference external" href="#installation-and-upgrade">Installation</a> | <a class="reference external" href="#documentation">Documentation</a> |
 <a class="reference external" href="#change-log">Change Log</a> | <a class="reference external" href="#wiki">Wiki</a> | <a class="reference external" href="#social">Social</a> | <a class="reference external" href="#receive-notifications">Notifications</a> |
-<a class="reference external" href="#how-to-report-bugs-or-suggest-improvements">Bugs</a> | <a class="reference external" href="#contributing">Contributing</a> | <a class="reference external" href="#donate">Donate</a></p>
+<a class="reference external" href="#how-to-report-bugs-or-suggest-improvements">Bugs</a> | <a class="reference external" href="#contributing">Contributing</a> | <a class="reference external" href="#commercial-support">Commercial Support</a> | <a class="reference external" href="#donate">Donate</a></p>
 <p>Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.</p>
 <p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-fy">UnicornFy</a> is a side project of
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api">UNICORN Binance WebSocket API</a> but can be used
 with every API that delivers the receives in raw format (as received without changes).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">unicorn_fy.unicorn_fy</span> <span class="k">import</span> <span class="n">UnicornFy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">unicorn_fy.unicorn_fy</span> <span class="kn">import</span> <span class="n">UnicornFy</span>
 
 <span class="n">received_stream_data_json</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;stream&quot;</span><span class="p">:</span> <span class="s2">&quot;btcusdt@trade&quot;</span><span class="p">,</span>
                              <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;e&quot;</span><span class="p">:</span> <span class="s2">&quot;trade&quot;</span><span class="p">,</span>
@@ -289,15 +288,21 @@ A demo script is appreciated.</p>
 </div>
 <div class="section" id="contributing">
 <h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-fy">unicorn_fy</a> is an open
-source project which welcomes contributions which can be anything from simple documentation fixes to new features. To
+<p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-fy">unicorn-fy</a>  is an open
+source project which welcomes contributions which can be anything from simple documentation fixes and reporting dead links to new features. To
 contribute follow
-<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-fy/blob/master/CONTRIBUTING">this guide</a>.</p>
+<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-fy/blob/master/CONTRIBUTING.md">this guide</a>.</p>
 <div class="section" id="contributors">
 <h3>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-fy/graphs/contributors"><img alt="Contributors" src="https://contributors-img.web.app/image?repo=oliver-zehentleitner/unicorn-fy" /></a></p>
 <p>We <img alt="love" src="https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-fy/master/images/misc/heart.png" /> open source!</p>
 </div>
+</div>
+<div class="section" id="commercial-support">
+<h2>Commercial Support<a class="headerlink" href="#commercial-support" title="Permalink to this headline">¶</a></h2>
+<p>Need a Python developer or consulting?</p>
+<p>Contact <a class="reference external" href="https://about.me/oliver-zehentleitner">me</a> for a non-binding and free consultation via my company
+<a class="reference external" href="https://www.lucit.dev">LUCIT</a> from Vienna (Austria).</p>
 <div class="section" id="donate">
 <h3>Donate<a class="headerlink" href="#donate" title="Permalink to this headline">¶</a></h3>
 <p>Since you are probably a developer yourself, you will understand very well that the creation of open source software is
@@ -305,6 +310,7 @@ not free - it requires technical knowledge, a lot of time and also financial exp
 <p>If you would like to help me to dedicate my time and energy to this project, even small donations are very welcome.</p>
 <p><a class="reference external" href="https://liberapay.com/oliver-zehentleitner/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg" /></a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BTC</span><span class="p">:</span> <span class="mi">39</span><span class="n">fS74fvcGnmEk8JUV8bG6P1wkdH29GtsA</span>
+<span class="n">LUNA</span><span class="p">:</span> <span class="n">terra1ncjg4a59x2pgvqy9qjyqprlj8lrwshm0wleht5</span> <span class="p">(</span><span class="n">Memo</span><span class="p">:</span> <span class="mi">108157985</span><span class="p">)</span>
 <span class="n">DASH</span><span class="p">:</span> <span class="n">XsRhBuPkXGF9WvifdpkVhTGSmVT4VcuQZ7</span>
 <span class="n">ETH</span><span class="p">:</span> <span class="mh">0x1C15857Bf1E18D122dDd1E536705748aa529fc9C</span>
 <span class="n">LTC</span><span class="p">:</span> <span class="n">LYNzHMFUbee3siyHvNCPaCjqXxjyq8YRGJ</span>
@@ -313,11 +319,6 @@ not free - it requires technical knowledge, a lot of time and also financial exp
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="you-need-a-python-dev">
-<h2>You need a Python Dev?<a class="headerlink" href="#you-need-a-python-dev" title="Permalink to this headline">¶</a></h2>
-<p>If you would like to <a class="reference external" href="https://about.me/oliver-zehentleitner">hire me</a> for a Python project, you can book me through
-my company <a class="reference external" href="https://www.lucit.co/desktop-and-server-apps.html">LUCIT IT-Management GmbH</a>.</p>
 </div>
 </div>
 
@@ -356,10 +357,12 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
 <li><a class="reference internal" href="#how-to-report-bugs-or-suggest-improvements">How to report Bugs or suggest Improvements?</a></li>
 <li><a class="reference internal" href="#contributing">Contributing</a><ul>
 <li><a class="reference internal" href="#contributors">Contributors</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#commercial-support">Commercial Support</a><ul>
 <li><a class="reference internal" href="#donate">Donate</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#you-need-a-python-dev">You need a Python Dev?</a></li>
 </ul>
 </li>
 </ul>
@@ -431,7 +434,7 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
     <li><a href="https://github.com/oliver-zehentleitner/unicorn-fy">unicorn-fy</a> &#187;</li>
     
     
-    <a href="index.html">unicorn-fy 0.7.0 documentation</a> &#187;
+    <a href="index.html">unicorn-fy 0.8.0 documentation</a> &#187;
     
 
         <li class="nav-item nav-item-this"><a href="">UnicornFy</a></li>
@@ -443,10 +446,10 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="copyright.html">Copyright</a> 2019-2020, Oliver Zehentleitner.
+    &copy; <a href="copyright.html">Copyright</a> 2021, Oliver Zehentleitner.
     <br />
 
-    Last updated on Dec 03 2020 at 18:59 (CET).
+    Last updated on Mar 14 2021 at 17:29 (CET).
     <a href="https://github.com/oliver-zehentleitner/unicorn-fy/issues">Found a bug</a>?
     <br />
 
@@ -455,7 +458,7 @@ my company <a class="reference external" href="https://www.lucit.co/desktop-and-
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
 
-    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.2.1
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.5.2
         with <a href="https://github.com/oliver-zehentleitner/python-docs-theme-technopathy">python-docs-theme-technopathy</a>
         by <a href="https://about.me/oliver-zehentleitner">Oliver Zehentleitner</a>.
     <br />

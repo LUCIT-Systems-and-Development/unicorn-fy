@@ -15,7 +15,7 @@
 # UnicornFy
 [Supported Exchanges](#supported-exchanges) | [Installation](#installation-and-upgrade) | [Documentation](#documentation) | 
 [Change Log](#change-log) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | 
-[Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing) | [Donate](#donate)
+[Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing) | [Commercial Support](#commercial-support) | [Donate](#donate)
 
 Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
 
@@ -147,8 +147,8 @@ If you dont find an issue related to your topic, please open a new issue:
 [Report a security bug!](https://github.com/oliver-zehentleitner/unicorn-fy/security/policy)
 
 ## Contributing
-[unicorn_fy](https://github.com/oliver-zehentleitner/unicorn-fy) is an open 
-source project which welcomes contributions which can be anything from simple documentation fixes to new features. To 
+[unicorn-fy](https://github.com/oliver-zehentleitner/unicorn-fy)  is an open 
+source project which welcomes contributions which can be anything from simple documentation fixes and reporting dead links to new features. To 
 contribute follow 
 [this guide](https://github.com/oliver-zehentleitner/unicorn-fy/blob/master/CONTRIBUTING.md).
  
@@ -156,6 +156,12 @@ contribute follow
 [![Contributors](https://contributors-img.web.app/image?repo=oliver-zehentleitner/unicorn-fy)](https://github.com/oliver-zehentleitner/unicorn-fy/graphs/contributors)
 
 We ![love](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-fy/master/images/misc/heart.png) open source!
+
+## Commercial Support
+Need a Python developer or consulting? 
+
+Contact [me](https://about.me/oliver-zehentleitner) for a non-binding and free consultation via my company 
+[LUCIT](https://www.lucit.dev) from Vienna (Austria).
 
 ### Donate
 Since you are probably a developer yourself, you will understand very well that the creation of open source software is 
@@ -167,12 +173,10 @@ If you would like to help me to dedicate my time and energy to this project, eve
 
 ```
 BTC: 39fS74fvcGnmEk8JUV8bG6P1wkdH29GtsA
+LUNA: terra1ncjg4a59x2pgvqy9qjyqprlj8lrwshm0wleht5 (Memo: 108157985)
 DASH: XsRhBuPkXGF9WvifdpkVhTGSmVT4VcuQZ7
 ETH: 0x1C15857Bf1E18D122dDd1E536705748aa529fc9C
 LTC: LYNzHMFUbee3siyHvNCPaCjqXxjyq8YRGJ
 XMR: 85dzsTRh6GRPGVSJoUbFDwAf9uwwAdim1HFpiGshLeKHgj2hVqKtYVPXMZvudioLsuLS1AegkUiQ12jwReRwWcFvF7kDAbF
 ZEC: t1WvQMPJMriGWD9qkZGDdE9tTJaawvmsBie
 ```
-## You need a Python Dev?
-If you would like to [hire me](https://about.me/oliver-zehentleitner) for a Python project, you can book me through 
-my company [LUCIT IT-Management GmbH](https://www.lucit.co/desktop-and-server-apps.html).

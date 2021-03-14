@@ -18,11 +18,11 @@ sys.path.insert(0, os.path.abspath('../..'))
 # -- Project information -----------------------------------------------------
 
 project = 'unicorn-fy'
-copyright = '2019-2020, Oliver Zehentleitner'
+copyright = '2021, Oliver Zehentleitner'
 author = 'Oliver Zehentleitner'
 
 # The full version, including alpha/beta/rc tags
-release = '0.7.0'
+release = '0.8.0'
 
 html_last_updated_fmt = "%b %d %Y at %H:%M (CET)"
 
