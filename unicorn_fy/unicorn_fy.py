@@ -11,7 +11,7 @@
 # Author: Oliver Zehentleitner
 #         https://about.me/oliver-zehentleitner
 #
-# Copyright (c) 2019-2020, Oliver Zehentleitner
+# Copyright (c) 2019-2021, Oliver Zehentleitner
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
@@ -54,7 +54,7 @@ class UnicornFy(object):
         - Binance.org
         - Jex.com
     """
-    VERSION = "0.8.0"
+    VERSION = "0.8.0.dev"
 
     def __init__(self):
         self.last_update_check_github = {'timestamp': time.time(),
