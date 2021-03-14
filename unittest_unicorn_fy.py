@@ -257,6 +257,19 @@ class TestBinanceUsWebsocket(unittest.TestCase):
         del self.unicorn_fy
 
 
+class TestBinanceTRWebsocket(unittest.TestCase):
+    def setUp(self):
+        self.unicorn_fy = UnicornFy()
+        self.unicorn_fy_version = str(self.unicorn_fy.get_version())
+
+    def test_template(self):
+        data = ''
+        asserted_result = ""
+        self.assertEqual(str(self.unicorn_fy.trbinance_com_websocket(data)), asserted_result)
+
+    def tearDown(self):
+        del self.unicorn_fy
+
 class TestBinanceOrgWebsocket(unittest.TestCase):
     def setUp(self):
         self.unicorn_fy = UnicornFy()
