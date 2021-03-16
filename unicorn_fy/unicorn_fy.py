@@ -218,6 +218,8 @@ class UnicornFy(object):
                 stream_data = {'data': stream_data}
             elif stream_data['e'] == 'listStatus':
                 stream_data = {'data': stream_data}
+            elif stream_data['e'] == 'balanceUpdate':
+                stream_data = {'data': stream_data}
         except KeyError:
             pass
         try:
@@ -489,6 +491,13 @@ class UnicornFy(object):
                             'free': item['f'],
                             'locked': item['l']}
                 unicorn_fied_data['balances'] += [new_item]
+        elif stream_data['data']['e'] == 'balanceUpdate':
+            unicorn_fied_data = {'stream_type': '!userData@arr',
+                                 'event_type': stream_data['data']['e'],
+                                 'event_time': stream_data['data']['E'],
+                                 'asset': stream_data['data']['a'],
+                                 'balance_delta': stream_data['data']['d'],
+                                 'clear_time': stream_data['data']['T']}
         elif stream_data['data']['e'] == 'executionReport':
             unicorn_fied_data = {'stream_type': '!userData@arr',
                                  'event_type': stream_data['data']['e'],
@@ -559,6 +568,8 @@ class UnicornFy(object):
             if stream_data['e'] == 'outboundAccountInfo':
                 stream_data = {'data': stream_data}
             elif stream_data['e'] == 'executionReport':
+                stream_data = {'data': stream_data}
+            elif stream_data['e'] == 'balanceUpdate':
                 stream_data = {'data': stream_data}
         except KeyError:
             pass
@@ -798,6 +809,13 @@ class UnicornFy(object):
                                 'free': item['f'],
                                 'locked': item['l']}
                     unicorn_fied_data['balances'] += [new_item]
+            elif stream_data['data']['e'] == 'balanceUpdate':
+                unicorn_fied_data = {'stream_type': '!userData@arr',
+                                 'event_type': stream_data['data']['e'],
+                                 'event_time': stream_data['data']['E'],
+                                 'asset': stream_data['data']['a'],
+                                 'balance_delta': stream_data['data']['d'],
+                                 'clear_time': stream_data['data']['T']}
             elif stream_data['data']['e'] == 'executionReport':
                 unicorn_fied_data = {'stream_type': '!userData@arr',
                                      'event_type': stream_data['data']['e'],
