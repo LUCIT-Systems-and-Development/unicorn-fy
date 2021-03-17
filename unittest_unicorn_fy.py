@@ -150,6 +150,11 @@ class TestBinanceComWebsocket(unittest.TestCase):
         asserted_result = "{'stream_type': 'ethusdt@listStatus', 'event_type': 'listStatus', 'event_time': 1606946194410, 'symbol': 'ETHUSDT', 'order_list_id': 10717037, 'contingency_type': 'OCO', 'list_status_type': 'ALL_DONE', 'list_order_status': 'ALL_DONE', 'list_reject_reason': 'NONE', 'list_client_order_id': 'i8B7NXuB37QkJ2Vy8f5KHh', 'transaction_time': 1606946194409, 'objects': [{'symbol': 'ETHUSDT', 'order_id': 2175939815, 'client_order_id': 'electron_648187c31bda49b6a2e81d23ae0'}, {'symbol': 'ETHUSDT', 'order_id': 2175939816, 'client_order_id': '84wruoWCZdkBUqbqlKfpv6'}], 'unicorn_fied': ['binance.com', '" + self.unicorn_fy_version + "']}"
         self.assertEqual(str(self.unicorn_fy.binance_com_websocket(data)), asserted_result)
 
+    def test_balanceUpdate(self):
+        data = '{"e":"balanceUpdate","E":1615926131286,"a":"USDT","d":"1.00000000","T":1615926131285}'
+        asserted_result = "{'stream_type': '!userData@arr', 'event_type': 'balanceUpdate', 'event_time': 1615926131286, 'asset': 'USDT', 'balance_delta': '1.00000000', 'clear_time': 1615926131285, 'unicorn_fied': ['binance.com', '" + self.unicorn_fy_version + "']}"
+        self.assertEqual(str(self.unicorn_fy.binance_com_websocket(data)), asserted_result)
+
     def test_template(self):
         data = ''
         asserted_result = "" + self.unicorn_fy_version + "']}"
