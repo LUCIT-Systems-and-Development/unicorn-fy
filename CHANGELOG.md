@@ -5,7 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to 
 [Semantic Versioning](http://semver.org/).
 
-## 0.8.0.dev (development stage/unreleased/unstable)
+## 0.9.0.dev (development stage/unreleased/unstable)
+## 0.9.0
+### Added
+- Support for `balanceUpdate` in `binance_websocket()` and `binance_futures_websocket()`
+[PR#19 thx @davivc](https://github.com/oliver-zehentleitner/unicorn-fy/pull/21)
+
 ## 0.8.0
 ### Added
 - TRBinance.com
