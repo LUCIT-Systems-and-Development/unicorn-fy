@@ -571,6 +571,10 @@ class UnicornFy(object):
                 stream_data = {'data': stream_data}
             elif stream_data['e'] == 'balanceUpdate':
                 stream_data = {'data': stream_data}
+            elif stream_data['e'] == 'ORDER_TRADE_UPDATE':
+                stream_data = {'data': stream_data}
+            elif stream_data['e'] == 'ACCOUNT_UPDATE':
+                stream_data = {'data': stream_data}
         except KeyError:
             pass
         try:
@@ -585,6 +589,7 @@ class UnicornFy(object):
                 stream_data['data']['depth_level'] = 20
             elif "@bookTicker" in stream_data['stream']:
                 stream_data['data']['e'] = "bookTicker"
+            
         except KeyError:
             pass
 
@@ -849,6 +854,42 @@ class UnicornFy(object):
                                      'order_creation_time': stream_data['data']['O'],
                                      'cumulative_quote_asset_transacted_quantity': stream_data['data']['Z'],
                                      'last_quote_asset_transacted_quantity': stream_data['data']['Y']}
+            elif stream_data['data']['e'] == 'ORDER_TRADE_UPDATE':
+                unicorn_fied_data = {'stream_type': 'ORDER_TRADE_UPDATE',
+                                 'event_type': stream_data['data']['e'],
+                                 'event_time': stream_data['data']['E'],
+                                 'symbol': stream_data['data']['o']['s'], # 交易对
+                                 'client_order_id': stream_data['data']['o']['c'], # 订单编号
+                                 'side': stream_data['data']['o']['S'], # 有用,订单方向
+                                 'order_type': stream_data['data']['o']['o'], # 订单类型
+                                 'time_in_force': stream_data['data']['o']['f'], # 有效方式
+                                 'order_quantity': stream_data['data']['o']['q'], # 订单原始数量
+                                 'order_price': stream_data['data']['o']['p'],# 原始价格
+                                 'order_avg_price': stream_data['data']['o']['ap'],# 平均价格
+                                 'order_tj_price': stream_data['data']['o']['sp'],# 条件订单触发价格，对追踪止损单无效
+                                 'current_execution_type': stream_data['data']['o']['x'],# 本次事件的具体执行类型
+                                 'current_order_status': stream_data['data']['o']['X'], # 订单的当前状态
+                                 'order_id': stream_data['data']['o']['i'],# 订单ID
+                                 'last_executed_quantity': stream_data['data']['o']['l'],# 订单末次成交量
+                                 'cumulative_filled_quantity': stream_data['data']['o']['z'],# 订单累计已成交量
+                                 'last_executed_price': stream_data['data']['o']['L'],# 订单末次成交价格
+                                 # 'commission_amount': stream_data['data']['o']['n'],# 手续费数量
+                                 # 'commission_asset': stream_data['data']['o']['N'],# 手续费资产类型
+                                 'transaction_time': stream_data['data']['o']['T'],# 成交时间
+                                 'trade_id': stream_data['data']['o']['t'], # 成交ID
+                                 'net_pay': stream_data['data']['o']['b'], # 买单净值
+                                 'net_selling_order_value': stream_data['data']['o']['a'],# 卖单净值
+                                 'is_trade_maker_side': stream_data['data']['o']['m'], # 该成交是作为挂单成交吗
+                                 'reduceOnly': stream_data['data']['o']['R'],# 是否是只减仓单
+                                 'trigger_price_type': stream_data['data']['o']['wt'], # 触发价类型
+                                 'order_price_type': stream_data['data']['o']['ot'],# 原始定单类型
+                                 'positionSide': stream_data['data']['o']['ps'],
+                                 # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['cp'],
+                                 # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['AP'],
+                                 # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['cr'],
+                                 'order_profit_loss': stream_data['data']['o']['rp']} #该交易实现盈亏
+            elif stream_data['data']['e'] == 'ORDER_TRADE_UPDATE':
+                pass
         except TypeError as error_msg:
             logging.critical(f"UnicornFy->binance_com_futures_websocket({str(unicorn_fied_data)}) - "
                              f"error: {str(error_msg)}")
