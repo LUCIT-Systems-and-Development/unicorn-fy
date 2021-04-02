@@ -589,7 +589,6 @@ class UnicornFy(object):
                 stream_data['data']['depth_level'] = 20
             elif "@bookTicker" in stream_data['stream']:
                 stream_data['data']['e'] = "bookTicker"
-            
         except KeyError:
             pass
 
@@ -888,7 +887,8 @@ class UnicornFy(object):
                                  # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['AP'],
                                  # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['cr'],
                                  'order_profit_loss': stream_data['data']['o']['rp']} #该交易实现盈亏
-            elif stream_data['data']['e'] == 'ORDER_TRADE_UPDATE':
+            elif stream_data['data']['e'] == 'ACCOUNT_UPDATE':
+                # 这里的还不会写,好多类别
                 pass
         except TypeError as error_msg:
             logging.critical(f"UnicornFy->binance_com_futures_websocket({str(unicorn_fied_data)}) - "
