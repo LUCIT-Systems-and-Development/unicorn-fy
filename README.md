@@ -19,9 +19,7 @@
 
 Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
 
-[UnicornFy](https://github.com/oliver-zehentleitner/unicorn-fy) is a side project of 
-[UNICORN Binance WebSocket API](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api) but can be used
-with every API that delivers the receives in raw format (as received without changes).
+Part of ['UNICORN Binance Suite'](https://github.com/oliver-zehentleitner/unicorn-binance-suite)
 
 ```
 from unicorn_fy.unicorn_fy import UnicornFy
@@ -121,6 +119,8 @@ or the [current master branch](https://github.com/oliver-zehentleitner/unicorn-f
 
 ## Social
 - [https://t.me/unicorndevs](https://t.me/unicorndevs)
+- [Twitter](https://twitter.com/DevsUnicorn)
+- [unicorn-coding-club](https://github.com/oliver-zehentleitner/unicorn-coding-club)
 - [https://dev.binance.vision](https://dev.binance.vision)
 - [https://community.binance.org](https://community.binance.org)
 
