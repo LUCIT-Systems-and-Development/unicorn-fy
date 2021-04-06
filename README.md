@@ -19,7 +19,7 @@
 
 Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
 
-Part of ['UNICORN Binance Suite'](https://github.com/oliver-zehentleitner/unicorn-binance-suite)
+Part of ['UNICORN Binance Suite'](https://github.com/oliver-zehentleitner/unicorn-binance-suite).
 
 ```
 from unicorn_fy.unicorn_fy import UnicornFy
