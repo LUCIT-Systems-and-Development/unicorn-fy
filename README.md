@@ -19,9 +19,7 @@
 
 Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
 
-[UnicornFy](https://github.com/oliver-zehentleitner/unicorn-fy) is a side project of 
-[UNICORN Binance WebSocket API](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api) but can be used
-with every API that delivers the receives in raw format (as received without changes).
+Part of ['UNICORN Binance Suite'](https://github.com/oliver-zehentleitner/unicorn-binance-suite).
 
 ```
 from unicorn_fy.unicorn_fy import UnicornFy
@@ -121,6 +119,8 @@ or the [current master branch](https://github.com/oliver-zehentleitner/unicorn-f
 
 ## Social
 - [https://t.me/unicorndevs](https://t.me/unicorndevs)
+- [Twitter](https://twitter.com/DevsUnicorn)
+- [unicorn-coding-club](https://github.com/oliver-zehentleitner/unicorn-coding-club)
 - [https://dev.binance.vision](https://dev.binance.vision)
 - [https://community.binance.org](https://community.binance.org)
 
@@ -173,8 +173,8 @@ If you would like to help me to dedicate my time and energy to this project, eve
 [![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/oliver-zehentleitner/donate)
 
 ```
+Terra (LUNA, UST, ...): terra1yt34qmmycextztnj9mpt3mnjzqqvl8jtqqq7g9
 BTC: 39fS74fvcGnmEk8JUV8bG6P1wkdH29GtsA
-LUNA: terra1ncjg4a59x2pgvqy9qjyqprlj8lrwshm0wleht5 (Memo: 108157985)
 DASH: XsRhBuPkXGF9WvifdpkVhTGSmVT4VcuQZ7
 ETH: 0x1C15857Bf1E18D122dDd1E536705748aa529fc9C
 LTC: LYNzHMFUbee3siyHvNCPaCjqXxjyq8YRGJ
