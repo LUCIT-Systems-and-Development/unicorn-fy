@@ -854,42 +854,143 @@ class UnicornFy(object):
                                      'cumulative_quote_asset_transacted_quantity': stream_data['data']['Z'],
                                      'last_quote_asset_transacted_quantity': stream_data['data']['Y']}
             elif stream_data['data']['e'] == 'ORDER_TRADE_UPDATE':
+                '''
+                    url:https://binance-docs.github.io/apidocs/futures/en/#event-order-update
+                    ex:
+                    {
+                        "e":"ORDER_TRADE_UPDATE",     // Event Type
+                        "E":1568879465651,            // Event Time
+                        "T":1568879465650,            // Transaction Time
+                        "o":{                             
+                                "s":"BTCUSDT",              // Symbol
+                                "c":"TEST",                 // Client Order Id
+                                // special client order id:
+                                // starts with "autoclose-": liquidation order
+                                // "adl_autoclose": ADL auto close order
+                                "S":"SELL",                 // Side
+                                "o":"TRAILING_STOP_MARKET", // Order Type
+                                "f":"GTC",                  // Time in Force
+                                "q":"0.001",                // Original Quantity
+                                "p":"0",                    // Original Price
+                                "ap":"0",                   // Average Price
+                                "sp":"7103.04",             // Stop Price. Please ignore with TRAILING_STOP_MARKET order
+                                "x":"NEW",                  // Execution Type
+                                "X":"NEW",                  // Order Status
+                                "i":8886774,                // Order Id
+                                "l":"0",                    // Order Last Filled Quantity
+                                "z":"0",                    // Order Filled Accumulated Quantity
+                                "L":"0",                    // Last Filled Price
+                                "N":"USDT",             // Commission Asset, will not push if no commission
+                                "n":"0",                // Commission, will not push if no commission
+                                "T":1568879465651,          // Order Trade Time
+                                "t":0,                      // Trade Id
+                                "b":"0",                    // Bids Notional
+                                "a":"9.91",                 // Ask Notional
+                                "m":false,                  // Is this trade the maker side?
+                                "R":false,                  // Is this reduce only
+                                "wt":"CONTRACT_PRICE",      // Stop Price Working Type
+                                "ot":"TRAILING_STOP_MARKET",    // Original Order Type
+                                "ps":"LONG",                        // Position Side
+                                "cp":false,                     // If Close-All, pushed with conditional order
+                                "AP":"7476.89",             // Activation Price, only puhed with TRAILING_STOP_MARKET order
+                                "cr":"5.0",                 // Callback Rate, only puhed with TRAILING_STOP_MARKET order
+                                "rp":"0"                            // Realized Profit of the trade
+                            }
+                        }
+                '''
                 unicorn_fied_data = {'stream_type': 'ORDER_TRADE_UPDATE',
                                  'event_type': stream_data['data']['e'],
                                  'event_time': stream_data['data']['E'],
-                                 'symbol': stream_data['data']['o']['s'], # 交易对
-                                 'client_order_id': stream_data['data']['o']['c'], # 订单编号
-                                 'side': stream_data['data']['o']['S'], # 有用,订单方向
-                                 'order_type': stream_data['data']['o']['o'], # 订单类型
-                                 'time_in_force': stream_data['data']['o']['f'], # 有效方式
-                                 'order_quantity': stream_data['data']['o']['q'], # 订单原始数量
-                                 'order_price': stream_data['data']['o']['p'],# 原始价格
-                                 'order_avg_price': stream_data['data']['o']['ap'],# 平均价格
-                                 'order_tj_price': stream_data['data']['o']['sp'],# 条件订单触发价格，对追踪止损单无效
-                                 'current_execution_type': stream_data['data']['o']['x'],# 本次事件的具体执行类型
-                                 'current_order_status': stream_data['data']['o']['X'], # 订单的当前状态
-                                 'order_id': stream_data['data']['o']['i'],# 订单ID
-                                 'last_executed_quantity': stream_data['data']['o']['l'],# 订单末次成交量
-                                 'cumulative_filled_quantity': stream_data['data']['o']['z'],# 订单累计已成交量
-                                 'last_executed_price': stream_data['data']['o']['L'],# 订单末次成交价格
-                                 # 'commission_amount': stream_data['data']['o']['n'],# 手续费数量
-                                 # 'commission_asset': stream_data['data']['o']['N'],# 手续费资产类型
-                                 'transaction_time': stream_data['data']['o']['T'],# 成交时间
-                                 'trade_id': stream_data['data']['o']['t'], # 成交ID
-                                 'net_pay': stream_data['data']['o']['b'], # 买单净值
-                                 'net_selling_order_value': stream_data['data']['o']['a'],# 卖单净值
-                                 'is_trade_maker_side': stream_data['data']['o']['m'], # 该成交是作为挂单成交吗
-                                 'reduceOnly': stream_data['data']['o']['R'],# 是否是只减仓单
-                                 'trigger_price_type': stream_data['data']['o']['wt'], # 触发价类型
-                                 'order_price_type': stream_data['data']['o']['ot'],# 原始定单类型
+                                 'symbol': stream_data['data']['o']['s'], # Symbol
+                                 'client_order_id': stream_data['data']['o']['c'], # Client Order Id
+                                 'side': stream_data['data']['o']['S'], # Side
+                                 'order_type': stream_data['data']['o']['o'], # Order Type
+                                 'time_in_force': stream_data['data']['o']['f'], # Time in Force
+                                 'order_quantity': stream_data['data']['o']['q'], # Original Quantity
+                                 'order_price': stream_data['data']['o']['p'],# Original Price
+                                 'order_avg_price': stream_data['data']['o']['ap'],# Average Price
+                                 'order_tj_price': stream_data['data']['o']['sp'],# Stop Price. Please ignore with TRAILING_STOP_MARKET order
+                                 'current_execution_type': stream_data['data']['o']['x'],# Execution Type
+                                 'current_order_status': stream_data['data']['o']['X'], # Order Status
+                                 'order_id': stream_data['data']['o']['i'],# Order Id
+                                 'last_executed_quantity': stream_data['data']['o']['l'],# Order Last Filled Quantity
+                                 'cumulative_filled_quantity': stream_data['data']['o']['z'],# Order Filled Accumulated Quantity
+                                 'last_executed_price': stream_data['data']['o']['L'],# Last Filled Price
+                                 'transaction_time': stream_data['data']['o']['T'],# Order Trade Time
+                                 'trade_id': stream_data['data']['o']['t'], # Trade Id
+                                 'net_pay': stream_data['data']['o']['b'], #  Ask Notional
+                                 'net_selling_order_value': stream_data['data']['o']['a'],# Ask Notional
+                                 'is_trade_maker_side': stream_data['data']['o']['m'], # Is this trade the maker side?
+                                 'reduceOnly': stream_data['data']['o']['R'],# Is this reduce only
+                                 'trigger_price_type': stream_data['data']['o']['wt'], # Stop Price Working Type
+                                 'order_price_type': stream_data['data']['o']['ot'],# Original Order Type
                                  'positionSide': stream_data['data']['o']['ps'],
                                  # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['cp'],
                                  # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['AP'],
                                  # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['cr'],
-                                 'order_profit_loss': stream_data['data']['o']['rp']} #该交易实现盈亏
+                                 'order_profit_loss': stream_data['data']['o']['rp']} # Realized Profit of the trade
             elif stream_data['data']['e'] == 'ACCOUNT_UPDATE':
-                # 这里的还不会写,好多类别
-                pass
+                '''
+                    url:https://binance-docs.github.io/apidocs/futures/en/#event-balance-and-position-update
+                    ex:
+                       {
+                        "e": "ACCOUNT_UPDATE",                // Event Type
+                        "E": 1564745798939,                   // Event Time
+                        "T": 1564745798938 ,                  // Transaction
+                        "a":                                  // Update Data
+                            {
+                            "m":"ORDER",                      // Event reason type
+                            "B":[                             // Balances
+                                {
+                                "a":"USDT",                   // Asset
+                                "wb":"122624.12345678",       // Wallet Balance
+                                "cw":"100.12345678"           // Cross Wallet Balance
+                                },
+                                {
+                                "a":"BNB",           
+                                "wb":"1.00000000",
+                                "cw":"0.00000000"         
+                                }
+                            ],
+                            "P":[
+                                {
+                                "s":"BTCUSDT",            // Symbol
+                                "pa":"0",                 // Position Amount
+                                "ep":"0.00000",            // Entry Price
+                                "cr":"200",               // (Pre-fee) Accumulated Realized
+                                "up":"0",                     // Unrealized PnL
+                                "mt":"isolated",              // Margin Type
+                                "iw":"0.00000000",            // Isolated Wallet (if isolated position)
+                                "ps":"BOTH"                   // Position Side
+                                }，
+                                {
+                                    "s":"BTCUSDT",
+                                    "pa":"20",
+                                    "ep":"6563.66500",
+                                    "cr":"0",
+                                    "up":"2850.21200",
+                                    "mt":"isolated",
+                                    "iw":"13200.70726908",
+                                    "ps":"LONG"
+                                },
+                                {
+                                    "s":"BTCUSDT",
+                                    "pa":"-10",
+                                    "ep":"6563.86000",
+                                    "cr":"-45.04000000",
+                                    "up":"-1423.15600",
+                                    "mt":"isolated",
+                                    "iw":"6570.42511771",
+                                    "ps":"SHORT"
+                                }
+                            ]
+                            }
+                        } 
+                '''
+                unicorn_fied_data = {'stream_type': 'ACCOUNT_UPDATE',
+                                 'event_type': stream_data['data']['e'],
+                                 'event_time': stream_data['data']['E'],}
+                                 # ...
         except TypeError as error_msg:
             logging.critical(f"UnicornFy->binance_com_futures_websocket({str(unicorn_fied_data)}) - "
                              f"error: {str(error_msg)}")
