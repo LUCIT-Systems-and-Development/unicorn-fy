@@ -31,5 +31,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Coveralls Finished
-      run: coveralls
+      run: python -m coveralls
 
