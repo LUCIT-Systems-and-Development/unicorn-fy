@@ -4,7 +4,7 @@
 [![Downloads](https://pepy.tech/badge/unicorn-fy)](https://pepy.tech/project/unicorn-fy)
 [![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel)](https://pypi.org/project/unicorn-fy/)
 [![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg)](https://github.com/oliver-zehentleitner/unicorn-fy/issues)
-[![Build Status](https://travis-ci.com/oliver-zehentleitner/unicorn-fy.svg?branch=master)](https://travis-ci.com/oliver-zehentleitner/unicorn-fy)
+[![build](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/python-app.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/python-app.yml)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/oliver-zehentleitner/unicorn-fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/oliver-zehentleitner/unicorn-fy/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/oliver-zehentleitner/unicorn-fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/oliver-zehentleitner/unicorn-fy/context:python)
 [![Coverage Status](https://coveralls.io/repos/github/oliver-zehentleitner/unicorn-fy/badge.svg?branch=master)](https://coveralls.io/github/oliver-zehentleitner/unicorn-fy?branch=master)
