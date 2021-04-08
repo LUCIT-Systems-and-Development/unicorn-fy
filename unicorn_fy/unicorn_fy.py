@@ -815,11 +815,11 @@ class UnicornFy(object):
                     unicorn_fied_data['balances'] += [new_item]
             elif stream_data['data']['e'] == 'balanceUpdate':
                 unicorn_fied_data = {'stream_type': '!userData@arr',
-                                 'event_type': stream_data['data']['e'],
-                                 'event_time': stream_data['data']['E'],
-                                 'asset': stream_data['data']['a'],
-                                 'balance_delta': stream_data['data']['d'],
-                                 'clear_time': stream_data['data']['T']}
+                                     'event_type': stream_data['data']['e'],
+                                     'event_time': stream_data['data']['E'],
+                                     'asset': stream_data['data']['a'],
+                                     'balance_delta': stream_data['data']['d'],
+                                     'clear_time': stream_data['data']['T']}
             elif stream_data['data']['e'] == 'executionReport':
                 unicorn_fied_data = {'stream_type': '!userData@arr',
                                      'event_type': stream_data['data']['e'],
@@ -855,7 +855,7 @@ class UnicornFy(object):
                                      'last_quote_asset_transacted_quantity': stream_data['data']['Y']}
             elif stream_data['data']['e'] == 'ORDER_TRADE_UPDATE':
                 '''
-                    url:https://binance-docs.github.io/apidocs/futures/en/#event-order-update
+                    url: https://binance-docs.github.io/apidocs/futures/en/#event-order-update
                     ex:
                     {
                         "e":"ORDER_TRADE_UPDATE",     // Event Type
@@ -899,39 +899,40 @@ class UnicornFy(object):
                         }
                 '''
                 unicorn_fied_data = {'stream_type': 'ORDER_TRADE_UPDATE',
-                                 'event_type': stream_data['data']['e'],
-                                 'event_time': stream_data['data']['E'],
-                                 'symbol': stream_data['data']['o']['s'], # Symbol
-                                 'client_order_id': stream_data['data']['o']['c'], # Client Order Id
-                                 'side': stream_data['data']['o']['S'], # Side
-                                 'order_type': stream_data['data']['o']['o'], # Order Type
-                                 'time_in_force': stream_data['data']['o']['f'], # Time in Force
-                                 'order_quantity': stream_data['data']['o']['q'], # Original Quantity
-                                 'order_price': stream_data['data']['o']['p'],# Original Price
-                                 'order_avg_price': stream_data['data']['o']['ap'],# Average Price
-                                 'order_tj_price': stream_data['data']['o']['sp'],# Stop Price. Please ignore with TRAILING_STOP_MARKET order
-                                 'current_execution_type': stream_data['data']['o']['x'],# Execution Type
-                                 'current_order_status': stream_data['data']['o']['X'], # Order Status
-                                 'order_id': stream_data['data']['o']['i'],# Order Id
-                                 'last_executed_quantity': stream_data['data']['o']['l'],# Order Last Filled Quantity
-                                 'cumulative_filled_quantity': stream_data['data']['o']['z'],# Order Filled Accumulated Quantity
-                                 'last_executed_price': stream_data['data']['o']['L'],# Last Filled Price
-                                 'transaction_time': stream_data['data']['o']['T'],# Order Trade Time
-                                 'trade_id': stream_data['data']['o']['t'], # Trade Id
-                                 'net_pay': stream_data['data']['o']['b'], #  Ask Notional
-                                 'net_selling_order_value': stream_data['data']['o']['a'],# Ask Notional
-                                 'is_trade_maker_side': stream_data['data']['o']['m'], # Is this trade the maker side?
-                                 'reduceOnly': stream_data['data']['o']['R'],# Is this reduce only
-                                 'trigger_price_type': stream_data['data']['o']['wt'], # Stop Price Working Type
-                                 'order_price_type': stream_data['data']['o']['ot'],# Original Order Type
-                                 'positionSide': stream_data['data']['o']['ps'],
-                                 # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['cp'],
-                                 # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['AP'],
-                                 # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['cr'],
-                                 'order_profit_loss': stream_data['data']['o']['rp']} # Realized Profit of the trade
+                                     'event_type': stream_data['data']['e'],
+                                     'event_time': stream_data['data']['E'],
+                                     'symbol': stream_data['data']['o']['s'],  # Symbol
+                                     'client_order_id': stream_data['data']['o']['c'],  # Client Order Id
+                                     'side': stream_data['data']['o']['S'],  # Side
+                                     'order_type': stream_data['data']['o']['o'],  # Order Type
+                                     'time_in_force': stream_data['data']['o']['f'],  # Time in Force
+                                     'order_quantity': stream_data['data']['o']['q'],  # Original Quantity
+                                     'order_price': stream_data['data']['o']['p'],  # Original Price
+                                     'order_avg_price': stream_data['data']['o']['ap'],  # Average Price
+                                     'order_stop_price': stream_data['data']['o']['sp'],  # Stop Price. Please ignore with TRAILING_STOP_MARKET order
+                                     'current_execution_type': stream_data['data']['o']['x'],  # Execution Type
+                                     'current_order_status': stream_data['data']['o']['X'],  # Order Status
+                                     'order_id': stream_data['data']['o']['i'],  # Order Id
+                                     'last_executed_quantity': stream_data['data']['o']['l'],  # Order Last Filled Quantity
+                                     'cumulative_filled_quantity': stream_data['data']['o']['z'],  # Order Filled Accumulated Quantity
+                                     'last_executed_price': stream_data['data']['o']['L'],  # Last Filled Price
+                                     'transaction_time': stream_data['data']['o']['T'],  # Order Trade Time
+                                     'trade_id': stream_data['data']['o']['t'],  # Trade Id
+                                     'net_pay': stream_data['data']['o']['b'],  # Ask Notional
+                                     'net_selling_order_value': stream_data['data']['o']['a'],  # Ask Notional
+                                     'is_trade_maker_side': stream_data['data']['o']['m'],  # Is this trade the maker side?
+                                     'reduce_only': stream_data['data']['o']['R'],  # Is this reduce only
+                                     'trigger_price_type': stream_data['data']['o']['wt'],  # Stop Price Working Type
+                                     'order_price_type': stream_data['data']['o']['ot'],  # Original Order Type
+                                     'position_side': stream_data['data']['o']['ps'],
+                                     # Todo:
+                                     # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['cp'],
+                                     # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['AP'],
+                                     # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['cr'],
+                                     'order_realized_profit': stream_data['data']['o']['rp']}  # Realized Profit of the trade
             elif stream_data['data']['e'] == 'ACCOUNT_UPDATE':
                 '''
-                    url:https://binance-docs.github.io/apidocs/futures/en/#event-balance-and-position-update
+                    url: https://binance-docs.github.io/apidocs/futures/en/#event-balance-and-position-update
                     ex:
                        {
                         "e": "ACCOUNT_UPDATE",                // Event Type
@@ -987,10 +988,10 @@ class UnicornFy(object):
                             }
                         } 
                 '''
+                # Todo: unfinished!
                 unicorn_fied_data = {'stream_type': 'ACCOUNT_UPDATE',
-                                 'event_type': stream_data['data']['e'],
-                                 'event_time': stream_data['data']['E'],}
-                                 # ...
+                                     'event_type': stream_data['data']['e'],
+                                     'event_time': stream_data['data']['E']}
         except TypeError as error_msg:
             logging.critical(f"UnicornFy->binance_com_futures_websocket({str(unicorn_fied_data)}) - "
                              f"error: {str(error_msg)}")

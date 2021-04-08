@@ -35,8 +35,6 @@
 
 from unicorn_fy.unicorn_fy import UnicornFy
 
-data = '{"e":"listStatus","E":1606946194410,"s":"ETHUSDT","g":10717037,"c":"OCO","l":"ALL_DONE","L":"ALL_DONE",' \
-       '"r":"NONE","C":"i8B7NXuB37QkJ2Vy8f5KHh","T":1606946194409,"O":[{"s":"ETHUSDT","i":2175939815,' \
-       '"c":"electron_648187c31bda49b6a2e81d23ae0"},{"s":"ETHUSDT","i":2175939816,"c":"84wruoWCZdkBUqbqlKfpv6"}]}'
-result = UnicornFy.binance_com_websocket(data)
+data = '{"e":"ORDER_TRADE_UPDATE","T":1617859867769,"E":1617859867772,"o":{"s":"SANDUSDT","c":"electron_6LyJZ9KPgmRbhKfFamx3","S":"BUY","o":"LIMIT","f":"GTC","q":"1000","p":"0.63428","ap":"0","sp":"0","x":"NEW","X":"NEW","i":315803079,"l":"0","z":"0","L":"0","T":1617859867769,"t":0,"b":"1262.16000","a":"0","m":false,"R":false,"wt":"CONTRACT_PRICE","ot":"LIMIT","ps":"LONG","cp":false,"rp":"0","pP":false,"si":0,"ss":0}}'
+result = UnicornFy.binance_futures_websocket(data)
 print(f"result: {result}")
