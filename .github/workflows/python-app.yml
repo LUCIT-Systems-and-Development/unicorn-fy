@@ -24,7 +24,7 @@ jobs:
         pip install -r test-requirements.txt
         pip install pytest
     - name: Unit test
-      run: pytest
+      run: python unittest_unicorn_fy.py
     - name: Coveralls
       uses: AndreMiras/coveralls-python-action@develop
       with:
