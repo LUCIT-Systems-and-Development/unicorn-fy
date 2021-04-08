@@ -25,11 +25,7 @@ jobs:
         pip install coveralls
     - name: Unit test
       run: coverage run --source unicorn_fy unittest_unicorn_fy.py
-
-  coveralls_finish:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-    - name: Coveralls Finished
-      run: python -m coveralls
-
+    - name: "Upload coverage to Codecov"
+      uses: codecov/codecov-action@v1
+      with:
+        fail_ci_if_error: true
