@@ -30,7 +30,16 @@ jobs:
       run: |
         coverage run --source unicorn_fy unittest_unicorn_fy.py
     - name: Coveralls
-      uses: coverallsapp/github-action@master
+      uses: AndreMiras/coveralls-python-action@develop
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        path--to-lcov: coverage.xml
+        parallel: true
+        flag-name: Unit Test
+
+  coveralls_finish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Coveralls Finished
+      uses: AndreMiras/coveralls-python-action@develop
+      with:
+        parallel-finished: true
