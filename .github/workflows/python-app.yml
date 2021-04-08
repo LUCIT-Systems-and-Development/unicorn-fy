@@ -25,7 +25,7 @@ jobs:
         pip install -r test-requirements.txt
     - name: Unit test
       run: |
-        coverage run --source unicorn_fy unittest_unicorn_fy.py
+        unittest_unicorn_fy.py
     - name: Coveralls
       uses: AndreMiras/coveralls-python-action@develop
       with:
