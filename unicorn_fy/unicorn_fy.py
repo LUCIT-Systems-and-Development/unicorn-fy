@@ -575,6 +575,8 @@ class UnicornFy(object):
                 stream_data = {'data': stream_data}
             elif stream_data['e'] == 'ACCOUNT_UPDATE':
                 stream_data = {'data': stream_data}
+            elif stream_data['e'] == 'ACCOUNT_CONFIG_UPDATE':
+                stream_data = {'data': stream_data}
         except KeyError:
             pass
         try:
@@ -991,6 +993,26 @@ class UnicornFy(object):
                                  'event_type': stream_data['data']['e'],
                                  'event_time': stream_data['data']['E'],}
                                  # ...
+            elif stream_data['data']['e'] == 'ACCOUNT_CONFIG_UPDATE':
+                '''
+                url: https://binance-docs.github.io/apidocs/futures/en/#event-order-update
+                ex:
+                {
+                    "e":"ACCOUNT_CONFIG_UPDATE",       // Event Type
+                    "E":1611646737479,                 // Event Time
+                    "T":1611646737476,                 // Transaction Time
+                    "ac":{                              
+                    "s":"BTCUSDT",                     // symbol
+                    "l":25                             // leverage
+                    }
+                }  
+                '''
+                unicorn_fied_data = {'stream_type': 'ACCOUNT_CONFIG_UPDATE',
+                                     'event_type': stream_data['data']['e'],
+                                     'event_time': stream_data['data']['E'],
+                                     'symbol' : stream_data['data']['ac']['s'],
+                                     'leverage' : stream_data['data']['ac']['l']
+                                 }
         except TypeError as error_msg:
             logging.critical(f"UnicornFy->binance_com_futures_websocket({str(unicorn_fied_data)}) - "
                              f"error: {str(error_msg)}")
