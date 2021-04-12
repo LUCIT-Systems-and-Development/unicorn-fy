@@ -575,6 +575,10 @@ class UnicornFy(object):
                 stream_data = {'data': stream_data}
             elif stream_data['e'] == 'ACCOUNT_UPDATE':
                 stream_data = {'data': stream_data}
+            elif stream_data['e'] == 'ACCOUNT_CONFIG_UPDATE':
+                stream_data = {'data': stream_data}
+            elif stream_data['e'] == 'MARGIN_CALL':
+                stream_data = {'data': stream_data}
         except KeyError:
             pass
         try:
@@ -990,8 +994,40 @@ class UnicornFy(object):
                 '''
                 # Todo: unfinished!
                 unicorn_fied_data = {'stream_type': 'ACCOUNT_UPDATE',
-                                     'event_type': stream_data['data']['e'],
-                                     'event_time': stream_data['data']['E']}
+                                 'event_type': stream_data['data']['e'],
+                                 'event_time': stream_data['data']['E'],}
+            elif stream_data['data']['e'] == 'MARGIN_CALL':
+                '''
+                    url: https://binance-docs.github.io/apidocs/futures/en/#event-margin-call
+                    ex: {
+                            "e":"MARGIN_CALL",      // Event Type
+                            "E":1587727187525,      // Event Time
+                            "cw":"3.16812045",      // Cross Wallet Balance. Only pushed with crossed position margin call
+                            "p":[                   // Position(s) of Margin Call
+                            {
+                                "s":"ETHUSDT",      // Symbol
+                                "ps":"LONG",        // Position Side
+                                "pa":"1.327",       // Position Amount
+                                "mt":"CROSSED",     // Margin Type
+                                "iw":"0",           // Isolated Wallet (if isolated position)
+                                "mp":"187.17127",   // Mark Price
+                                "up":"-1.166074",   // Unrealized PnL
+                                "mm":"1m,n.614445"     // Maintenance Margin Required
+                            }
+                            ]
+                        }  
+                '''
+                unicorn_fied_data = {'stream_type': 'MARGIN_CALL',
+                    'event_type': stream_data['data']['e'],
+                    'event_time': stream_data['data']['E'],
+                    'Symbol'    : stream_data['data']['p']['s'],
+                    'Side'      : stream_data['data']['p']['ps'],
+                    'Amount'    : stream_data['data']['p']['pa'],
+                    'Type'      : stream_data['data']['p']['mt'],
+                    'Wallet'    : stream_data['data']['p']['iw'],
+                    'Price'     : stream_data['data']['p']['mp'],
+                    'PnL'       : stream_data['data']['p']['up'],
+                    'Margin'    : stream_data['data']['p']['mm']}
         except TypeError as error_msg:
             logging.critical(f"UnicornFy->binance_com_futures_websocket({str(unicorn_fied_data)}) - "
                              f"error: {str(error_msg)}")
