@@ -34,6 +34,7 @@
 # IN THE SOFTWARE.
 
 from unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager import BinanceWebSocketApiManager
+from unicorn_binance_rest_api.unicorn_binance_rest_api_manager import BinanceRestApiManager
 from unicorn_fy.unicorn_fy import UnicornFy
 import logging
 import unittest
@@ -41,6 +42,8 @@ import os
 import time
 import threading
 
+
+# Todo: Add stream_everything with rest
 
 # https://docs.python.org/3/library/logging.html#logging-levels
 logging.basicConfig(level=logging.ERROR,

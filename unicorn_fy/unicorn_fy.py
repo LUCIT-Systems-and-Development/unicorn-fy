@@ -996,14 +996,8 @@ class UnicornFy(object):
                 unicorn_fied_data = {'stream_type': 'ACCOUNT_UPDATE',
                                      'event_type': stream_data['data']['e'],
                                      'event_time': stream_data['data']['E'],
-                                     'symbol': stream_data['data']['p']['s'],
-                                     'side': stream_data['data']['p']['ps'],
-                                     'amount': stream_data['data']['p']['pa'],
-                                     'type': stream_data['data']['p']['mt'],
-                                     'wallet': stream_data['data']['p']['iw'],
-                                     'price': stream_data['data']['p']['mp'],
-                                     'pnl': stream_data['data']['p']['up'],
-                                     'margin': stream_data['data']['p']['mm']}
+                                     'transaction': stream_data['data']['T'],
+                                     'update_data': stream_data['data']['a']}
             elif stream_data['data']['e'] == 'MARGIN_CALL':
                 '''
                     url: https://binance-docs.github.io/apidocs/futures/en/#event-margin-call
