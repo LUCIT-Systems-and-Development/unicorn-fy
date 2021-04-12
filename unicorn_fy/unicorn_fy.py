@@ -913,18 +913,18 @@ class UnicornFy(object):
                                      'order_quantity': stream_data['data']['o']['q'],  # Original Quantity
                                      'order_price': stream_data['data']['o']['p'],  # Original Price
                                      'order_avg_price': stream_data['data']['o']['ap'],  # Average Price
-                                     'order_stop_price': stream_data['data']['o']['sp'],  # Stop Price. Please ignore with TRAILING_STOP_MARKET order
+                                     'order_stop_price': stream_data['data']['o']['sp'],  # Stop Price.
                                      'current_execution_type': stream_data['data']['o']['x'],  # Execution Type
                                      'current_order_status': stream_data['data']['o']['X'],  # Order Status
                                      'order_id': stream_data['data']['o']['i'],  # Order Id
-                                     'last_executed_quantity': stream_data['data']['o']['l'],  # Order Last Filled Quantity
-                                     'cumulative_filled_quantity': stream_data['data']['o']['z'],  # Order Filled Accumulated Quantity
+                                     'last_executed_quantity': stream_data['data']['o']['l'],
+                                     'cumulative_filled_quantity': stream_data['data']['o']['z'],
                                      'last_executed_price': stream_data['data']['o']['L'],  # Last Filled Price
                                      'transaction_time': stream_data['data']['o']['T'],  # Order Trade Time
                                      'trade_id': stream_data['data']['o']['t'],  # Trade Id
                                      'net_pay': stream_data['data']['o']['b'],  # Ask Notional
                                      'net_selling_order_value': stream_data['data']['o']['a'],  # Ask Notional
-                                     'is_trade_maker_side': stream_data['data']['o']['m'],  # Is this trade the maker side?
+                                     'is_trade_maker_side': stream_data['data']['o']['m'],
                                      'reduce_only': stream_data['data']['o']['R'],  # Is this reduce only
                                      'trigger_price_type': stream_data['data']['o']['wt'],  # Stop Price Working Type
                                      'order_price_type': stream_data['data']['o']['ot'],  # Original Order Type
@@ -933,7 +933,7 @@ class UnicornFy(object):
                                      # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['cp'],
                                      # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['AP'],
                                      # 'cumulative_quote_asset_transacted_quantity': stream_data['data']['cr'],
-                                     'order_realized_profit': stream_data['data']['o']['rp']}  # Realized Profit of the trade
+                                     'order_realized_profit': stream_data['data']['o']['rp']}  # Realized Profit
             elif stream_data['data']['e'] == 'ACCOUNT_UPDATE':
                 '''
                     url: https://binance-docs.github.io/apidocs/futures/en/#event-balance-and-position-update
@@ -994,8 +994,16 @@ class UnicornFy(object):
                 '''
                 # Todo: unfinished!
                 unicorn_fied_data = {'stream_type': 'ACCOUNT_UPDATE',
-                                 'event_type': stream_data['data']['e'],
-                                 'event_time': stream_data['data']['E'],}
+                                     'event_type': stream_data['data']['e'],
+                                     'event_time': stream_data['data']['E'],
+                                     'symbol': stream_data['data']['p']['s'],
+                                     'side': stream_data['data']['p']['ps'],
+                                     'amount': stream_data['data']['p']['pa'],
+                                     'type': stream_data['data']['p']['mt'],
+                                     'wallet': stream_data['data']['p']['iw'],
+                                     'price': stream_data['data']['p']['mp'],
+                                     'pnl': stream_data['data']['p']['up'],
+                                     'margin': stream_data['data']['p']['mm']}
             elif stream_data['data']['e'] == 'MARGIN_CALL':
                 '''
                     url: https://binance-docs.github.io/apidocs/futures/en/#event-margin-call
@@ -1018,16 +1026,36 @@ class UnicornFy(object):
                         }  
                 '''
                 unicorn_fied_data = {'stream_type': 'MARGIN_CALL',
-                    'event_type': stream_data['data']['e'],
-                    'event_time': stream_data['data']['E'],
-                    'Symbol'    : stream_data['data']['p']['s'],
-                    'Side'      : stream_data['data']['p']['ps'],
-                    'Amount'    : stream_data['data']['p']['pa'],
-                    'Type'      : stream_data['data']['p']['mt'],
-                    'Wallet'    : stream_data['data']['p']['iw'],
-                    'Price'     : stream_data['data']['p']['mp'],
-                    'PnL'       : stream_data['data']['p']['up'],
-                    'Margin'    : stream_data['data']['p']['mm']}
+                                     'event_type': stream_data['data']['e'],
+                                     'event_time': stream_data['data']['E'],
+                                     'symbol': stream_data['data']['p']['s'],
+                                     'side': stream_data['data']['p']['ps'],
+                                     'amount': stream_data['data']['p']['pa'],
+                                     'type': stream_data['data']['p']['mt'],
+                                     'wallet': stream_data['data']['p']['iw'],
+                                     'price': stream_data['data']['p']['mp'],
+                                     'pnl': stream_data['data']['p']['up'],
+                                     'margin': stream_data['data']['p']['mm']}
+            elif stream_data['data']['e'] == 'ACCOUNT_CONFIG_UPDATE':
+                '''
+                url: https://binance-docs.github.io/apidocs/futures/en/#event-order-update
+                ex:
+                {
+                    "e":"ACCOUNT_CONFIG_UPDATE",       // Event Type
+                    "E":1611646737479,                 // Event Time
+                    "T":1611646737476,                 // Transaction Time
+                    "ac":{                              
+                    "s":"BTCUSDT",                     // symbol
+                    "l":25                             // leverage
+                    }
+                }  
+                '''
+                unicorn_fied_data = {'stream_type': 'ACCOUNT_CONFIG_UPDATE',
+                                     'event_type': stream_data['data']['e'],
+                                     'event_time': stream_data['data']['E'],
+                                     'symbol': stream_data['data']['ac']['s'],
+                                     'leverage': stream_data['data']['ac']['l']
+                                 }
         except TypeError as error_msg:
             logging.critical(f"UnicornFy->binance_com_futures_websocket({str(unicorn_fied_data)}) - "
                              f"error: {str(error_msg)}")
