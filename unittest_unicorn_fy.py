@@ -193,12 +193,21 @@ class TestBinanceComWebsocketFutures(unittest.TestCase):
 
     def test_account_update_futures(self):
         data = '{"e":"ACCOUNT_UPDATE","T":1617859763506,"E":1617859763511,"a":{"B":[{"a":"USDT","wb":"1790.86605837","cw":"1790.86605837"}],"P":[{"s":"CHZUSDT","pa":"0","ep":"0.00000","cr":"0","up":"0","mt":"cross","iw":"0","ps":"BOTH","ma":"USDT"},{"s":"CHZUSDT","pa":"2684","ep":"0.45855","cr":"79.89127995","up":"2.03986684","mt":"cross","iw":"0","ps":"LONG","ma":"USDT"}],"m":"ORDER"}}'
-        asserted_result = "{'stream_type': 'ACCOUNT_UPDATE', 'event_type': 'ACCOUNT_UPDATE', 'event_time': 1617859763511, 'unicorn_fied': ['binance.com-futures', '" + self.unicorn_fy_version + "']}"
+        asserted_result = "{'stream_type': 'ACCOUNT_UPDATE', 'event_type': 'ACCOUNT_UPDATE', 'event_time': 1617859763511, 'transaction': 1617859763506, 'update_data': {'B': [{'a': 'USDT', 'wb': '1790.86605837', 'cw': '1790.86605837'}], 'P': [{'s': 'CHZUSDT', 'pa': '0', 'ep': '0.00000', 'cr': '0', 'up': '0', 'mt': 'cross', 'iw': '0', 'ps': 'BOTH', 'ma': 'USDT'}, {'s': 'CHZUSDT', 'pa': '2684', 'ep': '0.45855', 'cr': '79.89127995', 'up': '2.03986684', 'mt': 'cross', 'iw': '0', 'ps': 'LONG', 'ma': 'USDT'}], 'm': 'ORDER'}, 'unicorn_fied': ['binance.com-futures', '" + self.unicorn_fy_version + "']}"
         self.assertEqual(str(self.unicorn_fy.binance_com_futures_websocket(data)), asserted_result)
 
     def test_order_trade_update_futures(self):
         data = '{"e":"ORDER_TRADE_UPDATE","T":1617859867769,"E":1617859867772,"o":{"s":"SANDUSDT","c":"electron_6LyJZ9KPgmRbhKfFamx3","S":"BUY","o":"LIMIT","f":"GTC","q":"1000","p":"0.63428","ap":"0","sp":"0","x":"NEW","X":"NEW","i":315803079,"l":"0","z":"0","L":"0","T":1617859867769,"t":0,"b":"1262.16000","a":"0","m":false,"R":false,"wt":"CONTRACT_PRICE","ot":"LIMIT","ps":"LONG","cp":false,"rp":"0","pP":false,"si":0,"ss":0}}'
         asserted_result = "{'stream_type': 'ORDER_TRADE_UPDATE', 'event_type': 'ORDER_TRADE_UPDATE', 'event_time': 1617859867772, 'symbol': 'SANDUSDT', 'client_order_id': 'electron_6LyJZ9KPgmRbhKfFamx3', 'side': 'BUY', 'order_type': 'LIMIT', 'time_in_force': 'GTC', 'order_quantity': '1000', 'order_price': '0.63428', 'order_avg_price': '0', 'order_stop_price': '0', 'current_execution_type': 'NEW', 'current_order_status': 'NEW', 'order_id': 315803079, 'last_executed_quantity': '0', 'cumulative_filled_quantity': '0', 'last_executed_price': '0', 'transaction_time': 1617859867769, 'trade_id': 0, 'net_pay': '1262.16000', 'net_selling_order_value': '0', 'is_trade_maker_side': False, 'reduce_only': False, 'trigger_price_type': 'CONTRACT_PRICE', 'order_price_type': 'LIMIT', 'position_side': 'LONG', 'order_realized_profit': '0', 'unicorn_fied': ['binance.com-futures', '" + self.unicorn_fy_version + "']}"
+        self.assertEqual(str(self.unicorn_fy.binance_com_futures_websocket(data)), asserted_result)
+
+    def test_margin_call_futures(self):
+        # Todo: MISSING!!!
+        pass
+
+    def test_account_config_update_futures(self):
+        data = '{"e":"ACCOUNT_CONFIG_UPDATE","T":1617971759717,"E":1617971759721,"ac":{"s":"BTCUSDT","l":19}}'
+        asserted_result = "{'stream_type': 'ACCOUNT_CONFIG_UPDATE', 'event_type': 'ACCOUNT_CONFIG_UPDATE', 'event_time': 1617971759721, 'symbol': 'BTCUSDT', 'leverage': 19, 'unicorn_fied': ['binance.com-futures', '" + self.unicorn_fy_version + "']}"
         self.assertEqual(str(self.unicorn_fy.binance_com_futures_websocket(data)), asserted_result)
 
     def tearDown(self):

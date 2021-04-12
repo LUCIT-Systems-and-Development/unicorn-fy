@@ -7,9 +7,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## 0.9.0.dev (development stage/unreleased/unstable)
 ### Added
-- Support for `ORDER_TRADE_UPDATE` and `ACCOUNT_UPDATE` in `binance_futures_websocket()`
-[PR#19 thx @StarBalll](https://github.com/oliver-zehentleitner/unicorn-fy/pull/23)
-- unittests for `ORDER_TRADE_UPDATE` and `ACCOUNT_UPDATE` in `binance_futures_websocket()`
+- Support for `ORDER_TRADE_UPDATE`, `ACCOUNT_CONFIG_UPDATE`, `MARGIN_CALL`
+ and `ACCOUNT_UPDATE` in `binance_futures_websocket()` (thx @StarBalll
+[PR#23](https://github.com/oliver-zehentleitner/unicorn-fy/pull/23) and 
+[PR#25](https://github.com/oliver-zehentleitner/unicorn-fy/pull/25)
+- unittests for `ORDER_TRADE_UPDATE`, `ACCOUNT_CONFIG_UPDATE`
+ and `ACCOUNT_UPDATE` in `binance_futures_websocket()`
 
 ## 0.9.0
 ### Added

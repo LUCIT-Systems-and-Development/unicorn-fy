@@ -35,6 +35,7 @@
 
 from unicorn_fy.unicorn_fy import UnicornFy
 
-data = '{"e":"ORDER_TRADE_UPDATE","T":1617859867769,"E":1617859867772,"o":{"s":"SANDUSDT","c":"electron_6LyJZ9KPgmRbhKfFamx3","S":"BUY","o":"LIMIT","f":"GTC","q":"1000","p":"0.63428","ap":"0","sp":"0","x":"NEW","X":"NEW","i":315803079,"l":"0","z":"0","L":"0","T":1617859867769,"t":0,"b":"1262.16000","a":"0","m":false,"R":false,"wt":"CONTRACT_PRICE","ot":"LIMIT","ps":"LONG","cp":false,"rp":"0","pP":false,"si":0,"ss":0}}'
+data = '{"e":"ACCOUNT_UPDATE","T":1617859763506,"E":1617859763511,"a":{"B":[{"a":"USDT","wb":"1790.86605837","cw":"1790.86605837"}],"P":[{"s":"CHZUSDT","pa":"0","ep":"0.00000","cr":"0","up":"0","mt":"cross","iw":"0","ps":"BOTH","ma":"USDT"},{"s":"CHZUSDT","pa":"2684","ep":"0.45855","cr":"79.89127995","up":"2.03986684","mt":"cross","iw":"0","ps":"LONG","ma":"USDT"}],"m":"ORDER"}}'
+
 result = UnicornFy.binance_futures_websocket(data)
 print(f"result: {result}")
