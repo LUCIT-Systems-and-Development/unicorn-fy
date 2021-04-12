@@ -5,7 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to 
 [Semantic Versioning](http://semver.org/).
 
-## 0.9.0.dev (development stage/unreleased/unstable)
+## 0.10.0.dev (development stage/unreleased/unstable)
+
+## 0.10.0
 ### Added
 - Support for `ORDER_TRADE_UPDATE`, `ACCOUNT_CONFIG_UPDATE`, `MARGIN_CALL`
  and `ACCOUNT_UPDATE` in `binance_futures_websocket()` (thx @StarBalll
