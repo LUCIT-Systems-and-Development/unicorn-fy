@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 [Semantic Versioning](http://semver.org/).
 
 ## 0.10.0.dev (development stage/unreleased/unstable)
+### Adding 
+- Support for Perpetual Coin Futures
 
 ## 0.10.0
 ### Added
