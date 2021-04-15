@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## 0.10.0.dev (development stage/unreleased/unstable)
 ### Adding 
-- Support for Perpetual Coin Futures
+- Support for Perpetual Coin Futures `binance_com_coin_futures_websocket()`
 
 ## 0.10.0
 ### Added
