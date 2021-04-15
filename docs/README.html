@@ -85,7 +85,7 @@
 <a class="reference external" href="#how-to-report-bugs-or-suggest-improvements">Bugs</a> | <a class="reference external" href="#contributing">Contributing</a> | <a class="reference external" href="#commercial-support">Commercial Support</a> | <a class="reference external" href="#donate">Donate</a></p>
 <p>Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.</p>
 <p>Part of <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-suite">‘UNICORN Binance Suite’</a>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">unicorn_fy.unicorn_fy</span> <span class="k">import</span> <span class="n">UnicornFy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">unicorn_fy.unicorn_fy</span> <span class="kn">import</span> <span class="n">UnicornFy</span>
 
 <span class="n">received_stream_data_json</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;stream&quot;</span><span class="p">:</span> <span class="s2">&quot;btcusdt@trade&quot;</span><span class="p">,</span>
                              <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;e&quot;</span><span class="p">:</span> <span class="s2">&quot;trade&quot;</span><span class="p">,</span>
@@ -156,8 +156,18 @@
 </tr>
 <tr>
 <td><a href="https://testnet.binancefuture.com">Binance Futures Testnet</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
-<td><a href="https://oliver-zehentleitner.github.io/unicorn-fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket"><code>binance_com_futures_websocket(stream_data_json)</code></a></td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn-fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_coin_futures_websocket"><code>binance_com_futures_websocket(stream_data_json)</code></a></td>
 <td>STABLE</td>
+</tr>
+<tr>
+<td><a href="https://www.binance.com">Binance Coin Futures</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn-fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_coin_futures_websocket"><code>binance_com_coin_futures_websocket(stream_data_json)</code></a></td>
+<td>NEEDS_YOUR_HELP</td>
+</tr>
+<tr>
+<td><a href="https://testnet.binancefuture.com">Binance Coin Futures Testnet</a> (<a href="https://github.com/binance-exchange/binance-official-api-docs">API</a>)</td>
+<td><a href="https://oliver-zehentleitner.github.io/unicorn-fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket"><code>binance_com_coin_futures_websocket(stream_data_json)</code></a></td>
+<td>NEEDS_YOUR_HELP</td>
 </tr>
 <tr>
 <td><a href="https://www.binance.je">Binance Jersey</a> (<a href="https://github.com/binance-jersey/binance-official-api-docs/">API</a>)</td>
@@ -334,6 +344,7 @@ further incentives for new donors. This way we generate added value for all side
 username via https://www.lucit-development.co/contact.html, I will invite you to the
 <a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-coding-club">unicorn-coding-club</a> as soon as possible.</p>
 <p><a class="reference external" href="https://liberapay.com/oliver-zehentleitner/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg" /></a></p>
+<p><a class="reference external" href="https://github.com/sponsors/oliver-zehentleitner/">:heart: Sponsor (GitHub)</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Terra</span> <span class="p">(</span><span class="n">LUNA</span><span class="p">,</span> <span class="n">UST</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span> <span class="n">terra1yt34qmmycextztnj9mpt3mnjzqqvl8jtqqq7g9</span>
 <span class="n">BTC</span><span class="p">:</span> <span class="mi">39</span><span class="n">fS74fvcGnmEk8JUV8bG6P1wkdH29GtsA</span>
 <span class="n">DASH</span><span class="p">:</span> <span class="n">XsRhBuPkXGF9WvifdpkVhTGSmVT4VcuQZ7</span>
@@ -471,7 +482,7 @@ username via https://www.lucit-development.co/contact.html, I will invite you to
     &copy; <a href="copyright.html">Copyright</a> 2021, Oliver Zehentleitner.
     <br />
 
-    Last updated on Apr 12 2021 at 16:24 (CET).
+    Last updated on Apr 16 2021 at 00:21 (CET).
     <a href="https://github.com/oliver-zehentleitner/unicorn-fy/issues">Found a bug</a>?
     <br />
 
@@ -480,13 +491,13 @@ username via https://www.lucit-development.co/contact.html, I will invite you to
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
 
-    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.5.1
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.5.4
         with <a href="https://github.com/oliver-zehentleitner/python-docs-theme-technopathy">python-docs-theme-technopathy</a>
         by <a href="https://about.me/oliver-zehentleitner">Oliver Zehentleitner</a>.
     <br />
         <a href="https://www.technopathy.club/2019/11/03/use-python-sphinx-on-github-pages-with-html-and-an-indivdual-theme">
     Create a GitHub Page like this one!</a>    <br />
-        Powered by <a href="https://www.lucit.co/desktop-and-server-apps.html">LUCIT - Python Development</a>
+        Sponsored by <a href="https://www.lucit-development.co">LUCIT - Python Development</a>
     </div>
 
   </body>
