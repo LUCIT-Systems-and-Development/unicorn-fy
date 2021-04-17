@@ -33,6 +33,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-rm ./build -r
-rm ./dist -r
-rm ./unicorn_fy.egg-info -r
+rm -r ./build
+rm -r ./dist
+rm -r ./unicorn_fy.egg-info

@@ -3,3 +3,4 @@ dependencies:
 - python>=3.6.0
 - pip:
   - ujson
+  - requests
