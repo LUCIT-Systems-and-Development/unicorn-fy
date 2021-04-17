@@ -56,7 +56,7 @@ class UnicornFy(object):
         - Binance.org
         - Jex.com
     """
-    VERSION = "0.10.1.dev"
+    VERSION = "0.10.1.dev-jh"
 
     def __init__(self):
         self.last_update_check_github = {'timestamp': time.time(),
@@ -1017,23 +1017,23 @@ class UnicornFy(object):
                     'positions': []
                 }
 
-                for balance in stream_data['data']['B']:
+                for balance in stream_data['data']['a']['B']:
                     unicorn_fied_data['balances'].append({
                         'asset': balance['a'],
                         'wallet_balance': balance['wb'],
                         'cross_wallet_balance': balance['cw']
                     })
 
-                for position in stream_data['data']['P']:
+                for position in stream_data['data']['a']['P']:
                     unicorn_fied_data['positions'].append({
-                        'symbol': balance['s'],
-                        'position_amount': balance['am'],
-                        'entry_price': balance['ep'],
-                        'accumulated_realized': balance['cr'],
-                        'upnl': balance['up'],
-                        'margin_type': balance['mt'],
-                        'isolated_wallet': balance['iw'],
-                        'position_side': balance['ps']
+                        'symbol': position['s'],
+                        'position_amount': position['pa'],
+                        'entry_price': position['ep'],
+                        'accumulated_realized': position['cr'],
+                        'upnl': position['up'],
+                        'margin_type': position['mt'],
+                        'isolated_wallet': position['iw'],
+                        'position_side': position['ps']
                     })
             elif stream_data['data']['e'] == 'MARGIN_CALL':
                 '''
