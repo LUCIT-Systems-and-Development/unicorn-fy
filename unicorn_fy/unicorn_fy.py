@@ -33,10 +33,11 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-import ujson as json
 import logging
 import time
+
 import requests
+import ujson as json
 
 
 class UnicornFy(object):
@@ -55,7 +56,7 @@ class UnicornFy(object):
         - Binance.org
         - Jex.com
     """
-    VERSION = "0.10.0.dev"
+    VERSION = "0.10.1.dev"
 
     def __init__(self):
         self.last_update_check_github = {'timestamp': time.time(),
@@ -96,8 +97,9 @@ class UnicornFy(object):
 
         :return: dict
         """
-        return UnicornFy.binance_websocket(stream_data_json, exchange="binance.com-margin", show_deprecated_warning=False)
-    
+        return UnicornFy.binance_websocket(stream_data_json, exchange="binance.com-margin",
+                                           show_deprecated_warning=False)
+
     @staticmethod
     def binance_com_isolated_margin_websocket(stream_data_json):
         """
@@ -111,7 +113,7 @@ class UnicornFy(object):
         return UnicornFy.binance_websocket(stream_data_json,
                                            exchange="binance.com-isolated_margin",
                                            show_deprecated_warning=False)
-        
+
     @staticmethod
     def binance_com_futures_websocket(stream_data_json):
         """
@@ -1005,12 +1007,34 @@ class UnicornFy(object):
                             }
                         } 
                 '''
-                # Todo: unfinished!
-                unicorn_fied_data = {'stream_type': 'ACCOUNT_UPDATE',
-                                     'event_type': stream_data['data']['e'],
-                                     'event_time': stream_data['data']['E'],
-                                     'transaction': stream_data['data']['T'],
-                                     'update_data': stream_data['data']['a']}
+                unicorn_fied_data = {
+                    'stream_type': 'ACCOUNT_UPDATE',
+                    'event_type': stream_data['data']['e'],
+                    'event_time': stream_data['data']['E'],
+                    'transaction': stream_data['data']['T'],
+                    'event_reason': stream_data['data']['a']['m'],
+                    'balances': [],
+                    'positions': []
+                }
+
+                for balance in stream_data['data']['a']['B']:
+                    unicorn_fied_data['balances'].append({
+                        'asset': balance['a'],
+                        'wallet_balance': balance['wb'],
+                        'cross_wallet_balance': balance['cw']
+                    })
+
+                for position in stream_data['data']['a']['P']:
+                    unicorn_fied_data['positions'].append({
+                        'symbol': position['s'],
+                        'position_amount': position['pa'],
+                        'entry_price': position['ep'],
+                        'accumulated_realized': position['cr'],
+                        'upnl': position['up'],
+                        'margin_type': position['mt'],
+                        'isolated_wallet': position['iw'],
+                        'position_side': position['ps']
+                    })
             elif stream_data['data']['e'] == 'MARGIN_CALL':
                 '''
                     url: https://binance-docs.github.io/apidocs/futures/en/#event-margin-call
@@ -1062,7 +1086,7 @@ class UnicornFy(object):
                                      'event_time': stream_data['data']['E'],
                                      'symbol': stream_data['data']['ac']['s'],
                                      'leverage': stream_data['data']['ac']['l']
-                                 }
+                                     }
         except TypeError as error_msg:
             logging.critical(f"UnicornFy->binance_futures_websocket({str(unicorn_fied_data)}) - "
                              f"error: {str(error_msg)}")
@@ -1075,9 +1099,9 @@ class UnicornFy(object):
         logging.debug("UnicornFy->binance_futures_websocket(" + str(unicorn_fied_data) + ")")
         return unicorn_fied_data
 
-
     @staticmethod
-    def binance_coin_futures_websocket(stream_data_json, exchange="binance.com-coin_futures", show_deprecated_warning=False):
+    def binance_coin_futures_websocket(stream_data_json, exchange="binance.com-coin_futures",
+                                       show_deprecated_warning=False):
         """
         unicorn_fy binance.com-coin_futures raw_stream_data
 
@@ -1588,7 +1612,7 @@ class UnicornFy(object):
                                      'event_time': stream_data['data']['E'],
                                      'symbol': stream_data['data']['ac']['s'],
                                      'leverage': stream_data['data']['ac']['l']
-                                 }
+                                     }
         except TypeError as error_msg:
             logging.critical(f"UnicornFy->binance_coin_futures_websocket({str(unicorn_fied_data)}) - "
                              f"error: {str(error_msg)}")
@@ -1600,7 +1624,6 @@ class UnicornFy(object):
                              f"error: {str(error_msg)}")
         logging.debug("UnicornFy->binance_coin_futures_websocket(" + str(unicorn_fied_data) + ")")
         return unicorn_fied_data
-
 
     @staticmethod
     def jex_com_websocket(stream_data_json):
@@ -1713,6 +1736,3 @@ class UnicornFy(object):
         except IndexError:
             value[key] = False
             return value
-
-
-

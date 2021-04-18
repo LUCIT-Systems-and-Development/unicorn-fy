@@ -50,7 +50,7 @@ setuptools.setup(
      long_description=long_description,
      long_description_content_type="text/markdown",
      license='MIT License',
-     install_requires=['ujson'],
+     install_requires=['ujson', 'requests'],
      keywords='binance, api, exchange, unify, binance-dex, binance-chain, rest-api, websockets',
      project_urls={
         'Documentation': 'https://oliver-zehentleitner.github.io/unicorn-fy/',
