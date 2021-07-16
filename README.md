@@ -46,9 +46,9 @@ print(unicorn_fied_stream_data)
 This lib is integrated into 
 [UNICORN Binance WebSocket API](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api) 
 and can be activated by setting parameter 
-[`output_default` of `BinanceWebSocketApiManager()` to `UnicornFy`](https://oliver-zehentleitner.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager.BinanceWebSocketApiManager.create_stream) 
+[`output_default` of `BinanceWebSocketApiManager()` to `UnicornFy`](https://oliver-zehentleitner.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output_default#module-unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager) 
 or for specific streams with the parameter 
-[`output` of `create_stream()` to `UnicornFy`](https://oliver-zehentleitner.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output_default#module-unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager).
+[`output` of `create_stream()` to `UnicornFy`](https://oliver-zehentleitner.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager.BinanceWebSocketApiManager.create_stream).
 
 ## Supported Exchanges
 ### Websockets
