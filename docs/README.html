@@ -106,6 +106,12 @@
 <span class="p">{</span><span class="s1">&#39;stream_type&#39;</span><span class="p">:</span> <span class="s1">&#39;btcusdt@trade&#39;</span><span class="p">,</span> <span class="s1">&#39;event_type&#39;</span><span class="p">:</span> <span class="s1">&#39;trade&#39;</span><span class="p">,</span> <span class="s1">&#39;event_time&#39;</span><span class="p">:</span> <span class="mi">1556876873656</span><span class="p">,</span> <span class="s1">&#39;symbol&#39;</span><span class="p">:</span> <span class="s1">&#39;BTCUSDT&#39;</span><span class="p">,</span> <span class="s1">&#39;trade_id&#39;</span><span class="p">:</span> <span class="mi">117727701</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="s1">&#39;5786.76000000&#39;</span><span class="p">,</span> <span class="s1">&#39;quantity&#39;</span><span class="p">:</span> <span class="s1">&#39;0.03200500&#39;</span><span class="p">,</span> <span class="s1">&#39;buyer_order_id&#39;</span><span class="p">:</span> <span class="mi">341831847</span><span class="p">,</span> <span class="s1">&#39;seller_order_id&#39;</span><span class="p">:</span> <span class="mi">341831876</span><span class="p">,</span> <span class="s1">&#39;trade_time&#39;</span><span class="p">:</span> <span class="mi">1556876873648</span><span class="p">,</span> <span class="s1">&#39;is_market_maker&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;ignore&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;unicorn_fied&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;binance&#39;</span><span class="p">,</span> <span class="s1">&#39;0.1.0&#39;</span><span class="p">]}</span>
 </pre></div>
 </div>
+<p>This lib is integrated into
+<a class="reference external" href="https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api">UNICORN Binance WebSocket API</a>
+and can be activated by setting parameter
+<a class="reference external" href="https://oliver-zehentleitner.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output_default#module-unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager"><code class="docutils literal notranslate"><span class="pre">output_default</span></code> of <code class="docutils literal notranslate"><span class="pre">BinanceWebSocketApiManager()</span></code> to <code class="docutils literal notranslate"><span class="pre">UnicornFy</span></code></a>
+or for specific streams with the parameter
+<a class="reference external" href="https://oliver-zehentleitner.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager.BinanceWebSocketApiManager.create_stream"><code class="docutils literal notranslate"><span class="pre">output</span></code> of <code class="docutils literal notranslate"><span class="pre">create_stream()</span></code> to <code class="docutils literal notranslate"><span class="pre">UnicornFy</span></code></a>.</p>
 <div class="section" id="supported-exchanges">
 <h2>Supported Exchanges<a class="headerlink" href="#supported-exchanges" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="websockets">
@@ -482,7 +488,7 @@ username via https://www.lucit-development.co/contact.html, I will invite you to
     &copy; <a href="copyright.html">Copyright</a> 2021, Oliver Zehentleitner.
     <br />
 
-    Last updated on Apr 18 2021 at 15:11 (CET).
+    Last updated on Oct 13 2021 at 18:09 (CET).
     <a href="https://github.com/oliver-zehentleitner/unicorn-fy/issues">Found a bug</a>?
     <br />
 
@@ -497,7 +503,7 @@ username via https://www.lucit-development.co/contact.html, I will invite you to
     <br />
         <a href="https://www.technopathy.club/2019/11/03/use-python-sphinx-on-github-pages-with-html-and-an-indivdual-theme">
     Create a GitHub Page like this one!</a>    <br />
-        Sponsored by <a href="https://www.lucit-development.co">LUCIT - Python Development</a>
+        Sponsored by <a href="https://www.lucit.dev">LUCIT Development</a>
     </div>
 
   </body>
