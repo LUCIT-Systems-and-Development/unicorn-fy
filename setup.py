@@ -43,7 +43,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
      name='unicorn-fy',
      version=str(unicornfy.get_version()),
-     author="Oliver Zehentleitner",
+     author="LUCIT Systems and Development",
      url="https://github.com/LUCIT-Systems-and-Development/unicorn-fy",
      description="Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.",
      long_description=long_description,
@@ -54,7 +54,7 @@ setuptools.setup(
      project_urls={
         'Documentation': 'https://lucit-systems-and-development.github.io/unicorn-fy/',
         'Wiki': 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki',
-        'Author': 'https://about.me/oliver-zehentleitner/',
+        'Author': 'https://www.lucit.tech',
      },
      packages=setuptools.find_packages(),
      classifiers=[
