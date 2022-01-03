@@ -4,14 +4,13 @@
 # File: pypi_install_packaging_tools.sh
 #
 # Part of ‘UnicornFy’
-# Project website: https://github.com/oliver-zehentleitner/unicorn-fy
-# Documentation: https://oliver-zehentleitner.github.io/unicorn-fy
+# Project website: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
+# Documentation: https://lucit-systems-and-development.github.io/unicorn-fy
 # PyPI: https://pypi.org/project/unicorn-fy
 #
-# Author: Oliver Zehentleitner
-#         https://about.me/oliver-zehentleitner
+# Author: LUCIT Systems and Development
 #
-# Copyright (c) 2019-2021, Oliver Zehentleitner
+# Copyright (c) 2019-2022, LUCIT Systems and Development (https://www.lucit.tech) and Oliver Zehentleitner
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a

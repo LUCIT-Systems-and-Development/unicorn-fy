@@ -18,8 +18,8 @@ sys.path.insert(0, os.path.abspath('../..'))
 # -- Project information -----------------------------------------------------
 
 project = 'unicorn-fy'
-copyright = '2021, Oliver Zehentleitner'
-author = 'Oliver Zehentleitner'
+copyright = '2019-2022, LUCIT Systems and Development and Oliver Zehentleitner'
+author = 'LUCIT Systems and Development'
 
 # The full version, including alpha/beta/rc tags
 release = '0.11.0'
@@ -59,8 +59,8 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 html_theme = 'python_docs_theme_technopathy'
-html_context = {'github_repo_name': 'unicorn-fy',
-                'github_user_name': 'oliver-zehentleitner',
+html_context = {'github_user_name': 'LUCIT-Systems-and-Development',
+                'github_repo_name': 'unicorn-fy',
                 'project_name': project}
 
 # Add any paths that contain custom static files (such as style sheets) here,

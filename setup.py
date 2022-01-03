@@ -4,14 +4,13 @@
 # File: setup.py
 #
 # Part of ‘UnicornFy’
-# Project website: https://github.com/oliver-zehentleitner/unicorn-fy
-# Documentation: https://oliver-zehentleitner.github.io/unicorn-fy
+# Project website: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
+# Documentation: https://lucit-systems-and-development.github.io/unicorn-fy
 # PyPI: https://pypi.org/project/unicorn-fy
 #
-# Author: Oliver Zehentleitner
-#         https://about.me/oliver-zehentleitner
+# Author: LUCIT Systems and Development
 #
-# Copyright (c) 2019-2021, Oliver Zehentleitner
+# Copyright (c) 2019-2022, LUCIT Systems and Development (https://www.lucit.tech) and Oliver Zehentleitner
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
@@ -45,7 +44,7 @@ setuptools.setup(
      name='unicorn-fy',
      version=str(unicornfy.get_version()),
      author="Oliver Zehentleitner",
-     url="https://github.com/oliver-zehentleitner/unicorn-fy",
+     url="https://github.com/LUCIT-Systems-and-Development/unicorn-fy",
      description="Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.",
      long_description=long_description,
      long_description_content_type="text/markdown",
@@ -53,8 +52,8 @@ setuptools.setup(
      install_requires=['ujson', 'requests'],
      keywords='binance, api, exchange, unify, binance-dex, binance-chain, rest-api, websockets',
      project_urls={
-        'Documentation': 'https://oliver-zehentleitner.github.io/unicorn-fy/',
-        'Wiki': 'https://github.com/oliver-zehentleitner/unicorn-fy/wiki',
+        'Documentation': 'https://lucit-systems-and-development.github.io/unicorn-fy/',
+        'Wiki': 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki',
         'Author': 'https://about.me/oliver-zehentleitner/',
      },
      packages=setuptools.find_packages(),
