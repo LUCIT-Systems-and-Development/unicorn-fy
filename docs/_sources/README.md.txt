@@ -76,7 +76,7 @@ or for specific streams with the parameter
 - none
 
 If you like the project, please 
-[![star](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-fy/master/images/misc/star.png)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/stargazers) it on
+[![star](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/star.png)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/stargazers) it on
 [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)!
 
 ## Installation and Upgrade
@@ -135,7 +135,7 @@ or the [current master branch](https://github.com/LUCIT-Systems-and-Development/
 
 ## Receive Notifications
 To receive notifications on available updates you can 
-[![watch](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-fy/master/images/misc/watch.png)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/watchers)
+[![watch](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/watch.png)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/watchers)
 the repository on [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy), write your
 [own script](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_version_of_this_package.py)
 with using 
@@ -145,7 +145,7 @@ with using
 
 ## How to report Bugs or suggest Improvements?
 [List of planned features](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) -
-click ![thumbs-up](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-fy/master/images/misc/thumbup.png) if you need one of them or suggest a new feature!
+click ![thumbs-up](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/thumbup.png) if you need one of them or suggest a new feature!
 
 Before you report a bug, [try the latest release](https://github.com/LUCIT-Systems-and-Development/unicorn-fy#installation-and-upgrade).
 If the issue still exists, provide the error trace, OS and python version and explain how to reproduce the error. 
@@ -165,7 +165,7 @@ contribute follow
 ### Contributors
 [![Contributors](https://contributors-img.web.app/image?repo=oliver-zehentleitner/unicorn-fy)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/graphs/contributors)
 
-We ![love](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-fy/master/images/misc/heart.png) open source!
+We ![love](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/heart.png) open source!
 
 ## Commercial Support
 Need a Python developer or consulting? 
