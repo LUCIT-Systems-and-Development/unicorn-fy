@@ -126,7 +126,7 @@ or the [current master branch](https://github.com/LUCIT-Systems-and-Development/
 
 ## Social
 - [https://t.me/unicorndevs](https://t.me/unicorndevs)
-- [Twitter](https://twitter.com/LUCIT_SysDev)
+- [https://twitter.com/LUCIT_SysDev](https://twitter.com/LUCIT_SysDev)
 - [https://dev.binance.vision](https://dev.binance.vision)
 - [https://community.binance.org](https://community.binance.org)
 
@@ -167,6 +167,8 @@ contribute follow
 We ![love](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/heart.png) open source!
 
 ## Commercial Support
+[![LUCIT](https://www.lucit.tech/files/images/logos/LUCIT-LOGO-TRANS-PLAIN-NEW.png)](https://www.lucit.tech)
+
 Do you need a developer, operator or consultant? 
 
 Contact me for a non-binding initial consultation via my company 
