@@ -1,13 +1,13 @@
-[![GitHub release](https://img.shields.io/github/release/oliver-zehentleitner/unicorn-fy.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest)
-[![GitHub](https://img.shields.io/github/license/oliver-zehentleitner/unicorn-fy.svg?color=blue)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/LUCIT-Systems-and-Development/unicorn-fy.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest)
+[![GitHub](https://img.shields.io/github/license/LUCIT-Systems-and-Development/unicorn-fy.svg?color=blue)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg)](https://www.python.org/downloads/)
 [![Downloads](https://pepy.tech/badge/unicorn-fy)](https://pepy.tech/project/unicorn-fy)
 [![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel)](https://pypi.org/project/unicorn-fy/)
 [![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues)
 [![build](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/python-app.yml/badge.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/python-app.yml)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/oliver-zehentleitner/unicorn-fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/lucit-systems-and-development/unicorn-fy/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/oliver-zehentleitner/unicorn-fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/lucit-systems-and-development/unicorn-fy/context:python)
-[![codecov](https://codecov.io/gh/oliver-zehentleitner/unicorn-fy/branch/master/graph/badge.svg?token=5I03AZ3F5S)](https://codecov.io/gh/oliver-zehentleitner/unicorn-fy)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/LUCIT-Systems-and-Development/unicorn-fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/LUCIT-Systems-and-Development/unicorn-fy/alerts/)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/LUCIT-Systems-and-Development/unicorn-fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/LUCIT-Systems-and-Development/unicorn-fy/context:python)
+[![codecov](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy/branch/master/graph/badge.svg?token=5I03AZ3F5S)](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy)
 [![Telegram](https://img.shields.io/badge/chat-telegram-yellow.svg)](https://t.me/unicorndevs)
 [![Donations/week](http://img.shields.io/liberapay/receives/oliver-zehentleitner.svg?logo=liberapay)](https://liberapay.com/oliver-zehentleitner/donate)
 [![Patrons](http://img.shields.io/liberapay/patrons/oliver-zehentleitner.svg?logo=liberapay")](https://liberapay.com/oliver-zehentleitner/donate)
@@ -44,9 +44,9 @@ print(unicorn_fied_stream_data)
 ```
 
 This lib is integrated into 
-[UNICORN Binance WebSocket API](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api)
+[UNICORN Binance WebSocket API](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api) 
 and can be activated by setting parameter 
-[`output_default` of `BinanceWebSocketApiManager()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output_default#module-unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager)
+[`output_default` of `BinanceWebSocketApiManager()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output_default#module-unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager) 
 or for specific streams with the parameter 
 [`output` of `create_stream()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager.BinanceWebSocketApiManager.create_stream).
 
@@ -76,8 +76,8 @@ or for specific streams with the parameter
 - none
 
 If you like the project, please 
-[![star](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/star.png)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/stargazers) it on
-[GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)!
+[![star](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/star.png)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/stargazers) it on 
+[GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)! 
 
 ## Installation and Upgrade
 The module requires Python 3.6.0 or above. 
@@ -93,7 +93,7 @@ The current dependencies are listed
 #### Linux, macOS, ...
 Run in bash:
 
-`pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/$(curl -s https://api.github.com/repos/oliver-zehentleitner/unicorn-fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
+`pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/$(curl -s https://api.github.com/repos/lucit-systems-and-development/unicorn-fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
 
 #### Windows
 Use the below command with the version (such as 0.7.0) you determined [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest):
@@ -106,7 +106,7 @@ This is not a release version and can not be considered to be stable!
 `pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/tarball/master --upgrade`
 
 ### [Conda environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html), [Virtualenv](https://virtualenv.pypa.io/en/latest/) or plain [Python](https://docs.python.org/2/install/)
-Download the [latest release](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest)
+Download the [latest release](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest) 
 or the [current master branch](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/master.zip)
  and use:
 - ./environment.yml
@@ -128,26 +128,25 @@ or the [current master branch](https://github.com/LUCIT-Systems-and-Development/
 
 ## Social
 - [https://t.me/unicorndevs](https://t.me/unicorndevs)
-- [Twitter](https://twitter.com/DevsUnicorn)
-- [unicorn-coding-club](https://github.com/LUCIT-Systems-and-Development/unicorn-coding-club)
+- [Twitter](https://twitter.com/LUCIT_SysDev)
 - [https://dev.binance.vision](https://dev.binance.vision)
 - [https://community.binance.org](https://community.binance.org)
 
 ## Receive Notifications
 To receive notifications on available updates you can 
-[![watch](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/watch.png)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/watchers)
-the repository on [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy), write your
-[own script](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_version_of_this_package.py)
+[![watch](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/watch.png)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/watchers) 
+the repository on [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy), write your 
+[own script](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_version_of_this_package.py) 
 with using 
-[`is_update_availabe()`](https://lucit-systems-and-development.github.io/unicorn-fy/unicorn_fy.html?highlight=is_update#unicorn_fy.unicorn_fy.UnicornFy.is_update_availabe)
+[`is_update_availabe()`](https://lucit-systems-and-development.github.io/unicorn-fy/unicorn_fy.html?highlight=is_update#unicorn_fy.unicorn_fy.UnicornFy.is_update_availabe) 
  or you use the 
 [monitoring API service](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api/wiki/UNICORN-Monitoring-API-Service).
 
 ## How to report Bugs or suggest Improvements?
-[List of planned features](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) -
+[List of planned features](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) - 
 click ![thumbs-up](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/thumbup.png) if you need one of them or suggest a new feature!
 
-Before you report a bug, [try the latest release](https://github.com/LUCIT-Systems-and-Development/unicorn-fy#installation-and-upgrade).
+Before you report a bug, [try the latest release](https://github.com/LUCIT-Systems-and-Development/unicorn-fy#installation-and-upgrade). 
 If the issue still exists, provide the error trace, OS and python version and explain how to reproduce the error. 
 A demo script is appreciated.
 
@@ -157,62 +156,18 @@ If you dont find an issue related to your topic, please open a new issue:
 [Report a security bug!](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/security/policy)
 
 ## Contributing
-[unicorn-fy](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)  is an open
+[unicorn-fy](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)  is an open 
 source project which welcomes contributions which can be anything from simple documentation fixes and reporting dead links to new features. To 
 contribute follow 
 [this guide](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/CONTRIBUTING.md).
  
 ### Contributors
-[![Contributors](https://contributors-img.web.app/image?repo=oliver-zehentleitner/unicorn-fy)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/graphs/contributors)
+[![Contributors](https://contributors-img.web.app/image?repo=lucit-systems-and-development/unicorn-fy)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/graphs/contributors)
 
 We ![love](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/heart.png) open source!
 
 ## Commercial Support
-Need a Python developer or consulting? 
+Do you need a developer, operator or consultant? 
 
-Contact [me](https://about.me/oliver-zehentleitner) for a non-binding and free consultation via my company 
+Contact me for a non-binding initial consultation via my company 
 [LUCIT](https://www.lucit.tech) from Vienna (Austria) or via [Telegram](https://t.me/LUCIT_OZ).
-
-## Donate
-Developing, documenting and testing the 
-[UNICORN Binance Suite](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite) and supporting the community
-takes a lot of time and time is a form of cost. I am extremely happy to do this, but need a solution for sharing the 
-costs.
-
-I think we are lucky, as our community consists of traders and programmers I expect to find mostly rational thinking 
-people who also benefit financially from these libraries.
-
-I would like to create a fair model for funding. My goals are that unicorn-binance-websocket-api, 
-unicorn-binance-rest-api and unicorn-fy remain freely available as open source and that I am compensated at least to 
-some extent and thus can invest my time more easily.
-
-If you know the hooker principle from negotiation research or game theory, you know about the problem that people don't 
-often pay for something out of their own impulse if they have already received it for free. 
-
-So my idea is to give every donor who gives an amount over 50 EUR access to a private Github repository where Python 
-classes for trading algos are provided (OrderBook, advanced stop-loss, ...). Moreover, maybe a nice ApiTrader community 
-will be formed.
-
-So the donor not only helps to push the open source development but also gets access to a well maintained collection of 
-practical code for little money. 
-
-Furthermore community members can help me by donating own developments to make the 
-[unicorn-coding-club](https://github.com/LUCIT-Systems-and-Development/unicorn-coding-club) repository more attractive to create
-further incentives for new donors. This way we generate added value for all sides in an uncomplicated way.
-
-If you donated at least 50 EUR (without transaction fee), please send me a message with a confirmation and your Github 
-username via https://www.lucit.tech/contact.html, I will invite you to the
-[unicorn-coding-club](https://github.com/LUCIT-Systems-and-Development/unicorn-coding-club) as soon as possible.
-
-[![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/oliver-zehentleitner/donate)
-
-[:heart: Sponsor (GitHub)](https://github.com/sponsors/oliver-zehentleitner/)
-```
-Terra (LUNA, UST, ...): terra1yt34qmmycextztnj9mpt3mnjzqqvl8jtqqq7g9
-BTC: 39fS74fvcGnmEk8JUV8bG6P1wkdH29GtsA
-DASH: XsRhBuPkXGF9WvifdpkVhTGSmVT4VcuQZ7
-ETH: 0x1C15857Bf1E18D122dDd1E536705748aa529fc9C
-LTC: LYNzHMFUbee3siyHvNCPaCjqXxjyq8YRGJ
-XMR: 85dzsTRh6GRPGVSJoUbFDwAf9uwwAdim1HFpiGshLeKHgj2hVqKtYVPXMZvudioLsuLS1AegkUiQ12jwReRwWcFvF7kDAbF
-ZEC: t1WvQMPJMriGWD9qkZGDdE9tTJaawvmsBie
-```
