@@ -44,6 +44,7 @@ setuptools.setup(
      name='unicorn-fy',
      version=str(unicornfy.get_version()),
      author="LUCIT Systems and Development",
+     author_email='info@lucit.tech',
      url="https://github.com/LUCIT-Systems-and-Development/unicorn-fy",
      description="Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.",
      long_description=long_description,
