@@ -32,7 +32,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-from unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager import BinanceWebSocketApiManager
+from unicorn_binance_websocket_api.manager import BinanceWebSocketApiManager
 from unicorn_fy.unicorn_fy import UnicornFy
 import logging
 import os
@@ -40,6 +40,7 @@ import time
 import threading
 
 # https://docs.python.org/3/library/logging.html#logging-levels
+logging.getLogger("unicorn_fy")
 logging.basicConfig(level=logging.INFO,
                     filename=os.path.basename(__file__) + '.log',
                     format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# File: dev_get_results.py
+# File: example_logging.py
 #
 # Part of ‘UnicornFy’
 # Project website: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
@@ -32,9 +32,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-from unicorn_binance_websocket_api.manager import BinanceWebSocketApiManager
-from unicorn_fy.unicorn_fy import UnicornFy
-import time
+import unicorn_binance_websocket_api
 import logging
 import os
 
@@ -44,20 +42,17 @@ logging.basicConfig(level=logging.DEBUG,
                     format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
                     style="{")
 
-binance_websocket_api_manager = BinanceWebSocketApiManager(exchange="binance.com")
-stream_id = binance_websocket_api_manager.create_stream(['ticker'], ['btcusdt', 'bnbbtc', 'ethbtc'])
-#binance_websocket_api_manager.create_stream(['miniTicker'], ['btcusdt', 'bnbbtc', 'ethbtc'])
-#binance_websocket_api_manager.create_stream(['!miniTicker'], ['arr'])
-#binance_websocket_api_manager.create_stream(['!ticker'], ['arr'])
 
-time.sleep(10)
-binance_websocket_api_manager.get_stream_subscriptions(stream_id)
-time.sleep(5)
-print(str(binance_websocket_api_manager.get_results_from_endpoints()))
-time.sleep(5)
+ubwa = unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.com",
+                                                                output_default="UnicornFy")
 
-while True:
-    oldest_stream_data_from_stream_buffer = binance_websocket_api_manager.pop_stream_data_from_stream_buffer()
-    if oldest_stream_data_from_stream_buffer:
-        oldest_stream_data_from_stream_buffer = UnicornFy.binance_com_websocket(oldest_stream_data_from_stream_buffer)
-        print(oldest_stream_data_from_stream_buffer)
+markets = ['bnbbtc', 'ethbtc', 'btcusdt', 'bchabcusdt', 'xrpusdt', 'rvnbtc', 'ltcusdt', 'adausdt', 'eosusdt',
+           'neousdt', 'bnbusdt', 'adabtc', 'ethusdt', 'trxbtc', 'trxbtc', 'bchabcbtc', 'ltcbtc', 'xrpbtc',
+           'ontbtc', 'bttusdt', 'eosbtc', 'xlmbtc', 'bttbtc', 'tusdusdt', 'xlmusdt', 'qkcbtc', 'zrxbtc',
+           'neobtc', 'adaeth', 'icxusdt', 'btctusd', 'icxbtc', 'btcusdc', 'wanbtc', 'zecbtc', 'wtcbtc']
+
+channels = ['trade', 'kline_1m', 'kline_5m', 'kline_15m', 'kline_30m', 'kline_1h', 'kline_12h', 'depth5']
+
+stream_id = ubwa.create_stream(channels, markets)
+
+print(f"Logging to {os.path.basename(__file__)}.log")

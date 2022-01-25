@@ -38,6 +38,8 @@ import time
 import requests
 import ujson as json
 
+logger = logging.getLogger("unicorn_fy")
+
 
 class UnicornFy(object):
     """
@@ -71,7 +73,7 @@ class UnicornFy(object):
 
         :return: dict
         """
-        logging.info("Can not convert raw data from binance.org")
+        logger.info("Can not convert raw data from binance.org")
         return stream_data_json
 
     @staticmethod
@@ -195,10 +197,10 @@ class UnicornFy(object):
         """
         unicorn_fied_data = False
 
-        logging.debug("UnicornFy->binance_websocket(" + str(stream_data_json) + ")")
+        logger.debug("UnicornFy->binance_websocket(" + str(stream_data_json) + ")")
         if show_deprecated_warning is True:
-            logging.warning("Using `UnicornFy.binance_websocket()` is deprecated, use "
-                            "`UnicornFy.binance_com_websocket()` or `UnicornFy.binance_je_websocket()` instead!")
+            logger.warning("Using `UnicornFy.binance_websocket()` is deprecated, use "
+                           "`UnicornFy.binance_com_websocket()` or `UnicornFy.binance_je_websocket()` instead!")
 
         if UnicornFy.is_json(stream_data_json) is False:
             return stream_data_json
@@ -264,12 +266,12 @@ class UnicornFy(object):
             if stream_data['result'] is None:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_websocket({str(stream_data)}, {str(exchange)}")
+                logger.debug(f"UnicornFy->binance_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
             else:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_websocket({str(stream_data)}, {str(exchange)}")
+                logger.debug(f"UnicornFy->binance_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
         except KeyError:
             pass
@@ -278,7 +280,7 @@ class UnicornFy(object):
             if stream_data['error']:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_websocket({str(stream_data)}, {str(exchange)}")
+                logger.debug(f"UnicornFy->binance_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
         except KeyError:
             pass
@@ -397,8 +399,8 @@ class UnicornFy(object):
                             'taker_by_quote_asset_volume': stream_data['data']['q']}
                     unicorn_fied_data['data'].append(data)
                 except KeyError as error_msg:
-                    logging.critical(f"UnicornFy->binance_com_futures_websocket({str(stream_data)}) - "
-                                     f"error: {str(error_msg)}")
+                    logger.critical(f"UnicornFy->binance_com_futures_websocket({str(stream_data)}) - "
+                                    f"error: {str(error_msg)}")
                     print(str(stream_data))
         elif stream_data['data']['e'] == '24hrTicker':
             try:
@@ -549,7 +551,7 @@ class UnicornFy(object):
                                  'last_quote_asset_transacted_quantity': stream_data['data']['Y']}
         unicorn_fied_version = [exchange, UnicornFy.VERSION]
         unicorn_fied_data['unicorn_fied'] = unicorn_fied_version
-        logging.debug("UnicornFy->binance_com_futures_websocket(" + str(unicorn_fied_data) + ")")
+        logger.debug("UnicornFy->binance_com_futures_websocket(" + str(unicorn_fied_data) + ")")
         return unicorn_fied_data
 
     @staticmethod
@@ -570,7 +572,7 @@ class UnicornFy(object):
         """
         unicorn_fied_data = False
 
-        logging.debug("UnicornFy->binance_futures_websocket(" + str(stream_data_json) + ")")
+        logger.debug("UnicornFy->binance_futures_websocket(" + str(stream_data_json) + ")")
         if show_deprecated_warning is True:
             pass
         if UnicornFy.is_json(stream_data_json) is False:
@@ -621,12 +623,12 @@ class UnicornFy(object):
             if stream_data['result'] is None:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_futures_websocket({str(stream_data)}, {str(exchange)}")
+                logger.debug(f"UnicornFy->binance_futures_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
             else:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_futures_websocket({str(stream_data)}, {str(exchange)}")
+                logger.debug(f"UnicornFy->binance_futures_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
         except KeyError:
             pass
@@ -635,7 +637,7 @@ class UnicornFy(object):
             if stream_data['error']:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_futures_websocket({str(stream_data)}, {str(exchange)}")
+                logger.debug(f"UnicornFy->binance_futures_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
         except KeyError:
             pass
@@ -1087,15 +1089,15 @@ class UnicornFy(object):
                                      'leverage': stream_data['data']['ac']['l']
                                      }
         except TypeError as error_msg:
-            logging.critical(f"UnicornFy->binance_futures_websocket({str(unicorn_fied_data)}) - "
-                             f"error: {str(error_msg)}")
+            logger.critical(f"UnicornFy->binance_futures_websocket({str(unicorn_fied_data)}) - "
+                            f"error: {str(error_msg)}")
         unicorn_fied_version = [exchange, UnicornFy.VERSION]
         try:
             unicorn_fied_data['unicorn_fied'] = unicorn_fied_version
         except TypeError as error_msg:
-            logging.critical(f"UnicornFy->binance_futures_websocket({str(unicorn_fied_data)}) - "
-                             f"error: {str(error_msg)}")
-        logging.debug("UnicornFy->binance_futures_websocket(" + str(unicorn_fied_data) + ")")
+            logger.critical(f"UnicornFy->binance_futures_websocket({str(unicorn_fied_data)}) - "
+                            f"error: {str(error_msg)}")
+        logger.debug("UnicornFy->binance_futures_websocket(" + str(unicorn_fied_data) + ")")
         return unicorn_fied_data
 
     @staticmethod
@@ -1117,7 +1119,7 @@ class UnicornFy(object):
         """
         unicorn_fied_data = False
 
-        logging.debug("UnicornFy->binance_coin_futures_websocket(" + str(stream_data_json) + ")")
+        logger.debug("UnicornFy->binance_coin_futures_websocket(" + str(stream_data_json) + ")")
         if show_deprecated_warning is True:
             pass
 
@@ -1169,12 +1171,12 @@ class UnicornFy(object):
             if stream_data['result'] is None:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_coin_futures_websocket({str(stream_data)}, {str(exchange)}")
+                logger.debug(f"UnicornFy->binance_coin_futures_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
             else:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_coin_futures_websocket({str(stream_data)}, {str(exchange)}")
+                logger.debug(f"UnicornFy->binance_coin_futures_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
         except KeyError:
             pass
@@ -1183,7 +1185,7 @@ class UnicornFy(object):
             if stream_data['error']:
                 unicorn_fied_version = [exchange, UnicornFy.VERSION]
                 stream_data['unicorn_fied'] = unicorn_fied_version
-                logging.debug(f"UnicornFy->binance_coin_futures_websocket({str(stream_data)}, {str(exchange)}")
+                logger.debug(f"UnicornFy->binance_coin_futures_websocket({str(stream_data)}, {str(exchange)}")
                 return stream_data
         except KeyError:
             pass
@@ -1613,15 +1615,15 @@ class UnicornFy(object):
                                      'leverage': stream_data['data']['ac']['l']
                                      }
         except TypeError as error_msg:
-            logging.critical(f"UnicornFy->binance_coin_futures_websocket({str(unicorn_fied_data)}) - "
-                             f"error: {str(error_msg)}")
+            logger.critical(f"UnicornFy->binance_coin_futures_websocket({str(unicorn_fied_data)}) - "
+                            f"error: {str(error_msg)}")
         unicorn_fied_version = [exchange, UnicornFy.VERSION]
         try:
             unicorn_fied_data['unicorn_fied'] = unicorn_fied_version
         except TypeError as error_msg:
-            logging.critical(f"UnicornFy->binance_coin_futures_websocket({str(unicorn_fied_data)}) - "
-                             f"error: {str(error_msg)}")
-        logging.debug("UnicornFy->binance_coin_futures_websocket(" + str(unicorn_fied_data) + ")")
+            logger.critical(f"UnicornFy->binance_coin_futures_websocket({str(unicorn_fied_data)}) - "
+                            f"error: {str(error_msg)}")
+        logger.debug("UnicornFy->binance_coin_futures_websocket(" + str(unicorn_fied_data) + ")")
         return unicorn_fied_data
 
     @staticmethod
