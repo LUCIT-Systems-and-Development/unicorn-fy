@@ -11,8 +11,8 @@
 [![Telegram](https://img.shields.io/badge/chat-telegram-yellow.svg)](https://t.me/unicorndevs)
 
 # UnicornFy
-[Supported Exchanges](#supported-exchanges) | [Installation](#installation-and-upgrade) | [Documentation](#documentation) | 
-[Change Log](#change-log) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | 
+[Supported Exchanges](#supported-exchanges) | [Installation](#installation-and-upgrade) | [Change Log](#change-log) | [Documentation](#documentation) | 
+[Examples](#examples) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | 
 [Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing) | [Commercial Support](#commercial-support)
 
 Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
@@ -118,15 +118,20 @@ or the [current master branch](https://github.com/LUCIT-Systems-and-Development/
 - ./requirements.txt
 - ./setup.py
 
+## Change Log
+[https://lucit-systems-and-development.github.io/unicorn-fy/CHANGELOG.html](https://lucit-systems-and-development.github.io/unicorn-fy/CHANGELOG.html)
+
 ## Documentation
 - [General](https://lucit-systems-and-development.github.io/unicorn-fy)
 - [Modules](https://lucit-systems-and-development.github.io/unicorn-fy/unicorn_fy.html)
 
+## Examples
+- [example_logging.py](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py)
+- [example_unicorn_fy.py](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_unicorn_fy.py)
+- [example_version_of_this_package.py](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_version_of_this_package.py)
+
 ## Source, Downloads, Examples, ...
 [https://github.com/LUCIT-Systems-and-Development/unicorn-fy](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
-
-## Change Log
-[https://lucit-systems-and-development.github.io/unicorn-fy/CHANGELOG.html](https://lucit-systems-and-development.github.io/unicorn-fy/CHANGELOG.html)
 
 ## Wiki
 [https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki)
