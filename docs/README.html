@@ -78,12 +78,12 @@
 <a class="reference external" href="https://t.me/unicorndevs"><img alt="Telegram" src="https://img.shields.io/badge/chat-telegram-yellow.svg" /></a></p>
 <div class="section" id="unicornfy">
 <h1>UnicornFy<a class="headerlink" href="#unicornfy" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="#supported-exchanges">Supported Exchanges</a> | <a class="reference external" href="#installation-and-upgrade">Installation</a> | <a class="reference external" href="#documentation">Documentation</a> |
-<a class="reference external" href="#change-log">Change Log</a> | <a class="reference external" href="#wiki">Wiki</a> | <a class="reference external" href="#social">Social</a> | <a class="reference external" href="#receive-notifications">Notifications</a> |
+<p><a class="reference external" href="#supported-exchanges">Supported Exchanges</a> | <a class="reference external" href="#installation-and-upgrade">Installation</a> | <a class="reference external" href="#change-log">Change Log</a> | <a class="reference external" href="#documentation">Documentation</a> |
+<a class="reference external" href="#examples">Examples</a> | <a class="reference external" href="#wiki">Wiki</a> | <a class="reference external" href="#social">Social</a> | <a class="reference external" href="#receive-notifications">Notifications</a> |
 <a class="reference external" href="#how-to-report-bugs-or-suggest-improvements">Bugs</a> | <a class="reference external" href="#contributing">Contributing</a> | <a class="reference external" href="#commercial-support">Commercial Support</a></p>
 <p>Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.</p>
 <p>Part of <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite">‘UNICORN Binance Suite’</a>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">unicorn_fy.unicorn_fy</span> <span class="kn">import</span> <span class="n">UnicornFy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unicorn_fy</span>
 
 <span class="n">received_stream_data_json</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;stream&quot;</span><span class="p">:</span> <span class="s2">&quot;btcusdt@trade&quot;</span><span class="p">,</span>
                              <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;e&quot;</span><span class="p">:</span> <span class="s2">&quot;trade&quot;</span><span class="p">,</span>
@@ -98,7 +98,9 @@
                                       <span class="s2">&quot;m&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
                                       <span class="s2">&quot;M&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}}</span>
 
-<span class="n">unicorn_fied_stream_data</span> <span class="o">=</span> <span class="n">UnicornFy</span><span class="o">.</span><span class="n">binance_com_websocket</span><span class="p">(</span><span class="n">received_stream_data_json</span><span class="p">)</span>
+<span class="n">unicornfy</span> <span class="o">=</span> <span class="n">unicorn_fy</span><span class="o">.</span><span class="n">UnicornFy</span><span class="p">()</span>
+
+<span class="n">unicorn_fied_stream_data</span> <span class="o">=</span> <span class="n">unicornfy</span><span class="o">.</span><span class="n">binance_com_websocket</span><span class="p">(</span><span class="n">received_stream_data_json</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">unicorn_fied_stream_data</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span>
 <span class="p">{</span><span class="s1">&#39;stream_type&#39;</span><span class="p">:</span> <span class="s1">&#39;btcusdt@trade&#39;</span><span class="p">,</span> <span class="s1">&#39;event_type&#39;</span><span class="p">:</span> <span class="s1">&#39;trade&#39;</span><span class="p">,</span> <span class="s1">&#39;event_time&#39;</span><span class="p">:</span> <span class="mi">1556876873656</span><span class="p">,</span> <span class="s1">&#39;symbol&#39;</span><span class="p">:</span> <span class="s1">&#39;BTCUSDT&#39;</span><span class="p">,</span> <span class="s1">&#39;trade_id&#39;</span><span class="p">:</span> <span class="mi">117727701</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="s1">&#39;5786.76000000&#39;</span><span class="p">,</span> <span class="s1">&#39;quantity&#39;</span><span class="p">:</span> <span class="s1">&#39;0.03200500&#39;</span><span class="p">,</span> <span class="s1">&#39;buyer_order_id&#39;</span><span class="p">:</span> <span class="mi">341831847</span><span class="p">,</span> <span class="s1">&#39;seller_order_id&#39;</span><span class="p">:</span> <span class="mi">341831876</span><span class="p">,</span> <span class="s1">&#39;trade_time&#39;</span><span class="p">:</span> <span class="mi">1556876873648</span><span class="p">,</span> <span class="s1">&#39;is_market_maker&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;ignore&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;unicorn_fied&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;binance&#39;</span><span class="p">,</span> <span class="s1">&#39;0.1.0&#39;</span><span class="p">]}</span>
@@ -110,6 +112,12 @@ and can be activated by setting parameter
 <a class="reference external" href="https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output_default#module-unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager"><code class="docutils literal notranslate"><span class="pre">output_default</span></code> of <code class="docutils literal notranslate"><span class="pre">BinanceWebSocketApiManager()</span></code> to <code class="docutils literal notranslate"><span class="pre">UnicornFy</span></code></a>
 or for specific streams with the parameter
 <a class="reference external" href="https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager.BinanceWebSocketApiManager.create_stream"><code class="docutils literal notranslate"><span class="pre">output</span></code> of <code class="docutils literal notranslate"><span class="pre">create_stream()</span></code> to <code class="docutils literal notranslate"><span class="pre">UnicornFy</span></code></a>.</p>
+<div class="section" id="get-the-right-logger">
+<h2>Get the right <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py">logger</a>:<a class="headerlink" href="#get-the-right-logger" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;unicorn_fy&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="supported-exchanges">
 <h2>Supported Exchanges<a class="headerlink" href="#supported-exchanges" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="websockets">
@@ -254,6 +262,10 @@ and use:</p>
 </ul>
 </div>
 </div>
+<div class="section" id="change-log">
+<h2>Change Log<a class="headerlink" href="#change-log" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://unicorn-fy.docs.lucit.tech//CHANGELOG.html">https://unicorn-fy.docs.lucit.tech//CHANGELOG.html</a></p>
+</div>
 <div class="section" id="documentation">
 <h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -261,13 +273,17 @@ and use:</p>
 <li><p><a class="reference external" href="https://unicorn-fy.docs.lucit.tech//unicorn_fy.html">Modules</a></p></li>
 </ul>
 </div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py">example_logging.py</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_unicorn_fy.py">example_unicorn_fy.py</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_version_of_this_package.py">example_version_of_this_package.py</a></p></li>
+</ul>
+</div>
 <div class="section" id="source-downloads-examples">
 <h2>Source, Downloads, Examples, …<a class="headerlink" href="#source-downloads-examples" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy">https://github.com/LUCIT-Systems-and-Development/unicorn-fy</a></p>
-</div>
-<div class="section" id="change-log">
-<h2>Change Log<a class="headerlink" href="#change-log" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://unicorn-fy.docs.lucit.tech//CHANGELOG.html">https://unicorn-fy.docs.lucit.tech//CHANGELOG.html</a></p>
 </div>
 <div class="section" id="wiki">
 <h2>Wiki<a class="headerlink" href="#wiki" title="Permalink to this headline">¶</a></h2>
@@ -276,8 +292,8 @@ and use:</p>
 <div class="section" id="social">
 <h2>Social<a class="headerlink" href="#social" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><p><a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/discussions">Discussions</a></p></li>
 <li><p><a class="reference external" href="https://t.me/unicorndevs">https://t.me/unicorndevs</a></p></li>
-<li><p><a class="reference external" href="https://twitter.com/LUCIT_SysDev">https://twitter.com/LUCIT_SysDev</a></p></li>
 <li><p><a class="reference external" href="https://dev.binance.vision">https://dev.binance.vision</a></p></li>
 <li><p><a class="reference external" href="https://community.binance.org">https://community.binance.org</a></p></li>
 </ul>
@@ -292,7 +308,7 @@ with using
 <a class="reference external" href="https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=is_update#unicorn_fy.unicorn_fy.UnicornFy.is_update_availabe"><code class="docutils literal notranslate"><span class="pre">is_update_availabe()</span></code></a>
 or you use the
 <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api/wiki/UNICORN-Monitoring-API-Service">monitoring API service</a>.</p>
-<p>Follow us on <a class="reference external" href="https://twitter.com/LUCIT_SysDev">Twitter</a> for general news about the <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite">unicorn-binance-suite</a>!</p>
+<p>Follow us on <a class="reference external" href="https://twitter.com/LUCIT_SysDev">Twitter</a> or on <a class="reference external" href="https://www.facebook.com/lucit.systems.and.development">Facebook</a> for general news about the <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite">unicorn-binance-suite</a>!</p>
 </div>
 <div class="section" id="how-to-report-bugs-or-suggest-improvements">
 <h2>How to report Bugs or suggest Improvements?<a class="headerlink" href="#how-to-report-bugs-or-suggest-improvements" title="Permalink to this headline">¶</a></h2>
@@ -336,6 +352,7 @@ contribute follow
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">UnicornFy</a><ul>
+<li><a class="reference internal" href="#get-the-right-logger">Get the right logger:</a></li>
 <li><a class="reference internal" href="#supported-exchanges">Supported Exchanges</a><ul>
 <li><a class="reference internal" href="#websockets">Websockets</a></li>
 <li><a class="reference internal" href="#rest">REST</a></li>
@@ -352,9 +369,10 @@ contribute follow
 <li><a class="reference internal" href="#conda-environment-virtualenv-or-plain-python">Conda environment, Virtualenv or plain Python</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#documentation">Documentation</a></li>
-<li><a class="reference internal" href="#source-downloads-examples">Source, Downloads, Examples, …</a></li>
 <li><a class="reference internal" href="#change-log">Change Log</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#source-downloads-examples">Source, Downloads, Examples, …</a></li>
 <li><a class="reference internal" href="#wiki">Wiki</a></li>
 <li><a class="reference internal" href="#social">Social</a></li>
 <li><a class="reference internal" href="#receive-notifications">Receive Notifications</a></li>
@@ -449,7 +467,7 @@ contribute follow
     <div class="footer">
         <a href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues">Found a bug</a>?
         <br />
-        Last updated on Jan 05 2022 at 00:48 (CET).
+        Last updated on Jan 27 2022 at 02:26 (CET).
         <br />
         &copy; <a href="copyright.html">Copyright</a> 2019-2022, LUCIT Systems and Development and Oliver Zehentleitner.
         <br />

@@ -11,8 +11,8 @@
 [![Telegram](https://img.shields.io/badge/chat-telegram-yellow.svg)](https://t.me/unicorndevs)
 
 # UnicornFy
-[Supported Exchanges](#supported-exchanges) | [Installation](#installation-and-upgrade) | [Documentation](#documentation) | 
-[Change Log](#change-log) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | 
+[Supported Exchanges](#supported-exchanges) | [Installation](#installation-and-upgrade) | [Change Log](#change-log) | [Documentation](#documentation) | 
+[Examples](#examples) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | 
 [Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing) | [Commercial Support](#commercial-support)
 
 Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
@@ -20,7 +20,7 @@ Convert received raw data from crypto exchange API endpoints into well-formed py
 Part of ['UNICORN Binance Suite'](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite).
 
 ```
-from unicorn_fy.unicorn_fy import UnicornFy
+import unicorn_fy
 
 received_stream_data_json = {"stream": "btcusdt@trade",
                              "data": {"e": "trade",
@@ -35,7 +35,9 @@ received_stream_data_json = {"stream": "btcusdt@trade",
                                       "m": True,
                                       "M": True}}
 
-unicorn_fied_stream_data = UnicornFy.binance_com_websocket(received_stream_data_json)
+unicornfy = unicorn_fy.UnicornFy()
+
+unicorn_fied_stream_data = unicornfy.binance_com_websocket(received_stream_data_json)
 print(unicorn_fied_stream_data)
 >>>
 {'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT', 'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847, 'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True, 'unicorn_fied': ['binance', '0.1.0']}
@@ -47,6 +49,11 @@ and can be activated by setting parameter
 [`output_default` of `BinanceWebSocketApiManager()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output_default#module-unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager) 
 or for specific streams with the parameter 
 [`output` of `create_stream()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager.BinanceWebSocketApiManager.create_stream).
+
+### Get the right [logger](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py):
+```
+logging.getLogger("unicorn_fy")
+```
 
 ## Supported Exchanges
 ### Websockets
@@ -111,22 +118,27 @@ or the [current master branch](https://github.com/LUCIT-Systems-and-Development/
 - ./requirements.txt
 - ./setup.py
 
+## Change Log
+[https://unicorn-fy.docs.lucit.tech//CHANGELOG.html](https://unicorn-fy.docs.lucit.tech//CHANGELOG.html)
+
 ## Documentation
 - [General](https://unicorn-fy.docs.lucit.tech/)
 - [Modules](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html)
 
+## Examples
+- [example_logging.py](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py)
+- [example_unicorn_fy.py](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_unicorn_fy.py)
+- [example_version_of_this_package.py](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_version_of_this_package.py)
+
 ## Source, Downloads, Examples, ...
 [https://github.com/LUCIT-Systems-and-Development/unicorn-fy](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
-
-## Change Log
-[https://unicorn-fy.docs.lucit.tech//CHANGELOG.html](https://unicorn-fy.docs.lucit.tech//CHANGELOG.html)
 
 ## Wiki
 [https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki)
 
 ## Social
+- [Discussions](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/discussions)
 - [https://t.me/unicorndevs](https://t.me/unicorndevs)
-- [https://twitter.com/LUCIT_SysDev](https://twitter.com/LUCIT_SysDev)
 - [https://dev.binance.vision](https://dev.binance.vision)
 - [https://community.binance.org](https://community.binance.org)
 
@@ -136,11 +148,11 @@ To receive notifications on available updates you can
 the repository on [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy), write your 
 [own script](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_version_of_this_package.py) 
 with using 
-[`is_update_availabe()`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=is_update#unicorn_fy.unicorn_fy.UnicornFy.is_update_availabe)
+[`is_update_availabe()`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=is_update#unicorn_fy.unicorn_fy.UnicornFy.is_update_availabe) 
  or you use the 
 [monitoring API service](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api/wiki/UNICORN-Monitoring-API-Service).
 
-Follow us on [Twitter](https://twitter.com/LUCIT_SysDev) for general news about the [unicorn-binance-suite](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite)!
+Follow us on [Twitter](https://twitter.com/LUCIT_SysDev) or on [Facebook](https://www.facebook.com/lucit.systems.and.development) for general news about the [unicorn-binance-suite](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite)!
 
 ## How to report Bugs or suggest Improvements?
 [List of planned features](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) - 
