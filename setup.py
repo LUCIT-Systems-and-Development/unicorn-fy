@@ -5,7 +5,7 @@
 #
 # Part of ‘UnicornFy’
 # Project website: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
-# Documentation: https://lucit-systems-and-development.github.io/unicorn-fy
+# Documentation: https://unicorn-fy.docs.lucit.tech/
 # PyPI: https://pypi.org/project/unicorn-fy
 #
 # Author: LUCIT Systems and Development
@@ -53,7 +53,7 @@ setuptools.setup(
      install_requires=['ujson', 'requests'],
      keywords='binance, api, exchange, unify, binance-dex, binance-chain, rest-api, websockets',
      project_urls={
-        'Documentation': 'https://lucit-systems-and-development.github.io/unicorn-fy/',
+        'Documentation': 'https://unicorn-fy.docs.lucit.tech//',
         'Wiki': 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki',
         'Author': 'https://www.lucit.tech',
      },

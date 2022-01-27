@@ -5,7 +5,7 @@
 #
 # Part of ‘UnicornFy’
 # Project website: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
-# Documentation: https://lucit-systems-and-development.github.io/unicorn-fy
+# Documentation: https://unicorn-fy.docs.lucit.tech/
 # PyPI: https://pypi.org/project/unicorn-fy
 #
 # Author: LUCIT Systems and Development
