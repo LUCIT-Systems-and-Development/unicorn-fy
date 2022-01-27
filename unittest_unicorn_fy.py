@@ -32,8 +32,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-from unicorn_binance_websocket_api.manager import BinanceWebSocketApiManager
-from unicorn_binance_rest_api.unicorn_binance_rest_api_manager import BinanceRestApiManager
+import BinanceWebSocketApiManager
+import BinanceRestApiManager
 from unicorn_fy.unicorn_fy import UnicornFy
 import logging
 import unittest
@@ -315,7 +315,7 @@ class TestLiveBinanceCom(unittest.TestCase):
     def setUp(self):
         print("\n\rstarting live test binance.com")
         self.unicorn_fy = UnicornFy()
-        ubwa = BinanceWebSocketApiManager(exchange="binance.com")
+        ubwa = unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.com")
         worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer,
                                          args=(ubwa,))
         worker_thread.start()
@@ -348,7 +348,7 @@ class TestLiveBinanceComFutures(unittest.TestCase):
     def setUp(self):
         print("\n\rstarting live test binance.com-futures")
         self.unicorn_fy = UnicornFy()
-        ubwa = BinanceWebSocketApiManager(exchange="binance.com-futures")
+        ubwa = unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.com-futures")
         worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer_futures,
                                          args=(ubwa,))
         worker_thread.start()
