@@ -32,8 +32,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-import BinanceWebSocketApiManager
-import BinanceRestApiManager
+import unicorn_binance_websocket_api
+import unicorn_binance_rest_api
 from unicorn_fy.unicorn_fy import UnicornFy
 import logging
 import unittest
