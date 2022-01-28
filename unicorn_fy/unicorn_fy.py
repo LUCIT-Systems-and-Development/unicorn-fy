@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# File: unicorn_fy.py
+# File: unicorn_fy/unicorn_fy.py
 #
 # Part of ‘UnicornFy’
 # Project website: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
