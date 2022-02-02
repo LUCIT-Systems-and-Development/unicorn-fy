@@ -4,7 +4,8 @@
 # File: example_version_of_this_package.py
 #
 # Part of ‘UnicornFy’
-# Project website: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
+# Project website: https://www.lucit.tech/unicorn-fy.html
+# Github: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
 # Documentation: https://unicorn-fy.docs.lucit.tech/
 # PyPI: https://pypi.org/project/unicorn-fy
 #
