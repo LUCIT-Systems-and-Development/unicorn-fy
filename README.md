@@ -136,7 +136,7 @@ or the [current master branch](https://github.com/LUCIT-Systems-and-Development/
 - [example_unicorn_fy.py](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_unicorn_fy.py)
 - [example_version_of_this_package.py](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_version_of_this_package.py)
 
-## Source, Downloads, Examples, ...
+## Project Homepage
 [https://github.com/LUCIT-Systems-and-Development/unicorn-fy](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
 
 ## Wiki
