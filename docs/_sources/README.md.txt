@@ -49,11 +49,11 @@ Output:
 ```
 
 This lib is integrated into 
-[UNICORN Binance WebSocket API](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api) 
+[UNICORN Binance WebSocket API](https://www.lucit.tech/unicorn-binance-websocket-api.html) 
 and can be activated by setting parameter 
-[`output_default` of `BinanceWebSocketApiManager()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output_default#module-unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager) 
+[`output_default` of `BinanceWebSocketApiManager()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output_default#module-unicorn_binance_websocket_api.manager) 
 or for specific streams with the parameter 
-[`output` of `create_stream()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager.BinanceWebSocketApiManager.create_stream).
+[`output` of `create_stream()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.manager.BinanceWebSocketApiManager.create_stream).
 
 ### Get the right [logger](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py):
 ```
@@ -119,6 +119,7 @@ This is not a release version and can not be considered to be stable!
 Download the [latest release](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest) 
 or the [current master branch](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/master.zip)
  and use:
+ 
 - ./environment.yml
 - ./requirements.txt
 - ./setup.py
@@ -135,7 +136,7 @@ or the [current master branch](https://github.com/LUCIT-Systems-and-Development/
 - [example_unicorn_fy.py](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_unicorn_fy.py)
 - [example_version_of_this_package.py](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_version_of_this_package.py)
 
-## Source, Downloads, Examples, ...
+## Project Homepage
 [https://github.com/LUCIT-Systems-and-Development/unicorn-fy](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
 
 ## Wiki
@@ -157,7 +158,7 @@ with using
  or you use the 
 [monitoring API service](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api/wiki/UNICORN-Monitoring-API-Service).
 
-Follow us on [Twitter](https://twitter.com/LUCIT_SysDev) or on [Facebook](https://www.facebook.com/lucit.systems.and.development) for general news about the [unicorn-binance-suite](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite)!
+Follow us on [Twitter](https://twitter.com/LUCIT_SysDev) or on [Facebook](https://www.facebook.com/lucit.systems.and.development) for general news about the [unicorn-binance-suite](https://www.lucit.tech/unicorn-binance-suite.html)!
 
 ## How to report Bugs or suggest Improvements?
 [List of planned features](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) - 
@@ -173,7 +174,7 @@ If you dont find an issue related to your topic, please open a new issue:
 [Report a security bug!](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/security/policy)
 
 ## Contributing
-[unicorn-fy](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)  is an open 
+[UnicornFy](https://www.lucit.tech/unicorn-fy.html)  is an open 
 source project which welcomes contributions which can be anything from simple documentation fixes and reporting dead links to new features. To 
 contribute follow 
 [this guide](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/CONTRIBUTING.md).
