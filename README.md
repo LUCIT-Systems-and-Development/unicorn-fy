@@ -173,7 +173,7 @@ If you dont find an issue related to your topic, please open a new issue:
 [Report a security bug!](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/security/policy)
 
 ## Contributing
-[unicorn-fy](https://www.lucit.tech/unicorn-fy.html)  is an open 
+[UnicornFy](https://www.lucit.tech/unicorn-fy.html)  is an open 
 source project which welcomes contributions which can be anything from simple documentation fixes and reporting dead links to new features. To 
 contribute follow 
 [this guide](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/CONTRIBUTING.md).
