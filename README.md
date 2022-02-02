@@ -49,11 +49,11 @@ Output:
 ```
 
 This lib is integrated into 
-[UNICORN Binance WebSocket API](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api) 
+[UNICORN Binance WebSocket API](https://www.lucit.tech/unicorn-binance-websocket-api.html) 
 and can be activated by setting parameter 
-[`output_default` of `BinanceWebSocketApiManager()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output_default#module-unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager) 
+[`output_default` of `BinanceWebSocketApiManager()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output_default#module-unicorn_binance_websocket_api.manager) 
 or for specific streams with the parameter 
-[`output` of `create_stream()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager.BinanceWebSocketApiManager.create_stream).
+[`output` of `create_stream()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.manager.BinanceWebSocketApiManager.create_stream).
 
 ### Get the right [logger](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py):
 ```
@@ -173,7 +173,7 @@ If you dont find an issue related to your topic, please open a new issue:
 [Report a security bug!](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/security/policy)
 
 ## Contributing
-[unicorn-fy](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)  is an open 
+[unicorn-fy](https://www.lucit.tech/unicorn-fy.html)  is an open 
 source project which welcomes contributions which can be anything from simple documentation fixes and reporting dead links to new features. To 
 contribute follow 
 [this guide](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/CONTRIBUTING.md).
