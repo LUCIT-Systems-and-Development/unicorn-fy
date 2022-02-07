@@ -11,7 +11,7 @@
 [![Read the Docs](https://img.shields.io/badge/read-%20docs-yellow)](https://unicorn-fy.docs.lucit.tech/)
 [![Github](https://img.shields.io/badge/source-github-yellow)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
 [![Telegram](https://img.shields.io/badge/chat-telegram-yellow)](https://t.me/unicorndevs)
-# UnicornFy
+# UnicornFy2
 [Supported Exchanges](#supported-exchanges) | [Installation](#installation-and-upgrade) | [Change Log](#change-log) | [Documentation](#documentation) | 
 [Examples](#examples) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | 
 [Bugs](#how-to-report-bugs-or-suggest-improvements) | [Contributing](#contributing) | [Commercial Support](#commercial-support)
