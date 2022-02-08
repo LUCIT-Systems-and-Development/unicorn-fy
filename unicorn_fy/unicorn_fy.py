@@ -201,7 +201,8 @@ class UnicornFy(object):
         logger.debug("UnicornFy->binance_websocket(" + str(stream_data_json) + ")")
         if show_deprecated_warning is True:
             logger.warning("Using `UnicornFy.binance_websocket()` is deprecated, use "
-                           "`UnicornFy.binance_com_websocket()` or `UnicornFy.binance_je_websocket()` instead!")
+                           "`UnicornFy.binance_com_websocket()`, `binance_futures_websocket()` or "
+                           "`UnicornFy.binance_je_websocket()` instead!")
 
         if UnicornFy.is_json(stream_data_json) is False:
             return stream_data_json
@@ -801,21 +802,17 @@ class UnicornFy(object):
             elif stream_data['data']['e'] == 'depth':
                 # Todo: KeyError: 'lastUpdateId'
                 # 'last_update_id': stream_data['data']['lastUpdateId'],
-                # Todo: KeyError: 'bids'
-                # 'bids': stream_data['data']['bids'],
-                # , 'asks': stream_data['data']['asks']
                 unicorn_fied_data = {'stream_type': stream_data['stream'],
                                      'event_type': stream_data['data']['e'],
                                      'symbol': stream_data['stream'][:stream_data['stream'].find('@')].upper()}
             elif stream_data['data']['e'] == 'depthUpdate':
-                # Todo: KeyError: 'bids'
-                # 'bids': stream_data['data']['b'],
                 unicorn_fied_data = {'stream_type': stream_data['stream'],
                                      'event_type': stream_data['data']['e'],
                                      'event_time': stream_data['data']['E'],
                                      'symbol': stream_data['data']['s'],
                                      'first_update_id_in_event': stream_data['data']['U'],
                                      'final_update_id_in_event': stream_data['data']['u'],
+                                     'bids': stream_data['data']['b'],
                                      'asks': stream_data['data']['a']}
             elif stream_data['data']['e'] == 'outboundAccountInfo':
                 unicorn_fied_data = {'stream_type': '!userData@arr',
