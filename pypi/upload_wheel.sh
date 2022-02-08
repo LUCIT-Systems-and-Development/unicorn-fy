@@ -39,6 +39,6 @@
 #index-servers=pypi
 #[pypi]
 #repository = https://upload.pypi.org/legacy/
-#username = unicorn_data_analysis
+#username = name
 
 python3 -m twine upload dist/*
