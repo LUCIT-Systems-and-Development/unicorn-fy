@@ -173,6 +173,7 @@ class TestBinanceComWebsocketFutures(unittest.TestCase):
         self.unicorn_fy = UnicornFy()
         self.unicorn_fy_version = str(self.unicorn_fy.get_version())
         self.unicorn_fy.binance_futures_websocket("data", show_deprecated_warning=True)
+        self.assertFalse(self.is_update_availabe())
 
     def test_with_non_json(self):
         self.unicorn_fy.binance_futures_websocket(False)
