@@ -1644,7 +1644,7 @@ class UnicornFy(object):
         :return: dict or False
         """
         try:
-            respond = requests.get('https://api.github.com/repos/oliver-zehentleitner/unicorn-fy/releases/latest')
+            respond = requests.get('https://api.github.com/repos/LUCIT-Systems-and-Development/unicorn-fy/releases/latest')
             return respond.json()
         except Exception:
             return False
