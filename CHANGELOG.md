@@ -7,7 +7,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [Discussions about unicorn-fy releases!](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/discussions/categories/releases)
 
-## 0.11.1.dev (development stage/unreleased/unstable)
+## 0.12.0.dev (development stage/unreleased/unstable)
+
+## 0.12.0
+### Fixed
+- `is_update_availabe()` typo to `is_update_available()`
 
 ## 0.11.1
 ### Changed
