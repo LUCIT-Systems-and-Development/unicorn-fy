@@ -7,8 +7,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [Discussions about unicorn-fy releases!](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/discussions/categories/releases)
 
-## 0.11.0.dev (development stage/unreleased/unstable)
+## 0.12.0.dev (development stage/unreleased/unstable)
+
+## 0.12.0
 ### Changed
+- Renamed `is_update_availabe()` to `is_update_available()`
 - Moved from https://github.com/oliver-zehentleitner to https://github.com/LUCIT-Systems-and-Development/
 - Correctly scope loggers so that it plays nicely with others, logger name is "unicorn_fy".
 
@@ -104,7 +107,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Adding
 - binance_com_websocket()
 - binance_je_websocket()
-- is_update_availabe()
+- is_update_available()
 - get_latest_version()
 - get_version()
 - get_latest_release_info()

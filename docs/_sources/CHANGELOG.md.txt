@@ -104,7 +104,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Adding
 - binance_com_websocket()
 - binance_je_websocket()
-- is_update_availabe()
+- is_update_available()
 - get_latest_version()
 - get_version()
 - get_latest_release_info()

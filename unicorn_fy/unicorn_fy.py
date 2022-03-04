@@ -58,7 +58,7 @@ class UnicornFy(object):
         - Binance.org
         - Jex.com
     """
-    VERSION = "0.11.0.dev"
+    VERSION = "0.12.0.dev"
 
     def __init__(self):
         self.last_update_check_github = {'timestamp': time.time(),
@@ -1698,7 +1698,7 @@ class UnicornFy(object):
             return False
         return True
 
-    def is_update_availabe(self):
+    def is_update_available(self):
         """
         Is a new release of this package available?
 
