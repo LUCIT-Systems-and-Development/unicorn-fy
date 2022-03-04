@@ -7,10 +7,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [Discussions about unicorn-fy releases!](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/discussions/categories/releases)
 
-## 0.11.0.dev (development stage/unreleased/unstable)
+## 0.11.1.dev (development stage/unreleased/unstable)
+
+## 0.11.1
 ### Changed
 - Moved from https://github.com/oliver-zehentleitner to https://github.com/LUCIT-Systems-and-Development/
 - Correctly scope loggers so that it plays nicely with others, logger name is "unicorn_fy".
+### Fixed
+- `binance_futures_websocket()` did not convert bids of depth streams ([issue#232](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api/issues/232))
 
 ## 0.11.0
 ### Adding 

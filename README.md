@@ -46,7 +46,10 @@ print(unicorn_fied_stream_data)
 Output:
 
 ```
-{'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT', 'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847, 'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True, 'unicorn_fied': ['binance', '0.1.0']}
+{'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT',
+ 'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847,
+ 'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True,
+ 'unicorn_fied': ['binance', '0.11.1']}
 ```
 
 This lib is integrated into 
@@ -56,7 +59,7 @@ and can be activated by setting parameter
 or for specific streams with the parameter 
 [`output` of `create_stream()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.manager.BinanceWebSocketApiManager.create_stream).
 
-### Get the right [logger](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py)
+### Get the right [logger](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py):
 ```
 logging.getLogger("unicorn_fy")
 ```
