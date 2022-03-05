@@ -51,7 +51,7 @@ logging.basicConfig(level=logging.ERROR,
                     format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
                     style="{")
 
-print("starting unittests")
+print("Starting unittests")
 
 
 def print_stream_data_from_stream_buffer(binance_websocket_api_manager):
@@ -325,7 +325,7 @@ class TestBinanceOrgWebsocket(unittest.TestCase):
 
 class TestLiveBinanceCom(unittest.TestCase):
     def setUp(self):
-        print("\n\rstarting live test binance.com")
+        print("\n\rStarting live test binance.com")
         self.unicorn_fy = UnicornFy()
         ubwa = unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.com")
         worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer,
@@ -358,7 +358,7 @@ class TestLiveBinanceCom(unittest.TestCase):
 
 class TestLiveBinanceComFutures(unittest.TestCase):
     def setUp(self):
-        print("\n\rstarting live test binance.com-futures")
+        print("\n\rStarting live test binance.com-futures")
         self.unicorn_fy = UnicornFy()
         ubwa = unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.com-futures")
         worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer_futures,
