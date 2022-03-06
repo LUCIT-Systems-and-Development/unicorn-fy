@@ -4,7 +4,7 @@
 [![Downloads](https://pepy.tech/badge/unicorn-fy)](https://pepy.tech/project/unicorn-fy)
 [![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel)](https://pypi.org/project/unicorn-fy/)
 [![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues)
-[![build](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/python-app.yml/badge.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/python-app.yml)
+[![Unit Tests](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/unit-tests.yml)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/LUCIT-Systems-and-Development/unicorn-fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/LUCIT-Systems-and-Development/unicorn-fy/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/LUCIT-Systems-and-Development/unicorn-fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/LUCIT-Systems-and-Development/unicorn-fy/context:python)
 [![codecov](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy/branch/master/graph/badge.svg?token=5I03AZ3F5S)](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy)
