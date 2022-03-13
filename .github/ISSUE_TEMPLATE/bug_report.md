@@ -11,6 +11,7 @@ assignees: oliver-zehentleitner
 Before opening a new issue, please ensure:
 - YOU HAVE READ THE ISSUE GUIDELINES! -> https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite/wiki/Issue-Guidelines
 - You search for existing bugs/feature requests
+- If related to `unicorn-binance-local-depth-cache` post to https://github.com/LUCIT-Systems-and-Development/unicorn-binance-local-depth-cache/issues
 - If related to `unicorn-binance-websocket-api` post to https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api/issues
 - If related to `unicorn-binance-rest-api` post to https://github.com/LUCIT-Systems-and-Development/unicorn-binance-rest-api/issues
 - Remove extraneous template details
@@ -39,18 +40,51 @@ Check this or we will delete your issue. (fill in the checkbox with an X like so
 - [ ] Windows
 - [ ] Linux (include flavour)
 
+#### What kind of internet connection do you have?
+```
+Include here a description of your internet access like cable, lte and up and download rate.
+```
+
+#### Hardware Specification 
+```
+Include here a description of the server hardware.
+```
+
+#### Operating System? (include version)
+- [ ] macOS
+- [ ] Windows
+- [ ] Linux (include flavour)
+
+#### Which endpoint do you connect?
+```
+Include here the endpint you are connecting to, like binance.com, binance.com-isolated_margin or binance.org-testnet
+```
+
+#### Python Version Requirement
+- [ ] I am using Python 3.7 or above
+
 #### Exact Python Version?
 ```
-Include here the response of 'python --version' or 'python3 --version'
+Include here the response of 'python --version' AND 'python3 --version'
 ```
 
 #### Pip Version?
 ```
-Include here the response of 'pip --version' or 'pip3 --version'
+Include here the response of 'python3 -m pip --version' or 'pip3 --version'
 ```
 
-#### Description of your issue
+#### Dependencies
+Run `pip list > pip_list.txt` and upload the file.
 
+#### Which Versions?
 ```
-Include the contents of the log here (if applicable). < REPLACE THIS TEXT
+Did you upgrade to the latest release version with `pip install unicorn-binance-websocket-api --upgrade`?
+
+Please control the versions you are using with this script and post the output: 
+https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite/blob/master/tools/get_versions_of_unicorn_packages.py
+```
+
+#### Description Of Your Issue
+```
+Include the contents of the log file here. (REMOVE API_KEY, API_SECRET, LISTEN_KEY!!)
 ```
