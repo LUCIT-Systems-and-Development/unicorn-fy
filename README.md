@@ -1,4 +1,4 @@
-[![GitHub release](https://img.shields.io/github/release/LUCIT-Systems-and-Development/unicorn-fy.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest)
+[![GitHub release](https://img.shields.io/github/release/LUCIT-Systems-and-Development/unicorn-fy.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases)
 [![GitHub](https://img.shields.io/github/license/LUCIT-Systems-and-Development/unicorn-fy.svg?color=blue)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg)](https://www.python.org/downloads/)
 [![Downloads](https://pepy.tech/badge/unicorn-fy)](https://pepy.tech/project/unicorn-fy)
