@@ -322,12 +322,13 @@ class TestBinanceOrgWebsocket(unittest.TestCase):
     def tearDown(self):
         del self.unicorn_fy
 
+UBWA = unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.com")
 
 class TestLiveBinanceCom(unittest.TestCase):
     def setUp(self):
         print("\n\rStarting live test binance.com")
         self.unicorn_fy = UnicornFy()
-        ubwa = unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.com")
+        ubwa = UBWA
         worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer,
                                          args=(ubwa,))
         worker_thread.start()
@@ -355,12 +356,13 @@ class TestLiveBinanceCom(unittest.TestCase):
     def tearDown(self):
         del self.unicorn_fy
 
+UBWA2 =  unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.com-futures")
 
 class TestLiveBinanceComFutures(unittest.TestCase):
     def setUp(self):
         print("\n\rStarting live test binance.com-futures")
         self.unicorn_fy = UnicornFy()
-        ubwa = unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.com-futures")
+        ubwa = UBWA2
         worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer_futures,
                                          args=(ubwa,))
         worker_thread.start()
