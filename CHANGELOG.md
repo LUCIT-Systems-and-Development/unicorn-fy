@@ -7,7 +7,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [Discussions about unicorn-fy releases!](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/discussions/categories/releases)
 
-## 0.12.0.dev (development stage/unreleased/unstable)
+## 0.12.1.dev (development stage/unreleased/unstable)
+Codebase equal to 0.12.0, just preparing conda-forge packaging
 
 ## 0.12.0
 ### Fixed
