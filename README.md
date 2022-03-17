@@ -107,6 +107,8 @@ The current dependencies are listed
 ### A conda package of the latest release with `conda` from [Anaconda](https://anaconda.org/conda-forge/unicorn-fy) via [CONDA-FORGE](https://conda-forge.org).
 `conda install -c conda-forge unicorn-fy`
 
+`conda update -c conda-forge unicorn-fy`
+
 ### From source of the latest release with PIP from [Github](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
 
 #### Linux, macOS, ...
