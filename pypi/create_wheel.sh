@@ -45,3 +45,5 @@ security-check() {
 
 security-check
 python3 setup.py bdist_wheel sdist
+
+echo "refresh conda-forge recipe!"
