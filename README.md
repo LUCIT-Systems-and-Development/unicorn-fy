@@ -101,8 +101,13 @@ The module requires Python 3.6.0 or above.
 The current dependencies are listed 
 [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/requirements.txt).
 
-### A wheel of the latest release with PIP from [PyPI](https://pypi.org/project/unicorn-fy/)
+### A wheel and a source file of the latest release with `pip` from [PyPI](https://pypi.org/project/unicorn-fy)
 `pip install unicorn-fy --upgrade`
+
+### A conda package of the latest release with `conda` from [Anaconda](https://anaconda.org/conda-forge/unicorn-fy) via [CONDA-FORGE](https://conda-forge.org).
+`conda install -c conda-forge unicorn-fy`
+
+### From source o
 
 ### From source of the latest release with PIP from [Github](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
 
