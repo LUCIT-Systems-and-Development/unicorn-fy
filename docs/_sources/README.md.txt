@@ -1,12 +1,15 @@
-[![GitHub release](https://img.shields.io/github/release/LUCIT-Systems-and-Development/unicorn-fy.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases)
-[![GitHub](https://img.shields.io/github/license/LUCIT-Systems-and-Development/unicorn-fy.svg?color=blue)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg)](https://www.python.org/downloads/)
-[![Downloads](https://pepy.tech/badge/unicorn-fy)](https://pepy.tech/project/unicorn-fy)
-[![PyPI - Wheel](https://img.shields.io/pypi/wheel/unicorn_fy.svg?label=PyPI%20wheel)](https://pypi.org/project/unicorn-fy/)
+[![GitHub Release](https://img.shields.io/github/release/LUCIT-Systems-and-Development/unicorn-fy.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases)
+[![Conda Release](https://img.shields.io/conda/vn/conda-forge/unicorn-fy.svg?color=blue)](https://anaconda.org/conda-forge/unicorn-fy)
+[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/unicorn-fy.svg?color=blue)](https://anaconda.org/conda-forge/unicorn-fy)
+[![PyPi Release](https://img.shields.io/pypi/v/unicorn-fy?color=blue)](https://pypi.org/project/unicorn-fy/)
+[![PyPi Downloads](https://pepy.tech/badge/unicorn-fy)](https://pepy.tech/project/unicorn-fy)
+[![License](https://img.shields.io/github/license/LUCIT-Systems-and-Development/unicorn-fy.svg?color=blue)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE)
+[![Supported Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg)](https://www.python.org/downloads/)
 [![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues)
-[![Unit Tests](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/unit-tests.yml)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/LUCIT-Systems-and-Development/unicorn-fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/LUCIT-Systems-and-Development/unicorn-fy/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/LUCIT-Systems-and-Development/unicorn-fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/LUCIT-Systems-and-Development/unicorn-fy/context:python)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/LUCIT-Systems-and-Development/unicorn-fy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/LUCIT-Systems-and-Development/unicorn-fy/alerts/)
+[![Unit Tests](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/unit-tests.yml)
+[![Azure Pipelines](https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/unicorn-fy-feedstock?branchName=main)](https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15694&branchName=main)
 [![codecov](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy/branch/master/graph/badge.svg?token=5I03AZ3F5S)](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy)
 [![Read the Docs](https://img.shields.io/badge/read-%20docs-yellow)](https://unicorn-fy.docs.lucit.tech/)
 [![Github](https://img.shields.io/badge/source-github-yellow)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
@@ -99,8 +102,13 @@ The module requires Python 3.6.0 or above.
 The current dependencies are listed 
 [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/requirements.txt).
 
-### A wheel of the latest release with PIP from [PyPI](https://pypi.org/project/unicorn-fy/)
+### A wheel and a source file of the latest release with `pip` from [PyPI](https://pypi.org/project/unicorn-fy)
 `pip install unicorn-fy --upgrade`
+
+### A conda package of the latest release with `conda` from [Anaconda](https://anaconda.org/conda-forge/unicorn-fy) via [CONDA-FORGE](https://conda-forge.org).
+`conda install -c conda-forge unicorn-fy`
+
+`conda update -c conda-forge unicorn-fy`
 
 ### From source of the latest release with PIP from [Github](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
 
