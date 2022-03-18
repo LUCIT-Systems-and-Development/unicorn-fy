@@ -1,4 +1,5 @@
-[![GitHub Release](https://img.shields.io/github/release/LUCIT-Systems-and-Development/unicorn-fy.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases)
+[![GitHub Release](https://img.shields.io/github/release/LUCIT-Systems-and-Development/unicorn-fy.svg?label=github)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases)
+[![GitHub Downloads](https://img.shields.io/github/downloads/LUCIT-Systems-and-Development/unicorn-fy/total?color=blue)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases)
 [![Conda Release](https://img.shields.io/conda/vn/conda-forge/unicorn-fy.svg?color=blue)](https://anaconda.org/conda-forge/unicorn-fy)
 [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/unicorn-fy.svg?color=blue)](https://anaconda.org/conda-forge/unicorn-fy)
 [![PyPi Release](https://img.shields.io/pypi/v/unicorn-fy?color=blue)](https://pypi.org/project/unicorn-fy/)
@@ -101,6 +102,8 @@ The module requires Python 3.6.0 or above.
 
 The current dependencies are listed 
 [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/requirements.txt).
+
+If you run into errors during the installation take a look [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki/Installation).
 
 ### A wheel and a source file of the latest release with `pip` from [PyPI](https://pypi.org/project/unicorn-fy)
 `pip install unicorn-fy --upgrade`
