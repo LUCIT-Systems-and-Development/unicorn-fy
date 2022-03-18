@@ -102,6 +102,8 @@ The module requires Python 3.6.0 or above.
 The current dependencies are listed 
 [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/requirements.txt).
 
+If you run into errors during the installation take a look [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki/Installation).
+
 ### A wheel and a source file of the latest release with `pip` from [PyPI](https://pypi.org/project/unicorn-fy)
 `pip install unicorn-fy --upgrade`
 
