@@ -58,7 +58,7 @@ setuptools.setup(
         'Wiki': 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki',
         'Author': 'https://www.lucit.tech',
      },
-     packages=setuptools.find_packages(),
+     packages=setuptools.find_packages(exclude=["tools", "images", "pypi", "sphinx", "docs", ".github"]),
      classifiers=[
          "Development Status :: 5 - Production/Stable",
          "Programming Language :: Python :: 3.6",
