@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: UNICORN Devs Chat
+    url: https://t.me/unicorndevs
+    about: Chat to us about the UnicornFy and ask general questions.
+  - name: UnicornFy Discussions
+    url: https://github.com/LUCIT-Systems-and-Development/unicorn-fy/discussions
+    about: Ask general questions.
+  - name: UnicornFy documentation
+    url: https://unicorn-fy.docs.lucit.tech/
+    about: The complete UnicornFy documentation.
