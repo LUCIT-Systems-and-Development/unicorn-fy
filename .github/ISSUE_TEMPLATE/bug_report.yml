@@ -84,16 +84,6 @@ body:
       render: shell
     validations:
       required: false
-
-  - type: dropdown
-    id: Processing
-    attributes:
-      label: Processing method?
-      description: |
-        Are you using the `stream_buffer` or the `process_stream_data`-callback function?
-      options:
-        - stream_buffer
-        - process_stream_data
          
   - type: dropdown
     id: Endpoint
