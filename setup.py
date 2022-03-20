@@ -60,6 +60,7 @@ setuptools.setup(
          'Changes': 'https://unicorn-fy.docs.lucit.tech//CHANGELOG.html',
          'Issue Tracker': 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues',
          'Chat': 'https://gitter.im/unicorn-binance-suite/unicorn-fy',
+         'Telegram': 'https://t.me/unicorndevs',
      },
      packages=setuptools.find_packages(exclude=["tools", "images", "pypi", "sphinx", "docs", ".github"]),
      classifiers=[
