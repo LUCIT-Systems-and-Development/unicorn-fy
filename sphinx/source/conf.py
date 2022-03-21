@@ -61,7 +61,8 @@ exclude_patterns = []
 html_theme = 'python_docs_theme_technopathy'
 html_context = {'github_user_name': 'LUCIT-Systems-and-Development',
                 'github_repo_name': 'unicorn-fy',
-                'project_name': project}
+                'project_name': project,
+                'lucit': True}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
