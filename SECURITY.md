@@ -1,5 +1,4 @@
 # Security Policies and Procedures
-
 This document outlines security procedures and general policies for the `unicorn-fy` project.
 
   * [Reporting a Bug](#reporting-a-bug)
@@ -7,8 +6,7 @@ This document outlines security procedures and general policies for the `unicorn
   * [Comments on this Policy](#comments-on-this-policy)
 
 ## Reporting a Bug
-
-`LUCIT System and Development` takes all security bugs in `unicorn-fy` seriously.
+`LUCIT Systems and Development` takes all security bugs in `unicorn-fy` seriously.
 Thank you for improving the security of `unicorn-fy`. We appreciate your efforts and 
 responsible disclosure and will make every effort to acknowledge your contributions.
 
@@ -25,7 +23,6 @@ Report security bugs in third-party modules to the person or team maintaining
 the module.
 
 ## Disclosure Policy
-
 When the security team receives a security bug report, they will assign it to a
 primary handler. This person will coordinate the fix and release process,
 involving the following steps:
@@ -36,6 +33,5 @@ involving the following steps:
     released as fast as possible to pip.
 
 ## Comments on this Policy
-
 If you have suggestions on how this process could be improved please submit a
 pull request.
