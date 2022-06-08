@@ -216,9 +216,14 @@ class TestBinanceComWebsocketFutures(unittest.TestCase):
         # Todo: MISSING!!!
         pass
 
-    def test_account_config_update_futures(self):
+    def test_account_config_update_leverage_futures(self):
         data = '{"e":"ACCOUNT_CONFIG_UPDATE","T":1617971759717,"E":1617971759721,"ac":{"s":"BTCUSDT","l":19}}'
         asserted_result = "{'stream_type': 'ACCOUNT_CONFIG_UPDATE', 'event_type': 'ACCOUNT_CONFIG_UPDATE', 'event_time': 1617971759721, 'symbol': 'BTCUSDT', 'leverage': 19, 'unicorn_fied': ['binance.com-futures', '" + self.unicorn_fy_version + "']}"
+        self.assertEqual(str(self.unicorn_fy.binance_com_futures_websocket(data)), asserted_result)
+
+    def test_account_config_update_asset_mode_futures(self):
+        data = '{"e":"ACCOUNT_CONFIG_UPDATE","T":1617971759717,"E":1617971759721,"ai":{"j":false}}'
+        asserted_result = "{'stream_type': 'ACCOUNT_CONFIG_UPDATE', 'event_type': 'ACCOUNT_CONFIG_UPDATE', 'event_time': 1617971759721, 'multi_assets_mode': False, 'unicorn_fied': ['binance.com-futures', '" + self.unicorn_fy_version + "']}"
         self.assertEqual(str(self.unicorn_fy.binance_com_futures_websocket(data)), asserted_result)
 
     def tearDown(self):
