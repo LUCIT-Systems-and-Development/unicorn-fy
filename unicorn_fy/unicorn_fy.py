@@ -582,9 +582,37 @@ class UnicornFy(object):
         stream_data = json.loads(stream_data_json)
 
         try:
+            if stream_data[0]['e'] == "24hrMiniTicker":
+                stream_data = {'data': {'e': "24hrMiniTicker"},
+                               'items': stream_data}
+            elif stream_data[0]['e'] == "24hrTicker":
+                stream_data = {'data': {'e': "24hrTicker"},
+                               'items': stream_data}
+            elif stream_data[0]['e'] == "markPriceUpdate":
+                stream_data = {'data': {'e': "markPriceUpdate"},
+                               'items': stream_data}
+        except KeyError:
+            pass
+
+        try:
+            if "!ticker@arr" in stream_data['stream']:
+                stream_data = {'data': {'e': "24hrTicker"},
+                               'items': stream_data['data']}
+            elif "!miniTicker@arr" in stream_data['stream']:
+                stream_data = {'data': {'e': "24hrMiniTicker"},
+                               'items': stream_data['data']}
+            elif "!markPriceUpdate@arr" in stream_data['stream']:
+                stream_data = {'data': {'e': "markPriceUpdate"},
+                               'items': stream_data['data']}
+        except KeyError:
+            pass
+
+        try:
             if stream_data['e'] == 'outboundAccountInfo':
                 stream_data = {'data': stream_data}
             elif stream_data['e'] == 'executionReport':
+                stream_data = {'data': stream_data}
+            elif stream_data['e'] == 'bookTicker':
                 stream_data = {'data': stream_data}
             elif stream_data['e'] == 'balanceUpdate':
                 stream_data = {'data': stream_data}
@@ -672,16 +700,14 @@ class UnicornFy(object):
                                      'quantity': stream_data['data']['q'],
                                      'trade_time': stream_data['data']['T'],
                                      'is_market_maker': stream_data['data']['m']}
-            elif stream_data['data']['e'] == 'kline':
+            elif stream_data['data']['e'] == 'kline' or stream_data['data']['e'] == 'continuous_kline':
                 stream_data['data'] = UnicornFy.set_to_false_if_not_exist(stream_data['data'], 'f')
                 stream_data['data'] = UnicornFy.set_to_false_if_not_exist(stream_data['data'], 'L')
                 unicorn_fied_data = {'stream_type': stream_data['stream'],
                                      'event_type': stream_data['data']['e'],
                                      'event_time': stream_data['data']['E'],
-                                     'symbol': stream_data['data']['s'],
                                      'kline': {'kline_start_time': stream_data['data']['k']['t'],
                                                'kline_close_time': stream_data['data']['k']['T'],
-                                               'symbol': stream_data['data']['k']['s'],
                                                'interval': stream_data['data']['k']['i'],
                                                'first_trade_id': stream_data['data']['f'],
                                                'last_trade_id': stream_data['data']['L'],
@@ -696,6 +722,54 @@ class UnicornFy(object):
                                                'taker_by_base_asset_volume': stream_data['data']['k']['V'],
                                                'taker_by_quote_asset_volume': stream_data['data']['k']['Q'],
                                                'ignore': stream_data['data']['k']['B']}}
+                try:
+                    unicorn_fied_data['symbol'] = stream_data['data']['s']
+                    unicorn_fied_data['kline']['symbol'] = stream_data['data']['k']['s']
+                except KeyError:
+                    unicorn_fied_data['pair'] = stream_data['data']['ps']
+                    unicorn_fied_data['contract_type'] = stream_data['data']['ct']
+            elif stream_data['data']['e'] == 'bookTicker':
+                unicorn_fied_data = {'stream_type': 'bookTicker',
+                                     'order_book_update_id': stream_data['data']['u'],
+                                     'symbol': stream_data['data']['s'],
+                                     'best_bid_price': stream_data['data']['b'],
+                                     'best_bid_quantity': stream_data['data']['B'],
+                                     'best_ask_price': stream_data['data']['a'],
+                                     'best_ask_quantity': stream_data['data']['A'],
+                                     'event_type': stream_data['data']['e']}
+            elif stream_data['data']['e'] == 'markPriceUpdate':
+                try:
+                    if stream_data['stream']:
+                        pass
+                except KeyError:
+                    stream_data['stream'] = '!markPriceUpdate@arr'
+                unicorn_fied_data = {'stream_type': stream_data['stream'],
+                                     'event_type': stream_data['data']['e'],
+                                     'data': []}
+
+                try:
+                    for item in stream_data['items']:
+                        data = {'stream_type': stream_data['stream'],
+                                'event_type': item['e'],
+                                'event_time': item['E'],
+                                'symbol': item['s'],
+                                'mark_price': item['p'],
+                                'index_price': item['i'],
+                                'estimated_settle_price': item['P'],
+                                'funding_rate': item['r'],
+                                'next_funding_time': item['T']}
+                        unicorn_fied_data['data'].append(data)
+                except KeyError:
+                    data = {'stream_type': stream_data['stream'],
+                            'event_type': stream_data['data']['e'],
+                            'event_time': stream_data['data']['E'],
+                            'symbol': stream_data['data']['s'],
+                            'mark_price': stream_data['data']['p'],
+                            'index_price': stream_data['data']['i'],
+                            'estimated_settle_price': stream_data['data']['P'],
+                            'funding_rate': stream_data['data']['r'],
+                            'next_funding_time': stream_data['data']['T']}
+                    unicorn_fied_data['data'].append(data)
             elif stream_data['data']['e'] == '24hrMiniTicker':
                 try:
                     if stream_data['stream']:
@@ -749,13 +823,8 @@ class UnicornFy(object):
                                 'price_change': item['p'],
                                 'price_change_percent': item['P'],
                                 'weighted_average_price': item['w'],
-                                'trade_before_24h_window': item['x'],
                                 'last_price': item['c'],
                                 'last_quantity': item['Q'],
-                                'best_bid_price': item['b'],
-                                'best_bid_quantity': item['B'],
-                                'best_ask_price': item['a'],
-                                'best_ask_quantity': item['A'],
                                 'open_price': item['o'],
                                 'high_price': item['h'],
                                 'low_price': item['l'],
@@ -768,16 +837,6 @@ class UnicornFy(object):
                                 'total_nr_of_trades': item['n']}
                         unicorn_fied_data['data'].append(data)
                 except KeyError:
-                    # Todo: KeyError: 'x'
-                    # 'trade_before_24h_window': stream_data['data']['x'],
-                    # Todo: KeyError: 'b'
-                    # 'best_bid_price': stream_data['data']['b'],
-                    # Todo: KeyError: 'B'
-                    # 'best_bid_quantity': stream_data['data']['B'],
-                    # Todo KeyError: 'a'
-                    # 'best_ask_price': stream_data['data']['a'],
-                    # Todo KeyError: 'A'
-                    # 'best_ask_quantity': stream_data['data']['A'],
                     data = {'stream_type': stream_data['stream'],
                             'event_type': stream_data['data']['e'],
                             'event_time': stream_data['data']['E'],
