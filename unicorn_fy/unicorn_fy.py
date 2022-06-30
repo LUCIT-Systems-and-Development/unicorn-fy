@@ -723,7 +723,7 @@ class UnicornFy(object):
                                      'best_ask_price': stream_data['data']['a'],
                                      'best_ask_quantity': stream_data['data']['A'],
                                      'event_type': stream_data['data']['e']}
-                if 'ps' in stream_data['data'].keys():
+                if 'ps' in stream_data['data']:
                     unicorn_fied_data['pair'] = stream_data['data']['ps']
             elif stream_data['data']['e'] == 'indexPriceUpdate':
                 try:
@@ -769,7 +769,7 @@ class UnicornFy(object):
                                 'estimated_settle_price': item['P'],
                                 'funding_rate': item['r'],
                                 'next_funding_time': item['T']}
-                        if 'i' in item.keys():
+                        if 'i' in item:
                             data['index_price'] = item['i']
                         unicorn_fied_data['data'].append(data)
                 except KeyError:
@@ -781,7 +781,7 @@ class UnicornFy(object):
                             'estimated_settle_price': stream_data['data']['P'],
                             'funding_rate': stream_data['data']['r'],
                             'next_funding_time': stream_data['data']['T']}
-                    if 'i' in stream_data['data'].keys():
+                    if 'i' in stream_data['data']:
                         data['index_price'] = stream_data['data']['i']
                     unicorn_fied_data['data'].append(data)
             elif stream_data['data']['e'] == 'forceOrder':
@@ -820,7 +820,7 @@ class UnicornFy(object):
                                      'last_executed_quantity': stream_data['data']['o']['l'],
                                      'cumulative_filled_quantity': stream_data['data']['o']['z'],
                                      'transaction_time': stream_data['data']['o']['T']}
-                if 'ps' in stream_data['data']['o'].keys():
+                if 'ps' in stream_data['data']['o']:
                     unicorn_fied_data['pair'] = stream_data['data']['o']['ps']
             elif stream_data['data']['e'] == 'compositeIndex':
                 '''
@@ -885,7 +885,7 @@ class UnicornFy(object):
                                 'low_price': item['l'],
                                 'total_traded_base_asset_volume': item['v'],
                                 'total_traded_quote_asset_volume': item['q']}
-                        if 'ps' in item.keys():
+                        if 'ps' in item:
                             data['pair'] = item['ps']
                         unicorn_fied_data['data'].append(data)
                 except KeyError:
@@ -899,7 +899,7 @@ class UnicornFy(object):
                             'low_price': stream_data['data']['l'],
                             'total_traded_base_asset_volume': stream_data['data']['v'],
                             'total_traded_quote_asset_volume': stream_data['data']['q']}
-                    if 'ps' in stream_data['data'].keys():
+                    if 'ps' in stream_data['data']:
                         data['pair'] = stream_data['data']['ps']
                     unicorn_fied_data['data'].append(data)
             elif stream_data['data']['e'] == '24hrTicker':
@@ -932,7 +932,7 @@ class UnicornFy(object):
                                 'first_trade_id': item['F'],
                                 'last_trade_id': item['L'],
                                 'total_nr_of_trades': item['n']}
-                        if 'ps' in item.keys():
+                        if 'ps' in item:
                             data['pair'] = item['ps']
                         unicorn_fied_data['data'].append(data)
                 except KeyError:
@@ -955,7 +955,7 @@ class UnicornFy(object):
                             'first_trade_id': stream_data['data']['F'],
                             'last_trade_id': stream_data['data']['L'],
                             'total_nr_of_trades': stream_data['data']['n']}
-                    if 'ps' in stream_data['data'].keys():
+                    if 'ps' in stream_data['data']:
                         data['pair'] = stream_data['data']['ps']
                     unicorn_fied_data['data'].append(data)
             elif stream_data['data']['e'] == 'depthUpdate':
@@ -971,7 +971,7 @@ class UnicornFy(object):
                                      'final_update_id_in_previous_event': stream_data['data']['pu'],
                                      'asks': stream_data['data']['a'],
                                      'bids': stream_data['data']['b']}
-                if 'ps' in stream_data['data'].keys():
+                if 'ps' in stream_data['data']:
                     unicorn_fied_data['pair'] = stream_data['data']['ps']
             elif stream_data['data']['e'] == 'ORDER_TRADE_UPDATE':
                 '''
@@ -1046,19 +1046,19 @@ class UnicornFy(object):
                                      'order_price_type': stream_data['data']['o']['ot'],  # Original Order Type
                                      'position_side': stream_data['data']['o']['ps'],
                                      'order_realized_profit': stream_data['data']['o']['rp']}  # Realized Profit
-                if 'i' in stream_data['data'].keys():
+                if 'i' in stream_data['data']:
                     unicorn_fied_data['account_alias'] = stream_data['data']['i']
-                if 'ma' in stream_data['data']['o'].keys():
+                if 'ma' in stream_data['data']['o']:
                     unicorn_fied_data['margin_asset'] = stream_data['data']['o']['ma']
-                if 'N' in stream_data['data']['o'].keys():
+                if 'N' in stream_data['data']['o']:
                     unicorn_fied_data['commission_asset'] = stream_data['data']['o']['N']
-                if 'n' in stream_data['data']['o'].keys():
+                if 'n' in stream_data['data']['o']:
                     unicorn_fied_data['commission'] = stream_data['data']['o']['n']
-                if 'cp' in stream_data['data']['o'].keys():
+                if 'cp' in stream_data['data']['o']:
                     unicorn_fied_data['close_all'] = stream_data['data']['o']['cp']
-                if 'AP' in stream_data['data']['o'].keys():
+                if 'AP' in stream_data['data']['o']:
                     unicorn_fied_data['activation_price'] = stream_data['data']['o']['AP']
-                if 'cr' in stream_data['data']['o'].keys():
+                if 'cr' in stream_data['data']['o']:
                     unicorn_fied_data['callback_rate'] = stream_data['data']['o']['cr']
             elif stream_data['data']['e'] == 'ACCOUNT_UPDATE':
                 '''
@@ -1127,7 +1127,7 @@ class UnicornFy(object):
                     'balances': [],
                     'positions': []
                 }
-                if 'i' in stream_data['data'].keys():
+                if 'i' in stream_data['data']:
                     unicorn_fied_data['account_alias'] = stream_data['data']['i']
 
                 for balance in stream_data['data']['a']['B']:
@@ -1136,7 +1136,7 @@ class UnicornFy(object):
                         'wallet_balance': balance['wb'],
                         'cross_wallet_balance': balance['cw']
                     }
-                    if 'bc' in balance.keys():
+                    if 'bc' in balance:
                         data['balance_change'] = balance['bc']
                     unicorn_fied_data['balances'].append(data)
 
@@ -1177,9 +1177,9 @@ class UnicornFy(object):
                                      'event_time': stream_data['data']['E'],
                                      'positions': []}
 
-                if 'i' in stream_data['data'].keys():
+                if 'i' in stream_data['data']:
                     unicorn_fied_data['account_alias'] = stream_data['data']['i']
-                if 'cw' in stream_data['data'].keys():
+                if 'cw' in stream_data['data']:
                     unicorn_fied_data['cross_wallet'] = stream_data['data']['cw']
 
                 for position in stream_data['data']['p']:
@@ -1190,7 +1190,7 @@ class UnicornFy(object):
                             'price': position['mp'],
                             'pnl': position['up'],
                             'margin': position['mm']}
-                    if 'iw' in position.keys():
+                    if 'iw' in position:
                         unicorn_fied_data['isolated_wallet'] = position['iw']
                     unicorn_fied_data['positions'].append(data)
             elif stream_data['data']['e'] == 'ACCOUNT_CONFIG_UPDATE':
