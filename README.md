@@ -1,3 +1,5 @@
+[![LUCIT-UNICORNFY-Banner](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/logo/LUCIT-UNICORNFY-Banner-Readme.png)](https://www.lucit.tech/unicorn-fy.html)
+
 [![GitHub Release](https://img.shields.io/github/release/LUCIT-Systems-and-Development/unicorn-fy.svg?label=github)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases)
 [![GitHub Downloads](https://img.shields.io/github/downloads/LUCIT-Systems-and-Development/unicorn-fy/total?color=blue)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases)
 [![Conda Release](https://img.shields.io/conda/vn/conda-forge/unicorn-fy.svg?color=blue)](https://anaconda.org/conda-forge/unicorn-fy)
