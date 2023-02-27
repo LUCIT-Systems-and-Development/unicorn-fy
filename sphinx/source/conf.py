@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 # -- Project information -----------------------------------------------------
 
 project = 'unicorn-fy'
-copyright = '2019-2022, LUCIT Systems and Development and Oliver Zehentleitner'
+copyright = '2019-2023, LUCIT Systems and Development and Oliver Zehentleitner'
 author = 'LUCIT Systems and Development'
 
 # The full version, including alpha/beta/rc tags
@@ -52,6 +52,7 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
+language = "en"
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -62,6 +63,8 @@ html_theme = 'python_docs_theme_technopathy'
 html_context = {'github_user_name': 'LUCIT-Systems-and-Development',
                 'github_repo_name': 'unicorn-fy',
                 'project_name': project,
+                'matomo_url': "https://matomo.lucit.co/matomo.php?idsite=7&amp;rec=1",
+                'freshchat_src': "//eu.fw-cdn.com/10659511/361973.js",
                 'lucit': True}
 
 # Add any paths that contain custom static files (such as style sheets) here,
