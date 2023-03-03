@@ -6,9 +6,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>UnicornFy &#8212; unicorn-fy 0.12.2 documentation</title>
+    <title>UnicornFy &#8212; unicorn-fy 0.12.2 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?2022.1" />
     
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/doctools.js"></script>
@@ -18,15 +19,141 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="copyright" title="Copyright" href="copyright.html" />
     <link rel="next" title="unicorn_fy" href="modules.html" />
-    <link rel="prev" title="Welcome to UnicornFy’s documentation!" href="index.html" />
-    <link rel="shortcut icon" type="image/png" href="_static/lucit.png" />
+    <link rel="prev" title="Welcome to UnicornFy’s documentation!" href="index.html" /><link rel="shortcut icon" type="image/png" href="_static/lucit.png" />
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     
-    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script
+        src='//eu.fw-cdn.com/10659511/361973.js'
+        chat='true'>
+    </script>
     
-     
+            <script type="text/javascript" src="_static/copybutton.js"></script>
+            <script type="text/javascript" src="_static/menu.js"></script> 
+  </head>
+<body>
+<div class="mobile-nav">
+    <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
+           aria-pressed="false" aria-expanded="false" role="button" aria-label="Menu" />
+    <label for="menuToggler" class="toggler__label">
+        <span></span>
+    </label>
+    <nav class="nav-content" role="navigation">
+        <form role="search" class="search" action="search.html" method="get">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
+                <path fill-rule="nonzero"
+                        d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#444"></path>
+            </svg>
+            <input type="text" name="q" aria-label="Quick search"/>
+            <input type="submit" value="Go"/>
+        </form>
+    </nav>
+    <div class="menu-wrapper">
+        <nav class="menu" role="navigation" aria-label="main navigation">
+            <p class="logo">
+                <div style="text-align: center;">
+                    <a href="https://www.lucit.tech"><img src="https://www.lucit.tech/files/images/logos/LUCIT-LOGO.png"></a>
+                    <a href="https://www.lucit.tech/trading-tools.html" style="font-size: 0.85em;font-weight: 900">Tailored Bots for Your Unique Trading Needs</a>
+                </div>
+            </p>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">UnicornFy</a><ul>
+<li><a class="reference internal" href="#get-the-right-logger">Get the right logger:</a></li>
+<li><a class="reference internal" href="#supported-exchanges">Supported Exchanges</a><ul>
+<li><a class="reference internal" href="#websockets">Websockets</a></li>
+<li><a class="reference internal" href="#rest">REST</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation-and-upgrade">Installation and Upgrade</a><ul>
+<li><a class="reference internal" href="#a-wheel-and-a-source-file-of-the-latest-release-with-pip-from-pypi">A wheel and a source file of the latest release with <code class="docutils literal notranslate"><span class="pre">pip</span></code> from PyPI</a></li>
+<li><a class="reference internal" href="#a-conda-package-of-the-latest-release-with-conda-from-anaconda-via-conda-forge">A conda package of the latest release with <code class="docutils literal notranslate"><span class="pre">conda</span></code> from Anaconda via CONDA-FORGE.</a></li>
+<li><a class="reference internal" href="#from-source-of-the-latest-release-with-pip-from-github">From source of the latest release with PIP from Github</a><ul>
+<li><a class="reference internal" href="#linux-macos">Linux, macOS, …</a></li>
+<li><a class="reference internal" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#from-the-latest-source-dev-stage-with-pip-from-github">From the latest source (dev-stage) with PIP from Github</a></li>
+<li><a class="reference internal" href="#conda-environment-virtualenv-or-plain-python">Conda environment, Virtualenv or plain Python</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#change-log">Change Log</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#project-homepage">Project Homepage</a></li>
+<li><a class="reference internal" href="#wiki">Wiki</a></li>
+<li><a class="reference internal" href="#social">Social</a></li>
+<li><a class="reference internal" href="#receive-notifications">Receive Notifications</a></li>
+<li><a class="reference internal" href="#how-to-report-bugs-or-suggest-improvements">How to report Bugs or suggest Improvements?</a></li>
+<li><a class="reference internal" href="#contributing">Contributing</a><ul>
+<li><a class="reference internal" href="#contributors">Contributors</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#you-want-to-say-thank-you">You want to say Thank You?</a></li>
+<li><a class="reference internal" href="#disclaimer">Disclaimer</a></li>
+<li><a class="reference internal" href="#commercial-support">Commercial Support</a></li>
+</ul>
+</li>
+</ul>
 
-  </head><body>  
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Welcome to UnicornFy’s documentation!</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="modules.html"
+                          title="next chapter">unicorn_fy</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/README.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: block" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<div role="note" aria-label="source code">
+    <h3>GitHub</h3>
+    <ul class="this-page-menu">
+      <li><a href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy">Show Source</a></li>
+      
+<li>
+<a class="github-button" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy"
+   data-icon="octicon-star" data-show-count="true"
+   aria-label="Star LUCIT-Systems-and-Development/unicorn-fy on GitHub">Star</a>
+<br />
+<a class="github-button" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/subscription"
+   data-icon="octicon-eye" data-show-count="true"
+   aria-label="Watch LUCIT-Systems-and-Development/unicorn-fy on GitHub">Watch</a>
+<br />
+<a class="github-button" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/fork"
+   data-icon="octicon-repo-forked" data-show-count="true"
+   aria-label="Fork LUCIT-Systems-and-Development/unicorn-fy on GitHub">Fork</a>
+<br />
+<a class="github-button" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues"
+   data-icon="octicon-issue-opened"
+   data-show-count="true" aria-label="Issue LUCIT-Systems-and-Development/unicorn-fy on GitHub">Issue</a>
+    
+</li>
+
+    </ul>
+</div>
+        </nav>
+    </div>
+</div>
+  
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -42,28 +169,32 @@
         <li class="right" >
           <a href="index.html" title="Welcome to UnicornFy’s documentation!"
              accesskey="P">previous</a> |</li>
-    <script
-        src='//eu.fw-cdn.com/10659511/361973.js'
-        chat='true'>
-    </script>
-    
-        
-        
-    <li><img src="_static/lucit.png" alt="LUCIT Logo"
-             style="vertical-align: middle; margin-top: -1px"/></li>
-    <li><a href="https://www.lucit.tech/unicorn-fy.html">unicorn-fy</a> &#187;</li>
-        
-    
-    
-    <a href="index.html">unicorn-fy 0.12.2 documentation</a> &#187;
-    
-
+              
+                  
+                  
+              <li><img src="_static/lucit.png" alt="LUCIT Logo"
+                       style="vertical-align: middle; margin-top: -1px"/></li>
+              <li><a href="https://www.lucit.tech/unicorn-fy.html">unicorn-fy</a> &#187;</li>
+                  
+              
+              
+              <a href="index.html">Docs</a> &#187;
+              
         <li class="nav-item nav-item-this"><a href="">UnicornFy</a></li>
-    <li class="right">
-        <a href="search.html" title="Search">search</a>
-         |
-    </li>
+                <li class="right">
+                    
 
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+                     |
+                </li>
+            
       </ul>
     </div>    
 
@@ -387,6 +518,12 @@ of any kind, including but not limited to direct or indirect damages for loss of
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+            <p class="logo">
+                <div style="text-align: center;">
+                <a href="https://www.lucit.tech"><img src="https://www.lucit.tech/files/images/logos/LUCIT-LOGO.png"></a>
+                    <a href="https://www.lucit.tech/trading-tools.html" style="font-size: 0.85em;font-weight: 900">Tailored Bots for Your Unique Trading Needs</a>
+                </div>
+            </p>
   <div>
     <h3><a href="index.html">Table of Contents</a></h3>
     <ul>
@@ -446,11 +583,21 @@ of any kind, including but not limited to direct or indirect damages for loss of
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-    <div role="note" aria-label="source code">
-        <h3>GitHub</h3>
-        <ul class="this-page-menu">
-          <li><a href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy">Show Source</a></li>
-          
+<div id="searchbox" style="display: block" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<div role="note" aria-label="source code">
+    <h3>GitHub</h3>
+    <ul class="this-page-menu">
+      <li><a href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy">Show Source</a></li>
+      
 <li>
 <a class="github-button" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy"
    data-icon="octicon-star" data-show-count="true"
@@ -470,26 +617,7 @@ of any kind, including but not limited to direct or indirect damages for loss of
     
 </li>
 
-        </ul>
-    </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-<br />
-
-<div style="text-align: center">
-    <br>
-    <a href="https://www.lucit.tech"><img src="https://www.lucit.tech/files/images/logos/LUCIT-LOGO.png"></a>
-    <p>
-        <a href="https://www.lucit.tech/trading-tools.html" style="font-size: 0.85em;font-weight: 900">Tailored Bots for Your Unique Trading Needs</a>
-    </p>
+    </ul>
 </div>
         </div>
       </div>
@@ -510,43 +638,47 @@ of any kind, including but not limited to direct or indirect damages for loss of
         <li class="right" >
           <a href="index.html" title="Welcome to UnicornFy’s documentation!"
              >previous</a> |</li>
-    <script
-        src='//eu.fw-cdn.com/10659511/361973.js'
-        chat='true'>
-    </script>
-    
-        
-        
-    <li><img src="_static/lucit.png" alt="LUCIT Logo"
-             style="vertical-align: middle; margin-top: -1px"/></li>
-    <li><a href="https://www.lucit.tech/unicorn-fy.html">unicorn-fy</a> &#187;</li>
-        
-    
-    
-    <a href="index.html">unicorn-fy 0.12.2 documentation</a> &#187;
-    
-
+              
+                  
+                  
+              <li><img src="_static/lucit.png" alt="LUCIT Logo"
+                       style="vertical-align: middle; margin-top: -1px"/></li>
+              <li><a href="https://www.lucit.tech/unicorn-fy.html">unicorn-fy</a> &#187;</li>
+                  
+              
+              
+              <a href="index.html">Docs</a> &#187;
+              
         <li class="nav-item nav-item-this"><a href="">UnicornFy</a></li>
-    <li class="right">
-        <a href="search.html" title="Search">search</a>
-         |
-    </li>
+                <li class="right">
+                    
 
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+                     |
+                </li>
+            
       </ul>
     </div>  
     <div class="footer">
-        <a href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues">Found a bug</a>?
-        <br />
-        Last updated on Feb 27 2023 at 18:25 (CET).
-        <br />
-        &copy; <a href="copyright.html">Copyright</a> 2019-2023, LUCIT Systems and Development and Oliver Zehentleitner.
-        <br />
-
-    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 6.1.3
-        with <a href="https://github.com/LUCIT-Systems-and-Development/python-docs-theme-technopathy">python-docs-theme-technopathy</a>
-        by <a href="https://www.lucit.tech">LUCIT Systems and Development</a>
+    &copy; <a href="https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api/blob/master/LICENSE">Copyright</a> 2019-2023, LUCIT Systems and Development and Oliver Zehentleitner.
+    See <a href="https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api/blob/master/LICENSE">License</a> for more information.<br />
+    Last updated on Feb 27 2023 at 18:32 (CET).
+    <a href="https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api/issues">Found a bug</a>?
+    <br />
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+        with <a href="https://github.com/LUCIT-Systems-and-Development/python-docs-theme-lucit">python-docs-theme-lucit</a>
+        by <a href="https://www.lucit.tech">LUCIT Systems and Development</a>.
     </div>
-    <img referrerpolicy="no-referrer-when-downgrade" src="https://matomo.lucit.co/matomo.php?idsite=3&amp;rec=1" style="border:0" alt="" />
+    
+    <img referrerpolicy="no-referrer-when-downgrade" src="https://matomo.lucit.co/matomo.php?idsite=7&amp;rec=1" style="border:0" alt="" />
+    
 
   </body>
 </html>
