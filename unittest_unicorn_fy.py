@@ -322,11 +322,11 @@ class TestBinanceOrgWebsocket(unittest.TestCase):
     def tearDown(self):
         del self.unicorn_fy
 
-UBWA = unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.com")
+UBWA = unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.us")
 
 class TestLiveBinanceCom(unittest.TestCase):
     def setUp(self):
-        print("\n\rStarting live test binance.com")
+        print("\n\rStarting live test binance.com (us)")
         self.unicorn_fy = UnicornFy()
         ubwa = UBWA
         worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer,
@@ -345,7 +345,7 @@ class TestLiveBinanceCom(unittest.TestCase):
         ubwa.create_stream(arr_channels, "arr")
         stream_id_trade = ubwa.get_stream_id_by_label("trade")
         ubwa.get_stream_subscriptions(stream_id_trade)
-        time.sleep(70)
+        time.sleep(10)
         ubwa.stop_manager_with_all_streams()
 
     def test_template(self):
@@ -356,11 +356,12 @@ class TestLiveBinanceCom(unittest.TestCase):
     def tearDown(self):
         del self.unicorn_fy
 
-UBWA2 =  unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.com-futures")
+#UBWA2 =  unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.com-futures")
+UBWA2 =  unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.us")
 
 class TestLiveBinanceComFutures(unittest.TestCase):
     def setUp(self):
-        print("\n\rStarting live test binance.com-futures")
+        print("\n\rStarting live test binance.com-futures (us)")
         self.unicorn_fy = UnicornFy()
         ubwa = UBWA2
         worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer_futures,
@@ -379,7 +380,7 @@ class TestLiveBinanceComFutures(unittest.TestCase):
         ubwa.create_stream(arr_channels, "arr")
         stream_id_trade = ubwa.get_stream_id_by_label("trade")
         ubwa.get_stream_subscriptions(stream_id_trade)
-        time.sleep(70)
+        time.sleep(10)
         ubwa.stop_manager_with_all_streams()
 
     def test_template(self):
