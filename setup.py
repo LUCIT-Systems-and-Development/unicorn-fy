@@ -60,7 +60,8 @@ setuptools.setup(
          'Changes': 'https://unicorn-fy.docs.lucit.tech//CHANGELOG.html',
          'Issue Tracker': 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues',
          'Chat': 'https://gitter.im/unicorn-binance-suite/unicorn-fy',
-         'Telegram': 'https://t.me/unicorndevs',
+         'Telegram': 'https://t.me/unicorndevs', 
+         'Get Support': 'https://www.lucit.tech/get-support.html',
      },
      packages=setuptools.find_packages(exclude=["tools", "images", "pypi", "sphinx", "docs", ".github"]),
      classifiers=[
@@ -70,6 +71,7 @@ setuptools.setup(
          "Programming Language :: Python :: 3.8",
          "Programming Language :: Python :: 3.9",
          "Programming Language :: Python :: 3.10",
+         "Programming Language :: Python :: 3.11",
          "License :: OSI Approved :: MIT License",
          'Intended Audience :: Developers',
          "Intended Audience :: Financial and Insurance Industry",
