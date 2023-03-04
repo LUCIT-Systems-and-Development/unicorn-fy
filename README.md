@@ -9,6 +9,7 @@
 [![License](https://img.shields.io/github/license/LUCIT-Systems-and-Development/unicorn-fy.svg?color=blue)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE)
 [![Supported Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg)](https://www.python.org/downloads/)
 [![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues)
+[![CodeQL](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/codeql-analysis.yml)
 [![Unit Tests](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/unit-tests.yml)
 [![Azure Pipelines](https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/unicorn-fy-feedstock?branchName=main)](https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15694&branchName=main)
 [![codecov](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy/branch/master/graph/badge.svg?token=5I03AZ3F5S)](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy)
