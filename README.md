@@ -148,7 +148,7 @@ or the [current master branch](https://github.com/LUCIT-Systems-and-Development/
 
 ## Documentation
 - [General](https://unicorn-fy.docs.lucit.tech/)
-- [Modules](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html)
+- [Modules](https://unicorn-fy.docs.lucit.tech/modules.html)
 
 ## Examples
 - [example_logging.py](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py)
