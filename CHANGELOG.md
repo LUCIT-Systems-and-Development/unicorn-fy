@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [Discussions about unicorn-fy releases!](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/discussions/categories/releases)
 
-[How to upgrade to the latest version!]([https://unicorn-fy.docs.lucit.tech/README.html#installation-and-upgrade))
+[How to upgrade to the latest version!](https://unicorn-fy.docs.lucit.tech/README.html#installation-and-upgrade)
 
 ## 0.12.2.dev (development stage/unreleased/unstable)
 
