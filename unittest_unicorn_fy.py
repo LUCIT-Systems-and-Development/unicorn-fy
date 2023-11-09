@@ -392,8 +392,8 @@ class TestLiveBinanceComFutures(unittest.TestCase):
         self.assertEqual(str(self.unicorn_fy.binance_org_websocket(data)), asserted_result)
 
     def test_with_context(self):
-        with UnicornFy as ufy:
-            self.assertString(ufy.get_version())
+        with UnicornFy() as ufy:
+            self.assertIsInstance(ufy.get_version(), str)
 
     def tearDown(self):
         del self.unicorn_fy
