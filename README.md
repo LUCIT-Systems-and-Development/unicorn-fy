@@ -104,7 +104,9 @@ If you like the project, please
 [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)! 
 
 ## Installation and Upgrade
-The module requires Python 3.6.0 or above. 
+The module requires Python 3.7.0 or above. 
+
+For the PyPy interpreter we offer packages only from Python version 3.9 and higher.
 
 The current dependencies are listed 
 [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/requirements.txt).
