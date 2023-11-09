@@ -56,6 +56,6 @@ markets = ['bnbbtc', 'ethbtc', 'btcusdt', 'bchabcusdt', 'xrpusdt', 'rvnbtc', 'lt
 
 channels = ['trade', 'kline_1m', 'kline_5m', 'kline_15m', 'kline_30m', 'kline_1h', 'kline_12h', 'depth5']
 
-stream_id = ubwa.create_stream(channels, markets)
+ubwa.create_stream(channels, markets)
 
 print(f"Logging to {os.path.basename(__file__)}.log")
