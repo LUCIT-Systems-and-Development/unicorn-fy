@@ -35,10 +35,5 @@
 #
 # create this file:
 # ~/.pypirc
-#[distutils]
-#index-servers=pypi
-#[pypi]
-#repository = https://upload.pypi.org/legacy/
-#username = name
 
 python3 -m twine upload dist/*

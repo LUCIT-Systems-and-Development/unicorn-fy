@@ -36,3 +36,6 @@
 rm -r ./build
 rm -r ./dist
 rm -r ./unicorn_fy.egg-info
+
+rm unicorn_fy/*.so
+rm unicorn_fy/*.c

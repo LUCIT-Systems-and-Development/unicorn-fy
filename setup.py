@@ -33,17 +33,19 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-import setuptools
-from unicorn_fy.unicorn_fy import UnicornFy
-
-unicornfy = UnicornFy
+from setuptools import setup
+from Cython.Build import cythonize
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-setuptools.setup(
+setup(
+     ext_modules=cythonize(
+        ['unicorn_fy/__init__.py',
+         'unicorn_fy/unicorn_fy.py'],
+        annotate=False),
      name='unicorn-fy',
-     version=str(unicornfy.get_version()),
+     version="0.12.2",
      author="LUCIT Systems and Development",
      author_email='info@lucit.tech',
      url="https://github.com/LUCIT-Systems-and-Development/unicorn-fy",
@@ -51,7 +53,7 @@ setuptools.setup(
      long_description=long_description,
      long_description_content_type="text/markdown",
      license='MIT License',
-     install_requires=['ujson', 'requests'],
+     install_requires=['ujson', 'requests', 'Cython'],
      keywords='binance, api, exchange, unify, binance-dex, binance-chain, rest-api, websockets',
      project_urls={
          'Documentation': 'https://unicorn-fy.docs.lucit.tech//',
@@ -63,15 +65,16 @@ setuptools.setup(
          'Telegram': 'https://t.me/unicorndevs', 
          'Get Support': 'https://www.lucit.tech/get-support.html',
      },
-     packages=setuptools.find_packages(exclude=["tools", "images", "pypi", "sphinx", "docs", ".github"]),
+     package_data={'': ['unicorn_fy/*.so',
+                        'unicorn_fy/*.dll']},
      classifiers=[
          "Development Status :: 5 - Production/Stable",
-         "Programming Language :: Python :: 3.6",
          "Programming Language :: Python :: 3.7",
          "Programming Language :: Python :: 3.8",
          "Programming Language :: Python :: 3.9",
          "Programming Language :: Python :: 3.10",
          "Programming Language :: Python :: 3.11",
+         "Programming Language :: Python :: 3.12",
          "License :: OSI Approved :: MIT License",
          'Intended Audience :: Developers',
          "Intended Audience :: Financial and Insurance Industry",

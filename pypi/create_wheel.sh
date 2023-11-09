@@ -34,16 +34,27 @@
 # IN THE SOFTWARE.
 
 security-check() {
-    echo -n "Did you change the version in \`sphinx conf.py\` and \`unicorn_fy.py\`? [yes|NO] "
+    echo -n "Did you change the version in \`build_wheels.yml\`, \`CHANGELOG.md\`, \`sphinx/source/conf.py\`, \`setup.py\` and \`/manager.py\`? [yes|NO] "
+    local SURE
+    read SURE
+    if [ "$SURE" != "yes" ]; then
+        exit 1
+    fi
+    echo "https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api/actions/workflows/build_wheels.yml"
+    echo "Refresh conda-forge recipe!"
+}
+
+compile-check() {
+    echo -n "Compile local? [yes|NO] "
     local SURE
     read SURE
     if [ "$SURE" != "yes" ]; then
         exit 1
     fi
     echo "ok, lets go ..."
+    python3 setup.py bdist_wheel sdist
 }
 
 security-check
-python3 setup.py bdist_wheel sdist
+compile-check
 
-echo "refresh conda-forge recipe!"

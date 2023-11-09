@@ -33,10 +33,11 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
+import cython
 import logging
-import time
-
+import platform
 import requests
+import time
 import ujson as json
 
 logger = logging.getLogger("unicorn_fy")
@@ -60,9 +61,21 @@ class UnicornFy(object):
     """
     VERSION = "0.12.2.dev"
 
-    def __init__(self):
+    def __init__(self, debug=False):
         self.last_update_check_github = {'timestamp': time.time(),
                                          'status': None}
+        if debug is True:
+            logger.info(f"New instance of unicorn-fy_{VERSION}-{'compiled' if cython.compiled else 'source'} on "
+                        f"{str(platform.system())} {str(platform.release())} started ...")
+
+    def __enter__(self):
+        logger.debug(f"Entering 'with-context' ...")
+        return self
+
+    def __exit__(self, exc_type, exc_value, error_traceback):
+        logger.debug(f"Leaving 'with-context' ...")
+        if exc_type:
+            logger.critical(f"An exception occurred: {exc_type} - {exc_value} - {error_traceback}")
 
     @staticmethod
     def binance_org_websocket(stream_data_json):
