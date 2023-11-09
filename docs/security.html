@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>unicorn_fy &#8212; unicorn-fy 0.13.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Policies and Procedures &#8212; unicorn-fy 0.13.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
     <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?v=fdf8e9ae" />
@@ -16,8 +16,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="unicorn_fy package" href="unicorn_fy.html" />
-    <link rel="prev" title="UnicornFy" href="readme.html" /><link rel="shortcut icon" type="image/png" href="_static/lucit.png" />
+    <link rel="prev" title="MIT License" href="license.html" /><link rel="shortcut icon" type="image/png" href="_static/lucit.png" />
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     
     <script
@@ -62,19 +61,26 @@
                 </div>
             </p>
   <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="readme.html"
-                          title="previous chapter">UnicornFy</a></p>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Security Policies and Procedures</a><ul>
+<li><a class="reference internal" href="#reporting-a-bug">Reporting a Bug</a></li>
+<li><a class="reference internal" href="#disclosure-policy">Disclosure Policy</a></li>
+<li><a class="reference internal" href="#comments-on-this-policy">Comments on this Policy</a></li>
+</ul>
+</li>
+</ul>
+
   </div>
   <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="unicorn_fy.html"
-                          title="next chapter">unicorn_fy package</a></p>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="license.html"
+                          title="previous chapter">MIT License</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/modules.rst.txt"
+      <li><a href="_sources/security.md.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -128,10 +134,7 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="unicorn_fy.html" title="unicorn_fy package"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="readme.html" title="UnicornFy"
+          <a href="license.html" title="MIT License"
              accesskey="P">previous</a> |</li>
               
                   
@@ -144,7 +147,7 @@
               
               <a href="index.html">Docs</a> &#187;
               
-        <li class="nav-item nav-item-this"><a href="">unicorn_fy</a></li>
+        <li class="nav-item nav-item-this"><a href="">Security Policies and Procedures</a></li>
                 <li class="right">
                     
 
@@ -167,43 +170,46 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="unicorn-fy">
-<h1>unicorn_fy<a class="headerlink" href="#unicorn-fy" title="Link to this heading">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="unicorn_fy.html">unicorn_fy package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="unicorn_fy.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicorn_fy.html#module-unicorn_fy.unicorn_fy">unicorn_fy.unicorn_fy module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy"><code class="docutils literal notranslate"><span class="pre">UnicornFy</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.VERSION"><code class="docutils literal notranslate"><span class="pre">UnicornFy.VERSION</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.binance_coin_futures_websocket"><code class="docutils literal notranslate"><span class="pre">UnicornFy.binance_coin_futures_websocket()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.binance_com_coin_futures_websocket"><code class="docutils literal notranslate"><span class="pre">UnicornFy.binance_com_coin_futures_websocket()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket"><code class="docutils literal notranslate"><span class="pre">UnicornFy.binance_com_futures_websocket()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.binance_com_isolated_margin_websocket"><code class="docutils literal notranslate"><span class="pre">UnicornFy.binance_com_isolated_margin_websocket()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.binance_com_margin_websocket"><code class="docutils literal notranslate"><span class="pre">UnicornFy.binance_com_margin_websocket()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.binance_com_websocket"><code class="docutils literal notranslate"><span class="pre">UnicornFy.binance_com_websocket()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.binance_futures_websocket"><code class="docutils literal notranslate"><span class="pre">UnicornFy.binance_futures_websocket()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.binance_je_websocket"><code class="docutils literal notranslate"><span class="pre">UnicornFy.binance_je_websocket()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.binance_org_websocket"><code class="docutils literal notranslate"><span class="pre">UnicornFy.binance_org_websocket()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.binance_us_websocket"><code class="docutils literal notranslate"><span class="pre">UnicornFy.binance_us_websocket()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.binance_websocket"><code class="docutils literal notranslate"><span class="pre">UnicornFy.binance_websocket()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.get_latest_release_info"><code class="docutils literal notranslate"><span class="pre">UnicornFy.get_latest_release_info()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.get_latest_version"><code class="docutils literal notranslate"><span class="pre">UnicornFy.get_latest_version()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.get_version"><code class="docutils literal notranslate"><span class="pre">UnicornFy.get_version()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.is_json"><code class="docutils literal notranslate"><span class="pre">UnicornFy.is_json()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.is_update_available"><code class="docutils literal notranslate"><span class="pre">UnicornFy.is_update_available()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.jex_com_websocket"><code class="docutils literal notranslate"><span class="pre">UnicornFy.jex_com_websocket()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.set_to_false_if_not_exist"><code class="docutils literal notranslate"><span class="pre">UnicornFy.set_to_false_if_not_exist()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="unicorn_fy.html#unicorn_fy.unicorn_fy.UnicornFy.trbinance_com_websocket"><code class="docutils literal notranslate"><span class="pre">UnicornFy.trbinance_com_websocket()</span></code></a></li>
+  <section id="security-policies-and-procedures">
+<h1>Security Policies and Procedures<a class="headerlink" href="#security-policies-and-procedures" title="Link to this heading">¶</a></h1>
+<p>This document outlines security procedures and general policies for the <code class="docutils literal notranslate"><span class="pre">unicorn-fy</span></code> project.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#reporting-a-bug">Reporting a Bug</a></p></li>
+<li><p><a class="reference external" href="#disclosure-policy">Disclosure Policy</a></p></li>
+<li><p><a class="reference external" href="#comments-on-this-policy">Comments on this Policy</a></p></li>
 </ul>
-</li>
+<section id="reporting-a-bug">
+<h2>Reporting a Bug<a class="headerlink" href="#reporting-a-bug" title="Link to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">LUCIT</span> <span class="pre">Systems</span> <span class="pre">and</span> <span class="pre">Development</span></code> takes all security bugs in <code class="docutils literal notranslate"><span class="pre">unicorn-fy</span></code> seriously.
+Thank you for improving the security of <code class="docutils literal notranslate"><span class="pre">unicorn-fy</span></code>. We appreciate your efforts and
+responsible disclosure and will make every effort to acknowledge your contributions.</p>
+<p>Report security bugs via our contact form:
+https://www.lucit.tech/contact-unicorn-developers.html</p>
+<p>The lead maintainer will acknowledge your email within 48 hours, and will send a
+more detailed response within 48 hours indicating the next steps in handling
+your report. After the initial reply to your report, the security team will
+endeavor to keep you informed of the progress towards a fix and full
+announcement, and may ask for additional information or guidance.</p>
+<p>Report security bugs in third-party modules to the person or team maintaining
+the module.</p>
+</section>
+<section id="disclosure-policy">
+<h2>Disclosure Policy<a class="headerlink" href="#disclosure-policy" title="Link to this heading">¶</a></h2>
+<p>When the security team receives a security bug report, they will assign it to a
+primary handler. This person will coordinate the fix and release process,
+involving the following steps:</p>
+<ul class="simple">
+<li><p>Confirm the problem and determine the affected versions.</p></li>
+<li><p>Audit code to find any potential similar problems.</p></li>
+<li><p>Prepare fixes for all releases still under maintenance. These fixes will be
+released as fast as possible to pip.</p></li>
 </ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="unicorn_fy.html#module-unicorn_fy">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</div>
+</section>
+<section id="comments-on-this-policy">
+<h2>Comments on this Policy<a class="headerlink" href="#comments-on-this-policy" title="Link to this heading">¶</a></h2>
+<p>If you have suggestions on how this process could be improved please submit a
+pull request.</p>
+</section>
 </section>
 
 
@@ -228,19 +234,26 @@
                 </div>
             </p>
   <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="readme.html"
-                          title="previous chapter">UnicornFy</a></p>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Security Policies and Procedures</a><ul>
+<li><a class="reference internal" href="#reporting-a-bug">Reporting a Bug</a></li>
+<li><a class="reference internal" href="#disclosure-policy">Disclosure Policy</a></li>
+<li><a class="reference internal" href="#comments-on-this-policy">Comments on this Policy</a></li>
+</ul>
+</li>
+</ul>
+
   </div>
   <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="unicorn_fy.html"
-                          title="next chapter">unicorn_fy package</a></p>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="license.html"
+                          title="previous chapter">MIT License</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/modules.rst.txt"
+      <li><a href="_sources/security.md.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -294,10 +307,7 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="unicorn_fy.html" title="unicorn_fy package"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="readme.html" title="UnicornFy"
+          <a href="license.html" title="MIT License"
              >previous</a> |</li>
               
                   
@@ -310,7 +320,7 @@
               
               <a href="index.html">Docs</a> &#187;
               
-        <li class="nav-item nav-item-this"><a href="">unicorn_fy</a></li>
+        <li class="nav-item nav-item-this"><a href="">Security Policies and Procedures</a></li>
                 <li class="right">
                     
 

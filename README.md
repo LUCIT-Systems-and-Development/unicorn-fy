@@ -111,7 +111,7 @@ The current dependencies are listed
 
 If you run into errors during the installation take a look [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki/Installation).
 
-### A wheel and a source file of the latest release with `pip` from [PyPI](https://pypi.org/project/unicorn-fy)
+### A binary, PyPy or source code based wheel of the latest version with `pip` from [PyPI](https://pypi.org/project/unicorn-fy)
 `pip install unicorn-fy --upgrade`
 
 ### A conda package of the latest release with `conda` from [Anaconda](https://anaconda.org/conda-forge/unicorn-fy) via [CONDA-FORGE](https://conda-forge.org).
@@ -127,11 +127,11 @@ Run in bash:
 `pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/$(curl -s https://api.github.com/repos/lucit-systems-and-development/unicorn-fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
 
 #### Windows
-Use the below command with the version (such as 0.7.0) you determined [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest):
+Use the below command with the version (such as 0.12.2) you determined [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest):
 
-`pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/0.7.0.tar.gz --upgrade`
+`pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/0.12.2.tar.gz --upgrade`
 
-### From the latest source (dev-stage) with PIP from [Github](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
+### From the latest source (dev-stage) with PIP from [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
 This is not a release version and can not be considered to be stable!
 
 `pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/tarball/master --upgrade`

@@ -322,7 +322,9 @@ class TestBinanceOrgWebsocket(unittest.TestCase):
     def tearDown(self):
         del self.unicorn_fy
 
+
 UBWA = unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.us")
+
 
 class TestLiveBinanceCom(unittest.TestCase):
     def setUp(self):
@@ -356,8 +358,9 @@ class TestLiveBinanceCom(unittest.TestCase):
     def tearDown(self):
         del self.unicorn_fy
 
-#UBWA2 =  unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.com-futures")
-UBWA2 =  unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.us")
+
+UBWA2 = unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.us")
+
 
 class TestLiveBinanceComFutures(unittest.TestCase):
     def setUp(self):
@@ -387,6 +390,10 @@ class TestLiveBinanceComFutures(unittest.TestCase):
         data = ''
         asserted_result = ""
         self.assertEqual(str(self.unicorn_fy.binance_org_websocket(data)), asserted_result)
+
+    def test_with_context(self):
+        with UnicornFy as ufy:
+            self.assertString(ufy.get_version())
 
     def tearDown(self):
         del self.unicorn_fy

@@ -64,9 +64,11 @@ def print_stream_data_from_stream_buffer(binance_websocket_api_manager):
             time.sleep(0.01)
 
 
-binance_websocket_api_manager = BinanceWebSocketApiManager()
+# To use this library you need a valid UNICORN Binance Suite License:
+# https://medium.lucit.tech/-87b0088124a8
+ubwa = BinanceWebSocketApiManager()
 
-worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer, args=(binance_websocket_api_manager,))
+worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer, args=(ubwa,))
 worker_thread.start()
 
 #channels = {'aggTrade', 'trade', 'kline_1m', 'kline_5m', 'kline_15m', 'kline_30m', 'kline_1h', 'kline_2h', 'kline_4h',
@@ -74,8 +76,10 @@ worker_thread.start()
 #            'ticker', 'bookTicker', 'depth5', 'depth10', 'depth20', 'depth', 'depth@100ms'}
 #arr_channels = {'!miniTicker', '!ticker', '!bookTicker'}
 
-stream_id = binance_websocket_api_manager.create_stream('ticker', ['btcusdt', 'bnbbtc', 'ethbtc'])
+stream_id = ubwa.create_stream('ticker', ['btcusdt', 'bnbbtc', 'ethbtc'])
 time.sleep(10)
-binance_websocket_api_manager.print_stream_info(stream_id)
-binance_websocket_api_manager.get_stream_subscriptions(stream_id)
+ubwa.print_stream_info(stream_id)
+ubwa.get_stream_subscriptions(stream_id)
+time.sleep(10)
+ubwa.stop_manager()
 

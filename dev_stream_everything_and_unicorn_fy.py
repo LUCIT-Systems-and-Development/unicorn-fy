@@ -33,6 +33,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
+from unicorn_binance_rest_api import BinanceRestAPIManager
 from unicorn_binance_websocket_api.manager import BinanceWebSocketApiManager
 from unicorn_fy.unicorn_fy import UnicornFy
 import logging
@@ -42,11 +43,6 @@ import sys
 import time
 import threading
 
-try:
-    from binance.client import Client
-except ImportError:
-    print("Please install `python-binance`!")
-    sys.exit(1)
 
 # https://docs.python.org/3/library/logging.html#logging-levels
 logging.getLogger("unicorn_fy")
@@ -78,29 +74,31 @@ arr_channels = {'!miniTicker', '!ticker', '!bookTicker'}
 markets = []
 
 try:
-    binance_rest_client = Client(binance_api_key, binance_api_secret)
-    binance_websocket_api_manager = BinanceWebSocketApiManager()
+    # To use this library you need a valid UNICORN Binance Suite License:
+    # https://medium.lucit.tech/-87b0088124a8
+    ubra = BinanceRestAPIManager(binance_api_key, binance_api_secret)
+    ubwa = BinanceWebSocketApiManager()
 except requests.exceptions.ConnectionError:
     print("No internet connection?")
     sys.exit(1)
 
-worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer, args=(binance_websocket_api_manager,))
+worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer, args=(ubwa,))
 worker_thread.start()
 
-data = binance_rest_client.get_all_tickers()
+data = ubra.get_all_tickers()
 for item in data:
     markets.append(item['symbol'])
 
-binance_websocket_api_manager.set_private_api_config(binance_api_key, binance_api_secret)
-userdata_stream_id = binance_websocket_api_manager.create_stream(["!userData"], ["arr"])
-arr_stream_id = binance_websocket_api_manager.create_stream(arr_channels, "arr")
+ubwa.set_private_api_config(binance_api_key, binance_api_secret)
+userdata_stream_id = ubwa.create_stream(["!userData"], ["arr"])
+arr_stream_id = ubwa.create_stream(arr_channels, "arr")
 
 for channel in channels:
-    binance_websocket_api_manager.create_stream(channel, markets, stream_label=channel)
+    ubwa.create_stream(channel, markets, stream_label=channel)
 
-stream_id_trade = binance_websocket_api_manager.get_stream_id_by_label("trade")
-binance_websocket_api_manager.get_stream_subscriptions(stream_id_trade)
+stream_id_trade = ubwa.get_stream_id_by_label("trade")
+ubwa.get_stream_subscriptions(stream_id_trade)
 
 #while True:
-#    binance_websocket_api_manager.print_summary()
+#    ubwa.print_summary()
 #    time.sleep(1)

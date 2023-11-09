@@ -40,7 +40,7 @@ security-check() {
     if [ "$SURE" != "yes" ]; then
         exit 1
     fi
-    echo "https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api/actions/workflows/build_wheels.yml"
+    echo "https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/build_wheels.yml"
     echo "Refresh conda-forge recipe!"
 }
 

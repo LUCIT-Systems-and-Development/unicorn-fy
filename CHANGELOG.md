@@ -9,7 +9,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [How to upgrade to the latest version!](https://unicorn-fy.docs.lucit.tech/README.html#installation-and-upgrade)
 
-## 0.12.2.dev (development stage/unreleased/unstable)
+## 0.13.0.dev (development stage/unreleased/unstable)
+
+## 0.13.0
+### Added 
+- `debug` parameter to `UnicornFy()`
+- Cython and PyPy Wheels support
 
 ## 0.12.2
 Codebase equal to 0.12.0, testing azure pipe

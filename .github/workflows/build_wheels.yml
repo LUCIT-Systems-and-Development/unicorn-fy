@@ -72,5 +72,5 @@ jobs:
           generate_release_notes: true
           name: unicorn-fy
           prerelease: false
-          tag_name: 0.12.2
+          tag_name: 0.13.0
           token: ${{ secrets.RELEASE_TOKEN }}

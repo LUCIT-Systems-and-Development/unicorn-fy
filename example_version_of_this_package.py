@@ -36,11 +36,8 @@
 
 from unicorn_fy.unicorn_fy import UnicornFy
 
-unicorn_fy = UnicornFy()
-
-print("is_update_available: " + str(unicorn_fy.is_update_available()))
-print("get_latest_version: " + str(unicorn_fy.get_latest_version()))
-
-# static methods
-print("get_version: " + str(UnicornFy.get_version()))
-print("get_latest_release_info: " + str(UnicornFy.get_latest_release_info()))
+with UnicornFy() as ufy:
+    print("is_update_available: " + str(ufy.is_update_available()))
+    print("get_latest_version: " + str(ufy.get_latest_version()))
+    print("get_version: " + str(ufy.get_version()))
+    print("get_latest_release_info: " + str(ufy.get_latest_release_info()))

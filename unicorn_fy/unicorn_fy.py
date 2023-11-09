@@ -59,13 +59,13 @@ class UnicornFy(object):
         - Binance.org
         - Jex.com
     """
-    VERSION = "0.12.2.dev"
+    VERSION = "0.13.0"
 
     def __init__(self, debug=False):
         self.last_update_check_github = {'timestamp': time.time(),
                                          'status': None}
         if debug is True:
-            logger.info(f"New instance of unicorn-fy_{VERSION}-{'compiled' if cython.compiled else 'source'} on "
+            logger.info(f"New instance of unicorn-fy_{self.VERSION}-{'compiled' if cython.compiled else 'source'} on "
                         f"{str(platform.system())} {str(platform.release())} started ...")
 
     def __enter__(self):
