@@ -65,6 +65,7 @@ setup(
          'Telegram': 'https://t.me/unicorndevs', 
          'Get Support': 'https://www.lucit.tech/get-support.html',
      },
+     python_requires='>=3.7.0',
      package_data={'': ['unicorn_fy/*.so',
                         'unicorn_fy/*.dll']},
      classifiers=[
