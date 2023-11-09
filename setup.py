@@ -56,10 +56,11 @@ setup(
      install_requires=['ujson', 'requests', 'Cython'],
      keywords='binance, api, exchange, unify, binance-dex, binance-chain, rest-api, websockets',
      project_urls={
-         'Documentation': 'https://unicorn-fy.docs.lucit.tech//',
+         'Documentation': 'https://unicorn-fy.docs.lucit.tech',
          'Wiki': 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki',
          'Author': 'https://www.lucit.tech',
-         'Changes': 'https://unicorn-fy.docs.lucit.tech//CHANGELOG.html',
+         'Changes': 'https://unicorn-fy.docs.lucit.tech/changelog.html',
+         'License': 'https://unicorn-fy.docs.lucit.tech/license.html',
          'Issue Tracker': 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues',
          'Chat': 'https://gitter.im/unicorn-binance-suite/unicorn-fy',
          'Telegram': 'https://t.me/unicorndevs', 
