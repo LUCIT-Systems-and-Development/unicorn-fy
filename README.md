@@ -111,8 +111,7 @@ The current dependencies are listed
 
 If you run into errors during the installation take a look [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki/Installation).
 
-### A Cython binary, PyPy or source code based CPython wheel of the latest version with `pip` from 
-[PyPI](https://pypi.org/project/unicorn-fy)
+### A Cython binary, PyPy or source code based CPython wheel of the latest version with `pip` from [PyPI](https://pypi.org/project/unicorn-fy)
 `pip install unicorn-fy --upgrade`
 
 ### A conda package of the latest release with `conda` from [Anaconda](https://anaconda.org/conda-forge/unicorn-fy) via [CONDA-FORGE](https://conda-forge.org).
