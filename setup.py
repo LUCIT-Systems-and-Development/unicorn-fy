@@ -52,7 +52,7 @@ setup(
      description="Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.",
      long_description=long_description,
      long_description_content_type="text/markdown",
-     license='MIT License',
+     license='LSOSL - LUCIT Synergetic Open Source License',
      install_requires=['ujson', 'requests', 'Cython'],
      keywords='binance, api, exchange, unify, binance-dex, binance-chain, rest-api, websockets',
      project_urls={
