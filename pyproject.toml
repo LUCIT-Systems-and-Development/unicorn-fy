@@ -1,3 +1,38 @@
+[tool.poetry]
+name = "unicorn-fy"
+version = "0.13.0"
+description = "An unofficial Python API to use the Binance REST API’s in a easy, fast, flexible, robust and fully-featured way."
+authors = ["LUCIT Systems and Development <info@lucit.tech>"]
+license = "LSOSL - LUCIT Synergetic Open Source License"
+readme = "README.md"
+homepage = "https://github.com/LUCIT-Systems-and-Development/unicorn-fy"
+documentation = "https://unicorn-fy.docs.lucit.tech"
+repository = "https://github.com/LUCIT-Systems-and-Development/unicorn-fy"
+
+[tool.poetry.urls]
+'Howto' = 'https://www.lucit.tech/unicorn-fy.html'
+'Documentation' = 'https://unicorn-fy.docs.lucit.tech'
+'Wiki' = 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki'
+'Author' = 'https://www.lucit.tech'
+'Changes' = 'https://unicorn-fy.docs.lucit.tech/changelog.html'
+'License' = 'https://unicorn-fy.docs.lucit.tech/license.html'
+'Issue Tracker' = 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues'
+'Telegram' = 'https://t.me/unicorndevs'
+'Chat' = 'https://app.gitter.im/#/room/#unicorn-fy:gitter.im'
+'Get Support' = 'https://www.lucit.tech/get-support.html'
+'LUCIT Online Shop' = 'https://shop.lucit.services/software'
+
+[tool.poetry.dependencies]
+python = ">=3.7.0"
+Cython = "*"
+requests = "*"
+simplejson = "*"
+
+[tool.poetry.dev-dependencies]
+
 [build-system]
 requires = ["setuptools", "wheel", "Cython", "pip"]
 build-backend = "setuptools.build_meta"
+
+[tool.poetry.package_data]
+unicorn_fy = ["*.so", "*.dll"]
