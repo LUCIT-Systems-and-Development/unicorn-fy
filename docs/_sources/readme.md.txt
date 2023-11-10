@@ -69,7 +69,7 @@ and can be activated by setting parameter
 or for specific streams with the parameter 
 [`output` of `create_stream()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.manager.BinanceWebSocketApiManager.create_stream).
 
-### Get the right [logger](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py):
+## Get the right [logger](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py):
 ```
 logging.getLogger("unicorn_fy")
 ```
@@ -104,17 +104,19 @@ If you like the project, please
 [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)! 
 
 ## Installation and Upgrade
-The module requires Python 3.6.0 or above. 
+The module requires Python 3.7.0 or above. 
+
+For the PyPy interpreter we offer packages only from Python version 3.9 and higher.
 
 The current dependencies are listed 
 [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/requirements.txt).
 
 If you run into errors during the installation take a look [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki/Installation).
 
-### A binary, PyPy or source code based wheel of the latest version with `pip` from [PyPI](https://pypi.org/project/unicorn-fy)
+### A Cython binary, PyPy or source code based CPython wheel of the latest version with `pip` from [PyPI](https://pypi.org/project/unicorn-fy)
 `pip install unicorn-fy --upgrade`
 
-### A conda package of the latest release with `conda` from [Anaconda](https://anaconda.org/conda-forge/unicorn-fy) via [CONDA-FORGE](https://conda-forge.org).
+### A conda package of the latest release with `conda` from [Anaconda](https://anaconda.org/conda-forge/unicorn-fy) via [CONDA-FORGE](https://conda-forge.org)
 `conda install -c conda-forge unicorn-fy`
 
 `conda update -c conda-forge unicorn-fy`
@@ -142,6 +144,7 @@ or the [current master branch](https://github.com/LUCIT-Systems-and-Development/
  and use:
  
 - ./environment.yml
+- ./pyproject.toml
 - ./requirements.txt
 - ./setup.py
 
