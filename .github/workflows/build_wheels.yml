@@ -1,10 +1,6 @@
 name: Build and Publish
 on:
   workflow_dispatch:
-permissions:
-  contents: write
-  discussions: write
-
 jobs:
   build_wheels:
     name: Build wheels on ${{ matrix.os }}
@@ -35,7 +31,6 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           path: ./wheelhouse/*.whl
-
   build_sdist:
     name: Build source distribution
     runs-on: ubuntu-latest
@@ -46,12 +41,13 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           path: dist/*.tar.gz
-
   Release:
     needs: [build_wheels, build_sdist]
     runs-on: ubuntu-latest
     environment: pypi
     permissions:
+      contents: write
+      discussions: write
       id-token: write
     steps:
       - uses: actions/download-artifact@v3
@@ -73,4 +69,4 @@ jobs:
           name: unicorn-fy
           prerelease: false
           tag_name: 0.13.0
-          token: ${{ secrets.PYPI_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
