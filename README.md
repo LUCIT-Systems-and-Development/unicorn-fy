@@ -129,9 +129,9 @@ Run in bash:
 `pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/$(curl -s https://api.github.com/repos/lucit-systems-and-development/unicorn-fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
 
 #### Windows
-Use the below command with the version (such as 0.12.2) you determined [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest):
+Use the below command with the version (such as 0.13.0) you determined [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest):
 
-`pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/0.12.2.tar.gz --upgrade`
+`pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/0.13.0.tar.gz --upgrade`
 
 ### From the latest source (dev-stage) with PIP from [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
 This is not a release version and can not be considered to be stable!
