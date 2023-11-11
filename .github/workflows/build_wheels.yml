@@ -73,4 +73,4 @@ jobs:
           name: unicorn-fy
           prerelease: false
           tag_name: 0.13.0
-          token: ${{ secrets.RELEASE_TOKEN }}
+          token: ${{ secrets.PYPI_TOKEN }}
