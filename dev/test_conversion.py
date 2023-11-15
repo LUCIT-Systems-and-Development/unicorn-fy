@@ -1,17 +1,21 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# File: pypi_create_wheel.sh
+# File: dev/test_conversion.py
 #
 # Part of ‘UnicornFy’
 # Project website: https://www.lucit.tech/unicorn-fy.html
 # Github: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
 # Documentation: https://unicorn-fy.docs.lucit.tech/
 # PyPI: https://pypi.org/project/unicorn-fy
+# LUCIT Online Shop: https://shop.lucit.services/software
+#
+# License: LSOSL - LUCIT Synergetic Open Source License
+# https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE
 #
 # Author: LUCIT Systems and Development
 #
-# Copyright (c) 2019-2023, LUCIT Systems and Development (https://www.lucit.tech) and Oliver Zehentleitner
+# Copyright (c) 2019-2023, LUCIT Systems and Development (https://www.lucit.tech)
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
@@ -33,28 +37,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-security-check() {
-    echo -n "Did you change the version in \`build_wheels.yml\`, \`CHANGELOG.md\`, \`sphinx/source/conf.py\`, \`setup.py\`, \`pyproject.toml\` and \`/manager.py\`? [yes|NO] "
-    local SURE
-    read SURE
-    if [ "$SURE" != "yes" ]; then
-        exit 1
-    fi
-    echo "https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/build_wheels.yml"
-    echo "Refresh conda-forge recipe!"
-}
+from unicorn_fy.unicorn_fy import UnicornFy
 
-compile-check() {
-    echo -n "Compile local? [yes|NO] "
-    local SURE
-    read SURE
-    if [ "$SURE" != "yes" ]; then
-        exit 1
-    fi
-    echo "ok, lets go ..."
-    python3 setup.py bdist_wheel sdist
-}
+data = '{"e":"ACCOUNT_UPDATE","T":1617859763506,"E":1617859763511,"a":{"B":[{"a":"USDT","wb":"1790.86605837","cw":"1790.86605837"}],"P":[{"s":"CHZUSDT","pa":"0","ep":"0.00000","cr":"0","up":"0","mt":"cross","iw":"0","ps":"BOTH","ma":"USDT"},{"s":"CHZUSDT","pa":"2684","ep":"0.45855","cr":"79.89127995","up":"2.03986684","mt":"cross","iw":"0","ps":"LONG","ma":"USDT"}],"m":"ORDER"}}'
 
-security-check
-compile-check
-
+result = UnicornFy.binance_futures_websocket(data)
+print(f"result: {result}")

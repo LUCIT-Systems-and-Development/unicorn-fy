@@ -8,10 +8,14 @@
 # Github: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
 # Documentation: https://unicorn-fy.docs.lucit.tech/
 # PyPI: https://pypi.org/project/unicorn-fy
+# LUCIT Online Shop: https://shop.lucit.services/software
+#
+# License: LSOSL - LUCIT Synergetic Open Source License
+# https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE
 #
 # Author: LUCIT Systems and Development
 #
-# Copyright (c) 2019-2023, LUCIT Systems and Development (https://www.lucit.tech) and Oliver Zehentleitner
+# Copyright (c) 2019-2023, LUCIT Systems and Development (https://www.lucit.tech)
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a

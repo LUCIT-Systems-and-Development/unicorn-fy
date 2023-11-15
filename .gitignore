@@ -1,5 +1,7 @@
 .idea
 
+dev/unicorn_fy
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

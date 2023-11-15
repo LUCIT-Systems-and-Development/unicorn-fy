@@ -1,17 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# File: dev_one_stream.py
+# File: dev/stream_everything_and_unicorn_fy.py
 #
 # Part of ‘UnicornFy’
 # Project website: https://www.lucit.tech/unicorn-fy.html
 # Github: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
 # Documentation: https://unicorn-fy.docs.lucit.tech/
 # PyPI: https://pypi.org/project/unicorn-fy
+# LUCIT Online Shop: https://shop.lucit.services/software
+#
+# License: LSOSL - LUCIT Synergetic Open Source License
+# https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE
 #
 # Author: LUCIT Systems and Development
 #
-# Copyright (c) 2019-2023, LUCIT Systems and Development (https://www.lucit.tech) and Oliver Zehentleitner
+# Copyright (c) 2019-2023, LUCIT Systems and Development (https://www.lucit.tech)
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
@@ -33,12 +37,16 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
+from unicorn_binance_rest_api import BinanceRestAPIManager
 from unicorn_binance_websocket_api.manager import BinanceWebSocketApiManager
 from unicorn_fy.unicorn_fy import UnicornFy
 import logging
 import os
+import requests
+import sys
 import time
 import threading
+
 
 # https://docs.python.org/3/library/logging.html#logging-levels
 logging.getLogger("unicorn_fy")
@@ -55,31 +63,46 @@ def print_stream_data_from_stream_buffer(binance_websocket_api_manager):
         oldest_stream_data_from_stream_buffer = binance_websocket_api_manager.pop_stream_data_from_stream_buffer()
         if oldest_stream_data_from_stream_buffer is not False:
             unicorn_fied_data = UnicornFy.binance_com_websocket(oldest_stream_data_from_stream_buffer)
-            print("===================================================================================================")
-            print(str(oldest_stream_data_from_stream_buffer))
-            print("===================================================================================================")
             print(str(unicorn_fied_data))
-            print("===================================================================================================")
         else:
             time.sleep(0.01)
 
 
-# To use this library you need a valid UNICORN Binance Suite License:
-# https://medium.lucit.tech/-87b0088124a8
-ubwa = BinanceWebSocketApiManager()
+binance_api_key = ""
+binance_api_secret = ""
+
+channels = {'aggTrade', 'trade', 'kline_1m', 'kline_5m', 'kline_15m', 'kline_30m', 'kline_1h', 'kline_2h', 'kline_4h',
+            'kline_6h', 'kline_8h', 'kline_12h', 'kline_1d', 'kline_3d', 'kline_1w', 'kline_1M', 'miniTicker',
+            'ticker', 'bookTicker', 'depth5', 'depth10', 'depth20', 'depth', 'depth@100ms'}
+arr_channels = {'!miniTicker', '!ticker', '!bookTicker'}
+markets = []
+
+try:
+    # To use this library you need a valid UNICORN Binance Suite License:
+    # https://medium.lucit.tech/-87b0088124a8
+    ubra = BinanceRestAPIManager(binance_api_key, binance_api_secret)
+    ubwa = BinanceWebSocketApiManager()
+except requests.exceptions.ConnectionError:
+    print("No internet connection?")
+    sys.exit(1)
 
 worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer, args=(ubwa,))
 worker_thread.start()
 
-#channels = {'aggTrade', 'trade', 'kline_1m', 'kline_5m', 'kline_15m', 'kline_30m', 'kline_1h', 'kline_2h', 'kline_4h',
-#            'kline_6h', 'kline_8h', 'kline_12h', 'kline_1d', 'kline_3d', 'kline_1w', 'kline_1M', 'miniTicker',
-#            'ticker', 'bookTicker', 'depth5', 'depth10', 'depth20', 'depth', 'depth@100ms'}
-#arr_channels = {'!miniTicker', '!ticker', '!bookTicker'}
+data = ubra.get_all_tickers()
+for item in data:
+    markets.append(item['symbol'])
 
-stream_id = ubwa.create_stream('ticker', ['btcusdt', 'bnbbtc', 'ethbtc'])
-time.sleep(10)
-ubwa.print_stream_info(stream_id)
-ubwa.get_stream_subscriptions(stream_id)
-time.sleep(10)
-ubwa.stop_manager()
+ubwa.set_private_api_config(binance_api_key, binance_api_secret)
+userdata_stream_id = ubwa.create_stream(["!userData"], ["arr"])
+arr_stream_id = ubwa.create_stream(arr_channels, "arr")
 
+for channel in channels:
+    ubwa.create_stream(channel, markets, stream_label=channel)
+
+stream_id_trade = ubwa.get_stream_id_by_label("trade")
+ubwa.get_stream_subscriptions(stream_id_trade)
+
+#while True:
+#    ubwa.print_summary()
+#    time.sleep(1)

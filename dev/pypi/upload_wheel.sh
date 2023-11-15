@@ -1,17 +1,21 @@
-#!/usr/bin/env python3
+#!/usr/bin/env bash
 # -*- coding: utf-8 -*-
 #
-# File: dev_test_conversion.py
+# File: pypi_upload_wheel.sh
 #
 # Part of ‘UnicornFy’
 # Project website: https://www.lucit.tech/unicorn-fy.html
 # Github: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
 # Documentation: https://unicorn-fy.docs.lucit.tech/
 # PyPI: https://pypi.org/project/unicorn-fy
+# LUCIT Online Shop: https://shop.lucit.services/software
+#
+# License: LSOSL - LUCIT Synergetic Open Source License
+# https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE
 #
 # Author: LUCIT Systems and Development
 #
-# Copyright (c) 2019-2023, LUCIT Systems and Development (https://www.lucit.tech) and Oliver Zehentleitner
+# Copyright (c) 2019-2023, LUCIT Systems and Development (https://www.lucit.tech)
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
@@ -32,10 +36,8 @@
 # WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
+#
+# create this file:
+# ~/.pypirc
 
-from unicorn_fy.unicorn_fy import UnicornFy
-
-data = '{"e":"ACCOUNT_UPDATE","T":1617859763506,"E":1617859763511,"a":{"B":[{"a":"USDT","wb":"1790.86605837","cw":"1790.86605837"}],"P":[{"s":"CHZUSDT","pa":"0","ep":"0.00000","cr":"0","up":"0","mt":"cross","iw":"0","ps":"BOTH","ma":"USDT"},{"s":"CHZUSDT","pa":"2684","ep":"0.45855","cr":"79.89127995","up":"2.03986684","mt":"cross","iw":"0","ps":"LONG","ma":"USDT"}],"m":"ORDER"}}'
-
-result = UnicornFy.binance_futures_websocket(data)
-print(f"result: {result}")
+python3 -m twine upload dist/*

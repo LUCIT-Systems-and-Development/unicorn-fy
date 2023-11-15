@@ -1,17 +1,21 @@
 #!/usr/bin/env bash
 # -*- coding: utf-8 -*-
 #
-# File: pypi_install_packaging_tools.sh
+# File: pypi_create_wheel.sh
 #
 # Part of ‘UnicornFy’
 # Project website: https://www.lucit.tech/unicorn-fy.html
 # Github: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
 # Documentation: https://unicorn-fy.docs.lucit.tech/
 # PyPI: https://pypi.org/project/unicorn-fy
+# LUCIT Online Shop: https://shop.lucit.services/software
+#
+# License: LSOSL - LUCIT Synergetic Open Source License
+# https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE
 #
 # Author: LUCIT Systems and Development
 #
-# Copyright (c) 2019-2023, LUCIT Systems and Development (https://www.lucit.tech) and Oliver Zehentleitner
+# Copyright (c) 2019-2023, LUCIT Systems and Development (https://www.lucit.tech)
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
@@ -33,4 +37,28 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-python3 -m pip install --user --upgrade pip setuptools wheel twine tqdm
+security-check() {
+    echo -n "Did you change the version in \`CHANGELOG.md\` and used \`dev/set_version.py\`? [yes|NO] "
+    local SURE
+    read SURE
+    if [ "$SURE" != "yes" ]; then
+        exit 1
+    fi
+    echo "https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/build_wheels.yml"
+    echo "https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/build_conda.yml"
+}
+
+compile-check() {
+    echo -n "Compile local? [yes|NO] "
+    local SURE
+    read SURE
+    if [ "$SURE" != "yes" ]; then
+        exit 1
+    fi
+    echo "ok, lets go ..."
+    python3 setup.py bdist_wheel sdist
+}
+
+security-check
+compile-check
+
