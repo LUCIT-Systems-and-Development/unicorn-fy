@@ -11,6 +11,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## 0.13.0.dev (development stage/unreleased/unstable)
 
+## 0.13.1
+- Building conda packages and distribute them via https://anaconda.org/lucit
+
 ## 0.13.0
 ### Added 
 - `debug` parameter to `UnicornFy()`

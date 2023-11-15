@@ -49,7 +49,7 @@ setup(
          'unicorn_fy/unicorn_fy.py'],
         annotate=False),
      name='unicorn-fy',
-     version="0.13.0",
+     version="0.13.1",
      author="LUCIT Systems and Development",
      author_email='info@lucit.tech',
      url="https://github.com/LUCIT-Systems-and-Development/unicorn-fy",

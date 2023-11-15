@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>UnicornFy &#8212; unicorn-fy 0.13.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnicornFy &#8212; unicorn-fy 0.13.1 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
     <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?v=fdf8e9ae" />
@@ -72,8 +72,16 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#installation-and-upgrade">Installation and Upgrade</a><ul>
-<li><a class="reference internal" href="#a-cython-binary-pypy-or-source-code-based-cpython-wheel-of-the-latest-version-with-pip-from-pypi">A Cython binary, PyPy or source code based CPython wheel of the latest version with <code class="docutils literal notranslate"><span class="pre">pip</span></code> from PyPI</a></li>
-<li><a class="reference internal" href="#a-conda-package-of-the-latest-release-with-conda-from-anaconda-via-conda-forge">A conda package of the latest release with <code class="docutils literal notranslate"><span class="pre">conda</span></code> from Anaconda via CONDA-FORGE</a></li>
+<li><a class="reference internal" href="#a-cython-binary-pypy-or-source-code-based-cpython-wheel-of-the-latest-version-with-pip-from-pypi">A Cython binary, PyPy or source code based CPython wheel of the latest version with <code class="docutils literal notranslate"><span class="pre">pip</span></code> from PyPI</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#update">Update</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#a-conda-package-of-the-latest-version-with-conda-from-anaconda">A Conda Package of the latest version with <code class="docutils literal notranslate"><span class="pre">conda</span></code> from Anaconda</a><ul>
+<li><a class="reference internal" href="#id1">Installation</a></li>
+<li><a class="reference internal" href="#id2">Update</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#from-source-of-the-latest-release-with-pip-from-github">From source of the latest release with PIP from Github</a><ul>
 <li><a class="reference internal" href="#linux-macos">Linux, macOS, …</a></li>
 <li><a class="reference internal" href="#windows">Windows</a></li>
@@ -216,18 +224,18 @@
 <p><a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy"><img alt="Github" src="https://img.shields.io/badge/source-github-cbc2c8" /></a>
 <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases"><img alt="GitHub Release" src="https://img.shields.io/github/release/LUCIT-Systems-and-Development/unicorn-fy.svg?label=github" /></a>
 <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases"><img alt="GitHub Downloads" src="https://img.shields.io/github/downloads/LUCIT-Systems-and-Development/unicorn-fy/total?color=blue" /></a>
-<a class="reference external" href="https://anaconda.org/conda-forge/unicorn-fy"><img alt="Conda Release" src="https://img.shields.io/conda/vn/conda-forge/unicorn-fy.svg?color=blue" /></a>
-<a class="reference external" href="https://anaconda.org/conda-forge/unicorn-fy"><img alt="Conda Downloads" src="https://img.shields.io/conda/dn/conda-forge/unicorn-fy.svg?color=blue" /></a>
+<a class="reference external" href="https://anaconda.org/lucit/unicorn-fy"><img alt="Anaconda Release" src="https://anaconda.org/lucit/unicorn-fy/badges/version.svg" /></a>
+<a class="reference external" href="https://anaconda.org/lucit/unicorn-fy"><img alt="Anaconda Downloads" src="https://anaconda.org/lucit/unicorn-fy/badges/downloads.svg" /></a>
 <a class="reference external" href="https://pypi.org/project/unicorn-fy/"><img alt="PyPi Release" src="https://img.shields.io/pypi/v/unicorn-fy?color=blue" /></a>
 <a class="reference external" href="https://pepy.tech/project/unicorn-fy"><img alt="PyPi Downloads" src="https://pepy.tech/badge/unicorn-fy" /></a>
 <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/LUCIT-Systems-and-Development/unicorn-fy.svg?color=blue" /></a>
 <a class="reference external" href="https://www.python.org/downloads/"><img alt="Supported Python Version" src="https://img.shields.io/pypi/pyversions/unicorn_fy.svg" /></a>
 <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues"><img alt="PyPI - Status" src="https://img.shields.io/pypi/status/unicorn_fy.svg" /></a>
+<a class="reference external" href="https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy"><img alt="codecov" src="https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy/branch/master/graph/badge.svg?token=5I03AZ3F5S" /></a>
 <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/codeql-analysis.yml"><img alt="CodeQL" src="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/codeql-analysis.yml/badge.svg" /></a>
 <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/unit-tests.yml"><img alt="Unit Tests" src="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/unit-tests.yml/badge.svg" /></a>
-<a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/build_wheels.yml"><img alt="Build and Publish" src="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/build_wheels.yml/badge.svg" /></a>
-<a class="reference external" href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15694&amp;amp;branchName=main"><img alt="Azure Pipelines" src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/unicorn-fy-feedstock?branchName=main" /></a>
-<a class="reference external" href="https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy"><img alt="codecov" src="https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy/branch/master/graph/badge.svg?token=5I03AZ3F5S" /></a>
+<a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/build_wheels.yml"><img alt="Build and Publish GH+PyPi" src="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/build_wheels.yml/badge.svg" /></a>
+<a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/build_conda.yml"><img alt="Build and Publish Anaconda" src="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/build_conda.yml/badge.svg" /></a>
 <a class="reference external" href="https://unicorn-fy.docs.lucit.tech/"><img alt="Read the Docs" src="https://img.shields.io/badge/read-%20docs-yellow" /></a>
 <a class="reference external" href="https://medium.lucit.tech"><img alt="Read How To`s" src="https://img.shields.io/badge/read-%20howto-yellow" /></a>
 <a class="reference external" href="https://t.me/unicorndevs"><img alt="Telegram" src="https://img.shields.io/badge/chat-telegram-41ab8c" /></a>
@@ -265,7 +273,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;stream_type&#39;</span><span class="p">:</span> <span class="s1">&#39;btcusdt@trade&#39;</span><span class="p">,</span> <span class="s1">&#39;event_type&#39;</span><span class="p">:</span> <span class="s1">&#39;trade&#39;</span><span class="p">,</span> <span class="s1">&#39;event_time&#39;</span><span class="p">:</span> <span class="mi">1556876873656</span><span class="p">,</span> <span class="s1">&#39;symbol&#39;</span><span class="p">:</span> <span class="s1">&#39;BTCUSDT&#39;</span><span class="p">,</span>
  <span class="s1">&#39;trade_id&#39;</span><span class="p">:</span> <span class="mi">117727701</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="s1">&#39;5786.76000000&#39;</span><span class="p">,</span> <span class="s1">&#39;quantity&#39;</span><span class="p">:</span> <span class="s1">&#39;0.03200500&#39;</span><span class="p">,</span> <span class="s1">&#39;buyer_order_id&#39;</span><span class="p">:</span> <span class="mi">341831847</span><span class="p">,</span>
  <span class="s1">&#39;seller_order_id&#39;</span><span class="p">:</span> <span class="mi">341831876</span><span class="p">,</span> <span class="s1">&#39;trade_time&#39;</span><span class="p">:</span> <span class="mi">1556876873648</span><span class="p">,</span> <span class="s1">&#39;is_market_maker&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;ignore&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
- <span class="s1">&#39;unicorn_fied&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;binance&#39;</span><span class="p">,</span> <span class="s1">&#39;0.11.1&#39;</span><span class="p">]}</span>
+ <span class="s1">&#39;unicorn_fied&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;binance&#39;</span><span class="p">,</span> <span class="s1">&#39;0.13.1&#39;</span><span class="p">]}</span>
 </pre></div>
 </div>
 <p>This lib is integrated into
@@ -394,13 +402,49 @@ or for specific streams with the parameter
 <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/requirements.txt">here</a>.</p>
 <p>If you run into errors during the installation take a look <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki/Installation">here</a>.</p>
 <section id="a-cython-binary-pypy-or-source-code-based-cpython-wheel-of-the-latest-version-with-pip-from-pypi">
-<h3>A Cython binary, PyPy or source code based CPython wheel of the latest version with <code class="docutils literal notranslate"><span class="pre">pip</span></code> from <a class="reference external" href="https://pypi.org/project/unicorn-fy">PyPI</a><a class="headerlink" href="#a-cython-binary-pypy-or-source-code-based-cpython-wheel-of-the-latest-version-with-pip-from-pypi" title="Link to this heading">¶</a></h3>
+<h3>A Cython binary, PyPy or source code based CPython wheel of the latest version with <code class="docutils literal notranslate"><span class="pre">pip</span></code> from <a class="reference external" href="https://pypi.org/project/unicorn-binance-rest-api/">PyPI</a><a class="headerlink" href="#a-cython-binary-pypy-or-source-code-based-cpython-wheel-of-the-latest-version-with-pip-from-pypi" title="Link to this heading">¶</a></h3>
+<p>Our <a class="reference external" href="https://cython.org/">Cython</a> and <a class="reference external" href="https://www.pypy.org/">PyPy</a> Wheels are available on <a class="reference external" href="https://pypi.org/">PyPI</a>,
+these wheels offer significant advantages for Python developers:</p>
+<ul class="simple">
+<li><p><em><strong>Performance Boost with Cython Wheels:</strong></em>
+Cython is a programming language that supplements Python with static typing and C-level performance. By compiling
+Python code into C, Cython Wheels can significantly enhance the execution speed of Python code, especially in
+computationally intensive tasks. This means faster runtimes and more efficient processing for users of our package.</p></li>
+<li><p><em><strong>PyPy Wheels for Enhanced Efficiency:</strong></em>
+PyPy is an alternative Python interpreter known for its speed and efficiency. It uses Just-In-Time (JIT) compilation,
+which can dramatically improve the performance of Python code. Our PyPy Wheels are tailored for compatibility with
+PyPy, allowing users to leverage this speed advantage seamlessly.</p></li>
+</ul>
+<p>Both Cython and PyPy Wheels on PyPI make the installation process simpler and more straightforward. They ensure that
+you get the optimized version of our package with minimal setup, allowing you to focus on development rather than
+configuration.</p>
+<section id="installation">
+<h4>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">unicorn-fy</span></code></p>
+</section>
+<section id="update">
+<h4>Update<a class="headerlink" href="#update" title="Link to this heading">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">unicorn-fy</span> <span class="pre">--upgrade</span></code></p>
 </section>
-<section id="a-conda-package-of-the-latest-release-with-conda-from-anaconda-via-conda-forge">
-<h3>A conda package of the latest release with <code class="docutils literal notranslate"><span class="pre">conda</span></code> from <a class="reference external" href="https://anaconda.org/conda-forge/unicorn-fy">Anaconda</a> via <a class="reference external" href="https://conda-forge.org">CONDA-FORGE</a><a class="headerlink" href="#a-conda-package-of-the-latest-release-with-conda-from-anaconda-via-conda-forge" title="Link to this heading">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">unicorn-fy</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">unicorn-fy</span></code></p>
+</section>
+<section id="a-conda-package-of-the-latest-version-with-conda-from-anaconda">
+<h3>A Conda Package of the latest version with <code class="docutils literal notranslate"><span class="pre">conda</span></code> from <a class="reference external" href="https://anaconda.org/lucit">Anaconda</a><a class="headerlink" href="#a-conda-package-of-the-latest-version-with-conda-from-anaconda" title="Link to this heading">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">unicorn-fy</span></code> package is available with <a class="reference external" href="https://docs.conda.io/en/latest/">Conda</a> through the
+<a class="reference external" href="https://anaconda.org/lucit"><code class="docutils literal notranslate"><span class="pre">lucit</span></code> channel</a>.</p>
+<p>For optimal compatibility and performance, it is recommended to source the necessary dependencies from the
+<a class="reference external" href="https://anaconda.org/conda-forge"><code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> channel</a>.</p>
+<section id="id1">
+<h4>Installation<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">channels</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+<span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">channels</span> <span class="n">lucit</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">lucit</span> <span class="n">unicorn</span><span class="o">-</span><span class="n">fy</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h4>Update<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">-c</span> <span class="pre">lucit</span> <span class="pre">unicorn-fy</span></code></p>
+</section>
 </section>
 <section id="from-source-of-the-latest-release-with-pip-from-github">
 <h3>From source of the latest release with PIP from <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy">Github</a><a class="headerlink" href="#from-source-of-the-latest-release-with-pip-from-github" title="Link to this heading">¶</a></h3>
@@ -411,8 +455,8 @@ or for specific streams with the parameter
 </section>
 <section id="windows">
 <h4>Windows<a class="headerlink" href="#windows" title="Link to this heading">¶</a></h4>
-<p>Use the below command with the version (such as 0.12.2) you determined <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest">here</a>:</p>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/0.12.2.tar.gz</span> <span class="pre">--upgrade</span></code></p>
+<p>Use the below command with the version (such as 0.13.1) you determined <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest">here</a>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/0.13.1.tar.gz</span> <span class="pre">--upgrade</span></code></p>
 </section>
 </section>
 <section id="from-the-latest-source-dev-stage-with-pip-from-github">
@@ -427,6 +471,7 @@ or the <a class="reference external" href="https://github.com/LUCIT-Systems-and-
 and use:</p>
 <ul class="simple">
 <li><p>./environment.yml</p></li>
+<li><p>./meta.yaml</p></li>
 <li><p>./pyproject.toml</p></li>
 <li><p>./requirements.txt</p></li>
 <li><p>./setup.py</p></li>
@@ -479,7 +524,10 @@ with using
 <a class="reference external" href="https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=is_update#unicorn_fy.unicorn_fy.UnicornFy.is_update_availabe"><code class="docutils literal notranslate"><span class="pre">is_update_available()</span></code></a>
 or you use the
 <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api/wiki/UNICORN-Monitoring-API-Service">monitoring API service</a>.</p>
-<p>Follow us on <a class="reference external" href="https://twitter.com/LUCIT_SysDev">Twitter</a> or on <a class="reference external" href="https://www.facebook.com/lucit.systems.and.development">Facebook</a> for general news about the <a class="reference external" href="https://www.lucit.tech/unicorn-binance-suite.html">unicorn-binance-suite</a>!</p>
+<p>Follow us on <a class="reference external" href="https://github.com/LUCIT-Systems-and-Development">GitHub</a>, <a class="reference external" href="https://medium.lucit.tech/">Medium</a>,
+<a class="reference external" href="https://www.youtube.com/&#64;LUCIT_Systems_and_Development">YouTube</a>,
+<a class="reference external" href="https://www.linkedin.com/company/lucit-systems-and-development">LinkedIn</a>,
+<a class="reference external" href="https://twitter.com/LUCIT_SysDev">X</a> or <a class="reference external" href="https://www.facebook.com/lucit.systems.and.development">Facebook</a>!</p>
 </section>
 <section id="how-to-report-bugs-or-suggest-improvements">
 <h2>How to report Bugs or suggest Improvements?<a class="headerlink" href="#how-to-report-bugs-or-suggest-improvements" title="Link to this heading">¶</a></h2>
@@ -560,8 +608,16 @@ of any kind, including but not limited to direct or indirect damages for loss of
 </ul>
 </li>
 <li><a class="reference internal" href="#installation-and-upgrade">Installation and Upgrade</a><ul>
-<li><a class="reference internal" href="#a-cython-binary-pypy-or-source-code-based-cpython-wheel-of-the-latest-version-with-pip-from-pypi">A Cython binary, PyPy or source code based CPython wheel of the latest version with <code class="docutils literal notranslate"><span class="pre">pip</span></code> from PyPI</a></li>
-<li><a class="reference internal" href="#a-conda-package-of-the-latest-release-with-conda-from-anaconda-via-conda-forge">A conda package of the latest release with <code class="docutils literal notranslate"><span class="pre">conda</span></code> from Anaconda via CONDA-FORGE</a></li>
+<li><a class="reference internal" href="#a-cython-binary-pypy-or-source-code-based-cpython-wheel-of-the-latest-version-with-pip-from-pypi">A Cython binary, PyPy or source code based CPython wheel of the latest version with <code class="docutils literal notranslate"><span class="pre">pip</span></code> from PyPI</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#update">Update</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#a-conda-package-of-the-latest-version-with-conda-from-anaconda">A Conda Package of the latest version with <code class="docutils literal notranslate"><span class="pre">conda</span></code> from Anaconda</a><ul>
+<li><a class="reference internal" href="#id1">Installation</a></li>
+<li><a class="reference internal" href="#id2">Update</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#from-source-of-the-latest-release-with-pip-from-github">From source of the latest release with PIP from Github</a><ul>
 <li><a class="reference internal" href="#linux-macos">Linux, macOS, …</a></li>
 <li><a class="reference internal" href="#windows">Windows</a></li>
@@ -697,7 +753,7 @@ of any kind, including but not limited to direct or indirect damages for loss of
     <div class="footer">
     &copy; <a href="/license.html">Copyright</a> 2023-2023, LUCIT Systems and Development. All Rights Reserved..
     See <a href="/license.html">License</a> for more information.<br />
-    Last updated on Nov 10 2023 at 16:08 (CET).
+    Last updated on Nov 15 2023 at 12:25 (CET).
     <a href="https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues/new/choose">Found a bug</a>?
     <br />
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
