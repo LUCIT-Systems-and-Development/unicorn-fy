@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [How to upgrade to the latest version!](https://unicorn-fy.docs.lucit.tech/README.html#installation-and-upgrade)
 
-## 0.13.0.dev (development stage/unreleased/unstable)
+## 0.13.1.dev (development stage/unreleased/unstable)
 
 ## 0.13.1
 - Building conda packages and distribute them via https://anaconda.org/lucit
