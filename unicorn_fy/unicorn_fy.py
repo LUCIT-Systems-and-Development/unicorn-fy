@@ -1098,14 +1098,30 @@ class UnicornFy(object):
                     "s":"BTCUSDT",                     // symbol
                     "l":25                             // leverage
                     }
-                }  
+                }
+                or:
+                {
+                    "e":"ACCOUNT_CONFIG_UPDATE",       // Event Type
+                    "E":1611646737479,                 // Event Time
+                    "T":1611646737476,                 // Transaction Time
+                    "ai":{                             // User's Account Configuration
+                    "j":true                           // Multi-Assets Mode
+                    }
+                }
                 '''
-                unicorn_fied_data = {'stream_type': 'ACCOUNT_CONFIG_UPDATE',
-                                     'event_type': stream_data['data']['e'],
-                                     'event_time': stream_data['data']['E'],
-                                     'symbol': stream_data['data']['ac']['s'],
-                                     'leverage': stream_data['data']['ac']['l']
-                                     }
+                if "ac" in stream_data['data']:
+                    unicorn_fied_data = {'stream_type': 'ACCOUNT_CONFIG_UPDATE',
+                                         'event_type': stream_data['data']['e'],
+                                         'event_time': stream_data['data']['E'],
+                                         'symbol': stream_data['data']['ac']['s'],
+                                         'leverage': stream_data['data']['ac']['l']
+                                         }
+                else:
+                    unicorn_fied_data = {'stream_type': 'ACCOUNT_CONFIG_UPDATE',
+                                         'event_type': stream_data['data']['e'],
+                                         'event_time': stream_data['data']['E'],
+                                         'multi_assets_mode': stream_data['data']['ai']['j'],
+                                         }
         except TypeError as error_msg:
             logger.critical(f"UnicornFy->binance_futures_websocket({str(unicorn_fied_data)}) - "
                             f"error: {str(error_msg)}")
