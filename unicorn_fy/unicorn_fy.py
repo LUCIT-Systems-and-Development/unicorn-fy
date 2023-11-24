@@ -1248,13 +1248,16 @@ class UnicornFy(object):
                                          }
         except TypeError as error_msg:
             logger.critical(f"UnicornFy->binance_futures_websocket({str(unicorn_fied_data)}) - "
-                            f"error: {str(error_msg)}")
+                            f"error: {str(error_msg)} - Variable: {stream_data['data']}")
+        except KeyError as error_msg:
+            logger.critical(f"UnicornFy->binance_futures_websocket({str(unicorn_fied_data)}) - "
+                            f"error: {str(error_msg)} - Variable: {stream_data['data']}")
         unicorn_fied_version = [exchange, UnicornFy.VERSION]
         try:
             unicorn_fied_data['unicorn_fied'] = unicorn_fied_version
         except TypeError as error_msg:
             logger.critical(f"UnicornFy->binance_futures_websocket({str(unicorn_fied_data)}) - "
-                            f"error: {str(error_msg)}")
+                            f"error: {str(error_msg)} - Variable: {stream_data['data']}")
         logger.debug("UnicornFy->binance_futures_websocket(" + str(unicorn_fied_data) + ")")
         return unicorn_fied_data
 
