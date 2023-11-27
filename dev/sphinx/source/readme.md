@@ -7,7 +7,7 @@
 [![Anaconda Downloads](https://anaconda.org/lucit/unicorn-fy/badges/downloads.svg)](https://anaconda.org/lucit/unicorn-fy)
 [![PyPi Release](https://img.shields.io/pypi/v/unicorn-fy?color=blue)](https://pypi.org/project/unicorn-fy/)
 [![PyPi Downloads](https://pepy.tech/badge/unicorn-fy)](https://pepy.tech/project/unicorn-fy)
-[![License](https://img.shields.io/github/license/LUCIT-Systems-and-Development/unicorn-fy.svg?color=blue)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/LUCIT-Systems-and-Development/unicorn-fy.svg?color=blue)](https://unicorn-fy.docs.lucit.tech/license.html)
 [![Supported Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg)](https://www.python.org/downloads/)
 [![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues)
 [![codecov](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy/branch/master/graph/badge.svg?token=5I03AZ3F5S)](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy)
@@ -25,7 +25,7 @@
 # UnicornFy
 [Supported Exchanges](#supported-exchanges) | [Installation](#installation-and-upgrade) | [Change Log](#change-log) | [Documentation](#documentation) | 
 [Examples](#examples) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | [Bugs](#how-to-report-bugs-or-suggest-improvements) 
-| [Contributing](#contributing) | [Leave a review](#you-want-to-say-thank-you) | [Disclaimer](#disclaimer) | [Commercial Support](#commercial-support)
+| [Contributing](#contributing) | [Disclaimer](#disclaimer) | [Commercial Support](#commercial-support)
 
 Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
 
@@ -116,12 +116,12 @@ If you run into errors during the installation take a look [here](https://github
 ### A Cython binary, PyPy or source code based CPython wheel of the latest version with `pip` from [PyPI](https://pypi.org/project/unicorn-binance-rest-api/)
 Our [Cython](https://cython.org/) and [PyPy](https://www.pypy.org/) Wheels are available on [PyPI](https://pypi.org/), 
 these wheels offer significant advantages for Python developers:
-- ***Performance Boost with Cython Wheels:*** 
-  Cython is a programming language that supplements Python with static typing and C-level performance. By compiling 
+
+- ***Performance Boost with Cython Wheels:*** Cython is a programming language that supplements Python with static typing and C-level performance. By compiling 
   Python code into C, Cython Wheels can significantly enhance the execution speed of Python code, especially in 
   computationally intensive tasks. This means faster runtimes and more efficient processing for users of our package. 
-- ***PyPy Wheels for Enhanced Efficiency:*** 
-  PyPy is an alternative Python interpreter known for its speed and efficiency. It uses Just-In-Time (JIT) compilation, 
+
+- ***PyPy Wheels for Enhanced Efficiency:*** PyPy is an alternative Python interpreter known for its speed and efficiency. It uses Just-In-Time (JIT) compilation, 
   which can dramatically improve the performance of Python code. Our PyPy Wheels are tailored for compatibility with 
   PyPy, allowing users to leverage this speed advantage seamlessly.
 
@@ -136,7 +136,8 @@ configuration.
 `pip install unicorn-fy --upgrade`
 
 ### A Conda Package of the latest version with `conda` from [Anaconda](https://anaconda.org/lucit)
-The `unicorn-fy` package is available with [Conda](https://docs.conda.io/en/latest/) through the 
+The `unicorn-fy` package is also available as a Cython version for the `linux-64`, `osx-64` 
+and `win-64` architectures with [Conda](https://docs.conda.io/en/latest/) through the 
 [`lucit` channel](https://anaconda.org/lucit). 
 
 For optimal compatibility and performance, it is recommended to source the necessary dependencies from the 
@@ -242,9 +243,6 @@ contribute follow
 [![Contributors](https://contributors-img.web.app/image?repo=lucit-systems-and-development/unicorn-fy)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/graphs/contributors)
 
 We ![love](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/heart.png) open source!
-
-## You want to say Thank You?
-We hope you are enjoying using our libraries and that they are proving to be useful to you. If you have a moment, we would greatly appreciate it if you could leave us a [review on Google](https://g.page/r/CbfHlcs8BfG8EAg/review). Thank you for your support!
 
 ## Disclaimer
 This project is for informational purposes only. You should not construe this information or any other material as 
