@@ -29,7 +29,7 @@
 [Examples](#examples) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | [Bugs](#how-to-report-bugs-or-suggest-improvements) 
 | [Contributing](#contributing) | [Disclaimer](#disclaimer) | [Commercial Support](#commercial-support)
 
-A Python API from [LUCIT Systems and Development](https://www.lucit.tech) to convert received raw data from crypto exchange API endpoints 
+A Python API by [LUCIT](https://www.lucit.tech) to convert received raw data from crypto exchange API endpoints 
 into well-formed python dictionaries.
 
 Part of ['UNICORN Binance Suite'](https://www.lucit.tech/unicorn-binance-suite.html).
