@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "unicorn-fy"
 version = "0.13.1"
-description = "An unofficial Python API to use the Binance REST API’s in a easy, fast, flexible, robust and fully-featured way."
+description = "A Python API by LUCIT to convert received raw data from crypto exchange API endpoints into well-formed python dictionaries."
 authors = ["LUCIT Systems and Development <info@lucit.tech>"]
 license = "LSOSL - LUCIT Synergetic Open Source License"
 readme = "README.md"

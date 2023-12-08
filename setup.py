@@ -53,7 +53,8 @@ setup(
      author="LUCIT Systems and Development",
      author_email='info@lucit.tech',
      url="https://github.com/LUCIT-Systems-and-Development/unicorn-fy",
-     description="Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.",
+     description="A Python API by LUCIT to convert received raw data from crypto exchange API endpoints into "
+                 "well-formed python dictionaries.",
      long_description=long_description,
      long_description_content_type="text/markdown",
      license='LSOSL - LUCIT Synergetic Open Source License',

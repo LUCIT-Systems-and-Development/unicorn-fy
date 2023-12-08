@@ -47,7 +47,8 @@ test:
 
 about:
   summary: | 
-    Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
+    A Python API by LUCIT to convert received raw data from crypto exchange API endpoints into well-formed python 
+    dictionaries.
   description: |
     [![Get a UNICORN Binance Suite License](https://raw.githubusercontent.com/LUCIT-Systems-and-Development/unicorn-binance-suite/master/images/logo/LUCIT-UBS-License-Offer.png)](https://shop.lucit.services)
     
@@ -78,7 +79,8 @@ about:
     [Examples](#examples) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | [Bugs](#how-to-report-bugs-or-suggest-improvements) 
     | [Contributing](#contributing) | [Disclaimer](#disclaimer) | [Commercial Support](#commercial-support)
     
-    Convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
+    A Python API by [LUCIT](https://www.lucit.tech) to convert received raw data from crypto exchange API endpoints 
+    into well-formed python dictionaries.
     
     Part of ['UNICORN Binance Suite'](https://www.lucit.tech/unicorn-binance-suite.html).
     
