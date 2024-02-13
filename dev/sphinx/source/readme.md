@@ -54,9 +54,9 @@ received_stream_data_json = {"stream": "btcusdt@trade",
                                       "m": True,
                                       "M": True}}
 
-unicornfy = unicorn_fy.UnicornFy()
+ufy = unicorn_fy.UnicornFy()
 
-unicorn_fied_stream_data = unicornfy.binance_com_websocket(received_stream_data_json)
+unicorn_fied_stream_data = ufy.binance_com_websocket(received_stream_data_json)
 print(unicorn_fied_stream_data)
 ```
 
