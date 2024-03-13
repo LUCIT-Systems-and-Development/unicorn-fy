@@ -16,35 +16,21 @@ jobs:
       - name: GitHub Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Docker and QEMU
+        if: matrix.os == 'ubuntu-20.04'
+        run: |
+          docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+          echo "DOCKER_IMAGE=quay.io/pypa/manylinux2014_aarch64" >> $GITHUB_ENV
+
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.16.2
+        env:
+          CIBW_ARCHS: auto aarch64
+          CIBW_MANYLINUX_AARCH64_IMAGE: ${{ env.DOCKER_IMAGE }}
+          CIBW_BEFORE_BUILD: pip install -r requirements.txt
+          CIBW_BUILD: cp39-*
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          path: ./wheelhouse/*.whl
-
-  build_wheels_raspberry:
-    name: Build wheels for Raspberry Pi
-    runs-on: ubuntu-latest
-    steps:
-      - name: GitHub Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up QEMU
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y qemu qemu-user-static qemu-user binfmt-support
-          docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
-
-      - name: Build wheels with QEMU
-        uses: pypa/cibuildwheel@v2.16.2
-        env:
-          CIBW_ARCHS_LINUX: "arm64 armv7l"
-          CIBW_MANYLINUX_AARCH64_IMAGE: "quay.io/pypa/manylinux2014_aarch64"
-          CIBW_MANYLINUX_ARMV7L_IMAGE: "quay.io/pypa/manylinux2014_armv7l"
-
-      - name: Upload Raspberry Pi Wheels
         uses: actions/upload-artifact@v3
         with:
           path: ./wheelhouse/*.whl
@@ -65,7 +51,7 @@ jobs:
           path: dist/*.tar.gz
 
   Release:
-    needs: [build_wheels, build_wheels_raspberry, build_sdist]
+    needs: [build_wheels, build_sdist]
     runs-on: ubuntu-latest
     environment: pypi
     permissions:
