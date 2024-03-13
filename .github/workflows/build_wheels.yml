@@ -13,13 +13,21 @@ jobs:
       CIBW_PYPY_VERSION: "7.3.10*"
     strategy:
       matrix:
-        os: [ubuntu-20.04, windows-2019, macos-11]
+        os: [ubuntu-20.04, windows-2019, macos-11, ubuntu-20.04-arm64
+        include:
+          - os: ubuntu-20.04-arm64
+            arch: arm64
+            docker_image: "quay.io/pypa/manylinux2014_aarch64"]
     steps:
       - name: GitHub Checkout
         uses: actions/checkout@v4
 
       - name: Build wheels
-        uses: pypa/cibuildwheel@v2.16.2
+        uses: pypa/cibuildwheel@v2.16.5
+
+      - name: Build wheels Linux ARM64 (Raspberry Pi)
+        if: matrix.os == 'ubuntu-20.04-arm64'
+        uses: pypa/cibuildwheel@v2.16.5
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
