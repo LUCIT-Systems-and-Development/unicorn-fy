@@ -1,4 +1,4 @@
-name: Build and Publish GH+PyPi
+name: Build and Publish GH+PyPi ARM
 
 on:
   workflow_dispatch:
@@ -8,18 +8,27 @@ on:
 jobs:
   build_wheels:
     name: Build wheels on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    env:
-      CIBW_PYPY_VERSION: "7.3.10*"
+    runs-on: ubuntu-latest  # Ändern zu ubuntu-latest, da wir Docker verwenden
     strategy:
       matrix:
-        os: [ubuntu-20.04, windows-2019, macos-11]
+        os: [ "manylinux2014_aarch64" ]  # Zielplattform für ARM-Architektur
+    services:
+      docker:
+        image: docker://multiarch/qemu-user-static:latest
+        options: --privileged
     steps:
       - name: GitHub Checkout
         uses: actions/checkout@v4
 
+      - name: Set up QEMU
+        run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.16.2
+        env:
+          CIBW_ARCHS_LINUX: aarch64  # Setzen der Architektur auf ARM64
+          CIBW_MANYLINUX_AARCH64_IMAGE: quay.io/pypa/manylinux2014_aarch64  # Verwenden des manylinux-Images für ARM64
+          CIBW_SKIP: "*-win32 *-manylinux_i686 *-macosx_* *-manylinux_x86_64"  # Überspringen nicht relevanter Builds
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
