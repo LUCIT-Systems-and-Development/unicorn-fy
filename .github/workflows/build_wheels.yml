@@ -13,11 +13,17 @@ jobs:
       CIBW_PYPY_VERSION: "7.3.10*"
     strategy:
       matrix:
-        os: [ubuntu-20.04, windows-2019, macos-11, ubuntu-20.04-arm64]
+        os: [ubuntu-20.04, windows-2019, macos-11, ubuntu-20.04-arm64, ubuntu-20.04-armv7l, ubuntu-20.04-armv6l]
         include:
           - os: ubuntu-20.04-arm64
             arch: arm64
             docker_image: "quay.io/pypa/manylinux2014_aarch64"
+          - os: ubuntu-20.04-armv7l
+            arch: armv7l
+            docker_image: "quay.io/pypa/manylinux2014_armv7l"
+          - os: ubuntu-20.04-armv6l
+            arch: armv6l
+            docker_image: "quay.io/pypa/manylinux2014_armv6l"
     steps:
       - name: GitHub Checkout
         uses: actions/checkout@v4
