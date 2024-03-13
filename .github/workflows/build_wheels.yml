@@ -1,4 +1,4 @@
-name: Build and Publish GH+PyPi
+name: Build and Publish GH+PyPi Alt
 
 on:
   workflow_dispatch:
@@ -9,6 +9,8 @@ jobs:
   build_wheels:
     name: Build wheels on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
+    env:
+      CIBW_PYPY_VERSION: "7.3.10*"
     strategy:
       matrix:
         os: [ubuntu-20.04, windows-2019, macos-11]
@@ -16,19 +18,8 @@ jobs:
       - name: GitHub Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Docker and QEMU
-        if: matrix.os == 'ubuntu-20.04'
-        run: |
-          docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
-          echo "DOCKER_IMAGE=quay.io/pypa/manylinux2014_aarch64" >> $GITHUB_ENV
-
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.16.2
-        env:
-          CIBW_ARCHS: auto aarch64
-          CIBW_MANYLINUX_AARCH64_IMAGE: ${{ env.DOCKER_IMAGE }}
-          CIBW_BEFORE_BUILD: pip install -r requirements.txt
-          CIBW_BUILD: cp39-*
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
@@ -51,7 +42,7 @@ jobs:
           path: dist/*.tar.gz
 
   Release:
-    needs: [build_wheels, build_sdist]
+    needs: [ build_wheels, build_sdist ]
     runs-on: ubuntu-latest
     environment: pypi
     permissions:
