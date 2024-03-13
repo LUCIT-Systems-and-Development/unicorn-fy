@@ -10,7 +10,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 [How to upgrade to the latest version!](https://unicorn-fy.docs.lucit.tech/readme.html#installation-and-upgrade)
 
 ## 0.13.1.dev (development stage/unreleased/unstable)
+
+## 0.14.0
 ### Added
+- Wheels for arm64 (Raspberry Pi)
 - PR "futures account update: handle multi_assets_mode update" https://github.com/LUCIT-Systems-and-Development/unicorn-fy/pull/38
 - PR "Updated All Futures Market Streams, Implemented Proper Coin-Futures Handling" https://github.com/LUCIT-Systems-and-Development/unicorn-fy/pull/39  
 
