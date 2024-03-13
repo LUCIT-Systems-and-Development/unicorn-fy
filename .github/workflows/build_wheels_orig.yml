@@ -1,4 +1,4 @@
-name: Build and Publish GH+PyPi
+name: Build and Publish GH+PyPif Alt
 
 on:
   workflow_dispatch:
