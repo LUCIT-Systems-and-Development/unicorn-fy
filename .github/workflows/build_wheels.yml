@@ -17,7 +17,7 @@ jobs:
         include:
           - os: ubuntu-20.04-arm64
             arch: arm64
-            docker_image: "quay.io/pypa/manylinux2014_aarch64"]
+            docker_image: "quay.io/pypa/manylinux2014_aarch64"
     steps:
       - name: GitHub Checkout
         uses: actions/checkout@v4
