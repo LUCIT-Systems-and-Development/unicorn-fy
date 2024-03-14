@@ -35,4 +35,4 @@ requires = ["setuptools", "wheel", "Cython", "pip"]
 build-backend = "setuptools.build_meta"
 
 [tool.poetry.package_data]
-unicorn_fy = ["*.so", "*.dll"]
+unicorn_fy = ["*.so", "*.dll", "*.py"]
