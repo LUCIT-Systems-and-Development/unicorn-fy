@@ -73,7 +73,8 @@ setup(
      },
      python_requires='>=3.7.0',
      package_data={'': ['unicorn_fy/*.so',
-                        'unicorn_fy/*.dll']},
+                        'unicorn_fy/*.dll',
+                        'unicorn_fy/*.py']},
      classifiers=[
          "Development Status :: 5 - Production/Stable",
          "Programming Language :: Python :: 3.7",
