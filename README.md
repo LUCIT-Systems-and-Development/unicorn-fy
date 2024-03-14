@@ -66,7 +66,7 @@ Output:
 {'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT',
  'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847,
  'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True,
- 'unicorn_fied': ['binance', '1.14.0']}
+ 'unicorn_fied': ['binance', '1.14.1']}
 ```
 
 This lib is integrated into 
@@ -124,17 +124,22 @@ If you run into errors during the installation take a look [here](https://github
 Our [Cython](https://cython.org/) and [PyPy](https://www.pypy.org/) Wheels are available on [PyPI](https://pypi.org/), 
 these wheels offer significant advantages for Python developers:
 
-- ***Performance Boost with Cython Wheels:*** Cython is a programming language that supplements Python with static typing and C-level performance. By compiling 
-  Python code into C, Cython Wheels can significantly enhance the execution speed of Python code, especially in 
-  computationally intensive tasks. This means faster runtimes and more efficient processing for users of our package. 
+- ***Performance Boost with Cython Wheels:*** Cython is a programming language that supplements Python with static 
+  typing and C-level performance. By compiling Python code into C, Cython Wheels can significantly enhance the 
+  execution speed of Python code, especially in  computationally intensive tasks. This means faster runtimes and more 
+  efficient processing for users of our package. 
 
-- ***PyPy Wheels for Enhanced Efficiency:*** PyPy is an alternative Python interpreter known for its speed and efficiency. It uses Just-In-Time (JIT) compilation, 
-  which can dramatically improve the performance of Python code. Our PyPy Wheels are tailored for compatibility with 
-  PyPy, allowing users to leverage this speed advantage seamlessly.
+- ***PyPy Wheels for Enhanced Efficiency:*** PyPy is an alternative Python interpreter known for its speed and 
+  efficiency. It uses Just-In-Time (JIT) compilation, which can dramatically improve the performance of Python code. 
+  Our PyPy Wheels are tailored for compatibility with PyPy, allowing users to leverage this speed advantage seamlessly.
 
 Both Cython and PyPy Wheels on PyPI make the installation process simpler and more straightforward. They ensure that 
 you get the optimized version of our package with minimal setup, allowing you to focus on development rather than 
 configuration.
+
+On Raspberry Pi and other architectures for which there are no pre-compiled versions, the package can still be 
+installed with PIP. PIP then compiles the package locally on the target system during installation. Please be patient, 
+this may take some time!
 
 #### Installation
 `pip install unicorn-fy`
@@ -143,7 +148,7 @@ configuration.
 `pip install unicorn-fy --upgrade`
 
 ### A Conda Package of the latest version with `conda` from [Anaconda](https://anaconda.org/lucit)
-The `unicorn-fy` package is also available as a Cython version for the `linux-64`, `linux-arm64`, `osx-64` 
+The `unicorn-fy` package is also available as a Cython version for the `linux-64`, `osx-64` 
 and `win-64` architectures with [Conda](https://docs.conda.io/en/latest/) through the 
 [`lucit` channel](https://anaconda.org/lucit). 
 
@@ -168,9 +173,9 @@ Run in bash:
 `pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/$(curl -s https://api.github.com/repos/lucit-systems-and-development/unicorn-fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
 
 #### Windows
-Use the below command with the version (such as 1.14.0) you determined [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest):
+Use the below command with the version (such as 1.14.1) you determined [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest):
 
-`pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/1.14.0.tar.gz --upgrade`
+`pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/1.14.1.tar.gz --upgrade`
 
 ### From the latest source (dev-stage) with PIP from [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
 This is not a release version and can not be considered to be stable!

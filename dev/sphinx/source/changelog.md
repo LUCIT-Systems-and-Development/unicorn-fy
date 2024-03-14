@@ -9,7 +9,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [How to upgrade to the latest version!](https://unicorn-fy.docs.lucit.tech/readme.html#installation-and-upgrade)
 
-## 0.13.1.dev (development stage/unreleased/unstable)
+## 0.14.1.dev (development stage/unreleased/unstable)
+## 0.14.1
+UnicornFy can now also be installed on all architectures on which there are no precompiled packages from LUCIT. PIP 
+now automatically recognises whether there is a suitable precompiled package and if not, the source is automatically 
+compiled on the target system during the installation process with Cython. Even if you don't have to do anything 
+special, please note that this process takes some time!
 
 ## 0.14.0
 ### Added

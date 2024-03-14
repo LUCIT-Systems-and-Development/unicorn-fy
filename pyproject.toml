@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "unicorn-fy"
-version = "1.14.0"
+version = "1.14.1"
 description = "A Python API by LUCIT to convert received raw data from crypto exchange API endpoints into well-formed python dictionaries."
 authors = ["LUCIT Systems and Development <info@lucit.tech>"]
 license = "LSOSL - LUCIT Synergetic Open Source License"
