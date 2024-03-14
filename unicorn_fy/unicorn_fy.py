@@ -73,11 +73,11 @@ class UnicornFy(object):
                         f"{str(platform.system())} {str(platform.release())} started ...")
 
     def __enter__(self):
-        logger.debug(f"Entering 'with-context' ...")
+        logger.debug(f"Entering with-context of UnicornFy() ...")
         return self
 
     def __exit__(self, exc_type, exc_value, error_traceback):
-        logger.debug(f"Leaving 'with-context' ...")
+        logger.debug(f"Leaving with-context of UnicornFy() ...")
         if exc_type:
             logger.critical(f"An exception occurred: {exc_type} - {exc_value} - {error_traceback}")
 
