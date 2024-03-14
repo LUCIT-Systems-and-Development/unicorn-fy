@@ -118,7 +118,7 @@ For the PyPy interpreter we offer packages only from Python version 3.9 and high
 The current dependencies are listed 
 [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/requirements.txt).
 
-If you run into errors during the installation take a look [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki/Installation).
+If you run into errors during the installation take a look [here](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite/wiki/Installation).
 
 ### A Cython binary, PyPy or source code based CPython wheel of the latest version with `pip` from [PyPI](https://pypi.org/project/unicorn-binance-rest-api/)
 Our [Cython](https://cython.org/) and [PyPy](https://www.pypy.org/) Wheels are available on [PyPI](https://pypi.org/), 
