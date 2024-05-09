@@ -1,1 +1,1 @@
-from unicorn_fy.unicorn_fy import UnicornFy
+from .unicorn_fy import UnicornFy

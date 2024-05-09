@@ -9,9 +9,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [How to upgrade to the latest version!](https://unicorn-fy.docs.lucit.tech/readme.html#installation-and-upgrade)
 
-## 0.14.1.dev (development stage/unreleased/unstable)
+## 0.14.2.dev (development stage/unreleased/unstable)
+
+## 0.14.2
+### Added
+- Since Unicorn-Fy is delivered as a compiled C extension, IDEs such as Pycharm and Visual Code cannot use information 
+  about available methods, parameters and their types for autocomplete and other intellisense functions. As a solution, 
+  from now on stub files (PYI) will be created in the build process and attached to the packages. The IDEs can 
+  automatically obtain the required information from these.
+
 ## 0.14.1
-UnicornFy can now also be installed on all architectures on which there are no precompiled packages from LUCIT. PIP 
+`unicorn-fy` can now also be installed on all architectures on which there are no precompiled packages from LUCIT. PIP 
 now automatically recognises whether there is a suitable precompiled package and if not, the source is automatically 
 compiled on the target system during the installation process with Cython. Even if you don't have to do anything 
 special, please note that this process takes some time!

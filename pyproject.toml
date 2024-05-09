@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "unicorn-fy"
-version = "1.14.1"
-description = "A Python API by LUCIT to convert received raw data from crypto exchange API endpoints into well-formed python dictionaries."
+version = "0.14.2"
+description = "A Python SDK by LUCIT to convert received raw data from crypto exchange API endpoints into well-formed python dictionaries."
 authors = ["LUCIT Systems and Development <info@lucit.tech>"]
 license = "LSOSL - LUCIT Synergetic Open Source License"
 readme = "README.md"
@@ -31,8 +31,8 @@ simplejson = "*"
 [tool.poetry.dev-dependencies]
 
 [build-system]
-requires = ["setuptools", "wheel", "Cython", "pip"]
+requires = ["setuptools", "wheel", "Cython", "pip", "mypy"]
 build-backend = "setuptools.build_meta"
 
 [tool.poetry.package_data]
-unicorn_fy = ["*.so", "*.dll", "*.py"]
+unicorn_fy = ["*.so", "*.dll", "*.py", "*.pyd", "*.pyi"]

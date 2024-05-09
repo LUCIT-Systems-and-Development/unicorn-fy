@@ -1,5 +1,5 @@
 {% set name = "unicorn-fy" %}
-{% set version = "1.14.1" %}
+{% set version = "0.14.2" %}
 
 package:
   name: {{ name|lower }}
@@ -9,15 +9,19 @@ source:
   path: .
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script_env:
+    - PYTHONNOUSERSITE=1
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - mypy
   host:
     - pip
     - python
+    - mypy
     - cython
     - requests
     - ujson
@@ -47,7 +51,7 @@ test:
 
 about:
   summary: | 
-    A Python API by LUCIT to convert received raw data from crypto exchange API endpoints into well-formed python 
+    A Python SDK by LUCIT to convert received raw data from crypto exchange API endpoints into well-formed python 
     dictionaries.
   description: |
     [![Get a UNICORN Binance Suite License](https://raw.githubusercontent.com/LUCIT-Systems-and-Development/unicorn-binance-suite/master/images/logo/LUCIT-UBS-License-Offer.png)](https://shop.lucit.services)
@@ -79,7 +83,7 @@ about:
     [Examples](#examples) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | [Bugs](#how-to-report-bugs-or-suggest-improvements) 
     | [Contributing](#contributing) | [Disclaimer](#disclaimer) | [Commercial Support](#commercial-support)
     
-    A Python API by [LUCIT](https://www.lucit.tech) to convert received raw data from crypto exchange API endpoints 
+    A Python SDK by [LUCIT](https://www.lucit.tech) to convert received raw data from crypto exchange API endpoints 
     into well-formed python dictionaries.
     
     Part of ['UNICORN Binance Suite'](https://www.lucit.tech/unicorn-binance-suite.html).
@@ -112,7 +116,7 @@ about:
     {'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT',
      'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847,
      'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True,
-     'unicorn_fied': ['binance', '1.14.1']}
+     'unicorn_fied': ['binance', '0.14.2']}
     ```
     
     This lib is integrated into 
@@ -213,9 +217,9 @@ about:
     `pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/$(curl -s https://api.github.com/repos/lucit-systems-and-development/unicorn-fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
     
     #### Windows
-    Use the below command with the version (such as 1.14.1) you determined [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest):
+    Use the below command with the version (such as 0.14.2) you determined [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest):
     
-    `pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/1.14.1.tar.gz --upgrade`
+    `pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/0.14.2.tar.gz --upgrade`
     
     ### From the latest source (dev-stage) with PIP from [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
     This is not a release version and can not be considered to be stable!

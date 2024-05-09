@@ -29,7 +29,7 @@
 [Examples](#examples) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | [Bugs](#how-to-report-bugs-or-suggest-improvements) 
 | [Contributing](#contributing) | [Disclaimer](#disclaimer) | [Commercial Support](#commercial-support)
 
-A Python API by [LUCIT](https://www.lucit.tech) to convert received raw data from crypto exchange API endpoints 
+A Python SDK by [LUCIT](https://www.lucit.tech) to convert received raw data from crypto exchange API endpoints 
 into well-formed python dictionaries.
 
 Part of ['UNICORN Binance Suite'](https://www.lucit.tech/unicorn-binance-suite.html).
@@ -66,7 +66,7 @@ Output:
 {'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT',
  'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847,
  'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True,
- 'unicorn_fied': ['binance', '1.14.1']}
+ 'unicorn_fied': ['binance', '0.14.2']}
 ```
 
 This lib is integrated into 
@@ -113,12 +113,25 @@ If you like the project, please
 ## Installation and Upgrade
 The module requires Python 3.7.0 or above. 
 
+For Anaconda we offer packages only from Python version 3.8 and higher.
+
 For the PyPy interpreter we offer packages only from Python version 3.9 and higher.
 
 The current dependencies are listed 
 [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/requirements.txt).
 
-If you run into errors during the installation take a look [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki/Installation).
+If you run into errors during the installation take a look [here](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite/wiki/Installation).
+
+### Packages are created automatically with GitHub Actions
+When a new release is to be created, we start two GitHubActions: 
+
+- [Build and Publish Anaconda](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/build_conda.yml)
+- [Build and Publish GH+PyPi](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/actions/workflows/build_wheels.yml) 
+
+Both start virtual Windows/Linux/Mac servers provided by GitHub in the cloud with preconfigured environments and 
+create the respective compilations and stub files, pack them into wheels and conda packages and then publish them on 
+GitHub, PYPI and Anaconda. This is a transparent method that makes it possible to trace the source code behind a 
+compilation.
 
 ### A Cython binary, PyPy or source code based CPython wheel of the latest version with `pip` from [PyPI](https://pypi.org/project/unicorn-binance-rest-api/)
 Our [Cython](https://cython.org/) and [PyPy](https://www.pypy.org/) Wheels are available on [PyPI](https://pypi.org/), 
@@ -173,9 +186,9 @@ Run in bash:
 `pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/$(curl -s https://api.github.com/repos/lucit-systems-and-development/unicorn-fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
 
 #### Windows
-Use the below command with the version (such as 1.14.1) you determined [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest):
+Use the below command with the version (such as 0.14.2) you determined [here](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/releases/latest):
 
-`pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/1.14.1.tar.gz --upgrade`
+`pip install https://github.com/LUCIT-Systems-and-Development/unicorn-fy/archive/0.14.2.tar.gz --upgrade`
 
 ### From the latest source (dev-stage) with PIP from [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
 This is not a release version and can not be considered to be stable!
@@ -194,16 +207,14 @@ or the [current master branch](https://github.com/LUCIT-Systems-and-Development/
 - ./setup.py
 
 ## Change Log
-[https://unicorn-fy.docs.lucit.tech//CHANGELOG.html](https://unicorn-fy.docs.lucit.tech//CHANGELOG.html)
+[https://unicorn-fy.docs.lucit.tech/changelog.html](https://unicorn-fy.docs.lucit.tech/changelog.html)
 
 ## Documentation
 - [General](https://unicorn-fy.docs.lucit.tech/)
 - [Modules](https://unicorn-fy.docs.lucit.tech/modules.html)
 
 ## Examples
-- [example_logging.py](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py)
-- [example_unicorn_fy.py](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_unicorn_fy.py)
-- [example_version_of_this_package.py](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_version_of_this_package.py)
+- [Look here!](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/tree/master/examples/)
 
 ## Project Homepage
 [https://www.lucit.tech/unicorn-fy.html](https://www.lucit.tech/unicorn-fy.html)
