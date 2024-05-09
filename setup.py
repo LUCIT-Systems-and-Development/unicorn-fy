@@ -85,7 +85,7 @@ setup(
      long_description_content_type="text/markdown",
      license='LSOSL - LUCIT Synergetic Open Source License',
      install_requires=['ujson', 'requests', 'Cython'],
-     keywords='binance, api, exchange, unify, binance-dex, binance-chain, rest-api, websockets',
+     keywords='binance, api, exchange, unicornfy, binance-dex, binance-chain, rest-api, websockets',
      project_urls={
          'Documentation': 'https://unicorn-fy.docs.lucit.tech',
          'Wiki': 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki',

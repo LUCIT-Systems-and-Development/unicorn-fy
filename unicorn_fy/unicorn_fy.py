@@ -57,11 +57,9 @@ class UnicornFy(object):
         - Binance-com-coin_futures
         - Binance-com-margin
         - Binance-com-isolated_margin
-        - Binance.je
         - Binance.us
         - trBinance.com
         - Binance.org
-        - Jex.com
     """
     VERSION = "0.14.2.dev"
 
@@ -162,18 +160,6 @@ class UnicornFy(object):
                                                    show_deprecated_warning=False)
 
     @staticmethod
-    def binance_je_websocket(stream_data_json):
-        """
-        unicorn_fy binance.je (Jersey) raw_stream_data
-
-        :param stream_data_json: The received raw stream data from the Binance websocket
-        :type stream_data_json: json
-
-        :return: dict
-        """
-        return UnicornFy.binance_websocket(stream_data_json, exchange="binance.je", show_deprecated_warning=False)
-
-    @staticmethod
     def binance_us_websocket(stream_data_json):
         """
         unicorn_fy binance.us (US) raw_stream_data
@@ -218,7 +204,7 @@ class UnicornFy(object):
         logger.debug("UnicornFy->binance_websocket(" + str(stream_data_json) + ")")
         if show_deprecated_warning is True:
             logger.warning("Using `UnicornFy.binance_websocket()` is deprecated, use "
-                           "`UnicornFy.binance_com_websocket()` or `UnicornFy.binance_je_websocket()` instead!")
+                           "`UnicornFy.binance_com_websocket()` instead!")
 
         if UnicornFy.is_json(stream_data_json) is False:
             return stream_data_json
@@ -1260,18 +1246,6 @@ class UnicornFy(object):
                             f"error: {str(error_msg)} - Variable: {stream_data['data']}")
         logger.debug("UnicornFy->binance_futures_websocket(" + str(unicorn_fied_data) + ")")
         return unicorn_fied_data
-
-    @staticmethod
-    def jex_com_websocket(stream_data_json):
-        """
-        unicorn_fy jex.com raw_stream_data
-
-        :param stream_data_json: The received raw stream data from the Binance websocket
-        :type stream_data_json: json
-
-        :return: dict
-        """
-        return UnicornFy.binance_websocket(stream_data_json, exchange="jex.com", show_deprecated_warning=False)
 
     @staticmethod
     def get_latest_release_info():
