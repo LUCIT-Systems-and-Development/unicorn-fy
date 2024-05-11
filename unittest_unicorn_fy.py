@@ -448,34 +448,6 @@ class TestBinanceComIsolatedMarginWebsocket(unittest.TestCase):
         del self.unicorn_fy
 
 
-class TestBinanceJeWebsocket(unittest.TestCase):
-    def setUp(self):
-        self.unicorn_fy = UnicornFy()
-        self.unicorn_fy_version = str(self.unicorn_fy.get_version())
-
-    def test_template(self):
-        data = ''
-        asserted_result = ""
-        self.assertEqual(str(self.unicorn_fy.binance_je_websocket(data)), asserted_result)
-
-    def tearDown(self):
-        del self.unicorn_fy
-
-
-class TestBinanceJexWebsocket(unittest.TestCase):
-    def setUp(self):
-        self.unicorn_fy = UnicornFy()
-        self.unicorn_fy_version = str(self.unicorn_fy.get_version())
-
-    def test_template(self):
-        data = ''
-        asserted_result = ""
-        self.assertEqual(str(self.unicorn_fy.jex_com_websocket(data)), asserted_result)
-
-    def tearDown(self):
-        del self.unicorn_fy
-
-
 class TestBinanceUsWebsocket(unittest.TestCase):
     def setUp(self):
         self.unicorn_fy = UnicornFy()
