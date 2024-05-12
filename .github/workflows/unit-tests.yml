@@ -8,7 +8,6 @@ on:
 
 jobs:
   test_python_3_7:
-    name: Unittests
     runs-on: ubuntu-latest
     steps:
     - name: GitHub Checkout
@@ -33,7 +32,6 @@ jobs:
       run: coverage run --source unicorn_fy unittest_unicorn_fy.py
 
   test_python_3_8:
-    name: Unittests
     runs-on: ubuntu-latest
     steps:
     - name: GitHub Checkout
@@ -58,7 +56,6 @@ jobs:
       run: coverage run --source unicorn_fy unittest_unicorn_fy.py
 
   test_python_3_9:
-    name: Unittests
     runs-on: ubuntu-latest
     steps:
     - name: GitHub Checkout
@@ -83,7 +80,6 @@ jobs:
       run: coverage run --source unicorn_fy unittest_unicorn_fy.py
 
   test_python_3_10:
-    name: Unittests
     runs-on: ubuntu-latest
     steps:
     - name: GitHub Checkout
@@ -108,7 +104,6 @@ jobs:
       run: coverage run --source unicorn_fy unittest_unicorn_fy.py
 
   test_python_3_11:
-    name: Unittests
     runs-on: ubuntu-latest
     steps:
     - name: GitHub Checkout
@@ -133,7 +128,6 @@ jobs:
       run: coverage run --source unicorn_fy unittest_unicorn_fy.py
 
   test_python_3_12:
-    name: Unittests
     runs-on: ubuntu-latest
     steps:
     - name: GitHub Checkout
