@@ -72,8 +72,8 @@ class UnicornFy(object):
         self.version = __version__
 
         if debug is True:
-            logger.info(f"New instance of unicorn-fy_{__version__}-{'compiled' if cython.compiled else 'source'} on "
-                        f"{str(platform.system())} {str(platform.release())} started ...")
+            logger.info(f"New instance of {__app_name__}_{__version__}-{'compiled' if cython.compiled else 'source'} "
+                        f"on {str(platform.system())} {str(platform.release())} started ...")
 
     def __enter__(self):
         logger.debug(f"Entering with-context of UnicornFy() ...")
