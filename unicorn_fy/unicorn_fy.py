@@ -44,7 +44,10 @@ import requests
 import time
 import ujson as json
 
-logger = logging.getLogger("unicorn_fy")
+__app_name__: str = "unicorn-fy"
+__version__: str = "0.14.2.dev"
+__logger__ = logging.getLogger("unicorn_fy")
+logger = __logger__
 
 
 class UnicornFy(object):
@@ -61,13 +64,15 @@ class UnicornFy(object):
         - trBinance.com
         - Binance.org
     """
-    VERSION = "0.14.2.dev"
 
     def __init__(self, debug=False):
         self.last_update_check_github = {'timestamp': time.time(),
                                          'status': None}
+        self.name = __app_name__
+        self.version = __version__
+
         if debug is True:
-            logger.info(f"New instance of unicorn-fy_{self.VERSION}-{'compiled' if cython.compiled else 'source'} on "
+            logger.info(f"New instance of unicorn-fy_{__version__}-{'compiled' if cython.compiled else 'source'} on "
                         f"{str(platform.system())} {str(platform.release())} started ...")
 
     def __enter__(self):
