@@ -73,7 +73,7 @@ and can be activated by setting parameter
 or for specific streams with the parameter 
 [`output` of `create_stream()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.manager.BinanceWebSocketApiManager.create_stream).
 
-## Get the right [logger](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py):
+## Get the right [logger](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/examples/_archive/example_logging.py):
 ```
 logging.getLogger("unicorn_fy")
 ```
@@ -227,7 +227,7 @@ or the [current master branch](https://github.com/LUCIT-Systems-and-Development/
 To receive notifications on available updates you can 
 [![watch](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/watch.png)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/watchers) 
 the repository on [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy), write your 
-[own script](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_version_of_this_package.py) 
+[own script](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/examples/_archive/example_version_of_this_package.py) 
 with using 
 [`is_update_available()`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=is_update#unicorn_fy.unicorn_fy.UnicornFy.is_update_availabe) 
  or you use the 

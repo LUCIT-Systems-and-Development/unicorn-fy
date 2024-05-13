@@ -10,6 +10,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 [How to upgrade to the latest version!](https://unicorn-fy.docs.lucit.tech/readme.html#installation-and-upgrade)
 
 ## 0.14.2.dev (development stage/unreleased/unstable)
+### Added
+- `__version__` and made use of it.
+### Removed
+- `binance_je_websocket()` 
+- `jex_com_websocket()`
 
 ## 0.14.2
 ### Added

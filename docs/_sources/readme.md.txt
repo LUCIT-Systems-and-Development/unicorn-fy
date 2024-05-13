@@ -20,7 +20,6 @@
 [![Telegram](https://img.shields.io/badge/community-telegram-41ab8c)](https://t.me/unicorndevs)
 [![Gitter](https://img.shields.io/badge/community-gitter-41ab8c)](https://gitter.im/unicorn-binance-suite/unicorn-fy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Get Free Professional Support](https://img.shields.io/badge/chat-lucit%20support-004166)](https://www.lucit.tech/get-support.html)
-[![ChatGPT UNICORN Binance Suite Assistant](https://img.shields.io/badge/chatgpt-%20ubs%20assistant-DA70D6)](https://chat.openai.com/g/g-VjCOjRhCJ-unicorn-binance-suite-assistant)
 
 [![LUCIT-UNICORNFY-Banner](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/logo/LUCIT-UNICORNFY-Banner-Readme.png)](https://www.lucit.tech/unicorn-fy.html)
 
@@ -34,9 +33,7 @@ into well-formed python dictionaries.
 
 Part of ['UNICORN Binance Suite'](https://www.lucit.tech/unicorn-binance-suite.html).
 
-Get help with the integration of the `UNICORN Binance Suite` modules from the 
-[`UNICORN Binance Suite Assistant` GPT](https://chat.openai.com/g/g-VjCOjRhCJ-unicorn-binance-suite-assistant) or 
-[a real human LUCIT employee](https://www.lucit.tech/get-support.html).
+[Get help](https://www.lucit.tech/get-support.html) with the integration of the `UNICORN Binance Suite` modules!
 
 ```
 import unicorn_fy
@@ -76,7 +73,7 @@ and can be activated by setting parameter
 or for specific streams with the parameter 
 [`output` of `create_stream()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.manager.BinanceWebSocketApiManager.create_stream).
 
-## Get the right [logger](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_logging.py):
+## Get the right [logger](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/examples/_archive/example_logging.py):
 ```
 logging.getLogger("unicorn_fy")
 ```
@@ -96,10 +93,8 @@ logging.getLogger("unicorn_fy")
 | [Binance Futures Testnet](https://testnet.binancefuture.com) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_futures_websocket(stream_data_json)`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_coin_futures_websocket) | STABLE |
 | [Binance Coin Futures](https://www.binance.com) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_coin_futures_websocket(stream_data_json)`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_coin_futures_websocket) | NEEDS_YOUR_HELP |
 | [Binance Coin Futures Testnet](https://testnet.binancefuture.com) ([API](https://github.com/binance-exchange/binance-official-api-docs)) | [`binance_com_coin_futures_websocket(stream_data_json)`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_com_futures_websocket) | NEEDS_YOUR_HELP |
-| [Binance Jersey](https://www.binance.je) ([API](https://github.com/binance-jersey/binance-official-api-docs/)) | [`binance_je_websocket(stream_data_json)`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_je_websocket) | STABLE |
 | [Binance US](https://www.binance.us) ([API](https://github.com/binance-us/binance-official-api-docs)) | [`binance_us_websocket(stream_data_json)`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_us_websocket) | STABLE |
 | [Binance TR](https://www.trbinance.com) ([API](https://www.trbinance.com/apidocs)) | [`trbinance_com_websocket(stream_data_json)`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.trbinance_com_websocket) | STABLE |
-| [Binance JEX](https://www.jex.com) ([API](https://jexapi.github.io/api-doc/spot.html#change-log)) | [`jex_com_websocket(stream_data_json)`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.jex_com_websocket) | STABLE |
 | [Binance DEX](https://www.binance.org) ([API](https://docs.binance.org/)) | [`binance_org_websocket(stream_data_json)`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_org_websocket) | NEEDS_YOUR_HELP |
 | [Binance DEX Testnet](https://testnet.binance.org) ([API](https://docs.binance.org/)) | [`binance_org_websocket(stream_data_json)`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_org_websocket) | NEEDS_YOUR_HELP |
 
@@ -232,7 +227,7 @@ or the [current master branch](https://github.com/LUCIT-Systems-and-Development/
 To receive notifications on available updates you can 
 [![watch](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/watch.png)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/watchers) 
 the repository on [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy), write your 
-[own script](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/example_version_of_this_package.py) 
+[own script](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/examples/_archive/example_version_of_this_package.py) 
 with using 
 [`is_update_available()`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=is_update#unicorn_fy.unicorn_fy.UnicornFy.is_update_availabe) 
  or you use the 
