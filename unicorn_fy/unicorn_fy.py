@@ -67,7 +67,7 @@ class UnicornFy(object):
 
     def __init__(self, debug=False):
         self.last_update_check_github = {'timestamp': time.time(),
-                                         'status': None}
+                                         'status': {'tag_name': None}}
         self.name = __app_name__
         self.version = __version__
 
@@ -1272,12 +1272,12 @@ class UnicornFy(object):
         :return: str or False
         """
         # Do a fresh request if status is None or last timestamp is older 1 hour
-        if self.last_update_check_github['status'] is None or \
+        if self.last_update_check_github['status']['tag_name'] is None or \
                 (self.last_update_check_github['timestamp'] + (60 * 60) < time.time()):
             self.last_update_check_github['status'] = self.get_latest_release_info()
         if self.last_update_check_github['status']:
             try:
-                return self.last_update_check_github['status']["tag_name"]
+                return self.last_update_check_github['status'].get("tag_name")
             except KeyError:
                 return "unknown"
         else:
