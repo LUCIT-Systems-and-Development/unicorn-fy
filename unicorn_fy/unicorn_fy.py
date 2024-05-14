@@ -1277,7 +1277,7 @@ class UnicornFy(object):
             self.last_update_check_github['status'] = self.get_latest_release_info()
         if self.last_update_check_github['status']:
             try:
-                return self.last_update_check_github['status'].get("tag_name")
+                return self.last_update_check_github['status']['tag_name']
             except KeyError:
                 return "unknown"
         else:
