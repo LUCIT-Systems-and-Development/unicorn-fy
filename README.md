@@ -104,8 +104,8 @@ logging.getLogger("unicorn_fy")
 
 None
 
-- Available via `pip` and `conda` as precompiled C-Extension including stub files for improved Intellisense features and 
-  source code easier debugging.
+- Available as a package via `pip` and `conda` as precompiled C extension with stub files for improved Intellisense 
+  functions and source code for easier debugging of the source code. [To the installation.](#installation-and-upgrade)
 
 - Excessively tested on Linux, Mac and Windows
 
