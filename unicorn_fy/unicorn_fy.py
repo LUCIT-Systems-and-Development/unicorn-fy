@@ -37,6 +37,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
+from typing import Optional
 import cython
 import logging
 import platform
@@ -1265,7 +1266,7 @@ class UnicornFy(object):
         except Exception:
             return False
 
-    def get_latest_version(self):
+    def get_latest_version(self) -> Optional[str]:
         """
         Get the version of the latest available release (cache time 1 hour)
 
