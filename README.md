@@ -114,7 +114,7 @@ If you like the project, please
 [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)! 
 
 ## Installation and Upgrade
-The module requires Python 3.7.0 or above. 
+The module requires Python 3.7 and runs smoothly up to and including Python 3.12.
 
 Anaconda packages are available from Python version 3.8 and higher, but only in the latest version!
 
