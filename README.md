@@ -78,8 +78,10 @@ or for specific streams with the parameter
 logging.getLogger("unicorn_fy")
 ```
 
-## Supported Exchanges
-### Websockets
+## What are the benefits of UnicornFy
+- Supported exchanges:
+
+***Websockets***
 
 | Exchange | Docs            | Status | 
 | -------- | --------------- | ------ |
@@ -98,8 +100,14 @@ logging.getLogger("unicorn_fy")
 | [Binance DEX](https://www.binance.org) ([API](https://docs.binance.org/)) | [`binance_org_websocket(stream_data_json)`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_org_websocket) | NEEDS_YOUR_HELP |
 | [Binance DEX Testnet](https://testnet.binance.org) ([API](https://docs.binance.org/)) | [`binance_org_websocket(stream_data_json)`](https://unicorn-fy.docs.lucit.tech//unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_org_websocket) | NEEDS_YOUR_HELP |
 
-### REST
-- none
+***REST***
+
+None
+
+- Available via `pip` and `conda` as precompiled C-Extension including stub files for improved Intellisense features and 
+  source code easier debugging.
+
+- Excessively tested on Linux, Mac and Windows
 
 If you like the project, please 
 [![star](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/star.png)](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/stargazers) it on 
@@ -108,7 +116,7 @@ If you like the project, please
 ## Installation and Upgrade
 The module requires Python 3.7.0 or above. 
 
-For Anaconda we offer packages only from Python version 3.8 and higher.
+Anaconda packages are available from Python version 3.8 and higher, but only in the latest version!
 
 For the PyPy interpreter we offer packages only from Python version 3.9 and higher.
 
@@ -173,7 +181,7 @@ conda install -c lucit unicorn-fy
 #### Update
 `conda update -c lucit unicorn-fy`
 
-### From source of the latest release with PIP from [Github](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
+### From source of the latest release with PIP from [GitHub](https://github.com/LUCIT-Systems-and-Development/unicorn-fy)
 
 #### Linux, macOS, ...
 Run in bash:
@@ -246,7 +254,7 @@ Before you report a bug, [try the latest release](https://github.com/LUCIT-Syste
 If the issue still exists, provide the error trace, OS and python version and explain how to reproduce the error. 
 A demo script is appreciated.
 
-If you dont find an issue related to your topic, please open a new issue:
+If you don't find an issue related to your topic, please open a new issue:
 [https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues)
 
 [Report a security bug!](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/security/policy)
