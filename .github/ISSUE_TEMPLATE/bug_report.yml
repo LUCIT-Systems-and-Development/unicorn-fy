@@ -28,16 +28,6 @@ body:
         Please control what version you are using with [this script](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite/blob/master/tools/get_versions_of_unicorn_packages.py) and post the output:
     validations:
       required: true
-      
-  - type: checkboxes
-    id: Confirmation
-    attributes:
-      label: Solution to Issue cannot be found in the documentation or other Issues and also occurs in the latest version of this library.
-      description: |
-        I have searched for other Issues with the same problem or similar feature requests and have looked in the documentation. This issue also affects the latest version of this library. 
-      options:
-        - label: I checked the documentation and other Issues. I am using the latest version of this library.
-          required: true
 
   - type: dropdown
     id: Hardware
